@@ -459,6 +459,7 @@ public class F2Section01Activity extends AppCompatActivity {
         bi.pofpa16Items.addView(rowView);
         pofpa16List.add(rowView);
 
+
         Pofpa15Binding pofpa15Binding = DataBindingUtil.bind(rowView);
         pofpa15Binding.btnClearView.setOnClickListener(new View.OnClickListener() {
             @Override

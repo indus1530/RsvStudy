@@ -1,30 +1,20 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
-import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.TalukasContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.UCsContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.VillagesContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
@@ -52,12 +42,12 @@ public class F1Section01Activity extends AppCompatActivity {
 
     private void initializingComponents() {
         db = new DatabaseHelper(this);
-        populateSpinner(this);
+        //populateSpinner(this);
 
-        bi.pocfa12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        //bi.pocfa12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
     }
 
-    public void populateSpinner(final Context context) {
+    /*public void populateSpinner(final Context context) {
         // Spinner Drop down elements
         talukaNames = new ArrayList<>();
         talukaCodes = new ArrayList<>();
@@ -160,7 +150,7 @@ public class F1Section01Activity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -227,14 +217,13 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setCode_lhw(lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
         MainApp.fc.setRef_ID(bi.pocfa08.getText().toString());
 
-        JSONObject form01_01 = new JSONObject();
+        JSONObject SA = new JSONObject();
 
-        form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
-        form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-        form01_01.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
-        form01_01.put("pocfa05", bi.pocfa05.getText().toString());
-        form01_01.put("pocfa06", bi.pocfa06.getText().toString());
-        form01_01.put("pocfa07", bi.pocfa07a.isChecked() ? "1"
+        SA.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
+        SA.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
+        SA.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
+        SA.put("pocfa06", bi.pocfa06.getText().toString());
+        SA.put("pocfa07", bi.pocfa07a.isChecked() ? "1"
                 : bi.pocfa07b.isChecked() ? "2"
                 : bi.pocfa07c.isChecked() ? "3"
                 : bi.pocfa07d.isChecked() ? "4"
@@ -242,17 +231,17 @@ public class F1Section01Activity extends AppCompatActivity {
                 : bi.pocfa07f.isChecked() ? "6"
                 : bi.pocfa0796.isChecked() ? "96"
                 : "0");
-        form01_01.put("pocfa0796x", bi.pocfa0796x.getText().toString());
-        form01_01.put("pocfa09", bi.pocfa09.getText().toString());
-        form01_01.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
-        form01_01.put("pocfa11", bi.pocfa11a.isChecked() ? "1" : bi.pocfa11b.isChecked() ? "2" : "0");
-        form01_01.put("pocfa12", bi.pocfa12.getText().toString());
-        form01_01.put("pocfa13y", bi.pocfa13y.getText().toString());
-        form01_01.put("pocfa13m", bi.pocfa13m.getText().toString());
-        form01_01.put("pocfa13d", bi.pocfa13d.getText().toString());
-        form01_01.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");
+        SA.put("pocfa0796x", bi.pocfa0796x.getText().toString());
+        SA.put("pocfa09", bi.pocfa09.getText().toString());
+        SA.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
+        SA.put("pocfa11", bi.pocfa11a.isChecked() ? "1" : bi.pocfa11b.isChecked() ? "2" : "0");
+        SA.put("pocfa12", bi.pocfa12.getText().toString());
+        SA.put("pocfa13y", bi.pocfa13y.getText().toString());
+        SA.put("pocfa13m", bi.pocfa13m.getText().toString());
+        SA.put("pocfa13d", bi.pocfa13d.getText().toString());
+        SA.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");
 
-        MainApp.fc.setsA(String.valueOf(form01_01));
+        MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);
 
         DOB = getDOB();

@@ -1,6 +1,6 @@
 <resources>
     <!--new Strings-->
-    <string name="app_name">Pulse Oximetry</string>
+    <string name="app_name">RSV Study</string>
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
     <string name="btnUpload">Upload</string>
@@ -27,6 +27,189 @@
     <string name="block">Block/ Muhalla</string>
     <string name="street">Street</string>
     <string name="cluster"> کلسٹر نمبر </string>
+
+
+    <string name="Section1"> ایڈریس اور شناخت کی معلومات </string>
+    <string name="RSID"> شُرکا کا شناختی نمبر # </string>
+
+    <string name="RS7"> ماں کا موجودہ شناختی آئی ڈی </string>
+
+    <string name="RS8"> آئی ڈی ماں کا مستقل شناختی </string>
+
+    <string name="RS9"> بچے کا نام </string>
+
+    <string name="RS10"> ماں کا نام </string>
+
+    <string name="RS11"> والد کا نام </string>
+
+    <string name="RS12"> گھر کے سربراہ کا نام </string>
+    <string name="RS13"> کا نام اور کوڈ CHW </string>
+    <string name="RS14"> وِزِٹ کی تاریخ (پہلی کوشش) </string>
+
+    <string name="Section2"> رضاکارانہ طور پر دیکھ بھال کرنے والا </string>
+    <string name="RS17"> ماں یا دیکھ بھال کرنے والے نے مطالعے میں حصہ لینے کے بارے میں مطمئن رضامندی دی ہے </string>
+    <string name="RS18"> رضامندی فراہم نہ کرنے </string>
+    <string name="RS20"> (رضامندی ملنے کی صورت میں) دیکھ بھال کرنے والا / جواب دینے والا شخص کون ہے؟ </string>
+    <string name="RS21"> ماں کیوں جواب دہ نہیں تھی؟ </string>
+    <string name="RS22"> کیا بچہ زندہ ہے </string>
+    <string name="RS23"> بچے کی تاریخ وفات کیا ہے؟ </string>
+
+    <string name="Section3"> گھریلو معلومات </string>
+    <string name="RS24"> کتنے عرصے سے آپ اس گھر میں رہ رہے ہیں؟ </string>
+    <string name="RS25"> گھر میں کتنے افراد ہیں؟ </string>
+    <string name="RS26"> گھر میں سونے کے لیے کتنے کمرے ہیں؟ </string>
+    <string name="RS27"> گھر کی چھت کو دیکھیں اور نوٹ کریں کہ چھت کا بنیادی مواد کیا ہے؟ </string>
+    <string name="RS27x"> دیگر (وضاحت کریں) </string>
+    <string name="RS28"> گھر کے فرش کو دیکھیں اور نوٹ کریں کہ فرش کا بنیادی مواد کیا ہے؟ </string>
+    <string name="RS28x"> دیگر (وضاحت کریں) </string>
+    <string name="RS29"> گھر کے باہر کی دیواروں کو دیکھیں اور نوٹ کریں کہ دیواروں کا بنیادی مواد کیا ہے؟ </string>
+    <string name="RS29x"> دیگر وضاحت کریں </string>
+    <string name="RS30"> گھر کے افراد کے لئے پینے کے پانی کا بنیادی ذریعہ کیا ہے؟ </string>
+    <string name="RS30x"> دیگر وضاحت کریں </string>
+    <string name="RS31"> عام طور پر خاندان کے افراد کس قسم کے ٹوائلٹ سہولت کا استعمال کرتے ہیں؟ </string>
+    <string name="RS31x"> دیگر وضاحت کریں </string>
+    <string name="RS32"> کیا گھر میں یہ موجود ہے </string>
+    <string name="RS321"> بجلی </string>
+    <string name="RS322"> الیکٹرک پنکھا </string>
+    <string name="RS323"> واٹر پمپ </string>
+    <string name="RS324"> سی ڈی / ڈی وی ڈی پلیئر </string>
+    <string name="RS325"> بلیک اینٹ وائٹ ٹیلی ویژن </string>
+    <string name="RS326"> رنگین ٹیلی ویژن </string>
+    <string name="RS327"> ریفریجریٹر </string>
+    <string name="RS328"> ریڈیو </string>
+    <string name="RS329"> موبائل فون </string>
+    <string name="RS3210"> تار والا فون </string>
+    <string name="RS3211"> کمپیوٹر </string>
+    <string name="RS3212"> واشنگ مشین </string>
+    <string name="RS3213"> کیمرے </string>
+    <string name="RS3214"> گھڑی / گھڑیال </string>
+    <string name="RS3215"> پریشر ککر </string>
+    <string name="RS3216"> سلائی مشین </string>
+    <string name="RS3217"> تھریشر </string>
+    <string name="RS3218"> ایئر کنڈشنر / روم کولر </string>
+    <string name="RS3219"> جانوروں سے چلنے والی گاڑی </string>
+    <string name="RS3220"> بائیسایکل </string>
+    <string name="RS3221"> ٹریکٹر / موٹر والی کشتی </string>
+    <string name="RS3222"> گاڑی / ٹرک </string>
+    <string name="RS3223"> موٹر سائیکل / سکوٹر </string>
+    <string name="RS3224"> رِکشا / وین </string>
+    <string name="RS3225"> کرسی </string>
+    <string name="RS3226"> بستر </string>
+    <string name="RS3227"> گدا </string>
+    <string name="RS3228"> سوفا </string>
+    <string name="RS3229"> ٹیبل </string>
+    <string name="RS3230"> الماری یا دراز </string>
+
+    <string name="RS33"> پوچھیں، دیکھیں اور نوٹ کریں کہ گھر میں کونسے جانور ہیں؟ </string>
+    <string name="RS331"> بکری، گائے،بھینس </string>
+    <string name="RS332"> مرغا، مرغی، بطخ، ہنس </string>
+    <string name="RS333"> دیگر پرندے </string>
+    <string name="RS334"> کتے </string>
+    <string name="RS335"> بلیاں </string>
+    <string name="RS336"> دیگر وضاحت کریں </string>
+    <string name="RS336x"> دیگر وضاحت کریں </string>
+
+    <string name="RS34"> کیا آپکے گھر میں کوئی سگریٹ پیتا ہے؟ </string>
+    <string name="RS35"> وہ سگریٹ کتنی مرتبا پیتے ہیں؟ </string>
+    <string name="RS36"> کیا وہ سگریٹ گھر کے اندر پیتے ہیں؟ </string>
+    <string name="RS37"> گھر میں کھانا پکانے کے لئے کس قسم کا چولہا اور ایندھن کا استعمال کیا جاتا ہے </string>
+    <string name="RS37x"> دیگر </string>
+    <string name="RS38"> گھر میں کون سی جگہ کھانا پکتا ہے؟ [براہ کرم یقین دہانی کریں اور تصدیق کر کے جواب دیں] </string>
+    <string name="RS38x"> دیگر </string>
+    <string name="RS39"> اگر چولہا گھر کے اندر ہے تو، اُس کے لئے کس قسم کی وینٹیلیشن کا استعمال کیا جاتا ہے؟ </string>
+    <string name="RS39x"> دیگر </string>
+    <string name="RS40"> جب کھانا پکایا جاتا ہے تو عام طور پربچہ کہاں رہتا ہے؟ </string>
+
+    <string name="Section4"> پچھلی صحت کی معلومات </string>
+    <string name="RS41"> کیا بچے کو پہلے سال میں کوئی سانس لینے والی پیچیدگی یا بیماری تھی؟ </string>
+    <string name="RS42"> بچے کو کس قسم کی پیچیدگی یا بیماری تھی ؟ </string>
+    <string name="RS421"> کھانسی </string>
+    <string name="RS422"> سرد / بہتی ہوئی ناک </string>
+    <string name="RS423"> سانس لینے میں مشکل </string>
+    <string name="RS424"> ڈی چیسٹ اندرا </string>
+    <string name="RS4277"> دیگر </string>
+    <string name="RS4277x"> دیگر </string>
+    <string name="RS428"> پتہ نہیں </string>
+
+    <string name="RS43"> کیا آپ نے کبھی اس بیماری یا مشکل کے لیے کسی ڈاکٹر کو دکھایا؟ </string>
+    <string name="RS44"> آپ نے بچے کو کہاں دکھایا تھا؟ </string>
+    <string name="RS441"> ہسپتال مقامی وضاحت کریں </string>
+    <string name="RS442"> پہلی سطح کی سہولت </string>
+    <string name="RS443"> آؤٹ ریچ / سیٹلائٹ </string>
+    <string name="RS444"> ڈاکٹر کے چیمبر </string>
+    <string name="RS445"> گھر میں </string>
+    <string name="RS4477"> (وضاحت کریں) دیگر </string>
+    <string name="RS448"> پتہ نہیں </string>
+
+    <string name="RS45"> کیا بچا ہسپتال میں داخل ہوا تھا؟ </string>
+    <string name="RS46"> کونسی تاریخ کوبچہ ہسپتال میں داخل ہوا تھا؟ </string>
+    <string name="RS47"> بچا کتنے دن ہسپتال میں رہا تھا؟ </string>
+    <string name="RS48"> کیا بچے نے گھر میں کسی دوا کا استعمال کیا؟ </string>
+
+    <string name="Section5"> ایٹوپک ڈرمیٹائٹس کے لئے اسکریننگ </string>
+    <string name="RS49"> کیا بچے کو خارش کے ساتھ جلد پر ریش تھے جو کم سے کم 12 ماہ تک آتے جاتے رہے ؟ </string>
+    <string name="RS50"> کیا پچھلے 12 مہینے کے دوران بچے کو خارش کے ساتھ جلد پر ریش ہوئے ہیں </string>
+    <string name="RS51"> کیا یہ جلد پر خارش کے ساتھ ریش سے جسم کے یہ حصے متاثرہوئے تھے: کہنیوں کے تہہ ، گھٹنوں کے پیچھے ، ٹخنوں کے سامنے ، کولہوں کے نیچے ، یا گردن ، کان یا آنکھوں کے گرد؟ </string>
+    <string name="RS52"> پہلی مرتبہ کس عمر میں یہ خارش کے ساتھ ریش ہوئے تھے؟ </string>
+    <string name="RS53"> کیا پچھلے 12 مہینے کے دوران یہ خارش کے ساتھ ریش پوری طرح صاف ہوگئے تھے؟ </string>
+    <string name="RS54"> پچھلے 12 مہینوں میں ، کتنی مرتبہ، آپ کا بچا رات کے وقت خارش کی وجہ سے جاگ گیا تھا؟ </string>
+    <string name="RS55"> کیا آپکے بچے کو کبھی ایکزیما ہوا تھا؟ </string>
+    <string name="RS56"> گزشتہ 12 مہینوں کے دوران آپ کے بچے کو ایکزیما ہوا ہے؟ </string>
+
+    <string name="section6"> (دمہ اور پہاڑی کی ویڈیو دکھائیں) 6.0) دمہ کے لئے اسکریننگ </string>
+    <string name="RS57"> کیا ماضی میں کسی بھی وقت بچے کے سینے میں گھرگھراہٹ (سینے سے سیٹی کی آواز) آئی ہے؟ </string>
+    <string name="RS58"> کیا پچھلے 12 مہینوں میں کسی بھی وقت سینے میں گھرگھراہٹ (سینے سے سیٹی کی آواز)آئی ہے؟ </string>
+    <string name="RS59"> پچھلے 12 مہینوں میں گھرگھراہٹ (سینے سے سیٹی کی آواز) کے کتنے واقعات ہوئے ہیں؟ </string>
+    <string name="RS60"> پچھلے 12 مہینوں میں ، گھرگھراہٹ (سینے سے سیٹی کی آواز) کی وجہ سے کتنی بار نیند خراب ہوئی ہے </string>
+    <string name="RS61"> پچھلے 12 مہینوں میں ، رات میں کھانسی کی وجہ سے کتنی بار نیند میں خلل پڑا ہے ، جب آپ کا بچہ ٹھیک ظاہر ہوتا ہے (یعنی کوئی زُکام یا سینے میں انفکشن نہیں ہوتا ہے) </string>
+    <string name="RS62"> پچھلے 12 مہینوں میں ، گھرگھراھٹ کبھی اتنی شدید ہوئی کہ بولنے یا رونے کی آواز کو محدود کردے؟ </string>
+    <string name="RS63"> کیا کبھی بچے کو دمہ کی تشخیص ہوئی ہے؟ </string>
+    <string name="RS64"> دمہ کی تشخیص کس نے کی؟ </string>
+    <string name="RS64x"> کوئی اور؟ وضاحت کریں </string>
+    <string name="RS65"> پچھلے 12 مہینوں میں ، کیا آپ کے بچے کو ورزش کے دوران یا اس کے بعد خشک کھانسی ہوئی ہے (سینے سے سیٹی کی آواز) آئی ہے؟ </string>
+    <string name="RS66"> پچھلے 12 مہینوں میں ، کیا اس سردی یا سینے میں انفیکشن سے وابستہ کھانسی کے علاوہ بھی ، بچے کو رات کو خشک کھانسی ہوئی ہے؟ </string>
+
+    <string name="section7"> راینائیٹس کے لئے اسکریننگ </string>
+    <string name="RS67"> جب سردی یا فلو نہیں ہے تو کیا آپ کے بچے کو چھینکنے یا ناک بند ہونے/ بہنے سے کبھی تکلیف ہوئی ہے؟ </string>
+    <string name="RS68"> پچھلے 12 مہینوں میں ، جب آپ کو نزلہ یا فلو نہیں تھا ، تو کیا بچے کو چھینک ، یا ناک بند ہونے سے مسئلہ ہوا تھا؟ </string>
+    <string name="RS69"> پچھلے 12 مہینوں میں ، کیا آنکھوں میں خارش کے ساتھ اس ناک کی تکلیف کا سامنا کرنا پڑا ہے؟ </string>
+    <string name="RS70"> پچھلے 12 ماہ کے دوران ناک کی تکلیف ہوئی؟ </string>
+    <string name="RS71"> پچھلے 12 مہینوں میں ، ناک کی اس پریشانی نے آپ کے بچے کی روز مرہ کی سرگرمیوں میں کتنا مداخلت کی ہے؟ </string>
+    <string name="RS72"> کیا بچے کو کبھی بخار ہوا ہے؟ </string>
+    <string name="RS73"> پچھلے 12 مہینے میں بچے کو بخار ہوا ہے؟ </string>
+
+    <string name="section8"> خاندان کی بیماری کے لئے اسکریننگ </string>
+    <string name="RS74"> کیا ماں کو کبھی یہ مثائل ہوئے؟ </string>
+    <string name="RS741"> دمہ </string>
+    <string name="RS742"> رائینایٹس </string>
+    <string name="RS743"> ایکزیما </string>
+
+    <string name="RS75"> کیا والد کو کبھی یہ مثائل ہوئے؟ </string>
+    <string name="RS751"> دمہ </string>
+    <string name="RS752"> رائینایٹس </string>
+    <string name="RS753"> ایکزیما </string>
+
+
+    <string name="Section9"> پیش قدمی عوامل </string>
+    <string name="RS76"> اِن میں سے کِن چیزوں کی وجہ سے آپکے بچے کو سانس لینے کی مشکلات میں مذید اضافہ ہوتا ہے؟ </string>
+    <string name="RS761"> ورزش </string>
+    <string name="RS762"> انفیکشن </string>
+    <string name="RS763"> جذبات۔ (رونا / ہنسنا) </string>
+    <string name="RS764"> سیزن / موسم </string>
+    <string name="RS765"> دھواں </string>
+    <string name="RS766"> ماحولیاتی آلودگی </string>
+    <string name="RS767"> گھریلو دھول </string>
+    <string name="RS768"> سرد موسم </string>
+    <string name="RS769"> جرگ (پولن) </string>
+    <string name="RS7610"> پنکھ / پَر </string>
+    <string name="RS7611"> گھاس </string>
+    <string name="RS7612"> کچھ اور </string>
+
+    <string name="Section92"> 2 پیش قدمی عوامل </string>
+    <string name="RS77"> کیا آپ کے بچے کو کسی غذا سے الرجی ہے؟ </string>
+    <string name="RS78"> آپ کے بچے کو کون سی غذا سے الرجی ہے؟ </string>
+    <string name="RS79"> برائے مہربانی ھیلتھ کارڈ تحقیقی کارکن کے حوالے کر دیں </string>
+    <string name="RS80"> انٹرویو کا اختتام ہوگیا؟ </string>
 
 
     <string name="end_interview"> اختتام </string>
