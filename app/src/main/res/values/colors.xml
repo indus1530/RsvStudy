@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryDark">#42a5f5</color>
+    <!--<color name="colorPrimary">#880E4F</color>-->
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryAlpha">#6e8b6f</color>
+    <color name="colorPrimaryBeta">#5c6bc0</color>
+    <color name="colorPrimaryGamma">#99a3ff</color>
+    <color name="colorAccent">#4fab54</color>
+    <color name="pink_100">#ccefd3</color>
+    <color name="colorHeading">#CDDC39</color>
+
+    <color name="black">#000000</color>
+    <color name="blackOverlay">#66000000</color>
+    <color name="dullBlack">#292929</color>
+    <color name="grayOverlay">#7f7f7f7f</color>
+    <color name="gray">#7f7f7f</color>
+    <color name="dullWhiteOverlay">#99d6d6d6</color>
+    <color name="whiteOverlay">#99ffffff</color>
+    <color name="WhiteOverlay">#d6d6d6d6</color>
+    <color name="dullWhite">#d6d6d6</color>
+    <color name="white">#ffffff</color>
+    <color name="colorText">#050505</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="dullWhileOverlay">#99d6d6d6</color>
+    <color name="dullWhile">#d6d6d6</color>
+
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
+    <color name="green">#4caf50</color>
+    <color name="red">#f44336</color>
+
+    <color name="darkRed">#D50000</color>
+    <color name="lightOrange">#FFE0B2</color>
+
+</resources>

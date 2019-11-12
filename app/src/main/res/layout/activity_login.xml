@@ -1,0 +1,388 @@
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.aku.hassannaqvi.uen_tmk.activities.LoginActivity">
+
+    &lt;!&ndash; Login progress &ndash;&gt;
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="72dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:gravity="center_horizontal"
+                android:keepScreenOn="true"
+                android:text="@string/app_name"
+                android:textColor="@color/colorAccent"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="#efefef"
+                android:gravity="center_horizontal"
+                android:text="A Project of"
+                android:textColor="@color/blackOverlay"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:contentDescription="Aga Khan LOGO"
+                android:src="@drawable/agakhan" />
+
+            &lt;!&ndash;android:onClick="gotoMain"&ndash;&gt;
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
+                android:hint="Username/Code"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0.99"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+
+                    />
+
+                <Button
+                    android:id="@+id/showPassword"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:background="#d6d6d6"
+                    android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                    android:padding="0dp"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spUC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:popupBackground="#3d3d3d"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/syncData"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_cloud_download_black_24dp"
+                    android:padding="16dp"
+                    android:text="Sync Users"
+
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:layout_weight="3"
+                    android:background="@android:color/holo_green_dark"
+                    android:padding="16dp"
+                    android:text="@string/action_sign_in"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtinstalldate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#efefef"
+                android:gravity="center"
+                android:textColor="#565656"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.LoginActivity">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginBottom="72dp"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:gravity="center_horizontal"
+                android:keepScreenOn="true"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:gravity="center_horizontal"
+                android:text="A PROJECT OF"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:contentDescription="Aga Khan LOGO"
+                android:src="@drawable/agakhannew" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="0.99"
+                        android:drawableEnd="@drawable/ic_assignment_ind_black_24dp"
+                        android:drawablePadding="8dp"
+                        android:hint="Username/Code"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:singleLine="true"
+                        android:textSize="18sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                </LinearLayout>
+
+                <!--android:text="dmu@aku"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/showPassword"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_button"
+                        android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.99"
+                        android:drawableEnd="@drawable/ic_lock_black_24dp"
+                        android:drawablePadding="8dp"
+                        android:hint="@string/prompt_password"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+
+                    <!--android:text="aku?dmu"-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spTaluka"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+
+
+                android:layoutDirection="rtl"
+                android:popupBackground="#3d3d3d"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spUCs"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+
+
+                android:layoutDirection="rtl"
+                android:popupBackground="#3d3d3d"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <Button
+                    android:id="@+id/syncData"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="38"
+                    android:background="@color/black_overlay"
+                    android:drawableStart="@drawable/ic_cloud_download_black_24dp"
+                    android:padding="15dp"
+                    android:text="Sync Data"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="68"
+                    android:background="#56ae51"
+                    android:padding="16dp"
+                    android:text="@string/action_sign_in"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtinstalldate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#efefef"
+                android:gravity="center"
+                android:textColor="#565656"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

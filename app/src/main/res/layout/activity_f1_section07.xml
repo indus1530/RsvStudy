@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.form1.F1Section07Activity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section07Activity" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl">
+
+        <LinearLayout style="@style/linearlayout_view">
+
+            <TextView
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pocfgheading" />
+
+            <LinearLayout
+                android:id="@+id/fldGrppocfgA"
+                style="@style/linearlayout_view_wt_bound">
+
+                <!-- 1-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/pocfg01"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
+
+                <RadioGroup
+                    android:id="@+id/pocfg01"
+                    style="@style/i_radiogroup">
+
+                    <RadioButton
+                        android:id="@+id/pocfg01a"
+                        style="@style/i_radiobutton"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:id="@+id/pocfg01b"
+                        style="@style/i_radiobutton"
+                        android:text="@string/no" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    style="@style/linearlayout_view_wt_bound"
+                    android:visibility="@{pocfg01b.checked? View.GONE : View.VISIBLE}">
+                    <!-- 2-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/pocfg02"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
+
+                    <RadioGroup
+                        android:id="@+id/pocfg02"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfg02a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfg02a" />
+
+                        <RadioButton
+                            android:id="@+id/pocfg02b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfg02b" />
+
+                        <RadioButton
+                            android:id="@+id/pocfg02c"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfg02c" />
+
+                        <RadioButton
+                            android:id="@+id/pocfg02d"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfg02d" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- skip pattern layout-->
+                <LinearLayout
+                    android:id="@+id/fldGrppocfg03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8px">
+
+                    <!-- At Birth-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/atbirth"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- bcg -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfg03info"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgbcg"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgbcg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgbcga"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgbcgb"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgbcg97"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgbcga.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgbcgdt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgbcga.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgbcgdt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- opv0 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgopv0"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgopv0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv0a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv0b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv097"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgopv0a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgopv0dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgopv0a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgopv0dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- At age of 6 weeks-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/at6wks"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- OPV-1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgopv1"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgopv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv1a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv1b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv197"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgopv1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgopv1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgopv1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgopv1dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- Penta - 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgp1"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgp1a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgp1b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgp197"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgp1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgp1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgp1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgp1dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- PCV - 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgpcv1"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgpcv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv1a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv1b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv197"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgpcv1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgpcv1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgpcv1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgpcv1dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- Rota Virus - 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgrt1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgrt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgrt1a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgrt1b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgrt197"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgrt1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgrt1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgrt1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgrt1dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+
+                    <!-- At age of 10 weeks-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/at10wks"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- OPV-2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgopv2"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgopv2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv2a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv2b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv297"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgopv2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgopv2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgopv2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgopv2dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- Penta - 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgp2"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgp2a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgp2b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgp297"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgp2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgp2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgp2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgp2dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- PVC - 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgpcv2"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgpcv2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv2a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv2b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv297"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgpcv2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgpcv2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgpcv2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgpcv2dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- Rota Virus - 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgrt2"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgrt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgrt2a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgrt2b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgrt297"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgrt2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgrt2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgrt2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgrt2dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- At age of 14 weeks-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/at14wks"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- OPV-3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgopv3"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgopv3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv3a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv3b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no2" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgopv397"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgopv3a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgopv3dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgopv3a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgopv3dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- Penta - 3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgp3"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgp3a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgp3b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgp397"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgp3a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgp3dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgp3a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgp3dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- PCV - 3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgpcv3"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgpcv3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv3a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv3b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgpcv397"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgpcv3a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgpcv3dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgpcv3a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgpcv3dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!-- IPV  -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgipv"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgipv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgipva"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgipvb"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgipv97"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgipva.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgipvdt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgipva.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgipvdt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- At age of 9 months-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/at9m"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Measles-1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgm1"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgm1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgm1a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgm1b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgm197"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgm1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgm1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgm1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgm1dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- At age of 15 months-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/at15m"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Measles-2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pocfgm2"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/pink_100"
+                            android:text="@string/response"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <RadioGroup
+                            android:id="@+id/pocfgm2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pocfgm2a"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgm2b"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no1" />
+
+                            <RadioButton
+                                android:id="@+id/pocfgm297"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/na1" />
+
+                        </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{pocfgm2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/pocfgdoi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/pocfgm2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{pocfgm2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/pocfgm2dt"
+                                        style="@style/textInput"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- end of skip pattern-->
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/pocfg03cv"
+                        style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:text="@string/pocfg03"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                style="@style/linearlayout_view_wt_bound"
+                                android:layoutDirection="ltr"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/pocfg0397"
+                                    style="@style/checkbox"
+                                    android:layout_width="0dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="30"
+                                    android:padding="8dp"
+                                    android:tag="-1"
+                                    android:text="@string/pocfg0397" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pocfg03"
+                                    style="@style/EditText_number"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_weight="70"
+                                    android:hint="@string/pocfg03x"
+                                    android:text='@{pocfg0397.checked ? "" : pocfg03.getText.toString}'
+                                    android:textColor="@android:color/black"
+                                    android:visibility='@{pocfg0397.checked ? View.GONE : View.VISIBLE}'
+                                    app:mask="##"
+                                    app:maxValue="20"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="32dp">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

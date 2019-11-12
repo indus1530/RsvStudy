@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.form3.F3Section01Activity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form3.F3Section01Activity" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dullWhile"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:id="@+id/llF3S1A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pofisec1" />
+
+            <!--Check HH button-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout
+                    android:id="@+id/llF3S1B"
+                    style="@style/linearlayout_view_wt_bound">
+
+
+                    <!--pofi001-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pofi001" />
+
+                            <Spinner
+                                android:id="@+id/pofi001"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pofi002-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pofi002" />
+
+                            <Spinner
+                                android:id="@+id/pofi002"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pofi003-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pofi003" />
+
+                            <Spinner
+                                android:id="@+id/pofi003"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:background="@android:color/darker_gray"
+                                android:paddingTop="5dp" />
+
+                            <TextView
+                                android:id="@+id/lhwcode"
+                                style="@style/textview_fm_lst_h" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!--pofi00-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pofi00" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pofi00"
+                                style="@style/EditText_number"
+                                android:hint="###"
+                                app:mask="###"
+                                app:maxValue="500"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <Button
+                        android:id="@+id/checkHHBtn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:elevation="5dp"
+                        android:text="CHECK"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/llform03"
+                style="@style/linearlayout_view"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <!--&lt;!&ndash;pofi01&ndash;&gt;
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pofi01"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/pofi01"
+                            style="@style/textInput"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>-->
+
+                <!--pofi004-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi004" />
+
+                        <EditText
+                            android:id="@+id/pofi004"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pofi004" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi005-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi005" />
+
+                        <EditText
+                            android:id="@+id/pofi005"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pofi005" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi02-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi02" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi02"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi02a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/pofi02b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi03-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi03cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi03" />
+
+                        <LinearLayout
+                            android:id="@+id/fldGrppofi03"
+                            style="@style/linearlayout_view"
+                            android:tag="0">
+
+                            <CheckBox
+                                android:id="@+id/pofi03a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi03a" />
+
+                            <CheckBox
+                                android:id="@+id/pofi03b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi03b" />
+
+                            <CheckBox
+                                android:id="@+id/pofi03c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi03c" />
+
+                            <CheckBox
+                                android:id="@+id/pofi0396"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/pofi0396x"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/specify"
+                                android:tag="pofi0396"
+                                android:text='@{pofi0396.checked? pofi0396x.getText.toString : "" }'
+                                android:visibility='@{pofi0396.checked? View.VISIBLE : View.GONE}' />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi04-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi04" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi04"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi04a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/pofi04b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi05-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi05cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi05" />
+
+                        <LinearLayout
+                            android:id="@+id/fldGrppofi05"
+                            style="@style/linearlayout_view"
+                            android:tag="0">
+
+                            <CheckBox
+                                android:id="@+id/pofi05a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi05a" />
+
+                            <CheckBox
+                                android:id="@+id/pofi05b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi05b" />
+
+                            <CheckBox
+                                android:id="@+id/pofi05c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi05c" />
+
+                            <CheckBox
+                                android:id="@+id/pofi05d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi05d" />
+
+                            <CheckBox
+                                android:id="@+id/pofi0596"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/pofi0596x"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/specify"
+                                android:tag="pofi0596"
+                                android:text='@{pofi0596.checked? pofi0596x.getText.toString : "" }'
+                                android:visibility='@{pofi0596.checked? View.VISIBLE : View.GONE}' />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi051-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi051" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi051"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi051a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <EditText
+                                android:id="@+id/pofi051ax"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/pofi051ax"
+                                android:tag="pofi051a"
+                                android:text='@{pofi051a.checked? pofi051ax.getText.toString : "" }'
+                                android:visibility='@{pofi051a.checked? View.VISIBLE : View.GONE}' />
+
+                            <RadioButton
+                                android:id="@+id/pofi051b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi06-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi06" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi06"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi06a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <EditText
+                                android:id="@+id/pofi06ax"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/pofi06ax"
+                                android:tag="pofi06a"
+                                android:text='@{pofi06a.checked? pofi06ax.getText.toString : "" }'
+                                android:visibility='@{pofi06a.checked? View.VISIBLE : View.GONE}' />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pofi06ay"
+                                style="@style/EditText_number"
+                                android:hint="@string/pofi06ay"
+                                android:tag="pofi06a"
+                                android:text='@{pofi06a.checked? pofi06ay.getText.toString : "" }'
+                                android:visibility='@{pofi06a.checked? View.VISIBLE : View.GONE}'
+                                app:mask="#"
+                                app:maxValue="8"
+                                app:minValue="1"
+                                app:type="range" />
+
+                            <RadioButton
+                                android:id="@+id/pofi06b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi07-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi07" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi07"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi07a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/pofi07b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                            <RadioButton
+                                android:id="@+id/pofi0797"
+                                style="@style/i_radiobutton"
+                                android:text="@string/na" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi08-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvpofi08"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi08" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi08"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi08a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi08a" />
+
+                            <RadioButton
+                                android:id="@+id/pofi08b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi08b" />
+
+                            <RadioButton
+                                android:id="@+id/pofi0896"
+                                style="@style/i_radiobutton"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/pofi0896x"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/specify"
+                                android:tag="pofi0896"
+                                android:text='@{pofi0896.checked? pofi0896x.getText.toString : "" }'
+                                android:visibility='@{pofi0896.checked? View.VISIBLE : View.GONE}' />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi09-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvpofi09"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi09" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi09"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi09a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi09a" />
+
+                            <RadioButton
+                                android:id="@+id/pofi09b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi09b" />
+
+                            <RadioButton
+                                android:id="@+id/pofi0997"
+                                style="@style/i_radiobutton"
+                                android:text="@string/na" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi10-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi10" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi10"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi10a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/pofi10b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi101-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi101cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi101" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi101"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi101a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/pofi101b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi11-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi11cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi11" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi11"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi11a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi11a" />
+
+                            <EditText
+                                android:id="@+id/pofi11ax"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/pofi11ax"
+                                android:tag="pofi11a"
+                                android:text='@{pofi11a.checked? pofi11ax.getText.toString : "" }'
+                                android:visibility='@{pofi11a.checked? View.VISIBLE : View.GONE}' />
+
+                            <RadioButton
+                                android:id="@+id/pofi11b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi11b" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi12-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi12cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pofi12"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/pofi12"
+                            style="@style/textInput"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi13-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi13cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi13" />
+
+                        <LinearLayout
+                            android:id="@+id/fldGrppofi13"
+                            style="@style/linearlayout_view"
+                            android:tag="0">
+
+                            <CheckBox
+                                android:id="@+id/pofi13a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi13a" />
+
+                            <CheckBox
+                                android:id="@+id/pofi13b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi13b" />
+
+                            <CheckBox
+                                android:id="@+id/pofi13c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi13c" />
+
+                            <CheckBox
+                                android:id="@+id/pofi13d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi13d" />
+
+                            <CheckBox
+                                android:id="@+id/pofi13e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi13e" />
+
+                            <CheckBox
+                                android:id="@+id/pofi13f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi13f" />
+
+                            <CheckBox
+                                android:id="@+id/pofi1396"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/pofi1396x"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/specify"
+                                android:tag="pofi1396"
+                                android:text='@{pofi1396.checked? pofi1396x.getText.toString : "" }'
+                                android:visibility='@{pofi1396.checked? View.VISIBLE : View.GONE}' />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi14-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pofi14cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi14" />
+
+                        <LinearLayout
+                            style="@style/linearlayout_view"
+                            android:tag="0">
+
+                            <CheckBox
+                                android:id="@+id/pofi14a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14a" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14b" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14c" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14d" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14e" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14f" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14g"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14g" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14h" />
+
+                            <CheckBox
+                                android:id="@+id/pofi14i"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14i" />
+
+                            <CheckBox
+                                android:id="@+id/pofi1496"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/pofi1496x"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/specify"
+                                android:tag="pofi1496"
+                                android:text='@{pofi1496.checked? pofi1496x.getText.toString : "" }'
+                                android:visibility='@{pofi1496.checked? View.VISIBLE : View.GONE}' />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi15-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi15" />
+
+                        <RadioGroup
+                            android:id="@+id/pofi15"
+                            style="@style/i_radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/pofi15a"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi15a" />
+
+                            <RadioButton
+                                android:id="@+id/pofi15b"
+                                style="@style/i_radiobutton"
+                                android:text="@string/pofi15b" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="32dp">
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:text="@string/nextSection"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnEnd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_red_light"
+                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:text="@string/end_interview"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>

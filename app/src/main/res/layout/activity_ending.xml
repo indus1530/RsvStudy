@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layoutDirection="rtl"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/i_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/dcstatus"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <RadioGroup
+                android:id="@+id/istatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/istatus1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus1"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus2"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus3"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus4"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus5"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus6"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatus7"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/istatus8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/other"
+                    android:textSize="25sp" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/istatus888x"
+                style="@style/EditTextAlphaNumeric"
+                android:layout_marginBottom="1dp"
+                android:hint="@string/specify"
+                android:inputType="textCapWords"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_End"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_weight="1"
+                android:onClick="endInterview"
+                android:text="@string/end_interview"
+                android:textColor="#ff1e1e"
+                android:textSize="30dp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
