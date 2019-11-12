@@ -31,19 +31,13 @@
 
     <string name="Section1"> ایڈریس اور شناخت کی معلومات </string>
     <string name="RSID"> شُرکا کا شناختی نمبر # </string>
-
     <string name="RS7"> ماں کا موجودہ شناختی آئی ڈی </string>
-
-    <string name="RS8"> آئی ڈی ماں کا مستقل شناختی </string>
-
+    <string name="RS8"> ماں کا مستقل شناختی آئی ڈی </string>
     <string name="RS9"> بچے کا نام </string>
-
     <string name="RS10"> ماں کا نام </string>
-
     <string name="RS11"> والد کا نام </string>
-
     <string name="RS12"> گھر کے سربراہ کا نام </string>
-    <string name="RS13"> کا نام اور کوڈ CHW </string>
+    <string name="RS13"> سی ایچ ڈبلیو کا نام اور کوڈ </string>
     <string name="RS14"> وِزِٹ کی تاریخ (پہلی کوشش) </string>
 
     <string name="Section2"> رضاکارانہ طور پر دیکھ بھال کرنے والا </string>
