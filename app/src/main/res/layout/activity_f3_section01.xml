@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form3.F3Section01Activity" />
+            type="edu.aku.hassannaqvi.rsvstudy.ui.form3.F3Section01Activity" />
 
     </data>
 
