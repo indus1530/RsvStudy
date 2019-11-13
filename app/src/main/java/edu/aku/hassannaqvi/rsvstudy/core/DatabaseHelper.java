@@ -560,6 +560,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allDC;
     }
 
+    public Collection<LHWContract> getAllLhw() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                lhwEntry._ID,
+                lhwEntry.COLUMN_LHW_CODE,
+                lhwEntry.COLUMN_LHW_NAME
+        };
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                lhwEntry._ID + " ASC";
+
+        Collection<LHWContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    singleTalukas.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                TalukasContract dc = new TalukasContract();
+                allDC.add(dc.HydrateTalukas(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
     public Collection<ChildrenContract> getChildBy(String lhw_code, String caseid) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;

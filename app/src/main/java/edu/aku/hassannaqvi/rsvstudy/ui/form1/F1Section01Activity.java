@@ -1,32 +1,38 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
-import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class F1Section01Activity extends AppCompatActivity {
 
     public static String DOB;
     ActivityF1Section01Binding bi;
-    private List<String> ucName, talukaNames, villageNames, lhwNames;
-    private List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
+    private List<String> ucName, talukaNames, villageNames, chwNames;
+    private List<String> ucCode, talukaCodes, villageCodes, chwCodes;
     private DatabaseHelper db;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
@@ -35,29 +41,29 @@ public class F1Section01Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section_01);
         bi.setCallback(this);
-        this.setTitle("Form 01 (Case Reporting Form)");
+        this.setTitle("RSV Study section 1");
         initializingComponents();
 
     }
 
     private void initializingComponents() {
         db = new DatabaseHelper(this);
-        //populateSpinner(this);
+        populateSpinner(this);
 
         //bi.pocfa12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
     }
 
-    /*public void populateSpinner(final Context context) {
+    public void populateSpinner(final Context context) {
         // Spinner Drop down elements
-        talukaNames = new ArrayList<>();
-        talukaCodes = new ArrayList<>();
+        chwNames = new ArrayList<>();
+        chwCodes = new ArrayList<>();
 
-        talukaNames.add("....");
-        talukaCodes.add("....");
+        chwNames.add("....");
+        chwCodes.add("....");
 
-        Collection<TalukasContract> dc = db.getAllTalukas();
+        Collection<LHWContract> dc = db.getAllLHWsByTaluka();
 
-        for (TalukasContract d : dc) {
+        for (LHWContract d : dc) {
             talukaNames.add(d.getTaluka());
             talukaCodes.add(d.getTalukacode());
         }
@@ -113,21 +119,21 @@ public class F1Section01Activity extends AppCompatActivity {
                     villageNames.add(p.getVillagename());
                 }
 
-                lhwCodes = new ArrayList<>();
-                lhwNames = new ArrayList<>();
+                chwCodes = new ArrayList<>();
+                chwNames = new ArrayList<>();
 
-                lhwCodes.add("....");
-                lhwNames.add("....");
+                chwCodes.add("....");
+                chwNames.add("....");
 
                 Collection<LHWContract> lhw =
                         db.getAllLHWsByTaluka(talukaCodes.get(bi.pocfa01.getSelectedItemPosition()),
                                 ucCode.get(bi.pocfa02.getSelectedItemPosition()));
                 for (LHWContract p : lhw) {
-                    lhwCodes.add(p.getLhwcode());
-                    lhwNames.add(p.getLhwname());
+                    chwCodes.add(p.getLhwcode());
+                    chwNames.add(p.getLhwname());
                 }
 
-                bi.pocfa03.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, lhwNames));
+                bi.RS13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, chwNames));
                 bi.pocfa04.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageNames));
             }
 
@@ -137,11 +143,11 @@ public class F1Section01Activity extends AppCompatActivity {
             }
         });
 
-        bi.pocfa03.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.RS13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
-                bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+                bi.chwcode.setText("LHW Code: " + chwCodes.get(i));
             }
 
             @Override
@@ -150,7 +156,7 @@ public class F1Section01Activity extends AppCompatActivity {
             }
         });
 
-    }*/
+    }
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -171,7 +177,7 @@ public class F1Section01Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01))
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll01))
             return;
 
         try {
@@ -214,12 +220,21 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
-        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
-        MainApp.fc.setRef_ID(bi.pocfa08.getText().toString());
+        MainApp.fc.setRef_ID(bi.RSID.getText().toString());
+        MainApp.fc.setCode_lhw(chwCodes.get(bi.RS13.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.chwcode.getText().toString());
 
         JSONObject SA = new JSONObject();
 
-        SA.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
+        SA.put("RSID", bi.RSID.getText().toString());
+        SA.put("RS7", bi.RS7.getText().toString());
+        SA.put("RS8", bi.RS8.getText().toString());
+        SA.put("RS9", bi.RS9.getText().toString());
+        SA.put("RS10", bi.RS10.getText().toString());
+        SA.put("RS11", bi.RS11.getText().toString());
+        SA.put("RS12", bi.RS12.getText().toString());
+
+        /*SA.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
         SA.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
         SA.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
         SA.put("pocfa06", bi.pocfa06.getText().toString());
@@ -239,27 +254,27 @@ public class F1Section01Activity extends AppCompatActivity {
         SA.put("pocfa13y", bi.pocfa13y.getText().toString());
         SA.put("pocfa13m", bi.pocfa13m.getText().toString());
         SA.put("pocfa13d", bi.pocfa13d.getText().toString());
-        SA.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");
+        SA.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");*/
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);
 
-        DOB = getDOB();
+        /*DOB = getDOB();*/
 
     }
 
 
-    private String getDOB() {
+    /*private String getDOB() {
         if (bi.pocfa11a.isChecked())
             return DateUtils.convertDateFormat(bi.pocfa12.getText().toString());
         else return DateUtils.getDOB("dd/MM/yyyy",
                 Integer.valueOf(bi.pocfa13y.getText().toString()),
                 Integer.valueOf(bi.pocfa13m.getText().toString()),
                 Integer.valueOf(bi.pocfa13d.getText().toString()));
-    }
+    }*/
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01);
+        return ValidatorClass.EmptyCheckingContainer(this, bi.ll01);
     }
 
 }
