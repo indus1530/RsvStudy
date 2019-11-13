@@ -61,87 +61,14 @@ public class F1Section01Activity extends AppCompatActivity {
         chwNames.add("....");
         chwCodes.add("....");
 
-        Collection<LHWContract> dc = db.getAllLHWsByTaluka();
+        Collection<LHWContract> dc = db.getAllLhw();
 
         for (LHWContract d : dc) {
-            talukaNames.add(d.getTaluka());
-            talukaCodes.add(d.getTalukacode());
+            chwNames.add(d.getLhwname());
+            chwCodes.add(d.getLhwcode());
         }
 
-        bi.pocfa01.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, talukaNames));
-
-        bi.pocfa01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                if (position == 0) return;
-
-                ucCode = new ArrayList<>();
-                ucName = new ArrayList<>();
-
-                ucCode.add("....");
-                ucName.add("....");
-
-                Collection<UCsContract> pc = db.getAllUCsbyTaluka(talukaCodes.get(position));
-                for (UCsContract p : pc) {
-                    ucCode.add(p.getUccode());
-                    ucName.add(p.getUcs());
-                }
-
-                bi.pocfa02.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, ucName));
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-
-            }
-        });
-
-        bi.pocfa02.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                if (position == 0) return;
-
-                villageCodes = new ArrayList<>();
-                villageNames = new ArrayList<>();
-
-                villageCodes.add("....");
-                villageNames.add("....");
-
-                Collection<VillagesContract> pc =
-                        db.getAllPSUsByTaluka(talukaCodes.get(bi.pocfa01.getSelectedItemPosition()),
-                                ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-                for (VillagesContract p : pc) {
-                    villageCodes.add(p.getVillagecode());
-                    villageNames.add(p.getVillagename());
-                }
-
-                chwCodes = new ArrayList<>();
-                chwNames = new ArrayList<>();
-
-                chwCodes.add("....");
-                chwNames.add("....");
-
-                Collection<LHWContract> lhw =
-                        db.getAllLHWsByTaluka(talukaCodes.get(bi.pocfa01.getSelectedItemPosition()),
-                                ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-                for (LHWContract p : lhw) {
-                    chwCodes.add(p.getLhwcode());
-                    chwNames.add(p.getLhwname());
-                }
-
-                bi.RS13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, chwNames));
-                bi.pocfa04.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageNames));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+        bi.RS13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, chwNames));
 
         bi.RS13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
