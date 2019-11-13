@@ -42,7 +42,7 @@ public class F1Section01Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section_01);
         bi.setCallback(this);
         this.setTitle("RSV Study section 1");
-        initializingComponents();
+        //initializingComponents();
 
     }
 
@@ -160,28 +160,6 @@ public class F1Section01Activity extends AppCompatActivity {
         SA.put("RS10", bi.RS10.getText().toString());
         SA.put("RS11", bi.RS11.getText().toString());
         SA.put("RS12", bi.RS12.getText().toString());
-
-        /*SA.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
-        SA.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-        SA.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
-        SA.put("pocfa06", bi.pocfa06.getText().toString());
-        SA.put("pocfa07", bi.pocfa07a.isChecked() ? "1"
-                : bi.pocfa07b.isChecked() ? "2"
-                : bi.pocfa07c.isChecked() ? "3"
-                : bi.pocfa07d.isChecked() ? "4"
-                : bi.pocfa07e.isChecked() ? "5"
-                : bi.pocfa07f.isChecked() ? "6"
-                : bi.pocfa0796.isChecked() ? "96"
-                : "0");
-        SA.put("pocfa0796x", bi.pocfa0796x.getText().toString());
-        SA.put("pocfa09", bi.pocfa09.getText().toString());
-        SA.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
-        SA.put("pocfa11", bi.pocfa11a.isChecked() ? "1" : bi.pocfa11b.isChecked() ? "2" : "0");
-        SA.put("pocfa12", bi.pocfa12.getText().toString());
-        SA.put("pocfa13y", bi.pocfa13y.getText().toString());
-        SA.put("pocfa13m", bi.pocfa13m.getText().toString());
-        SA.put("pocfa13d", bi.pocfa13d.getText().toString());
-        SA.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");*/
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);
