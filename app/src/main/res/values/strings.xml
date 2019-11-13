@@ -28,7 +28,7 @@
     <string name="street">Street</string>
     <string name="cluster"> کلسٹر نمبر </string>
 
-
+    <!--Start RSV Study Strings-->
     <string name="Section1"> ایڈریس اور شناخت کی معلومات </string>
     <string name="RSID"> شُرکا کا شناختی نمبر # </string>
     <string name="RS7"> ماں کا موجودہ شناختی آئی ڈی </string>
@@ -76,14 +76,94 @@
     <string name="RS25"> گھر میں کتنے افراد ہیں؟ </string>
     <string name="RS26"> گھر میں سونے کے لیے کتنے کمرے ہیں؟ </string>
     <string name="RS27"> گھر کی چھت کو دیکھیں اور نوٹ کریں کہ چھت کا بنیادی مواد کیا ہے؟ </string>
+    <string name="RS27h1"> قدرتی چھت سازی </string>
+    <string name="RS271"> چھت نہیں ہے </string>
+    <string name="RS272"> اسچ چھت / کھجور کے درخت کے پتے/ ریڈ /  گھاس </string>
+    <string name="RS273"> مٹی </string>
+    <string name="RS274"> سوڈ / مٹی اور گھاس کا مرکب </string>
+    <string name="RS275"> پی لکڑی </string>
+    <string name="RS27h2"> بنیادی چھت سازی </string>
+    <string name="RS276"> رسٹک چٹائی </string>
+    <string name="RS277"> بانس </string>
+    <string name="RS278"> خام لکڑی کا تختہ / لکڑی / گتے </string>
+    <string name="RS279"> شیٹنگ / پلاسٹک Polyethylene  </string>
+    <string name="RS2710">  / اینٹیںUnburnt  </string>
+    <string name="RS2711"> جمع کئے گئے پتھر </string>
+    <string name="RS27h3"> مکمل تیار شدہ چھت </string>
+    <string name="RS2712"> میٹل / جی آئی یا آئرن شیٹ / ٹِن  </string>
+    <string name="RS2713"> تیار شدہ لکڑی </string>
+    <string name="RS2714"> کیلامین / سیمنٹ فائبر </string>
+    <string name="RS2715"> اسبسٹوس شیٹ </string>
+    <string name="RS2716"> مضبوط اینٹ  سیمنٹ / آرسیسی / کنکریٹ </string>
+    <string name="RS2717"> روف شنگلز </string>
+    <string name="RS2718"> ٹائلیں </string>
+    <string name="RS2719"> سلیٹ </string>
+    <string name="RS2720"> برنٹ برک </string>
     <string name="RS27x"> دیگر (وضاحت کریں) </string>
     <string name="RS28"> گھر کے فرش کو دیکھیں اور نوٹ کریں کہ فرش کا بنیادی مواد کیا ہے؟ </string>
+    <string name="RS28h1"> قدرتی فرش </string>
+    <string name="RS281"> گیلی مٹی / مٹی / زمین / ریت </string>
+    <string name="RS282"> ڈنگ </string>
+    <string name="RS283"> ابتدائی خام لکڑی کا تختہ </string>
+    <string name="RS284"> پام / بانس </string>
+    <string name="RS285"> سیمنٹ / چونے کے بغیر اینٹ </string>
+    <string name="RS286"> سیمنٹ / چونے کے بغیر پتھر </string>
+    <string name="RS28h2"> مکمل تیار شدہ فرش </string>
+    <string name="RS287"> لکڑی / پالش لکڑی </string>
+    <string name="RS288"> ونایل / اسفالٹ  </string>
+    <string name="RS289"> سیرامک ٹائلز  </string>
+    <string name="RS2810"> سیمنٹ </string>
+    <string name="RS2811"> چپس / ٹریرازو / موزیک </string>
+    <string name="RS2812"> قالین / چٹائی </string>
+    <string name="RS2813"> پالش پتھر / ماربل / گرینٹ </string>
     <string name="RS28x"> دیگر (وضاحت کریں) </string>
     <string name="RS29"> گھر کے باہر کی دیواروں کو دیکھیں اور نوٹ کریں کہ دیواروں کا بنیادی مواد کیا ہے؟ </string>
+    <string name="RS29h1"> قدرتی دیوار </string>
+    <string name="RS291"> دیوار نہیں ہے </string>
+    <string name="RS292"> کین / پام / ٹرنک / بانس </string>
+    <string name="RS293"> گندگی /  گیلی مٹی </string>
+    <string name="RS294"> پتھر </string>
+    <string name="RS295"> گھاس / ریڈ / تھیچ / لکڑیاں </string>
+    <string name="RS29h2"> ابتدائی دیوار </string>
+    <string name="RS296">بانس کے ساتھ مٹی   </string>
+    <string name="RS297"> پتھر کے ساتھ مٹی </string>
+    <string name="RS298"> پلائیووڈ </string>
+    <string name="RS299"> گتے / پلاسٹک </string>
+    <string name="RS2910"> سورج بوم اینٹیں </string>
+    <string name="RS2911"> خام لکڑی / استعمال شدہ لکڑی </string>
+    <string name="RS29h3"> مکمل تیار شدہ دیوار </string>
+    <string name="RS2912"> سیمنٹ / کُنکریٹ </string>
+    <string name="RS2913"> چونے کے ساتھ پتھر / سیمنٹ </string>
+    <string name="RS2914"> چونے کے ساتھ اینٹیں / سیمنٹ </string>
+    <string name="RS2915"> مکمل لکڑی کے تختے / شنگلز </string>
+    <string name="RS2916"> سیمنٹ بلاکس </string>
+    <string name="RS2917"> میٹل / جی آئی یا آئرن شیٹ / ٹن / اسبسٹسوس شیٹ </string>
     <string name="RS29x"> دیگر وضاحت کریں </string>
     <string name="RS30"> گھر کے افراد کے لئے پینے کے پانی کا بنیادی ذریعہ کیا ہے؟ </string>
+    <string name="RS301"> پائپ </string>
+    <string name="RS302"> ٹیوب / دستی پمپ  </string>
+    <string name="RS303"> سپرنگ یا کنویں کا پانی   </string>
+    <string name="RS304"> بارش کا پانی  </string>
+    <string name="RS305"> واٹر ٹینکر / ٹوکری </string>
+    <string name="RS306"> سطح </string>
+    <string name="RS307"> بوتل </string>
     <string name="RS30x"> دیگر وضاحت کریں </string>
     <string name="RS31"> عام طور پر خاندان کے افراد کس قسم کے ٹوائلٹ سہولت کا استعمال کرتے ہیں؟ </string>
+    <string name="RS31h1"> فلش ٹوائلٹ </string>
+    <string name="RS311"> پائپ شدہ سیور کا نظام میں فلش </string>
+    <string name="RS312"> سیپٹک ٹینک میں فلش </string>
+    <string name="RS313"> گھڑا ٹوائلٹ میں فلش </string>
+    <string name="RS314"> کہیں اور فلش کرنا </string>
+    <string name="RS315"> فلش، پتہ نہیں کہاں </string>
+    <string name="RS31h2"> گڑھا ٹوائلٹ  </string>
+    <string name="RS316"> ہوا دار بہتر گھڑا / بایوگیس ٹوائلٹ  </string>
+    <string name="RS317"> سلیب کے ساتھ گھڑا ٹوائلٹ </string>
+    <string name="RS318">  سلیب کے بغیر گھڑا ٹوائلٹ </string>
+    <string name="RS319"> ٹوئن گڑھا / کمپوسٹنگ ٹوائلٹ </string>
+    <string name="RS3110"> خشک ٹوائلٹ </string>
+    <string name="RS3111"> بالٹی ٹوائلٹ </string>
+    <string name="RS3112">  لٹکتا ہوا ٹوائلٹ </string>
+    <string name="RS3113"> کوئی سہولت نہیں/جھاڑی/ کھلی جگہ یا میدان </string>
     <string name="RS31x"> دیگر وضاحت کریں </string>
     <string name="RS32"> کیا گھر میں یہ موجود ہے </string>
     <string name="RS321"> بجلی </string>
@@ -128,14 +208,43 @@
 
     <string name="RS34"> کیا آپکے گھر میں کوئی سگریٹ پیتا ہے؟ </string>
     <string name="RS35"> وہ سگریٹ کتنی مرتبا پیتے ہیں؟ </string>
+    <string name="RS351"> ہر روز 10 یا اس سے زیادہ مرتبہ </string>
+    <string name="RS352"> ہر روز 5-9 کے درمیان </string>
+    <string name="RS353"> ہر دن 1-4 کے درمیان </string>
+    <string name="RS354"> فی ہفتہ ایک بار سے زیادہ  </string>
+    <string name="RS355"> کم سے کم ہفتے میں ایک بار </string>
+    <string name="RS356"> کبھی کبھار </string>
     <string name="RS36"> کیا وہ سگریٹ گھر کے اندر پیتے ہیں؟ </string>
+    <string name="RS361">   ہمیشہ </string>
+    <string name="RS362"> زیادہ تر </string>
+    <string name="RS363"> کبھی کبھار </string>
+    <string name="RS364"> کبھی نہیں  </string>
     <string name="RS37"> گھر میں کھانا پکانے کے لئے کس قسم کا چولہا اور ایندھن کا استعمال کیا جاتا ہے </string>
+    <string name="RS371"> قدرتی گیس والا چولہا، ایل پی جی یا ایل این جی </string>
+    <string name="RS372"> بجلی سے چلنے والا چولہا  </string>
+    <string name="RS373"> کیروسین چولہا </string>
+    <string name="RS374"> روایتی ایندھن کا استعمال کرتے ہوئے روایتی مٹی کا چولہا (لکڑی، درخت کے باقیات، تنکا، چاول کی شاک، جوٹ کی چھڑیوں، دیگر فصلوں کی باقیات </string>
+    <string name="RS375"> کوئلے کا استعمال کرتے ہوئے روایتی چولہا </string>
+    <string name="RS376"> روایتی مٹی  کا چولہا جانوروں کی باقیات </string>
+    <string name="RS377"> بہتر مٹی کا چولہ </string>
     <string name="RS37x"> دیگر </string>
     <string name="RS38"> گھر میں کون سی جگہ کھانا پکتا ہے؟ [براہ کرم یقین دہانی کریں اور تصدیق کر کے جواب دیں] </string>
+    <string name="RS381"> رہنے اور سونے والے کمرے میں </string>
+    <string name="RS382"> اسی عمارت کے علیحدہ کمرے کو باورچی خانے کے طور پر استعمال کیا جاتا ہے </string>
+    <string name="RS383">    باورچی کھانا  دوسری عمارت میں ہے </string>
+    <string name="RS384"> ورانڈا </string>
+    <string name="RS385"> باہر   </string>
     <string name="RS38x"> دیگر </string>
     <string name="RS39"> اگر چولہا گھر کے اندر ہے تو، اُس کے لئے کس قسم کی وینٹیلیشن کا استعمال کیا جاتا ہے؟ </string>
+    <string name="RS391"> چمنی </string>
+    <string name="RS392"> چولہے کے ساتھ وینٹ یا پنکھا ہے </string>
+    <string name="RS393"> آگے کھلی کھڑکی ہے </string>
+    <string name="RS394"> کوئی نہیں </string>
     <string name="RS39x"> دیگر </string>
     <string name="RS40"> جب کھانا پکایا جاتا ہے تو عام طور پربچہ کہاں رہتا ہے؟ </string>
+    <string name="RS401"> اسی جگہ میں جہاں کھانا پکایا جا رہا ہے   </string>
+    <string name="RS402"> اسی کمرے میں جہاں کھانا پکایا جا رہا ہے </string>
+    <string name="RS403"> دوسری جگہ </string>
 
     <string name="Section4"> پچھلی صحت کی معلومات </string>
     <string name="RS41"> کیا بچے کو پہلے سال میں کوئی سانس لینے والی پیچیدگی یا بیماری تھی؟ </string>
@@ -258,7 +367,7 @@
     <string name="RS78"> آپ کے بچے کو کون سی غذا سے الرجی ہے؟ </string>
     <string name="RS79"> برائے مہربانی ھیلتھ کارڈ تحقیقی کارکن کے حوالے کر دیں </string>
     <string name="RS80"> انٹرویو کا اختتام ہوگیا؟ </string>
-
+    <!--End RSV Study Strings-->
 
     <string name="end_interview"> اختتام </string>
     <string name="start_interview"> انٽرويو شروع ڪريو </string>
@@ -311,6 +420,7 @@
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
     <string name="other"> ٻيو ڪجھ </string>
+    <string name="uother">  )وضاحت کریں( دیگر</string>
     <string name="specify"> وضاحت ڪريو </string>
     <string name="kg"> ڪلوگرام</string>
     <string name="cm"> سينٽي ميٽر</string>
@@ -1153,7 +1263,6 @@
 
 
     <!-- Hospital Registeration Form 4-->
-
 
     <string name="pohr0a"> ھا </string>
     <string name="pohr0b"> نه </string>
