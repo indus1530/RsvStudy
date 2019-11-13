@@ -172,6 +172,9 @@
     <string name="RS52"> پہلی مرتبہ کس عمر میں یہ خارش کے ساتھ ریش ہوئے تھے؟ </string>
     <string name="RS53"> کیا پچھلے 12 مہینے کے دوران یہ خارش کے ساتھ ریش پوری طرح صاف ہوگئے تھے؟ </string>
     <string name="RS54"> پچھلے 12 مہینوں میں ، کتنی مرتبہ، آپ کا بچا رات کے وقت خارش کی وجہ سے جاگ گیا تھا؟ </string>
+    <string name="RS54a"> 1 سے 2 مرتبہ </string>
+    <string name="RS54b"> 3 سے 5 مرتبہ </string>
+    <string name="RS54c"> 5 سے زائد مرتبہ </string>
     <string name="RS55"> کیا آپکے بچے کو کبھی ایکزیما ہوا تھا؟ </string>
     <string name="RS56"> گزشتہ 12 مہینوں کے دوران آپ کے بچے کو ایکزیما ہوا ہے؟ </string>
 
@@ -180,20 +183,46 @@
     <string name="RS58"> کیا پچھلے 12 مہینوں میں کسی بھی وقت سینے میں گھرگھراہٹ (سینے سے سیٹی کی آواز)آئی ہے؟ </string>
     <string name="RS59"> پچھلے 12 مہینوں میں گھرگھراہٹ (سینے سے سیٹی کی آواز) کے کتنے واقعات ہوئے ہیں؟ </string>
     <string name="RS60"> پچھلے 12 مہینوں میں ، گھرگھراہٹ (سینے سے سیٹی کی آواز) کی وجہ سے کتنی بار نیند خراب ہوئی ہے </string>
+    <string name="RS60a"> فی ہفتہ ایک رات سے کم </string>
+    <string name="RS60b"> فی ہفتہ ایک یا زیادہ راتیں </string>
     <string name="RS61"> پچھلے 12 مہینوں میں ، رات میں کھانسی کی وجہ سے کتنی بار نیند میں خلل پڑا ہے ، جب آپ کا بچہ ٹھیک ظاہر ہوتا ہے (یعنی کوئی زُکام یا سینے میں انفکشن نہیں ہوتا ہے) </string>
+    <string name="RS61a"> فی ہفتہ ایک رات سے کم </string>
+    <string name="RS61b"> فی ہفتہ ایک یا زیادہ راتیں </string>
     <string name="RS62"> پچھلے 12 مہینوں میں ، گھرگھراھٹ کبھی اتنی شدید ہوئی کہ بولنے یا رونے کی آواز کو محدود کردے؟ </string>
     <string name="RS63"> کیا کبھی بچے کو دمہ کی تشخیص ہوئی ہے؟ </string>
     <string name="RS64"> دمہ کی تشخیص کس نے کی؟ </string>
-    <string name="RS64x"> کوئی اور؟ وضاحت کریں </string>
+    <string name="RS64a"> ڈاکٹر </string>
+    <string name="RS64b"> پیرا میڈیک </string>
+    <string name="RS64c"> نرس </string>
+    <string name="RS6496"> کوئی اور </string>
     <string name="RS65"> پچھلے 12 مہینوں میں ، کیا آپ کے بچے کو ورزش کے دوران یا اس کے بعد خشک کھانسی ہوئی ہے (سینے سے سیٹی کی آواز) آئی ہے؟ </string>
     <string name="RS66"> پچھلے 12 مہینوں میں ، کیا اس سردی یا سینے میں انفیکشن سے وابستہ کھانسی کے علاوہ بھی ، بچے کو رات کو خشک کھانسی ہوئی ہے؟ </string>
 
     <string name="section7"> راینائیٹس کے لئے اسکریننگ </string>
     <string name="RS67"> جب سردی یا فلو نہیں ہے تو کیا آپ کے بچے کو چھینکنے یا ناک بند ہونے/ بہنے سے کبھی تکلیف ہوئی ہے؟ </string>
     <string name="RS68"> پچھلے 12 مہینوں میں ، جب آپ کو نزلہ یا فلو نہیں تھا ، تو کیا بچے کو چھینک ، یا ناک بند ہونے سے مسئلہ ہوا تھا؟ </string>
+    <string name="RS68a"> 1 سے 2 مرتبہ </string>
+    <string name="RS68b"> 3 سے 5 مرتبہ </string>
+    <string name="RS68c"> 5 سے زائد مرتبہ </string>
     <string name="RS69"> پچھلے 12 مہینوں میں ، کیا آنکھوں میں خارش کے ساتھ اس ناک کی تکلیف کا سامنا کرنا پڑا ہے؟ </string>
     <string name="RS70"> پچھلے 12 ماہ کے دوران ناک کی تکلیف ہوئی؟ </string>
+    <string name="RS70a"> جنوری </string>
+    <string name="RS70b"> فروری </string>
+    <string name="RS70c"> مارچ </string>
+    <string name="RS70d"> اپریل </string>
+    <string name="RS70e"> مئی </string>
+    <string name="RS70f"> جون </string>
+    <string name="RS70g"> جولائی </string>
+    <string name="RS70h"> اگست </string>
+    <string name="RS70i"> ستمبر </string>
+    <string name="RS70j"> اکتوبر </string>
+    <string name="RS70k"> نومبر </string>
+    <string name="RS70l"> دسمبر </string>
     <string name="RS71"> پچھلے 12 مہینوں میں ، ناک کی اس پریشانی نے آپ کے بچے کی روز مرہ کی سرگرمیوں میں کتنا مداخلت کی ہے؟ </string>
+    <string name="RS71a"> کوئی پریشانی نہیں </string>
+    <string name="RS71b"> کم سے کم پریشانی </string>
+    <string name="RS71c"> درمیانی پریشانی </string>
+    <string name="RS71d"> شدید پریشانی  </string>
     <string name="RS72"> کیا بچے کو کبھی بخار ہوا ہے؟ </string>
     <string name="RS73"> پچھلے 12 مہینے میں بچے کو بخار ہوا ہے؟ </string>
 
@@ -274,10 +303,10 @@
     <string name="no1"> نه، ٽڪو نه لڳو </string>
     <string name="no2"> نه، ڦڙا نه پيتا </string>
     <string name="na1"> لاڳو نٿو ٿئي </string>
-    <string name="dkn"> خبر ناھي </string>
+    <string name="dkn"> پتہ نہیں </string>
     <string name="day"> دن </string>
     <string name="date"> تاريخ </string>
-    <string name="month"> مهينو </string>
+    <string name="month"> مہینہ </string>
     <string name="year"> سال </string>
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
@@ -287,7 +316,7 @@
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
     <string name="none">ڪجهه به نه</string>
-    <string name="num"> تعداد (ٻڌايو) لکو </string>
+    <string name="num"> اعداد </string>
     <string name="treat"> موجوده علاج لکو </string>
     <string name="pocfe02h"> ڪمرن جو تعداد </string>
 
@@ -1587,6 +1616,7 @@
     <string name="pohrl03c"> مري ويو </string>
     <string name="nameW"> عام نالو ڏيو </string>
     <string name="comment">Comments</string>
+    <string name="never"> کبھی نہیں </string>
 
 
 </resources>

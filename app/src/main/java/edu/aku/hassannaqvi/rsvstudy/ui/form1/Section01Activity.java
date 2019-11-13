@@ -1,27 +1,20 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
-import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
@@ -41,19 +34,19 @@ public class Section01Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section01);
         bi.setCallback(this);
-        this.setTitle("RSV Study section 1");
+        //this.setTitle("RSV Study section 1");
         //initializingComponents();
 
     }
 
     private void initializingComponents() {
         db = new DatabaseHelper(this);
-        populateSpinner(this);
+        //populateSpinner(this);
 
         //bi.pocfa12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
     }
 
-    public void populateSpinner(final Context context) {
+    /*public void populateSpinner(final Context context) {
         // Spinner Drop down elements
         chwNames = new ArrayList<>();
         chwCodes = new ArrayList<>();
@@ -83,7 +76,7 @@ public class Section01Activity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
     public void BtnContinue() {
         if (formValidation()) {
