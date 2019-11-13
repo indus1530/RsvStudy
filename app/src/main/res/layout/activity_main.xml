@@ -109,7 +109,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 02 (Follow Ups - 7 Day)" />
+                android:text="Form 02 (Follow Ups - 7 Day)"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/form02_b"
@@ -118,7 +119,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 02 (Follow Ups - 14 Day)" />
+                android:text="Form 02 (Follow Ups - 14 Day)"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/form03"
@@ -127,7 +129,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 03 (Referral Form)" />
+                android:text="Form 03 (Referral Form)"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/form04"
@@ -136,7 +139,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 04 (Hospital Physician Form)" />
+                android:text="Form 04 (Hospital Physician Form)"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/syncServer"
@@ -183,7 +187,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section Members" />
+                    android:text="Section Members"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openA"
@@ -191,7 +196,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section A" />
+                    android:text="Section A"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openB"
@@ -199,7 +205,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section B" />
+                    android:text="Section B"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openC"
@@ -207,7 +214,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section C" />
+                    android:text="Section C"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openF"
@@ -215,8 +223,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-
-                    android:text="Section F" />
+                    android:text="Section F"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openG"
@@ -224,7 +232,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section G" />
+                    android:text="Section G"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openHA"
@@ -232,7 +241,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section HA" />
+                    android:text="Section HA"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openHB"
@@ -240,7 +250,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section HB" />
+                    android:text="Section HB"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openI"
@@ -248,7 +259,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section I" />
+                    android:text="Section I"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openJ"
@@ -256,7 +268,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section J" />
+                    android:text="Section J"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openK"
@@ -264,7 +277,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section K" />
+                    android:text="Section K"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/openL"
@@ -272,7 +286,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Section L" />
+                    android:text="Section L"
+                    android:visibility="gone" />
 
 
                 <Button

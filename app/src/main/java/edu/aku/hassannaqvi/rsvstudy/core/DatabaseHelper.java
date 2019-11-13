@@ -580,7 +580,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collection<LHWContract> allDC = new ArrayList<>();
         try {
             c = db.query(
-                    singleTalukas.TABLE_NAME,  // The table to query
+                    lhwEntry.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -589,8 +589,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                TalukasContract dc = new TalukasContract();
-                allDC.add(dc.HydrateTalukas(c));
+                LHWContract dc = new LHWContract();
+                allDC.add(dc.hydrate(c));
             }
         } finally {
             if (c != null) {
