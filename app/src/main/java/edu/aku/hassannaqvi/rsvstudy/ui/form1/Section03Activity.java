@@ -17,19 +17,19 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section0405Binding;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section03Binding;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 
-public class F1Section04_05Activity extends AppCompatActivity {
+public class Section03Activity extends AppCompatActivity {
 
-    ActivityF1Section0405Binding bi;
+    ActivityF1Section03Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04_05);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section03);
         bi.setCallback(this);
         this.setTitle("Form 01 (Case Reporting Form)");
         EventsCall();
@@ -207,7 +207,7 @@ public class F1Section04_05Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                Intent ii = new Intent(this, F1Section06Activity.class);
+                Intent ii = new Intent(this, Section04Activity.class);
                 startActivity(ii);
 
                 //MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);

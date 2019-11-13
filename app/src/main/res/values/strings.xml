@@ -43,11 +43,33 @@
 
     <string name="Section2"> رضاکارانہ طور پر دیکھ بھال کرنے والا </string>
     <string name="RS17"> ماں یا دیکھ بھال کرنے والے نے مطالعے میں حصہ لینے کے بارے میں مطمئن رضامندی دی ہے </string>
-    <string name="RS18"> رضامندی فراہم نہ کرنے </string>
-    <string name="RS20"> (رضامندی ملنے کی صورت میں) دیکھ بھال کرنے والا / جواب دینے والا شخص کون ہے؟ </string>
-    <string name="RS21"> ماں کیوں جواب دہ نہیں تھی؟ </string>
-    <string name="RS22"> کیا بچہ زندہ ہے </string>
-    <string name="RS23"> بچے کی تاریخ وفات کیا ہے؟ </string>
+    <string name="RS18"> رضامندی فراہم نہ کرنے کی وجہ؟ </string>
+    <string name="RS18a"> دلچسپی نہیں ہے </string>
+    <string name="RS18b"> مصروفیت </string>
+    <string name="RS18c"> مطالعہ کے طریقہ کار سے مطمئن نہیں </string>
+    <string name="RS18d"> کسی بھی وجہ کا ذکر کرنے سے انکار </string>
+    <string name="RS18e"> گھر میں کوئی بھی موجود نہیں </string>
+    <string name="RS18f"> بچے کی نشاندہی نہیں ہوئی </string>
+    <string name="RS19"> (رضامندی ملنے کی صورت میں) دیکھ بھال کرنے والا / جواب دینے والا شخص کون ہے؟ </string>
+    <string name="RS19a"> ماں </string>
+    <string name="RS19b"> دادی </string>
+    <string name="RS19c"> آنٹی </string>
+    <string name="RS19d"> بہن </string>
+    <string name="RS19e"> والد </string>
+    <string name="RS19f"> دادا </string>
+    <string name="RS19g"> انکل </string>
+    <string name="RS19h"> بھائی </string>
+    <string name="RS1996"> دیگر </string>
+    <string name="RS20"> ماں کیوں جواب دہ نہیں تھی؟ </string>
+    <string name="RS20a">  وہ حیات نہیں ہیں </string>
+    <string name="RS20b"> وہ دوسرے شہر منتقل ہوگئی ہے </string>
+    <string name="RS20c"> وہ اس قابل نہیں ہے </string>
+    <string name="RS20d"> مسلسل غیر حاظر ہے </string>
+    <string name="RS2096"> دیگر </string>
+    <string name="RS21"> کیا بچہ زندہ ہے </string>
+    <string name="RS21a">  ہاں، اب بھی زندہ </string>
+    <string name="RS21b">  نہیں، بچہ مر چکا ہے </string>
+    <string name="RS22"> بچے کی تاریخ وفات کیا ہے؟ </string>
 
     <string name="Section3"> گھریلو معلومات </string>
     <string name="RS24"> کتنے عرصے سے آپ اس گھر میں رہ رہے ہیں؟ </string>
@@ -231,8 +253,8 @@
     <string name="RS422"> سرد / بہتی ہوئی ناک </string>
     <string name="RS423"> سانس لینے میں مشکل </string>
     <string name="RS424"> ڈی چیسٹ اندرا </string>
-    <string name="RS4277"> دیگر </string>
-    <string name="RS4277x"> دیگر </string>
+    <string name="RS4296"> دیگر </string>
+    <string name="RS4296x"> دیگر </string>
     <string name="RS428"> پتہ نہیں </string>
 
     <string name="RS43"> کیا آپ نے کبھی اس بیماری یا مشکل کے لیے کسی ڈاکٹر کو دکھایا؟ </string>
@@ -242,13 +264,15 @@
     <string name="RS443"> آؤٹ ریچ / سیٹلائٹ </string>
     <string name="RS444"> ڈاکٹر کے چیمبر </string>
     <string name="RS445"> گھر میں </string>
-    <string name="RS4477"> (وضاحت کریں) دیگر </string>
-    <string name="RS448"> پتہ نہیں </string>
+    <string name="RS4496"> دیگر </string>
+    <string name="RS4497"> پتہ نہیں </string>
 
     <string name="RS45"> کیا بچا ہسپتال میں داخل ہوا تھا؟ </string>
+    <string name="RS4598"> پتہ نہیں </string>
     <string name="RS46"> کونسی تاریخ کوبچہ ہسپتال میں داخل ہوا تھا؟ </string>
     <string name="RS47"> بچا کتنے دن ہسپتال میں رہا تھا؟ </string>
     <string name="RS48"> کیا بچے نے گھر میں کسی دوا کا استعمال کیا؟ </string>
+    <string name="RS4898"> پتہ نہیں </string>
 
     <string name="Section5"> ایٹوپک ڈرمیٹائٹس کے لئے اسکریننگ </string>
     <string name="RS49"> کیا بچے کو خارش کے ساتھ جلد پر ریش تھے جو کم سے کم 12 ماہ تک آتے جاتے رہے ؟ </string>
@@ -360,7 +384,7 @@
     <string name="no2"> نه، ڦڙا نه پيتا </string>
     <string name="na1"> لاڳو نٿو ٿئي </string>
     <string name="dkn"> خبر ناھي </string>
-    <string name="day"> ڏينهن </string>
+    <string name="day"> دن </string>
     <string name="date"> تاريخ </string>
     <string name="month"> مهينو </string>
     <string name="year"> سال </string>

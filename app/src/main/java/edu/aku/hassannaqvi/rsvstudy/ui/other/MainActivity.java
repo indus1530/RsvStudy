@@ -57,10 +57,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section01Activity;
-import edu.aku.hassannaqvi.rsvstudy.ui.form2.F2Section01Activity;
-import edu.aku.hassannaqvi.rsvstudy.ui.form3.F3Section01Activity;
-import edu.aku.hassannaqvi.rsvstudy.ui.form4.F4Section01Activity;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
 
 public class MainActivity extends Activity {
@@ -336,7 +333,7 @@ public class MainActivity extends Activity {
                     iStatus = "\tN/A";
                 }
 
-                rSumText += fc.getsH();
+                rSumText += fc.getsE();
 
                 rSumText += " " + iStatus + " ";
 
@@ -436,7 +433,7 @@ public class MainActivity extends Activity {
                         editor.commit();
 
                         if (!MainApp.userName.equals("0000")) {
-                            Intent oF = new Intent(MainActivity.this, F1Section01Activity.class);
+                            Intent oF = new Intent(MainActivity.this, Section01Activity.class);
                             startActivity(oF);
                         }
                     }
@@ -464,24 +461,8 @@ public class MainActivity extends Activity {
         if (!MainApp.userName.equals("0000")) {
             switch (id) {
                 case R.id.form01:
-                    oF = new Intent(MainActivity.this, F1Section01Activity.class);
+                    oF = new Intent(MainActivity.this, Section01Activity.class);
                     MainApp.formtype = "f1";
-                    break;
-                case R.id.form02:
-                    oF = new Intent(MainActivity.this, F2Section01Activity.class).putExtra("day", "7");
-                    MainApp.formtype = "f2";
-                    break;
-                case R.id.form02_b:
-                    oF = new Intent(MainActivity.this, F2Section01Activity.class).putExtra("day", "14");
-                    MainApp.formtype = "f2";
-                    break;
-                case R.id.form03:
-                    oF = new Intent(MainActivity.this, F3Section01Activity.class);
-                    MainApp.formtype = "f3";
-                    break;
-                case R.id.form04:
-                    oF = new Intent(MainActivity.this, F4Section01Activity.class);
-                    MainApp.formtype = "f4";
                     break;
 
             }
@@ -494,7 +475,7 @@ public class MainActivity extends Activity {
     }
 
     public void openA(View v) {
-        Intent iA = new Intent(this, F1Section01Activity.class);
+        Intent iA = new Intent(this, Section01Activity.class);
         startActivity(iA);
     }
 
