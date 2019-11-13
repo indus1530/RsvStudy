@@ -144,8 +144,8 @@
     <string name="RS422"> سرد / بہتی ہوئی ناک </string>
     <string name="RS423"> سانس لینے میں مشکل </string>
     <string name="RS424"> ڈی چیسٹ اندرا </string>
-    <string name="RS4277"> دیگر </string>
-    <string name="RS4277x"> دیگر </string>
+    <string name="RS4296"> دیگر </string>
+    <string name="RS4296x"> دیگر </string>
     <string name="RS428"> پتہ نہیں </string>
 
     <string name="RS43"> کیا آپ نے کبھی اس بیماری یا مشکل کے لیے کسی ڈاکٹر کو دکھایا؟ </string>
@@ -155,13 +155,15 @@
     <string name="RS443"> آؤٹ ریچ / سیٹلائٹ </string>
     <string name="RS444"> ڈاکٹر کے چیمبر </string>
     <string name="RS445"> گھر میں </string>
-    <string name="RS4477"> (وضاحت کریں) دیگر </string>
-    <string name="RS448"> پتہ نہیں </string>
+    <string name="RS4496"> دیگر </string>
+    <string name="RS4497"> پتہ نہیں </string>
 
     <string name="RS45"> کیا بچا ہسپتال میں داخل ہوا تھا؟ </string>
+    <string name="RS4598"> پتہ نہیں </string>
     <string name="RS46"> کونسی تاریخ کوبچہ ہسپتال میں داخل ہوا تھا؟ </string>
     <string name="RS47"> بچا کتنے دن ہسپتال میں رہا تھا؟ </string>
     <string name="RS48"> کیا بچے نے گھر میں کسی دوا کا استعمال کیا؟ </string>
+    <string name="RS4898"> پتہ نہیں </string>
 
     <string name="Section5"> ایٹوپک ڈرمیٹائٹس کے لئے اسکریننگ </string>
     <string name="RS49"> کیا بچے کو خارش کے ساتھ جلد پر ریش تھے جو کم سے کم 12 ماہ تک آتے جاتے رہے ؟ </string>
@@ -264,8 +266,8 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="male"> مرد</string>
     <string name="female"> عورت </string>
-    <string name="yes"> ھا </string>
-    <string name="no"> نه </string>
+    <string name="yes"> ہاں </string>
+    <string name="no"> نہیں </string>
     <string name="na"> لاڳو نٿو ٿئي </string>
     <string name="yes1"> ها، ٽڪو لڳو </string>
     <string name="yes2"> ها، ڦڙا پيتا </string>
@@ -273,7 +275,7 @@
     <string name="no2"> نه، ڦڙا نه پيتا </string>
     <string name="na1"> لاڳو نٿو ٿئي </string>
     <string name="dkn"> خبر ناھي </string>
-    <string name="day"> ڏينهن </string>
+    <string name="day"> دن </string>
     <string name="date"> تاريخ </string>
     <string name="month"> مهينو </string>
     <string name="year"> سال </string>

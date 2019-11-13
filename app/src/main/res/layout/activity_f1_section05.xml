@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.form1.F1Section07Activity">
+    tools:context=".ui.form1.Section05Activity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section07Activity" />
+            type="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity" />
     </data>
 
 

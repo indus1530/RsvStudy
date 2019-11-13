@@ -47,49 +47,31 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section01Activity"
+            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section02_03Activity"
+            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section02Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section04_05Activity"
+            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section03Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section06Activity"
+            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section04Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section07Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section08Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section09_10Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section11Activity"
+            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />

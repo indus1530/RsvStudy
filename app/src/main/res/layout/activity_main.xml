@@ -100,7 +100,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 01 (Case Reporting Form)" />
+                android:text="RSV Study Tool" />
 
             <Button
                 android:id="@+id/form02"

@@ -17,19 +17,20 @@ import java.util.Arrays;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section07Binding;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
-public class F1Section07Activity extends AppCompatActivity {
+public class Section05Activity extends AppCompatActivity {
 
-    ActivityF1Section07Binding bi;
+    ActivityF1Section05Binding bi;
     DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section07);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section05);
         this.setTitle("Form 01 (Case Reporting Form)");
 
         db = new DatabaseHelper(this);
@@ -76,7 +77,7 @@ public class F1Section07Activity extends AppCompatActivity {
         }
 
         for (DatePickerInputEditText datePickerEditText : pickersEdittext) {
-            datePickerEditText.setMinDate(F1Section01Activity.DOB);
+            datePickerEditText.setMinDate(Section01Activity.DOB);
         }
 
         bi.pocfgbcgdt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -290,7 +291,7 @@ public class F1Section07Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, F1Section08Activity.class));
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 public class FormsContract {
 
-    private final String projectName = "Pulse Oximetry";
+    private final String projectName = "RSV Study";
     //private final String surveyType = "SN";
     private String _ID = "";
     private String _UID = "";
@@ -28,12 +28,6 @@ public class FormsContract {
     private String sC = "";
     private String sD = "";
     private String sE = "";
-    private String sF = "";
-    private String sG = "";
-    private String sH = "";
-    private String sI = "";
-    private String sJ = "";
-    private String sK = "";
     private String endingdatetime = "";
 
     private String gpsLat = "";
@@ -72,12 +66,6 @@ public class FormsContract {
         this.sC = jsonObject.getString(FormsTable.COLUMN_SC);
         this.sD = jsonObject.getString(FormsTable.COLUMN_SD);
         this.sE = jsonObject.getString(FormsTable.COLUMN_SE);
-        this.sF = jsonObject.getString(FormsTable.COLUMN_SF);
-        this.sG = jsonObject.getString(FormsTable.COLUMN_SG);
-        this.sH = jsonObject.getString(FormsTable.COLUMN_SH);
-        this.sI = jsonObject.getString(FormsTable.COLUMN_SI);
-        this.sJ = jsonObject.getString(FormsTable.COLUMN_SJ);
-        this.sK = jsonObject.getString(FormsTable.COLUMN_SK);
         this.gpsLat = jsonObject.getString(FormsTable.COLUMN_GPSLAT);
         this.gpsLng = jsonObject.getString(FormsTable.COLUMN_GPSLNG);
         this.gpsDT = jsonObject.getString(FormsTable.COLUMN_GPSDATE);
@@ -108,12 +96,6 @@ public class FormsContract {
         this.sC = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SC));
         this.sD = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SD));
         this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
-        this.sF = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SF));
-        this.sG = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SG));
-        this.sH = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SH));
-        this.sI = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SI));
-        this.sJ = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SJ));
-        this.sK = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SK));
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
         this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
         this.gpsDT = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSDATE));
@@ -156,25 +138,6 @@ public class FormsContract {
         if (!this.sE.equals("")) {
             json.put(FormsTable.COLUMN_SE, this.sE.equals("") ? JSONObject.NULL : new JSONObject(this.sE));
         }
-        if (!this.sF.equals("")) {
-            json.put(FormsTable.COLUMN_SF, this.sF.equals("") ? JSONObject.NULL : new JSONObject(this.sF));
-        }
-        if (!this.sG.equals("")) {
-            json.put(FormsTable.COLUMN_SG, this.sG.equals("") ? JSONObject.NULL : new JSONObject(this.sG));
-        }
-        if (!this.sH.equals("")) {
-            json.put(FormsTable.COLUMN_SH, this.sH.equals("") ? JSONObject.NULL : new JSONObject(this.sH));
-        }
-        if (!this.sI.equals("")) {
-            json.put(FormsTable.COLUMN_SI, this.sI.equals("") ? JSONObject.NULL : new JSONObject(this.sI));
-        }
-        if (!this.sJ.equals("")) {
-            json.put(FormsTable.COLUMN_SJ, this.sJ.equals("") ? JSONObject.NULL : new JSONObject(this.sJ));
-        }
-        if (!this.sK.equals("")) {
-            json.put(FormsTable.COLUMN_SK, this.sK.equals("") ? JSONObject.NULL : new JSONObject(this.sK));
-        }
-
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
         json.put(FormsTable.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
         json.put(FormsTable.COLUMN_GPSDATE, this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
@@ -303,54 +266,6 @@ public class FormsContract {
         this.sE = sE;
     }
 
-    public String getsF() {
-        return sF;
-    }
-
-    public void setsF(String sF) {
-        this.sF = sF;
-    }
-
-    public String getsG() {
-        return sG;
-    }
-
-    public void setsG(String sG) {
-        this.sG = sG;
-    }
-
-    public String getsH() {
-        return sH;
-    }
-
-    public void setsH(String sH) {
-        this.sH = sH;
-    }
-
-    public String getsI() {
-        return sI;
-    }
-
-    public void setsI(String sI) {
-        this.sI = sI;
-    }
-
-    public String getsJ() {
-        return sJ;
-    }
-
-    public void setsJ(String sJ) {
-        this.sJ = sJ;
-    }
-
-    public String getsK() {
-        return sK;
-    }
-
-    public void setsK(String sK) {
-        this.sK = sK;
-    }
-
     public String getEndingdatetime() {
         return endingdatetime;
     }
@@ -443,12 +358,6 @@ public class FormsContract {
         public static final String COLUMN_SC = "sC";
         public static final String COLUMN_SD = "sD";
         public static final String COLUMN_SE = "sE";
-        public static final String COLUMN_SF = "sF";
-        public static final String COLUMN_SG = "sG";
-        public static final String COLUMN_SH = "sH";
-        public static final String COLUMN_SI = "sI";
-        public static final String COLUMN_SJ = "sJ";
-        public static final String COLUMN_SK = "sK";
         public static final String COLUMN_GPSLAT = "gpslat";
         public static final String COLUMN_GPSLNG = "gpslng";
         public static final String COLUMN_GPSDATE = "gpsdate";

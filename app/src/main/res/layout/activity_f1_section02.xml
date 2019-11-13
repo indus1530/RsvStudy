@@ -8,7 +8,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.rsvstudy.ui.form1.F1Section02_03Activity" />
+            type="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section02Activity" />
 
     </data>
 
@@ -19,7 +19,7 @@
         android:layoutDirection="rtl">
 
         <LinearLayout
-            android:id="@+id/ll0203"
+            android:id="@+id/ll02"
             style="@style/linearlayout_view">
 
             <TextView
