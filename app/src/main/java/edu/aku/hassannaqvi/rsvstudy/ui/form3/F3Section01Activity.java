@@ -51,173 +51,22 @@ public class F3Section01Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section01);
         bi.setCallback(this);
-        this.setTitle("Form 03 (Referral Form)");
-        events_call();
-        clickListener();
-
+        this.setTitle("Section 03");
+        setListeners();
     }
 
+    private void setListeners() {
 
-    public void populateSpinner(final Context context) {
-        // Spinner Drop down elements
-        talukaNames = new ArrayList<>();
-        talukaCodes = new ArrayList<>();
-
-        talukaNames.add("....");
-        talukaCodes.add("....");
-
-        Collection<TalukasContract> dc = db.getAllTalukas();
-
-        for (TalukasContract d : dc) {
-            talukaNames.add(d.getTaluka());
-            talukaCodes.add(d.getTalukacode());
-        }
-
-        bi.pofi001.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, talukaNames));
-
-        bi.pofi001.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.RSf3034.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (position == 0) return;
-
-                ucCode = new ArrayList<>();
-                ucName = new ArrayList<>();
-
-                ucCode.add("....");
-                ucName.add("....");
-
-                Collection<UCsContract> pc = db.getAllUCsbyTaluka(talukaCodes.get(position));
-                for (UCsContract p : pc) {
-                    ucCode.add(p.getUccode());
-                    ucName.add(p.getUcs());
+                if (bi.RSf3034b.isChecked()) {
+                    ClearClass.ClearAllFields(bi.llrsv01, null);
                 }
-
-                bi.pofi002.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, ucName));
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-
-            }
-        });
-
-
-        bi.pofi002.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                if (position == 0) return;
-
-                    /*villageCodes = new ArrayList<>();
-                    villageNames = new ArrayList<>();
-
-                    villageCodes.add("....");
-                    villageNames.add("....");
-
-                    Collection<VillagesContract> pc =
-                            db.getAllPSUsByTaluka(talukaCodes.get(bi.pocfa01.getSelectedItemPosition()),
-                                    ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-                    for (VillagesContract p : pc) {
-                        villageCodes.add(p.getVillagecode());
-                        villageNames.add(p.getVillagename());
-                    }*/
-
-                lhwCodes = new ArrayList<>();
-                lhwNames = new ArrayList<>();
-
-                lhwCodes.add("....");
-                lhwNames.add("....");
-
-                Collection<LHWContract> lhw =
-                        db.getAllLHWsByTaluka(talukaCodes.get(bi.pofi001.getSelectedItemPosition()),
-                                ucCode.get(bi.pofi002.getSelectedItemPosition()));
-                for (LHWContract p : lhw) {
-                    lhwCodes.add(p.getLhwcode());
-                    lhwNames.add(p.getLhwname());
-                }
-
-                bi.pofi003.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, lhwNames));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-        bi.pofi003.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) return;
-                bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
-                ClearClass.ClearAllFields(bi.llform03, null);
-                bi.llform03.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-    }
-
-
-    private void clickListener() {
-
-        bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (!formValidation())
-                    return;
-
-                cContract = db.getChildById(lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
-
-                if (cContract == null)
-                    cContract = db.getChildById("f1", lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
-
-                if (cContract == null) {
-                    Toast.makeText(F3Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
-                    ClearClass.ClearAllFields(bi.llform03, false);
-                    bi.llform03.setVisibility(View.GONE);
-                    return;
-                }
-                ClearClass.ClearAllFields(bi.llform03, true);
-                bi.llform03.setVisibility(View.VISIBLE);
-                bi.pofi004.setText(cContract.getChild_name());
-                bi.pofi005.setText(cContract.getF_name());
-                bi.pofi004.setEnabled(false);
-                bi.pofi005.setEnabled(false);
-
-
-            }
-        });
-
-        bi.pofi00.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                bi.llform03.setVisibility(View.GONE);
-                ClearClass.ClearAllFields(bi.llform03, false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
             }
         });
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -236,8 +85,7 @@ public class F3Section01Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.llF3S1B))
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll03A))
             return;
 
         try {
@@ -250,7 +98,6 @@ public class F3Section01Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     private boolean UpdateDB() {
@@ -270,7 +117,7 @@ public class F3Section01Activity extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        return ValidatorClass.EmptyCheckingContainer(this, bi.llF3S1A);
+        return ValidatorClass.EmptyCheckingContainer(this, bi.ll03A);
     }
 
     private void SaveDraft() throws JSONException {
@@ -283,227 +130,268 @@ public class F3Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
-        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pofi003.getSelectedItemPosition()));
-        MainApp.fc.setRef_ID(bi.pofi00.getText().toString());
-
         JSONObject form03_01 = new JSONObject();
 
-        form03_01.put("pofi001", talukaCodes.get(bi.pofi001.getSelectedItemPosition()));
+        /*form03_01.put("pofi001", talukaCodes.get(bi.pofi001.getSelectedItemPosition()));
         form03_01.put("pofi002", ucCode.get(bi.pofi002.getSelectedItemPosition()));
-        //form03_01.put("pofi01", bi.pofi01.getText().toString());
+        //form03_01.put("pofi01", bi.pofi01.getText().toString());*/
 
-        form03_01.put("pofi004", bi.pofi004.getText().toString());
-        form03_01.put("pofi005", bi.pofi005.getText().toString());
+        form03_01.put("RS24", bi.RS24.getText().toString());
+        form03_01.put("RS25", bi.RS25.getText().toString());
+        form03_01.put("RS26", bi.RS26.getText().toString());
 
-        form03_01.put("pofi02", bi.pofi02a.isChecked() ? "1"
-                : bi.pofi02b.isChecked() ? "2"
+        form03_01.put("RS27a", bi.RS27a.isChecked() ? "1" : "0");
+        form03_01.put("RS27b", bi.RS27b.isChecked() ? "2" : "0");
+        form03_01.put("RS27c", bi.RS27c.isChecked() ? "3" : "0");
+        form03_01.put("RS27d", bi.RS27d.isChecked() ? "4" : "0");
+        form03_01.put("RS27e", bi.RS27e.isChecked() ? "5" : "0");
+        form03_01.put("RS27f", bi.RS27f.isChecked() ? "6" : "0");
+        form03_01.put("RS27g", bi.RS27g.isChecked() ? "7" : "0");
+        form03_01.put("RS27h", bi.RS27h.isChecked() ? "8" : "0");
+        form03_01.put("RS27i", bi.RS27i.isChecked() ? "9" : "0");
+        form03_01.put("RS27j", bi.RS27j.isChecked() ? "10" : "0");
+        form03_01.put("RS27k", bi.RS27k.isChecked() ? "11" : "0");
+        form03_01.put("RS27l", bi.RS27l.isChecked() ? "12" : "0");
+        form03_01.put("RS27m", bi.RS27m.isChecked() ? "13" : "0");
+        form03_01.put("RS27n", bi.RS27n.isChecked() ? "14" : "0");
+        form03_01.put("RS27o", bi.RS27o.isChecked() ? "15" : "0");
+        form03_01.put("RS27p", bi.RS27p.isChecked() ? "16" : "0");
+        form03_01.put("RS27q", bi.RS27q.isChecked() ? "17" : "0");
+        form03_01.put("RS27r", bi.RS27r.isChecked() ? "18" : "0");
+        form03_01.put("RS27s", bi.RS27s.isChecked() ? "19" : "0");
+        form03_01.put("RS27t", bi.RS27t.isChecked() ? "20" : "0");
+        form03_01.put("RS2796", bi.RS2796.isChecked() ? "96" : "0");
+        form03_01.put("RS2796x", bi.RS2796x.getText().toString());
+
+        form03_01.put("RS28a", bi.RS28a.isChecked() ? "1" : "0");
+        form03_01.put("RS28b", bi.RS28b.isChecked() ? "2" : "0");
+        form03_01.put("RS28c", bi.RS28c.isChecked() ? "3" : "0");
+        form03_01.put("RS28d", bi.RS28d.isChecked() ? "4" : "0");
+        form03_01.put("RS28e", bi.RS28e.isChecked() ? "5" : "0");
+        form03_01.put("RS28f", bi.RS28f.isChecked() ? "6" : "0");
+        form03_01.put("RS28g", bi.RS28g.isChecked() ? "7" : "0");
+        form03_01.put("RS28h", bi.RS28h.isChecked() ? "8" : "0");
+        form03_01.put("RS28i", bi.RS28i.isChecked() ? "9" : "0");
+        form03_01.put("RS28j", bi.RS28j.isChecked() ? "10" : "0");
+        form03_01.put("RS28k", bi.RS28k.isChecked() ? "11" : "0");
+        form03_01.put("RS28l", bi.RS28l.isChecked() ? "12" : "0");
+        form03_01.put("RS28m", bi.RS28m.isChecked() ? "13" : "0");
+        form03_01.put("RS2896", bi.RS2896.isChecked() ? "96" : "0");
+        form03_01.put("RS2896x", bi.RS2896x.getText().toString());
+
+        form03_01.put("RSf3029", bi.RSf3029a.isChecked() ? "1"
+                : bi.RSf3029b.isChecked() ? "2"
+                : bi.RSf3029c.isChecked() ? "3"
+                : bi.RSf3029d.isChecked() ? "4"
+                : bi.RSf3029e.isChecked() ? "5"
+                : bi.RSf3029f.isChecked() ? "6"
+                : bi.RSf3029g.isChecked() ? "7"
+                : bi.RSf3029h.isChecked() ? "8"
+                : bi.RSf3029i.isChecked() ? "9"
+                : bi.RSf3029j.isChecked() ? "10"
+                : bi.RSf3029k.isChecked() ? "11"
+                : bi.RSf3029l.isChecked() ? "12"
+                : bi.RSf3029m.isChecked() ? "13"
+                : bi.RSf3029n.isChecked() ? "14"
+                : bi.RSf3029o.isChecked() ? "15"
+                : bi.RSf3029p.isChecked() ? "16"
+                : bi.RSf3029q.isChecked() ? "17"
+                : bi.RSf302996.isChecked() ? "96"
+                : "0");
+        form03_01.put("RSf302996x", bi.RSf302996x.getText().toString());
+
+        form03_01.put("RSf3030", bi.RSf3030a.isChecked() ? "1"
+                : bi.RSf3030b.isChecked() ? "2"
+                : bi.RSf3030c.isChecked() ? "3"
+                : bi.RSf3030d.isChecked() ? "4"
+                : bi.RSf3030e.isChecked() ? "5"
+                : bi.RSf3030f.isChecked() ? "6"
+                : bi.RSf3030g.isChecked() ? "7"
+                : bi.RSf303096.isChecked() ? "96"
+                : "0");
+        form03_01.put("RSf303096x", bi.RSf303096x.getText().toString());
+
+        form03_01.put("RSf3031", bi.RSf3031a.isChecked() ? "1"
+                : bi.RSf3031b.isChecked() ? "2"
+                : bi.RSf3031c.isChecked() ? "3"
+                : bi.RSf3031d.isChecked() ? "4"
+                : bi.RSf3031e.isChecked() ? "5"
+                : bi.RSf3031f.isChecked() ? "6"
+                : bi.RSf3031g.isChecked() ? "7"
+                : bi.RSf3031h.isChecked() ? "8"
+                : bi.RSf3031i.isChecked() ? "9"
+                : bi.RSf3031j.isChecked() ? "10"
+                : bi.RSf3031k.isChecked() ? "11"
+                : bi.RSf3031l.isChecked() ? "12"
+                : bi.RSf3031m.isChecked() ? "13"
+                : bi.RSf303196.isChecked() ? "96"
+                : "0");
+        form03_01.put("RSf303196x", bi.RSf303196x.getText().toString());
+
+        form03_01.put("RSf30321", bi.RSf30321a.isChecked() ? "1"
+                : bi.RSf30321b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30322", bi.RSf30322a.isChecked() ? "1"
+                : bi.RSf30322b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30323", bi.RSf30323a.isChecked() ? "1"
+                : bi.RSf30323b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30324", bi.RSf30324a.isChecked() ? "1"
+                : bi.RSf30324b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30325", bi.RSf30325a.isChecked() ? "1"
+                : bi.RSf30325b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30326", bi.RSf30326a.isChecked() ? "1"
+                : bi.RSf30326b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30327", bi.RSf30327a.isChecked() ? "1"
+                : bi.RSf30327b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30328", bi.RSf30328a.isChecked() ? "1"
+                : bi.RSf30328b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30329", bi.RSf30329a.isChecked() ? "1"
+                : bi.RSf30329b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303210", bi.RSf303210a.isChecked() ? "1"
+                : bi.RSf303210b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303211", bi.RSf303211a.isChecked() ? "1"
+                : bi.RSf303211b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303212", bi.RSf303212a.isChecked() ? "1"
+                : bi.RSf303212b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303213", bi.RSf303213a.isChecked() ? "1"
+                : bi.RSf303213b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303214", bi.RSf303214a.isChecked() ? "1"
+                : bi.RSf303214b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303215", bi.RSf303215a.isChecked() ? "1"
+                : bi.RSf303215b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303216", bi.RSf303216a.isChecked() ? "1"
+                : bi.RSf303216b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303217", bi.RSf303217a.isChecked() ? "1"
+                : bi.RSf303217b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303218", bi.RSf303218a.isChecked() ? "1"
+                : bi.RSf303218b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303219", bi.RSf303219a.isChecked() ? "1"
+                : bi.RSf303219b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303220", bi.RSf303220a.isChecked() ? "1"
+                : bi.RSf303220b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303221", bi.RSf303221a.isChecked() ? "1"
+                : bi.RSf303221b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303222", bi.RSf303222a.isChecked() ? "1"
+                : bi.RSf303222b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303223", bi.RSf303223a.isChecked() ? "1"
+                : bi.RSf303223b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303224", bi.RSf303224a.isChecked() ? "1"
+                : bi.RSf303224b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303225", bi.RSf303225a.isChecked() ? "1"
+                : bi.RSf303225b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303226", bi.RSf303226a.isChecked() ? "1"
+                : bi.RSf303226b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303227", bi.RSf303227a.isChecked() ? "1"
+                : bi.RSf303227b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303228", bi.RSf303228a.isChecked() ? "1"
+                : bi.RSf303228b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303229", bi.RSf303229a.isChecked() ? "1"
+                : bi.RSf303229b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303230", bi.RSf303230a.isChecked() ? "1"
+                : bi.RSf303230b.isChecked() ? "2"
                 : "0");
 
-        form03_01.put("pofi03a", bi.pofi03a.isChecked() ? "1" : "0");
-        form03_01.put("pofi03b", bi.pofi03b.isChecked() ? "2" : "0");
-        form03_01.put("pofi03c", bi.pofi03c.isChecked() ? "3" : "0");
-        form03_01.put("pofi0396", bi.pofi0396.isChecked() ? "96" : "0");
-        form03_01.put("pofi0396x", bi.pofi0396x.getText().toString());
+        form03_01.put("RSf30331", bi.RSf30331a.isChecked() ? "1"
+                : bi.RSf30331b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30332", bi.RSf30332a.isChecked() ? "1"
+                : bi.RSf30332b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30333", bi.RSf30333a.isChecked() ? "1"
+                : bi.RSf30333b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30334", bi.RSf30334a.isChecked() ? "1"
+                : bi.RSf30334b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf30335", bi.RSf30335a.isChecked() ? "1"
+                : bi.RSf30335b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303396", bi.RSf303396a.isChecked() ? "1"
+                : bi.RSf303396b.isChecked() ? "2"
+                : "0");
+        form03_01.put("RSf303396x", bi.RSf303396x.getText().toString());
 
-        form03_01.put("pofi04", bi.pofi04a.isChecked() ? "1"
-                : bi.pofi04b.isChecked() ? "2"
+        form03_01.put("RSf3034", bi.RSf3034a.isChecked() ? "1"
+                : bi.RSf3034b.isChecked() ? "2"
                 : "0");
 
-        form03_01.put("pofi05a", bi.pofi05a.isChecked() ? "1" : "0");
-        form03_01.put("pofi05b", bi.pofi05b.isChecked() ? "2" : "0");
-        form03_01.put("pofi05c", bi.pofi05c.isChecked() ? "3" : "0");
-        form03_01.put("pofi05d", bi.pofi05d.isChecked() ? "4" : "0");
-        form03_01.put("pofi0596", bi.pofi0596.isChecked() ? "96" : "0");
-        form03_01.put("pofi0596x", bi.pofi0596x.getText().toString());
-
-        form03_01.put("pofi051", bi.pofi051a.isChecked() ? "1"
-                : bi.pofi051b.isChecked() ? "2"
-                : "0");
-        form03_01.put("pofi051ax", bi.pofi051ax.getText().toString());
-
-        form03_01.put("pofi06", bi.pofi06a.isChecked() ? "1"
-                : bi.pofi06b.isChecked() ? "2"
-                : "0");
-        form03_01.put("pofi06ax", bi.pofi06ax.getText().toString());
-        form03_01.put("pofi06ay", bi.pofi06ay.getText().toString());
-
-        form03_01.put("pofi07", bi.pofi07a.isChecked() ? "1"
-                : bi.pofi07b.isChecked() ? "2"
-                : bi.pofi0797.isChecked() ? "97"
+        form03_01.put("RSf3035", bi.RSf3035a.isChecked() ? "1"
+                : bi.RSf3035b.isChecked() ? "2"
+                : bi.RSf3035c.isChecked() ? "3"
+                : bi.RSf3035d.isChecked() ? "4"
+                : bi.RSf3035e.isChecked() ? "5"
+                : bi.RSf3035f.isChecked() ? "6"
                 : "0");
 
-        form03_01.put("pofi08", bi.pofi08a.isChecked() ? "1"
-                : bi.pofi08b.isChecked() ? "2"
-                : bi.pofi0896.isChecked() ? "96"
-                : "0");
-        form03_01.put("pofi0896x", bi.pofi0896x.getText().toString());
-
-        form03_01.put("pofi09", bi.pofi09a.isChecked() ? "1"
-                : bi.pofi09b.isChecked() ? "2"
-                : bi.pofi0997.isChecked() ? "97"
+        form03_01.put("RSf3036", bi.RSf3036a.isChecked() ? "1"
+                : bi.RSf3036b.isChecked() ? "2"
+                : bi.RSf3036c.isChecked() ? "3"
+                : bi.RSf3036d.isChecked() ? "4"
                 : "0");
 
-        form03_01.put("pofi10", bi.pofi10a.isChecked() ? "1"
-                : bi.pofi10b.isChecked() ? "2"
+        form03_01.put("RSf3037", bi.RSf3037a.isChecked() ? "1"
+                : bi.RSf3037b.isChecked() ? "2"
+                : bi.RSf3037c.isChecked() ? "3"
+                : bi.RSf3037d.isChecked() ? "4"
+                : bi.RSf3037e.isChecked() ? "5"
+                : bi.RSf3037f.isChecked() ? "6"
+                : bi.RSf3037g.isChecked() ? "7"
+                : bi.RSf303796.isChecked() ? "96"
                 : "0");
+        form03_01.put("RSf303796x", bi.RSf303796x.getText().toString());
 
-        form03_01.put("pofi101", bi.pofi101a.isChecked() ? "1"
-                : bi.pofi101b.isChecked() ? "2"
+        form03_01.put("RSf3038", bi.RSf3038a.isChecked() ? "1"
+                : bi.RSf3038b.isChecked() ? "2"
+                : bi.RSf3038c.isChecked() ? "3"
+                : bi.RSf3038d.isChecked() ? "4"
+                : bi.RSf3038e.isChecked() ? "5"
+                : bi.RSf303896.isChecked() ? "96"
                 : "0");
+        form03_01.put("RSf303896x", bi.RSf303896x.getText().toString());
 
-        form03_01.put("pofi11", bi.pofi11a.isChecked() ? "1"
-                : bi.pofi11b.isChecked() ? "2"
+        form03_01.put("RSf3039", bi.RSf3039a.isChecked() ? "1"
+                : bi.RSf3039b.isChecked() ? "2"
+                : bi.RSf3039c.isChecked() ? "3"
+                : bi.RSf3039d.isChecked() ? "4"
+                : bi.RSf303996.isChecked() ? "96"
                 : "0");
-        form03_01.put("pofi11ax", bi.pofi11ax.getText().toString());
+        form03_01.put("RSf303996x", bi.RSf303996x.getText().toString());
 
-        form03_01.put("pofi12", bi.pofi12.getText().toString());
-
-        form03_01.put("pofi13a", bi.pofi13a.isChecked() ? "1" : "0");
-        form03_01.put("pofi13b", bi.pofi13b.isChecked() ? "2" : "0");
-        form03_01.put("pofi13c", bi.pofi13c.isChecked() ? "3" : "0");
-        form03_01.put("pofi13d", bi.pofi13d.isChecked() ? "4" : "0");
-        form03_01.put("pofi13e", bi.pofi13e.isChecked() ? "5" : "0");
-        form03_01.put("pofi13f", bi.pofi13f.isChecked() ? "6" : "0");
-        form03_01.put("pofi1396", bi.pofi1396.isChecked() ? "96" : "0");
-        form03_01.put("pofi1396x", bi.pofi1396x.getText().toString());
-
-        form03_01.put("pofi14a", bi.pofi14a.isChecked() ? "1" : "0");
-        form03_01.put("pofi14b", bi.pofi14b.isChecked() ? "2" : "0");
-        form03_01.put("pofi14c", bi.pofi14c.isChecked() ? "3" : "0");
-        form03_01.put("pofi14d", bi.pofi14d.isChecked() ? "4" : "0");
-        form03_01.put("pofi14e", bi.pofi14e.isChecked() ? "5" : "0");
-        form03_01.put("pofi14f", bi.pofi14f.isChecked() ? "6" : "0");
-        form03_01.put("pofi14g", bi.pofi14g.isChecked() ? "7" : "0");
-        form03_01.put("pofi14h", bi.pofi14h.isChecked() ? "8" : "0");
-        form03_01.put("pofi14i", bi.pofi14i.isChecked() ? "9" : "0");
-        form03_01.put("pofi1496", bi.pofi1496.isChecked() ? "96" : "0");
-        form03_01.put("pofi1496x", bi.pofi1496x.getText().toString());
-
-        form03_01.put("pofi15", bi.pofi15a.isChecked() ? "1"
-                : bi.pofi15b.isChecked() ? "2"
+        form03_01.put("RSf3040", bi.RSf3040a.isChecked() ? "1"
+                : bi.RSf3040b.isChecked() ? "2"
+                : bi.RSf3040c.isChecked() ? "3"
                 : "0");
 
         MainApp.fc.setsA(String.valueOf(form03_01));
         MainApp.setGPS(this);
-    }
-
-
-    void events_call() {
-
-        db = new DatabaseHelper(this);
-        populateSpinner(this);
-
-        bi.pofi02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.pofi02a.getId()) {
-                    ClearClass.ClearAllFields(bi.pofi03cv, null);
-                    bi.pofi03cv.setVisibility(View.GONE);
-                } else {
-                    bi.pofi03cv.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.pofi04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.pofi04a.getId()) {
-                    ClearClass.ClearAllFields(bi.pofi05cv, null);
-                    bi.pofi05cv.setVisibility(View.GONE);
-                } else {
-                    bi.pofi05cv.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        //bi.pofi01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
-        bi.pofi12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
-
-        bi.pofi07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                ClearClass.ClearAllFields(bi.cvpofi08, null);
-                ClearClass.ClearAllFields(bi.cvpofi09, null);
-                bi.cvpofi08.setVisibility(View.GONE);
-                bi.cvpofi09.setVisibility(View.GONE);
-
-                if (checkedId == bi.pofi07a.getId()) {
-                    bi.cvpofi09.setVisibility(View.VISIBLE);
-                } else if (checkedId == bi.pofi07b.getId()) {
-                    bi.cvpofi08.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-
-       /* bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (!bi.pofi05a.isChecked()) {
-                    bi.pofi06.clearCheck();
-                }
-            }
-        });*/
-
-
-        /*bi.pofi09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (bi.pofi09b.isChecked()) {
-                    ClearClass.ClearAllFields(bi.fldGrppofi11, null);
-                }
-            }
-        });*/
-
-        bi.pofi101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-
-                ClearClass.ClearAllFields(bi.pofi11cv, null);
-                ClearClass.ClearAllFields(bi.pofi12cv, null);
-                ClearClass.ClearAllFields(bi.pofi13cv, null);
-                ClearClass.ClearAllFields(bi.pofi14cv, null);
-                bi.pofi11cv.setVisibility(View.GONE);
-                bi.pofi12cv.setVisibility(View.GONE);
-                bi.pofi13cv.setVisibility(View.GONE);
-                bi.pofi14cv.setVisibility(View.GONE);
-
-                if (checkedId == bi.pofi101a.getId()) {
-                    bi.pofi11cv.setVisibility(View.VISIBLE);
-                    bi.pofi12cv.setVisibility(View.VISIBLE);
-                    bi.pofi13cv.setVisibility(View.VISIBLE);
-                } else if (checkedId == bi.pofi101b.getId()) {
-                    bi.pofi14cv.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-
-        bi.pofi11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                ClearClass.ClearAllFields(bi.pofi12cv, null);
-                ClearClass.ClearAllFields(bi.pofi13cv, null);
-                ClearClass.ClearAllFields(bi.pofi14cv, null);
-                bi.pofi12cv.setVisibility(View.GONE);
-                bi.pofi13cv.setVisibility(View.GONE);
-                bi.pofi14cv.setVisibility(View.GONE);
-
-                if (checkedId == bi.pofi11a.getId()) {
-                    bi.pofi12cv.setVisibility(View.VISIBLE);
-                    bi.pofi13cv.setVisibility(View.VISIBLE);
-                } else if (checkedId == bi.pofi11b.getId()) {
-                    bi.pofi14cv.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
     }
 
 }
