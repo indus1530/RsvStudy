@@ -28,9 +28,8 @@ public class Section05Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section05);
-
-        db = new DatabaseHelper(this);
         bi.setCallback(this);
+        db = new DatabaseHelper(this);
         setupSkips();
 
 

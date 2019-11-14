@@ -168,7 +168,7 @@
                         app:maxValue="2020"
                         app:minValue="2015"
                         app:pattern="[0-9]{4,4}"
-                        app:type="equal" />
+                        app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/RS52b"
@@ -178,7 +178,7 @@
                         app:maxValue="12"
                         app:minValue="1"
                         app:pattern="[0-9]{1,2}"
-                        app:type="equal" />
+                        app:type="range" />
 
                 </LinearLayout>
 
