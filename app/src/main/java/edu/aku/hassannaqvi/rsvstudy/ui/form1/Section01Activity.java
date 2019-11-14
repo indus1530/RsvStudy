@@ -115,7 +115,7 @@ public class Section01Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        //DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = new DatabaseHelper(this);
         long updcount = db.addForm(MainApp.fc);
 
         MainApp.fc.set_ID(String.valueOf(updcount));
