@@ -23,41 +23,13 @@
 
         <LinearLayout style="@style/linearlayout_view">
 
-
             <TextView
                 style="@style/textview_fm_lst_h"
                 android:text="@string/Section3" />
 
-
             <LinearLayout
                 android:id="@+id/ll03A"
                 style="@style/linearlayout_view">
-
-                <!--&lt;!&ndash;pofi01&ndash;&gt;
-                <android.support.v7.widget.CardView style="@style/cardView">
-
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/pofi01"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                            android:id="@+id/pofi01"
-                            style="@style/textInput"
-                            android:focusable="false"
-                            android:hint="DD/MM/YYYY"
-                            android:textColor="@android:color/black"
-                            app:dateFormat="dd-MM-yyyy"
-                            app:maxDate="CR_DATE" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>-->
 
                 <!--RS024-->
                 <android.support.v7.widget.CardView
@@ -104,7 +76,7 @@
                             style="@style/EditText_number"
                             android:hint="@string/RS25"
                             android:maxLength="2"
-                            app:maxValue="30"
+                            app:maxValue="99"
                             app:minValue="1"
                             app:required="true"
                             app:type="range" />
@@ -129,7 +101,7 @@
                             style="@style/EditText_number"
                             android:hint="@string/RS26"
                             android:maxLength="2"
-                            app:maxValue="20"
+                            app:maxValue="99"
                             app:minValue="1"
                             app:required="true"
                             app:type="range" />
