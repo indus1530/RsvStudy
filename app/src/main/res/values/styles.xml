@@ -152,26 +152,23 @@
 
 
     <style name="radiogroup">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">left</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_marginBottom">16dp</item>
         <item name="android:background">#d6d6d6</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
-        <item name="android:padding">16dp</item>
 
     </style>
 
-    <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
+    <style name="radiobutton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_marginBottom">1dp</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:padding">10dp</item>
         <item name="android:background">@color/white</item>
         <item name="android:elevation">1dp</item>
