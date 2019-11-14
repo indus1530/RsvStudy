@@ -1,22 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>-->
+        <item name="android:textViewStyle">@style/labels</item>
+        <item name="android:editTextStyle">@style/textInput</item>
         <!-- Customize your theme here. -->
     </style>
 
     <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <item name="android:textViewStyle">@style/labels</item>
-        <item name="android:editTextStyle">@style/textInput</item>
         <item name="android:buttonStyle">@style/buttons</item>
         <item name="android:checkboxStyle">@style/checkbox</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
-        <!--<item name="android:toolbarStyle">@style/ActionBar</item>
-        <item name="actionBarStyle">@style/ActionBar</item>-->
+        <!--        <item name="android:toolbarStyle">@style/ActionBar</item>-->
+        <!--        <item name="actionBarStyle">@style/ActionBar</item>-->
         <!-- Customize your theme here. -->
     </style>
 
@@ -258,12 +258,12 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
-    <style name="Theme.AppTheme.Light.DarkActionBar" parent="android:Theme.Material.Light.DarkActionBar">
-        <item name="android:colorPrimary">@color/colorPrimary</item>
-        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:colorAccent">@color/colorAccent</item>
-        <item name="android:colorForeground">@color/black</item>
-    </style>
+    <!--    <style name="Theme.AppTheme.Light.DarkActionBar" parent="android:Theme.Material.Light.DarkActionBar">-->
+    <!--        <item name="android:colorPrimary">@color/colorPrimary</item>-->
+    <!--        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--        <item name="android:colorAccent">@color/colorAccent</item>-->
+    <!--        <item name="android:colorForeground">@color/black</item>-->
+    <!--    </style>-->
 
     <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
         <item name="sv_backgroundColor">#33b78ff7</item>
@@ -380,7 +380,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:background">@android:color/transparent</item>
+        <!--        <item name="android:background">@android:color/transparent</item>-->
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">15sp</item>
@@ -389,12 +389,11 @@
 
     <style name="textview_fm_lst_h">
         <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">monospace</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:background">@android:color/transparent</item>
+        <!--        <item name="android:background">@color/colorHeading</item>-->
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">35sp</item>

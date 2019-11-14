@@ -420,8 +420,8 @@
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
     <string name="other"> ٻيو ڪجھ </string>
-    <string name="uother">  )وضاحت کریں( دیگر</string>
-    <string name="specify"> وضاحت ڪريو </string>
+    <string name="uother"> دیگر </string>
+    <string name="specify"> وضاحت کریں </string>
     <string name="kg"> ڪلوگرام</string>
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>

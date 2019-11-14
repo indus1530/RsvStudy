@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimaryDark">#42a5f5</color>
+    <color name="colorPrimaryDark">#005662</color>
     <!--<color name="colorPrimary">#880E4F</color>-->
-    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimary">#00838f</color>
     <color name="colorPrimaryAlpha">#6e8b6f</color>
     <color name="colorPrimaryBeta">#5c6bc0</color>
     <color name="colorPrimaryGamma">#99a3ff</color>
-    <color name="colorAccent">#4fab54</color>
+    <color name="colorAccent">#4fb3bf</color>
     <color name="pink_100">#ccefd3</color>
     <color name="colorHeading">#CDDC39</color>
 
