@@ -370,10 +370,10 @@
     <!--End RSV Study Strings-->
 
     <string name="end_interview"> اختتام </string>
-    <string name="start_interview"> انٽرويو شروع ڪريو </string>
-    <string name="nextSection"> اڳيون سيڪشن </string>
+    <string name="start_interview"> انٹرویو شروع کریں </string>
+    <string name="nextSection"> اگلا حصہ </string>
     <string name="addMember"> افراد کا اندراج </string>
-    <string name="dcstatus"> انٽرويو جو نتيجو</string>
+    <string name="dcstatus"> انٹرویو کا نتیجہ </string>
     <string name="complete"> مکمل</string>
     <string name="incomplete">نا مکمل</string>
     <!-- String related to section headings -->

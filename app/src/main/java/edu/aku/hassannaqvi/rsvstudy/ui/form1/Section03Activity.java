@@ -10,7 +10,12 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
@@ -22,6 +27,11 @@ import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 public class Section03Activity extends AppCompatActivity {
 
     ActivityF1Section03Binding bi;
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private List<String> talukaNames, ucName, lhwNames;
+    private List<String> talukaCodes, ucCode, lhwCodes;
+    private DatabaseHelper db;
+    private ChildrenContract cContract;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,17 +71,29 @@ public class Section03Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll03A))
+            return;
+
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            MainApp.endActivity(this, this);
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private boolean UpdateDB() {
+        long updcount = db.addForm(MainApp.fc);
 
-        DatabaseHelper db = new DatabaseHelper(this);
-
-        int updcount = db.updateSD();
-
-        if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+        MainApp.fc.set_ID(String.valueOf(updcount));
+        if (updcount != 0) {
+            MainApp.fc.set_UID(
+                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
+            db.updateFormID();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -91,6 +113,7 @@ public class Section03Activity extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setUser(MainApp.userName);
+        MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
         JSONObject form03_01 = new JSONObject();

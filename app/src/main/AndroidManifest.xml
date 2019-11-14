@@ -19,13 +19,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:theme="@style/AppTheme"
         android:screenOrientation="portrait"
         android:windowSoftInputMode="adjustResize|stateHidden">
-
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,43 +43,36 @@
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section02Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section03Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section04Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.core.AndroidDatabaseManager"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
@@ -90,8 +83,7 @@
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:screenOrientation="portrait" />
 
         <activity android:name="edu.aku.hassannaqvi.rsvstudy.FormsList" />
 

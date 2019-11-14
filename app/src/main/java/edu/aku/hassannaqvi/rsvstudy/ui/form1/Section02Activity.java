@@ -15,6 +15,7 @@ import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section02Binding;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
@@ -41,9 +42,49 @@ public class Section02Activity extends AppCompatActivity {
 
                 if (checkedId == bi.RS17b.getId()) {
                     bi.RS18cv.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.RS19cv, null);
+                    ClearClass.ClearAllFields(bi.RS20cv, null);
+                    ClearClass.ClearAllFields(bi.RS21cv, null);
+                    ClearClass.ClearAllFields(bi.RS22cv, null);
+                    bi.RS19cv.setVisibility(View.GONE);
+                    bi.RS20cv.setVisibility(View.GONE);
+                    bi.RS21cv.setVisibility(View.GONE);
+                    bi.RS22cv.setVisibility(View.GONE);
                 } else {
                     ClearClass.ClearAllFields(bi.RS18cv, null);
                     bi.RS18cv.setVisibility(View.GONE);
+                    bi.RS19cv.setVisibility(View.VISIBLE);
+                    bi.RS20cv.setVisibility(View.VISIBLE);
+                    bi.RS21cv.setVisibility(View.VISIBLE);
+                    bi.RS22cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        bi.RS19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS19a.getId()) {
+                    ClearClass.ClearAllFields(bi.RS20cv, null);
+                    bi.RS20cv.setVisibility(View.GONE);
+                } else {
+                    bi.RS20cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        bi.RS21.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS21b.getId()) {
+                    bi.RS22cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS22cv, null);
+                    bi.RS22cv.setVisibility(View.GONE);
                 }
             }
         });
@@ -60,8 +101,14 @@ public class Section02Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, Section03Activity.class));
+
+                if (bi.RS17b.isChecked()) {
+                    finish();
+                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    finish();
+                    startActivity(new Intent(this, Section03Activity.class));
+                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -101,7 +148,8 @@ public class Section02Activity extends AppCompatActivity {
                 : bi.RS18c.isChecked() ? "3"
                 : bi.RS18d.isChecked() ? "4"
                 : bi.RS18e.isChecked() ? "5"
-                : bi.RS18f.isChecked() ? "6" : "0");
+                : bi.RS18f.isChecked() ? "6"
+                : "0");
 
         SB.put("RS19", bi.RS19a.isChecked() ? "1"
                 : bi.RS19b.isChecked() ? "2"
@@ -111,18 +159,21 @@ public class Section02Activity extends AppCompatActivity {
                 : bi.RS19f.isChecked() ? "6"
                 : bi.RS19g.isChecked() ? "7"
                 : bi.RS19h.isChecked() ? "8"
-                : bi.RS1996.isChecked() ? "96" : "0");
+                : bi.RS1996.isChecked() ? "96"
+                : "0");
         SB.put("RS19x", bi.RS1996x.getText().toString());
 
         SB.put("RS20", bi.RS20a.isChecked() ? "1"
                 : bi.RS20b.isChecked() ? "2"
                 : bi.RS20c.isChecked() ? "3"
                 : bi.RS20d.isChecked() ? "4"
-                : bi.RS2096.isChecked() ? "96" : "0");
+                : bi.RS2096.isChecked() ? "96"
+                : "0");
         SB.put("RS20x", bi.RS2096x.getText().toString());
 
         SB.put("RS21", bi.RS21a.isChecked() ? "1"
-                : bi.RS21b.isChecked() ? "2" : "0");
+                : bi.RS21b.isChecked() ? "2"
+                : "0");
 
         SB.put("RS22", bi.RS22.getText().toString());
 
