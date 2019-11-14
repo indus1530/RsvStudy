@@ -192,7 +192,6 @@ public class Section05Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
         MainApp.endActivity(this, this);
     }
 

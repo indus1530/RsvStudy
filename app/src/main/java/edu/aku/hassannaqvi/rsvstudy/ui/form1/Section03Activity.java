@@ -87,15 +87,13 @@ public class Section03Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
+
         DatabaseHelper db = new DatabaseHelper(this);
 
-        long updcount = db.addForm(MainApp.fc);
+        int updcount = db.updateSC();
 
-        MainApp.fc.set_ID(String.valueOf(updcount));
-        if (updcount != 0) {
-            MainApp.fc.set_UID(
-                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
-            db.updateFormID();
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -104,7 +102,6 @@ public class Section03Activity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-
         return ValidatorClass.EmptyCheckingContainer(this, bi.ll03A);
     }
 
@@ -119,10 +116,6 @@ public class Section03Activity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
         JSONObject SC = new JSONObject();
-
-        /*SC.put("pofi001", talukaCodes.get(bi.pofi001.getSelectedItemPosition()));
-        SC.put("pofi002", ucCode.get(bi.pofi002.getSelectedItemPosition()));
-        //SC.put("pofi01", bi.pofi01.getText().toString());*/
 
         SC.put("RS24", bi.RS24.getText().toString());
         SC.put("RS25", bi.RS25.getText().toString());
@@ -382,6 +375,11 @@ public class Section03Activity extends AppCompatActivity {
 
         MainApp.fc.setsC(String.valueOf(SC));
         MainApp.setGPS(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
 }
