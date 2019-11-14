@@ -437,6 +437,7 @@
 
             <!--RS46 - Date Picker-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS46cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -466,6 +467,7 @@
 
             <!--RS47 - EditText-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS47cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

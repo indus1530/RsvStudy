@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -13,6 +15,7 @@ import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section04Binding;
+import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section04Activity extends AppCompatActivity {
@@ -24,7 +27,7 @@ public class Section04Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04);
         bi.setCallback(this);
-
+        setupSkips();
 
         /*bi.pocff03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -62,6 +65,85 @@ public class Section04Activity extends AppCompatActivity {
 
     }
 
+
+    private void setupSkips() {
+
+        bi.RS41.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS41a.getId()) {
+                    bi.RS42cv.setVisibility(View.VISIBLE);
+                    bi.RS43cv.setVisibility(View.VISIBLE);
+                    bi.RS44cv.setVisibility(View.VISIBLE);
+                    bi.RS45cv.setVisibility(View.VISIBLE);
+                    bi.RS46cv.setVisibility(View.VISIBLE);
+                    bi.RS47cv.setVisibility(View.VISIBLE);
+                    bi.RS48cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS42cv, null);
+                    ClearClass.ClearAllFields(bi.RS43cv, null);
+                    ClearClass.ClearAllFields(bi.RS44cv, null);
+                    ClearClass.ClearAllFields(bi.RS45cv, null);
+                    ClearClass.ClearAllFields(bi.RS46cv, null);
+                    ClearClass.ClearAllFields(bi.RS47cv, null);
+                    ClearClass.ClearAllFields(bi.RS48cv, null);
+                    bi.RS42cv.setVisibility(View.GONE);
+                    bi.RS43cv.setVisibility(View.GONE);
+                    bi.RS44cv.setVisibility(View.GONE);
+                    bi.RS45cv.setVisibility(View.GONE);
+                    bi.RS46cv.setVisibility(View.GONE);
+                    bi.RS47cv.setVisibility(View.GONE);
+                    bi.RS48cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.RS43.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS43a.getId()) {
+                    bi.RS44cv.setVisibility(View.VISIBLE);
+                    bi.RS45cv.setVisibility(View.VISIBLE);
+                    bi.RS46cv.setVisibility(View.VISIBLE);
+                    bi.RS47cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS44cv, null);
+                    ClearClass.ClearAllFields(bi.RS45cv, null);
+                    ClearClass.ClearAllFields(bi.RS46cv, null);
+                    ClearClass.ClearAllFields(bi.RS47cv, null);
+                    bi.RS44cv.setVisibility(View.GONE);
+                    bi.RS45cv.setVisibility(View.GONE);
+                    bi.RS46cv.setVisibility(View.GONE);
+                    bi.RS47cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.RS45.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS45a.getId()) {
+                    bi.RS46cv.setVisibility(View.VISIBLE);
+                    bi.RS47cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS46cv, null);
+                    ClearClass.ClearAllFields(bi.RS47cv, null);
+                    bi.RS46cv.setVisibility(View.GONE);
+                    bi.RS47cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+    }
+
+
+
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -77,6 +159,7 @@ public class Section04Activity extends AppCompatActivity {
             }
         }
     }
+
 
     private boolean UpdateDB() {
 

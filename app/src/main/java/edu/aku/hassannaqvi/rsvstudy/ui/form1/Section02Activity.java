@@ -66,11 +66,11 @@ public class Section02Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS19a.getId()) {
+                if (checkedId != bi.RS19a.getId()) {
+                    bi.RS20cv.setVisibility(View.VISIBLE);
+                } else {
                     ClearClass.ClearAllFields(bi.RS20cv, null);
                     bi.RS20cv.setVisibility(View.GONE);
-                } else {
-                    bi.RS20cv.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -80,11 +80,11 @@ public class Section02Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS21b.getId()) {
-                    bi.RS22cv.setVisibility(View.VISIBLE);
-                } else {
+                if (checkedId != bi.RS21b.getId()) {
                     ClearClass.ClearAllFields(bi.RS22cv, null);
                     bi.RS22cv.setVisibility(View.GONE);
+                } else {
+                    bi.RS22cv.setVisibility(View.VISIBLE);
                 }
             }
         });
