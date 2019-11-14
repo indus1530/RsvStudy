@@ -147,6 +147,7 @@
 
             <!--RS52 - EditText-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS52cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -429,6 +430,7 @@
 
             <!--RS59 - EditText-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS59cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -1312,6 +1314,11 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
+                        <RadioButton
+                            android:id="@+id/RS76198"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
 
                     <TextView
@@ -1333,6 +1340,11 @@
                             android:id="@+id/RS762b"
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/RS76298"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
@@ -1356,6 +1368,11 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
+                        <RadioButton
+                            android:id="@+id/RS76398"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
 
                     <TextView
@@ -1377,6 +1394,11 @@
                             android:id="@+id/RS764b"
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/RS76498"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
@@ -1400,6 +1422,11 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
+                        <RadioButton
+                            android:id="@+id/RS76598"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
 
                     <TextView
@@ -1421,6 +1448,11 @@
                             android:id="@+id/RS766b"
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/RS76698"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
@@ -1444,6 +1476,11 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
+                        <RadioButton
+                            android:id="@+id/RS76798"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
 
                     <TextView
@@ -1465,6 +1502,11 @@
                             android:id="@+id/RS768b"
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/RS76898"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
@@ -1488,6 +1530,11 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
+                        <RadioButton
+                            android:id="@+id/RS76998"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
 
                     <TextView
@@ -1509,6 +1556,11 @@
                             android:id="@+id/RS7610b"
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/RS761098"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
@@ -1532,6 +1584,11 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
+                        <RadioButton
+                            android:id="@+id/RS761198"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
+
                     </RadioGroup>
 
                     <TextView
@@ -1553,6 +1610,11 @@
                             android:id="@+id/RS7612b"
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/RS761298"
+                            style="@style/i_radiobutton"
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
@@ -1599,8 +1661,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--RS78 - EditText-->
+            <!--RS78 - EditText -->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS78cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
