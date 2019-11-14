@@ -77,31 +77,6 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form2.F2Section01Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form2.F2Section02Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-
-        <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form4.F4Section01Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
-            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form3.F3Section01Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.core.AndroidDatabaseManager"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"

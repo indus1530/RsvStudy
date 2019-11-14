@@ -24,7 +24,6 @@ public class Section04Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04);
         bi.setCallback(this);
-        this.setTitle("Form 01 (Case Reporting Form)");
 
 
         /*bi.pocff03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
