@@ -29,6 +29,7 @@
 
             <!--RS17 - Radio-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS17cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -118,6 +119,7 @@
 
             <!--RS19 - Radio-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS19cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -195,6 +197,7 @@
 
             <!--RS20 - Radio-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS20cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -252,6 +255,7 @@
 
             <!--RS21 - Radio-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS21cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -286,6 +290,7 @@
 
             <!--RS22 - Date Picker-->
             <android.support.v7.widget.CardView
+                android:id="@+id/RS22cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
