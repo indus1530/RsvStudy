@@ -16,7 +16,6 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section03Binding;
@@ -106,14 +105,6 @@ public class Section03Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-
-        MainApp.fc = new FormsContract();
-        MainApp.fc.setDeviceID(MainApp.deviceId);
-        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
-        MainApp.fc.setFormType(MainApp.formtype);
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
         JSONObject SC = new JSONObject();
 
