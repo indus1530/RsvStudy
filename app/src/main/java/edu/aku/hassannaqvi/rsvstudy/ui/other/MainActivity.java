@@ -190,13 +190,15 @@ public class MainActivity extends Activity {
         MainApp.fatherMap.put("N/A_0", "0");
 
         loadTagDialog();
+        bi.lblAppVersion.setText(getResources().getString(R.string.app_name) + " New Version " + newVer + " Downloading..");
+
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
 //        lblheader.setText("Welcome! You're assigned to block ' " + MainApp.regionDss + " '" + MainApp.userName);
-        bi.lblheader.setText("Welcome!!");
+        bi.lblheader.setText("Welcome, " + MainApp.userName + "!");
 
         if (MainApp.admin) {
             bi.adminsec.setVisibility(View.VISIBLE);
@@ -222,20 +224,20 @@ public class MainActivity extends Activity {
                 file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
 
                 if (file.exists()) {
-                    bi.lblAppVersion.setText("PO APP New Version " + newVer + "  Downloaded.");
+                    bi.lblAppVersion.setText(" New Version " + getResources().getString(R.string.app_name) + " ( " + newVer + " ) Downloaded.");
 //                    InstallNewApp(newVer, preVer);
                     showDialog(newVer, preVer);
                 } else {
                     NetworkInfo networkInfo = ((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
                     if (networkInfo != null && networkInfo.isConnected()) {
 
-                        bi.lblAppVersion.setText("PO APP New Version " + newVer + " Downloading..");
+                        bi.lblAppVersion.setText(getResources().getString(R.string.app_name) + " New Version " + newVer + " Downloading..");
                         downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
                         Uri uri = Uri.parse(MainApp._APP_UPDATE_URL + versionAppContract.getPathname());
                         DownloadManager.Request request = new DownloadManager.Request(uri);
                         request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
                                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                .setTitle("Downloading PO new App ver." + newVer);
+                                .setTitle("Downloading " + getResources().getString(R.string.app_name) + " new App ver." + newVer);
                         refID = downloadManager.enqueue(request);
 
                         editorDownload.putLong("refID", refID);
@@ -243,7 +245,7 @@ public class MainActivity extends Activity {
                         editorDownload.commit();
 
                     } else {
-                        bi.lblAppVersion.setText("PO APP New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
+                        bi.lblAppVersion.setText(getResources().getString(R.string.app_name) + " New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
                     }
                 }
 

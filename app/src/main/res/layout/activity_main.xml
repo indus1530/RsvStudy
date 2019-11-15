@@ -6,11 +6,11 @@
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/rsv_bg"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="72dp"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        android:background="@drawable/rsv_bg"
         tools:context="edu.aku.hassannaqvi.rsvstudy.ui.other.MainActivity">
 
         <LinearLayout
@@ -26,20 +26,10 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/lightOrange"
-                android:textAlignment="center"
+                android:drawableStart="@drawable/ic_warning_black_24dp"
+                android:drawablePadding="12dp"
                 android:textColor="@color/darkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/lblheader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/dullWhite"
-                android:text="Main Menu"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/lblMainMenu"
@@ -47,10 +37,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:background="@color/dullWhite"
                 android:text="Main Menu"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/lblheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Main Menu"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/recordSummary"
@@ -98,67 +101,48 @@
             <Button
                 android:id="@+id/form01"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:background="@color/colorSecondary"
+                android:elevation="1dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:radius="2dp"
                 android:onClick="openForm"
-                android:text="RSV Study Tool" />
+                android:shadowRadius="@android:integer/config_mediumAnimTime"
+                android:text="Open New Form"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/form02"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openForm"
-                android:text="Form 02 (Follow Ups - 7 Day)"
-                android:visibility="gone" />
 
-            <Button
-                android:id="@+id/form02_b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openForm"
-                android:text="Form 02 (Follow Ups - 14 Day)"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/form03"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openForm"
-                android:text="Form 03 (Referral Form)"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/form04"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openForm"
-                android:text="Form 04 (Hospital Physician Form)"
-                android:visibility="gone" />
 
             <Button
                 android:id="@+id/syncServer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:background="@color/colorSecondary"
+                android:elevation="1dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 android:onClick="syncServer"
+                android:radius="2dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
                 android:text="Upload Data" />
 
             <Button
                 android:id="@+id/syncDevice"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:background="@color/colorSecondary"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/colorAccent"
                 android:onClick="syncDevice"
                 android:text="Download Data"
                 android:visibility="gone" />

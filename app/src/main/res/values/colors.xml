@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#1A0B24</color>
     <!--<color name="colorPrimary">#880E4F</color>-->
     <color name="colorPrimary">#451e5d</color>
+    <color name="colorSecondary">#00617d</color>
     <color name="colorPrimaryAlpha">#d6451e5d</color>
     <color name="colorPrimaryBeta">#5c6bc0</color>
     <color name="colorPrimaryGamma">#99a3ff</color>
@@ -34,6 +35,6 @@
     <color name="red">#f44336</color>
 
     <color name="darkRed">#D50000</color>
-    <color name="lightOrange">#FFE0B2</color>
+    <color name="lightOrange">#f7f6e0</color>
 
 </resources>

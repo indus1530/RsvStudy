@@ -1,6 +1,6 @@
 <resources>
     <!--new Strings-->
-    <string name="app_name">RSV Study</string>
+    <string name="app_name">RSV Study App</string>
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
     <string name="btnUpload">Upload</string>

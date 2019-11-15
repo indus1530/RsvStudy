@@ -33,13 +33,11 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,7 +54,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -111,13 +108,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     @BindView(R.id.email_sign_in_button)
     Button mEmailSignInButton;
 
-    @BindView(R.id.spUCs)
-    Spinner spUCs;
-    @BindView(R.id.spTaluka)
-    Spinner spTalukas;
 
     @BindView(R.id.syncData)
-    Button syncData;
+    TextView syncData;
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
@@ -192,9 +185,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         });
 
         db = new DatabaseHelper(this);
-
-        populateSpinner(this);
-
 //        DB backup
 
         dbBackup();
@@ -215,75 +205,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     }
 
-    public void populateSpinner(Context context) {
-
-        final Context mContext = context;
-
-        // Populate Talukas list
-        TalukasList = db.getAllTalukas();
-
-        lablesTalukas = new ArrayList<>();
-        talukasMap = new HashMap<>();
-
-        lablesTalukas.add("Select District..");
-
-        for (TalukasContract taluka : TalukasList) {
-            lablesTalukas.add(taluka.getTaluka());
-
-            talukasMap.put(taluka.getTaluka(), taluka.getTalukacode());
-        }
-
-        spTalukas.setAdapter(new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_dropdown_item, lablesTalukas));
-
-        spTalukas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                // Populate UCs list
-
-                if (spTalukas.getSelectedItemPosition() != 0) {
-                    MainApp.talukaCode = Integer.valueOf(talukasMap.get(spTalukas.getSelectedItem().toString()));
-                }
-
-                lablesUCs = new ArrayList<>();
-                ucsMap = new HashMap<>();
-                lablesUCs.add("Select Union Council..");
-
-                if (spTalukas.getSelectedItemPosition() != 0) {
-                    UcsList = db.getAllUCs(String.valueOf(MainApp.talukaCode));
-                    for (UCsContract ucs : UcsList) {
-                        lablesUCs.add(ucs.getUcs());
-                        ucsMap.put(ucs.getUcs(), ucs.getUccode());
-                    }
-                }
-
-                spUCs.setAdapter(new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_dropdown_item, lablesUCs));
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        spUCs.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                // Populate UCs list
-
-                if (spUCs.getSelectedItemPosition() != 0) {
-                    MainApp.ucCode = Integer.valueOf(ucsMap.get(spUCs.getSelectedItem().toString()));
-                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-    }
 
     public void dbBackup() {
 

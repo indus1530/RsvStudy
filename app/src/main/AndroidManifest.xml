@@ -39,7 +39,7 @@
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:windowSoftInputMode="stateVisible|adjustPan" />
+            android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.MainActivity"
