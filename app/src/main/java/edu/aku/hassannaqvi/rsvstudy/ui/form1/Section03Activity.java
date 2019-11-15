@@ -365,7 +365,7 @@ public class Section03Activity extends AppCompatActivity {
                 : "0");
 
         MainApp.fc.setsC(String.valueOf(SC));
-        MainApp.setGPS(this);
+
     }
 
     @Override
