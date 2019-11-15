@@ -892,86 +892,62 @@
 
                         <CheckBox
                             android:id="@+id/RS70a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70a" />
 
                         <CheckBox
                             android:id="@+id/RS70b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70b" />
 
                         <CheckBox
                             android:id="@+id/RS70c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70c" />
 
                         <CheckBox
                             android:id="@+id/RS70d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70d" />
 
                         <CheckBox
                             android:id="@+id/RS70e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70e" />
 
                         <CheckBox
                             android:id="@+id/RS70f"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70f" />
 
                         <CheckBox
                             android:id="@+id/RS70g"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70g" />
 
                         <CheckBox
                             android:id="@+id/RS70h"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70h" />
 
                         <CheckBox
                             android:id="@+id/RS70i"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70i" />
 
                         <CheckBox
                             android:id="@+id/RS70j"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70j" />
 
                         <CheckBox
                             android:id="@+id/RS70k"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70k" />
 
                         <CheckBox
                             android:id="@+id/RS70l"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/checkbox"
                             android:text="@string/RS70l" />
 
                     </LinearLayout>
