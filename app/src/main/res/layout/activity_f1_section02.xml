@@ -186,7 +186,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="pocfc0296"
-                            android:text='@{RS1996.checked? RS1996x.getText.toString : "" }'
+                            android:text='@{RS1996.checked? RS1996x.getText().toString() : "" }'
                             android:visibility='@{RS1996.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
@@ -244,7 +244,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="pocfc0296"
-                            android:text='@{RS2096.checked? RS2096x.getText.toString : "" }'
+                            android:text='@{RS2096.checked? RS2096x.getText().toString() : "" }'
                             android:visibility='@{RS2096.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>

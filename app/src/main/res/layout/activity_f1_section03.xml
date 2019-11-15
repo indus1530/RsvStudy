@@ -253,7 +253,7 @@
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/specify"
                                 android:tag="RS2796"
-                                android:text='@{RS2796.checked? RS2796x.getText.toString : "" }'
+                                android:text='@{RS2796.checked? RS2796x.getText().toString() : "" }'
                                 android:visibility='@{RS2796.checked? View.VISIBLE : View.GONE}' />
 
                         </RadioGroup>
@@ -364,7 +364,7 @@
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/specify"
                                 android:tag="RS2896"
-                                android:text='@{RS2896.checked? RS2896x.getText.toString : "" }'
+                                android:text='@{RS2896.checked? RS2896x.getText().toString() : "" }'
                                 android:visibility='@{RS2896.checked? View.VISIBLE : View.GONE}' />
 
                             </RadioGroup>
@@ -501,7 +501,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RSf302996"
-                            android:text='@{RSf302996.checked? RSf302996x.getText.toString : "" }'
+                            android:text='@{RSf302996.checked? RSf302996x.getText().toString() : "" }'
                             android:visibility='@{RSf302996.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -568,7 +568,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RSf303096"
-                            android:text='@{RSf303096.checked? RSf303096x.getText.toString : "" }'
+                            android:text='@{RSf303096.checked? RSf303096x.getText().toString() : "" }'
                             android:visibility='@{RSf303096.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -677,7 +677,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RSf303196"
-                            android:text='@{RSf303196.checked? RSf303196x.getText.toString : "" }'
+                            android:text='@{RSf303196.checked? RSf303196x.getText().toString() : "" }'
                             android:visibility='@{RSf303196.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -1503,7 +1503,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RSf303396a"
-                            android:text='@{RSf303396a.checked? RSf303396x.getText.toString : "" }'
+                            android:text='@{RSf303396a.checked? RSf303396x.getText().toString() : "" }'
                             android:visibility='@{RSf303396a.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -1694,7 +1694,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RSf303796"
-                            android:text='@{RSf303796.checked? RSf303796x.getText.toString : "" }'
+                            android:text='@{RSf303796.checked? RSf303796x.getText().toString() : "" }'
                             android:visibility='@{RSf303796.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -1751,7 +1751,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RSf303896"
-                            android:text='@{RSf303896.checked? RSf303896x.getText.toString : "" }'
+                            android:text='@{RSf303896.checked? RSf303896x.getText().toString() : "" }'
                             android:visibility='@{RSf303896.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -1796,7 +1796,7 @@
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/RS39x"
                                 android:tag="RSf303996"
-                                android:text='@{RSf303996.checked? RSf303996x.getText.toString : "" }'
+                                android:text='@{RSf303996.checked? RSf303996x.getText().toString() : "" }'
                                 android:visibility='@{RSf303996.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton

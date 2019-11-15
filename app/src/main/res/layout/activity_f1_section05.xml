@@ -655,7 +655,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RS6496"
-                            android:text='@{RS6496.checked? RS6496x.getText.toString : "" }'
+                            android:text='@{RS6496.checked? RS6496x.getText().toString() : "" }'
                             android:visibility='@{RS6496.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>

@@ -184,7 +184,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RS4296a"
-                            android:text='@{RS4296a.checked? RS4296ax.getText.toString : "" }'
+                            android:text='@{RS4296a.checked? RS4296ax.getText().toString() : "" }'
                             android:visibility='@{RS4296a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -382,7 +382,7 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/specify"
                             android:tag="RS4496a"
-                            android:text='@{RS4496a.checked? RS4496ax.getText.toString : "" }'
+                            android:text='@{RS4496a.checked? RS4496ax.getText().toString() : "" }'
                             android:visibility='@{RS4496a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
