@@ -100,10 +100,12 @@
     </style>
 
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:elevation">1dp</item>
         <item name="android:background">@drawable/et_style</item>
         <item name="android:textColorHint">@color/gray</item>
         <item name="android:textColor">@color/black</item>
@@ -305,10 +307,9 @@
         <item name="android:textSize">20sp</item>
         <item name="android:drawable">@drawable/textview_background_grad</item>
         <item name="android:typeface">sans</item>
-        <item name="android:paddingTop">16dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
         <item name="android:elevation">1dp</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
     </style>
 
     <style name="i_textview1">
