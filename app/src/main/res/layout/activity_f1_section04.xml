@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.form1.Section04Activity">
 
     <data>
 
@@ -11,12 +14,12 @@
 
     </data>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/rsv_bg"
         android:layoutDirection="rtl"
-        tools:context=".activities.Section04Activity">
+        android:padding="16dp">
 
         <LinearLayout
             android:id="@+id/ll04"
@@ -25,7 +28,9 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/textview_fm_lst_h"
+                style="@style/HeadingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/Section4" />
 
             <!--RS41 - Radio-->
@@ -39,20 +44,24 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/RS41" />
 
                     <RadioGroup
                         android:id="@+id/RS41"
+                        android:orientation="horizontal"
                         style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/RS41a"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/RS41b"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/no" />
 
@@ -73,11 +82,17 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS42" />
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS421" />
@@ -98,8 +113,11 @@
 
                     </RadioGroup>
 
-                        <TextView
-                            style="@style/i_textview"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS422" />
@@ -121,7 +139,10 @@
                     </RadioGroup>
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS423" />
@@ -142,11 +163,15 @@
 
                     </RadioGroup>
 
-                        <TextView
-                            style="@style/i_textview"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/RS424"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
-                            android:text="@string/RS424" />
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
 
                     <RadioGroup
                         android:id="@+id/RS424"
@@ -165,7 +190,10 @@
                     </RadioGroup>
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS4296" />
@@ -181,10 +209,12 @@
 
                         <EditText
                             android:id="@+id/RS4296ax"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
                             android:hint="@string/specify"
                             android:tag="RS4296a"
                             android:text='@{RS4296a.checked? RS4296ax.getText().toString() : "" }'
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
                             android:visibility='@{RS4296a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -209,7 +239,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS43" />
 
                     <RadioGroup
@@ -243,12 +276,18 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS44" />
 
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS441" />
@@ -271,7 +310,10 @@
 
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS442" />
@@ -294,7 +336,10 @@
 
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS443" />
@@ -317,7 +362,10 @@
 
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS444" />
@@ -340,7 +388,10 @@
 
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS445" />
@@ -363,7 +414,10 @@
 
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/RS4496" />
@@ -379,10 +433,12 @@
 
                         <EditText
                             android:id="@+id/RS4496ax"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
                             android:hint="@string/specify"
                             android:tag="RS4496a"
                             android:text='@{RS4496a.checked? RS4496ax.getText().toString() : "" }'
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
                             android:visibility='@{RS4496a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -407,7 +463,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS45" />
 
                     <RadioGroup
@@ -438,8 +497,7 @@
             <!--RS46 - Date Picker-->
             <android.support.v7.widget.CardView
                 android:id="@+id/RS46cv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -447,18 +505,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS46" />
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         android:id="@+id/RS46"
-                        style="@style/textInput"
                         android:layout_marginStart="20dp"
                         android:layout_weight="70"
                         android:focusable="false"
                         android:hint="DD/MM/YYYY"
                         android:textColor="@android:color/black"
                         app:dateFormat="dd-MM-yyyy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         app:maxDate="CR_DATE" />
 
                 </LinearLayout>
@@ -468,8 +530,7 @@
             <!--RS47 - EditText-->
             <android.support.v7.widget.CardView
                 android:id="@+id/RS47cv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -477,13 +538,19 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS47" />
 
                     <EditText
                         android:id="@+id/RS47"
-                        style="@style/EditText_number"
-                        android:hint="@string/day" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/ed_numbersOnly"
+                        android:hint="@string/day"
+                        android:inputType="number" />
 
                 </LinearLayout>
 
@@ -500,25 +567,32 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS48" />
 
                     <RadioGroup
                         android:id="@+id/RS48"
+                        android:orientation="horizontal"
                         style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/RS48a"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/RS48b"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/RS4898"
+                            android:layout_weight="1"
                             style="@style/radiobutton"
                             android:text="@string/RS4898" />
 

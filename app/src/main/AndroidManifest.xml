@@ -38,12 +38,14 @@
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.MainActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
+
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity

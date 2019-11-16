@@ -24,7 +24,8 @@
         <LinearLayout style="@style/linearlayout_view">
 
             <TextView
-                style="@style/textview_fm_lst_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/Section3" />
 
             <LinearLayout
@@ -68,12 +69,18 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS25" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RS25"
-                            style="@style/EditText_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_numbersOnly"
+                            android:inputType="number"
                             android:hint="@string/RS25"
                             android:maxLength="2"
                             app:maxValue="99"
@@ -93,12 +100,18 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS26" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RS26"
-                            style="@style/EditText_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_numbersOnly"
+                            android:inputType="number"
                             android:hint="@string/RS26"
                             android:maxLength="2"
                             app:maxValue="99"
@@ -118,11 +131,17 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS27" />
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS27h1" />
@@ -157,7 +176,10 @@
                                 android:text="@string/RS275" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:background="@color/colorPrimaryDark"
                                 android:gravity="center"
                                 android:text="@string/RS27h2" />
@@ -193,7 +215,10 @@
                                 android:text="@string/RS2711" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:background="@color/colorPrimaryDark"
                                 android:gravity="center"
                                 android:text="@string/RS27h3" />
@@ -249,8 +274,12 @@
                                 android:text="@string/uother" />
 
                             <EditText
+
                                 android:id="@+id/RS2796x"
-                                style="@style/EditTextAlphaNumeric"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/ed_sentence"
+                                android:inputType="textShortMessage"
                                 android:hint="@string/specify"
                                 android:tag="RS2796"
                                 android:text='@{RS2796.checked? RS2796x.getText().toString() : "" }'
@@ -270,11 +299,17 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS28" />
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS28h1" />
@@ -314,7 +349,10 @@
                                 android:text="@string/RS286" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:background="@color/colorPrimaryDark"
                                 android:gravity="center"
                                 android:text="@string/RS28h2" />
@@ -361,7 +399,10 @@
 
                             <EditText
                                 android:id="@+id/RS2896x"
-                                style="@style/EditTextAlphaNumeric"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/ed_sentence"
+                                android:inputType="textShortMessage"
                                 android:hint="@string/specify"
                                 android:tag="RS2896"
                                 android:text='@{RS2896.checked? RS2896x.getText().toString() : "" }'
@@ -379,11 +420,17 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS29" />
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS29h1" />
@@ -418,7 +465,10 @@
                                 android:text="@string/RS295" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:background="@color/colorPrimaryDark"
                                 android:gravity="center"
                                 android:text="@string/RS29h2" />
@@ -454,7 +504,10 @@
                                 android:text="@string/RS2911" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:background="@color/colorPrimaryDark"
                                 android:gravity="center"
                                 android:text="@string/RS29h3" />
@@ -498,7 +551,10 @@
 
                         <EditText
                             android:id="@+id/RSf302996x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="RSf302996"
                             android:text='@{RSf302996.checked? RSf302996x.getText().toString() : "" }'
@@ -514,12 +570,16 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS30" />
 
                         <RadioGroup
                             android:id="@+id/RSf3030"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3030a"
@@ -565,7 +625,10 @@
 
                         <EditText
                             android:id="@+id/RSf303096x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="RSf303096"
                             android:text='@{RSf303096.checked? RSf303096x.getText().toString() : "" }'
@@ -581,18 +644,25 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS31" />
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS31h1" />
 
                         <RadioGroup
                             android:id="@+id/RSf3031"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3031a"
@@ -620,7 +690,10 @@
                                 android:text="@string/RS315" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:background="@color/colorPrimaryDark"
                                 android:gravity="center"
                                 android:text="@string/RS31h2" />
@@ -674,7 +747,10 @@
 
                         <EditText
                             android:id="@+id/RSf303196x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="RSf303196"
                             android:text='@{RSf303196.checked? RSf303196x.getText().toString() : "" }'
@@ -690,18 +766,25 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS32" />
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS321" />
 
                         <RadioGroup
                             android:id="@+id/RSf30321"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30321a"
@@ -716,14 +799,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS322" />
 
                         <RadioGroup
                             android:id="@+id/RSf30322"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30322a"
@@ -738,14 +825,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS323" />
 
                         <RadioGroup
                             android:id="@+id/RSf30323"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30323a"
@@ -760,14 +851,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS324" />
 
                         <RadioGroup
                             android:id="@+id/RSf30324"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30324a"
@@ -782,14 +877,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS325" />
 
                         <RadioGroup
                             android:id="@+id/RSf30325"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30325a"
@@ -804,14 +903,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS326" />
 
                         <RadioGroup
                             android:id="@+id/RSf30326"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30326a"
@@ -826,14 +929,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS327" />
 
                         <RadioGroup
                             android:id="@+id/RSf30327"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30327a"
@@ -848,14 +955,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS328" />
 
                         <RadioGroup
                             android:id="@+id/RSf30328"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30328a"
@@ -870,14 +981,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS329" />
 
                         <RadioGroup
                             android:id="@+id/RSf30329"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30329a"
@@ -892,14 +1007,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3210" />
 
                         <RadioGroup
                             android:id="@+id/RSf303210"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303210a"
@@ -914,14 +1033,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3211" />
 
                         <RadioGroup
                             android:id="@+id/RSf303211"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303211a"
@@ -936,14 +1059,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3212" />
 
                         <RadioGroup
                             android:id="@+id/RSf303212"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303212a"
@@ -958,14 +1085,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3213" />
 
                         <RadioGroup
                             android:id="@+id/RSf303213"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303213a"
@@ -980,14 +1111,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3214" />
 
                         <RadioGroup
                             android:id="@+id/RSf303214"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303214a"
@@ -1002,14 +1137,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3215" />
 
                         <RadioGroup
                             android:id="@+id/RSf303215"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303215a"
@@ -1024,14 +1163,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3216" />
 
                         <RadioGroup
                             android:id="@+id/RSf303216"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303216a"
@@ -1046,14 +1189,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3217" />
 
                         <RadioGroup
                             android:id="@+id/RSf303217"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303217a"
@@ -1068,14 +1215,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3218" />
 
                         <RadioGroup
                             android:id="@+id/RSf303218"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303218a"
@@ -1090,14 +1241,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3219" />
 
                         <RadioGroup
                             android:id="@+id/RSf303219"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303219a"
@@ -1112,14 +1267,18 @@
                         </RadioGroup>
 
                             <TextView
-                            style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3220" />
 
                         <RadioGroup
                             android:id="@+id/RSf303220"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303220a"
@@ -1134,14 +1293,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3221" />
 
                         <RadioGroup
                             android:id="@+id/RSf303221"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303221a"
@@ -1156,14 +1319,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3222" />
 
                         <RadioGroup
                             android:id="@+id/RSf303222"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303222a"
@@ -1178,14 +1345,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3223" />
 
                         <RadioGroup
                             android:id="@+id/RSf303223"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303223a"
@@ -1200,14 +1371,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3224" />
 
                         <RadioGroup
                             android:id="@+id/RSf303224"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303224a"
@@ -1222,14 +1397,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3225" />
 
                         <RadioGroup
                             android:id="@+id/RSf303225"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303225a"
@@ -1244,14 +1423,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3226" />
 
                         <RadioGroup
                             android:id="@+id/RSf303226"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303226a"
@@ -1266,14 +1449,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3227" />
 
                         <RadioGroup
                             android:id="@+id/RSf303227"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303227a"
@@ -1288,14 +1475,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3228" />
 
                         <RadioGroup
                             android:id="@+id/RSf303228"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303228a"
@@ -1310,14 +1501,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3229" />
 
                         <RadioGroup
                             android:id="@+id/RSf303229"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303229a"
@@ -1332,14 +1527,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS3230" />
 
                         <RadioGroup
                             android:id="@+id/RSf303230"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303230a"
@@ -1363,18 +1562,25 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS33" />
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS331" />
 
                         <RadioGroup
                             android:id="@+id/RSf30331"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30331a"
@@ -1389,14 +1595,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS332" />
 
                         <RadioGroup
                             android:id="@+id/RSf30332"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30332a"
@@ -1411,14 +1621,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS333" />
 
                         <RadioGroup
                             android:id="@+id/RSf30333"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30333a"
@@ -1433,14 +1647,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS334" />
 
                         <RadioGroup
                             android:id="@+id/RSf30334"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30334a"
@@ -1455,14 +1673,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/RS335" />
 
                         <RadioGroup
                             android:id="@+id/RSf30335"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf30335a"
@@ -1477,14 +1699,18 @@
                         </RadioGroup>
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/uother" />
 
                         <RadioGroup
                             android:id="@+id/RSf303396"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf303396a"
@@ -1500,7 +1726,10 @@
 
                         <EditText
                             android:id="@+id/RSf303396x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="RSf303396a"
                             android:text='@{RSf303396a.checked? RSf303396x.getText().toString() : "" }'
@@ -1516,12 +1745,16 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS34" />
 
                         <RadioGroup
                             android:id="@+id/RSf3034"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3034a"
@@ -1550,12 +1783,16 @@
                         <LinearLayout style="@style/linearlayout_view">
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="@string/RS35" />
 
                             <RadioGroup
                                 android:id="@+id/RSf3035"
-                                style="@style/i_radiogroup">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/RSf3035a"
@@ -1599,12 +1836,16 @@
                         <LinearLayout style="@style/linearlayout_view">
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="@string/RS36" />
 
                             <RadioGroup
                                 android:id="@+id/RSf3036"
-                                style="@style/i_radiogroup">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/RSf3036a"
@@ -1640,12 +1881,16 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS37" />
 
                         <RadioGroup
                             android:id="@+id/RSf3037"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3037a"
@@ -1691,7 +1936,10 @@
 
                         <EditText
                             android:id="@+id/RSf303796x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="RSf303796"
                             android:text='@{RSf303796.checked? RSf303796x.getText().toString() : "" }'
@@ -1707,12 +1955,16 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS37" />
 
                         <RadioGroup
                             android:id="@+id/RSf3038"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3038a"
@@ -1748,7 +2000,10 @@
 
                         <EditText
                             android:id="@+id/RSf303896x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="RSf303896"
                             android:text='@{RSf303896.checked? RSf303896x.getText().toString() : "" }'
@@ -1764,12 +2019,16 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS39" />
 
                         <RadioGroup
                             android:id="@+id/RSf3039"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3039a"
@@ -1793,7 +2052,10 @@
 
                             <EditText
                                 android:id="@+id/RSf303996x"
-                                style="@style/EditTextAlphaNumeric"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/ed_sentence"
+                                android:inputType="textShortMessage"
                                 android:hint="@string/RS39x"
                                 android:tag="RSf303996"
                                 android:text='@{RSf303996.checked? RSf303996x.getText().toString() : "" }'
@@ -1816,12 +2078,16 @@
                     <LinearLayout style="@style/linearlayout_view">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS40" />
 
                         <RadioGroup
                             android:id="@+id/RSf3040"
-                            style="@style/i_radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/RSf3040a"

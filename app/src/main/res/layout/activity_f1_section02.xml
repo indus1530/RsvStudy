@@ -23,7 +23,8 @@
             style="@style/linearlayout_view">
 
             <TextView
-                style="@style/textview_fm_lst_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/Section2" />
 
 
@@ -39,7 +40,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS17" />
 
                     <RadioGroup
@@ -74,7 +78,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS18" />
 
                     <RadioGroup
@@ -129,7 +136,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS19" />
 
                     <RadioGroup
@@ -183,7 +193,10 @@
 
                         <EditText
                             android:id="@+id/RS1996x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="pocfc0296"
                             android:text='@{RS1996.checked? RS1996x.getText().toString() : "" }'
@@ -207,7 +220,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS20" />
 
                     <RadioGroup
@@ -241,7 +257,10 @@
 
                         <EditText
                             android:id="@+id/RS2096x"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/specify"
                             android:tag="pocfc0296"
                             android:text='@{RS2096.checked? RS2096x.getText().toString() : "" }'
@@ -265,7 +284,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS21" />
 
                     <RadioGroup
@@ -300,7 +322,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS22" />
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText

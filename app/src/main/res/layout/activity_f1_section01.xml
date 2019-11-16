@@ -24,7 +24,8 @@
         <LinearLayout style="@style/linearlayout_view">
 
             <TextView
-                style="@style/textview_fm_lst_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/Section1" />
 
             <LinearLayout
@@ -39,8 +40,11 @@
                         android:layoutDirection="ltr">
 
                         <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RSID" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RSID"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RSID"
@@ -65,7 +69,10 @@
                         android:layoutDirection="ltr">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS7" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -91,7 +98,10 @@
                         android:layoutDirection="ltr">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS8" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -117,12 +127,15 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/RS9" />
 
                         <EditText
                             android:id="@+id/RS9"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
                             android:hint="@string/RS9"
                             android:inputType="textPersonName" />
 
@@ -138,12 +151,18 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS10" />
 
                         <EditText
                             android:id="@+id/RS10"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/RS10" />
 
                     </LinearLayout>
@@ -158,12 +177,18 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS11" />
 
                         <EditText
                             android:id="@+id/RS11"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:inputType="textShortMessage"
                             android:hint="@string/RS11" />
 
                     </LinearLayout>
@@ -178,13 +203,19 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS12" />
 
                         <EditText
                             android:id="@+id/RS12"
-                            style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/RS12" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:hint="@string/RS12"
+                            android:inputType="textShortMessage" />
 
                     </LinearLayout>
 
@@ -198,7 +229,8 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="@string/RS13" />
 
                         <Spinner

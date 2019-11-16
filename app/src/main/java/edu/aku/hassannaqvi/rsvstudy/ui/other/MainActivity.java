@@ -58,6 +58,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section04Activity;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
 
 public class MainActivity extends Activity {
@@ -643,6 +644,11 @@ public class MainActivity extends Activity {
             }, 3 * 1000);
 
         }
+    }
+
+    public void OpenSection4(View view) {
+        startActivity(new Intent(this, Section04Activity.class));
+
     }
 
    /* private class DownloadReceiver extends ResultReceiver {

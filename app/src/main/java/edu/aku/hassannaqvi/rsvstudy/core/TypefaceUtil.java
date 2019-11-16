@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.rsvstudy.core;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 
 import java.lang.reflect.Field;
 
@@ -25,7 +26,8 @@ public class TypefaceUtil {
             defaultFontTypefaceField.setAccessible(true);
             defaultFontTypefaceField.set(null, customFontTypeface);
         } catch (Exception e) {
-            //Log.e("Can not set custom font " + customFontFileNameInAssets + " instead of " + defaultFontNameToOverride);
+
+            Log.e("TypeFace", "Can not set custom font " + customFontFileNameInAssets + " instead of " + defaultFontNameToOverride + "\r\n" + e);
         }
     }
 }

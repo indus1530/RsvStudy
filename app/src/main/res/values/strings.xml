@@ -1726,6 +1726,9 @@
     <string name="nameW"> عام نالو ڏيو </string>
     <string name="comment">Comments</string>
     <string name="never"> کبھی نہیں </string>
+    <string name="ed_letterOnly">QWERTYUIOPASDFGHJKLZXCVBNM qwertyuiopasdfghjklzxcvbnm</string>
+    <string name="ed_sentence">QWERTYUIOPASDFGHJKLZXCVBNM qwertyuiopasdfghjklzxcvbnm,.?-#()1234567890</string>
+    <string name="ed_numbersOnly"> 12345 67890</string>
 
 
 </resources>

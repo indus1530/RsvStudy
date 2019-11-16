@@ -22,15 +22,12 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/i_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:text="@string/dcstatus"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white"
-                android:textSize="30dp" />
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <RadioGroup
                 android:id="@+id/istatus"
@@ -105,10 +102,12 @@
 
             <EditText
                 android:id="@+id/istatus888x"
-                style="@style/EditTextAlphaNumeric"
                 android:layout_marginBottom="1dp"
                 android:hint="@string/specify"
-                android:inputType="textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/ed_sentence"
+                android:inputType="textShortMessage"
                 android:visibility="gone" />
 
             <Button
