@@ -21,7 +21,10 @@
         android:background="@color/dullWhile"
         android:layoutDirection="rtl">
 
-        <LinearLayout style="@style/linearlayout_view">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -30,14 +33,19 @@
 
             <LinearLayout
                 android:id="@+id/ll03A"
-                style="@style/linearlayout_view">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <!--RS024-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/Rsf3024"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:layoutDirection="ltr">
 
                         <TextView
@@ -66,7 +74,10 @@
                     android:id="@+id/Rsf3025"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -97,7 +108,10 @@
                     android:id="@+id/Rsf3026"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -128,7 +142,10 @@
                     android:id="@+id/Rsf3027"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -296,7 +313,10 @@
                     android:id="@+id/Rsf3028"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -417,7 +437,10 @@
                 <!--RS029 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -567,7 +590,10 @@
                 <!--RS030 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -641,7 +667,10 @@
                 <!--RS031 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -763,7 +792,10 @@
                 <!--RS032 Radio Button - Multiple-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1559,7 +1591,10 @@
                 <!--RS033 Radio Button - Multiple-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1742,7 +1777,10 @@
                 <!--RS034 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1773,14 +1811,20 @@
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:id="@+id/llrsv01"
-                    style="@style/linearlayout_view_wt_bound"
+
                     android:visibility='@{RSf3034b.checked ? View.GONE : View.VISIBLE }'>
 
                     <!--RS035 Radio Button-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
-                        <LinearLayout style="@style/linearlayout_view">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -1833,7 +1877,10 @@
                     <!--RS036 Radio Button-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
-                        <LinearLayout style="@style/linearlayout_view">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -1878,7 +1925,10 @@
                 <!--RS037 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1952,7 +2002,10 @@
                 <!--RS038 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -2016,7 +2069,10 @@
                 <!--RS039 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -2075,7 +2131,10 @@
                 <!--RS040 Radio Button-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"

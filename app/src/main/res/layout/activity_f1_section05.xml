@@ -21,7 +21,9 @@
 
         <LinearLayout
             android:id="@+id/ll05"
-            style="@style/linearlayout_view">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
 

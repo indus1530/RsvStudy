@@ -18,37 +18,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rsv_bg"
-        android:padding="16dp"
-        android:layoutDirection="rtl">
+        android:layoutDirection="rtl"
+        android:padding="16dp">
 
-        <LinearLayout style="@style/linearlayout_view">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
+                style="@style/HeadingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Section1" />
 
             <LinearLayout
                 android:id="@+id/ll01"
-                style="@style/linearlayout_view_wt_bound">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <!--RSID-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
-                        style="@style/linearlayout_view_wt_bound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
                         android:layoutDirection="ltr">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
                             android:text="@string/RSID"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RSID"
-                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="###-##"
                             android:inputType="number"
                             android:textColor="@color/colorPrimary"
@@ -65,19 +74,22 @@
                 <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
-                        style="@style/linearlayout_view_wt_bound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:layoutDirection="ltr">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/RS7" />
+                            android:text="@string/RS7"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RS7"
-                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/num78"
                             android:inputType="number"
                             android:textColor="@color/colorPrimary"
@@ -94,19 +106,22 @@
                 <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
-                        style="@style/linearlayout_view_wt_bound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:layoutDirection="ltr">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/RS8" />
+                            android:text="@string/RS8"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RS8"
-                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/num78"
                             android:inputType="number"
                             android:textColor="@color/colorPrimary"
@@ -124,7 +139,10 @@
                     android:id="@+id/RS9cv"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -148,22 +166,25 @@
                     android:id="@+id/RS10cv"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/RS10" />
+                            android:text="@string/RS10"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <EditText
                             android:id="@+id/RS10"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="@string/ed_sentence"
-                            android:inputType="textShortMessage"
-                            android:hint="@string/RS10" />
+                            android:hint="@string/RS10"
+                            android:inputType="textShortMessage" />
 
                     </LinearLayout>
 
@@ -174,22 +195,25 @@
                     android:id="@+id/RS11cv"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/RS11" />
+                            android:text="@string/RS11"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <EditText
                             android:id="@+id/RS11"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="@string/ed_sentence"
-                            android:inputType="textShortMessage"
-                            android:hint="@string/RS11" />
+                            android:hint="@string/RS11"
+                            android:inputType="textShortMessage" />
 
                     </LinearLayout>
 
@@ -200,14 +224,17 @@
                     android:id="@+id/RS12cv"
                     style="@style/cardView">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/RS12" />
+                            android:text="@string/RS12"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <EditText
                             android:id="@+id/RS12"
@@ -226,7 +253,7 @@
                     style="@style/cardView"
                     android:visibility="gone">
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout >
 
                         <TextView
                             android:layout_gravity="center_horizontal"
@@ -256,7 +283,6 @@
                 </android.support.v7.widget.CardView>-->
 
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -270,8 +296,8 @@
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="4sp"
+                    android:layout_weight="1"
                     android:background="@android:color/holo_green_light"
                     android:onClick='@{() -> callback.BtnContinue()}'
                     android:text="@string/start_interview"
@@ -283,8 +309,8 @@
                     android:id="@+id/btn_End"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="4sp"
+                    android:layout_weight="1"
                     android:background="@android:color/holo_red_light"
                     android:onClick='@{() -> callback.BtnEnd()}'
                     android:text="@string/end_interview"
