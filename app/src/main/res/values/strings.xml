@@ -67,7 +67,7 @@
     <string name="RS20d"> مسلسل غیر حاظر ہے </string>
     <string name="RS2096"> دیگر </string>
     <string name="RS21"> کیا بچہ زندہ ہے </string>
-    <string name="RS21a">  ہاں، اب بھی زندہ </string>
+    <string name="RS21a">  ہاں، اب بھی زندہ ہے </string>
     <string name="RS21b">  نہیں، بچہ مر چکا ہے </string>
     <string name="RS22"> بچے کی تاریخ وفات کیا ہے؟ </string>
 
@@ -292,8 +292,8 @@
     <string name="RS58"> کیا پچھلے 12 مہینوں میں کسی بھی وقت سینے میں گھرگھراہٹ (سینے سے سیٹی کی آواز)آئی ہے؟ </string>
     <string name="RS59"> پچھلے 12 مہینوں میں گھرگھراہٹ (سینے سے سیٹی کی آواز) کے کتنے واقعات ہوئے ہیں؟ </string>
     <string name="RS60"> پچھلے 12 مہینوں میں ، گھرگھراہٹ (سینے سے سیٹی کی آواز) کی وجہ سے کتنی بار نیند خراب ہوئی ہے </string>
-    <string name="RS60a"> فی ہفتہ ایک رات سے کم </string>
-    <string name="RS60b"> فی ہفتہ ایک یا زیادہ راتیں </string>
+    <string name="RS60a"> ہفتہ ایک رات سے کم </string>
+    <string name="RS60b"> ہفتہ ایک یا زیادہ راتیں </string>
     <string name="RS61"> پچھلے 12 مہینوں میں ، رات میں کھانسی کی وجہ سے کتنی بار نیند میں خلل پڑا ہے ، جب آپ کا بچہ ٹھیک ظاہر ہوتا ہے (یعنی کوئی زُکام یا سینے میں انفکشن نہیں ہوتا ہے) </string>
     <string name="RS61a"> فی ہفتہ ایک رات سے کم </string>
     <string name="RS61b"> فی ہفتہ ایک یا زیادہ راتیں </string>
