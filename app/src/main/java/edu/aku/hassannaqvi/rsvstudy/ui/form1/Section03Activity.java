@@ -70,7 +70,9 @@ public class Section03Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll03A))
+
+        MainApp.endActivity(this, this);
+        /*if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll03A))
             return;
 
         try {
@@ -82,7 +84,7 @@ public class Section03Activity extends AppCompatActivity {
             MainApp.endActivity(this, this);
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
+        }*/
     }
 
     private boolean UpdateDB() {
