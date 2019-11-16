@@ -48,16 +48,19 @@
 
                     <RadioGroup
                         android:id="@+id/RS17"
+                        android:orientation="horizontal"
                         style="@style/radiogroup">
 
                         <RadioButton
                             android:id="@+id/RS17a"
                             style="@style/radiobutton"
+                            android:layout_weight="1"
                             android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/RS17b"
                             style="@style/radiobutton"
+                            android:layout_weight="1"
                             android:text="@string/no" />
 
                     </RadioGroup>
@@ -292,16 +295,19 @@
 
                     <RadioGroup
                         android:id="@+id/RS21"
-                        style="@style/radiogroup">
+                        style="@style/radiogroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/RS21a"
                             style="@style/radiobutton"
+                            android:layout_weight="1"
                             android:text="@string/RS21a" />
 
                         <RadioButton
                             android:id="@+id/RS21b"
                             style="@style/radiobutton"
+                            android:layout_weight="1"
                             android:text="@string/RS21b" />
 
                     </RadioGroup>
