@@ -20,6 +20,7 @@ public class SyncListAdapter extends RecyclerView.Adapter<SyncListAdapter.SyncLi
 
     public SyncListAdapter(List<SyncModel> synclist) {
         this.synclist = synclist;
+        this.setHasStableIds(true);
     }
 
     public void updatesyncList(List<SyncModel> synclist) {

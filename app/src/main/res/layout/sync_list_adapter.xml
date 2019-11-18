@@ -27,12 +27,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <FrameLayout
+            <!-- <FrameLayout
+                 android:id="@+id/status_color"
+                 android:layout_width="20dp"
+                 android:layout_height="match_parent"
+                 android:background="@color/red"
+                 android:elevation="5.20dp" />-->
+
+            <View
                 android:id="@+id/status_color"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:background="@color/red"
-                android:elevation="5.20dp"></FrameLayout>
+                android:elevation="5.20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,14 +75,11 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-
-                <FrameLayout
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/black">
-
-                </FrameLayout>
+                    android:layout_height="2dp"
+                    android:layout_margin="12dp"
+                    android:background="@color/black" />
 
                 <TextView
                     android:id="@+id/tv_msg"
