@@ -18,13 +18,8 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
-import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.TalukasContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.UCsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.UsersContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.VersionAppContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.VillagesContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
@@ -63,7 +58,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 break;
             case "Users":
                 position = 1;
-                break;
+                break;/*
             case "UCs":
                 position = 2;
                 break;
@@ -78,9 +73,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 break;
             case "Children":
                 position = 6;
-                break;
+                break;*/
             case "Childlist":
-                position = 7;
+                position = 2;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -109,7 +104,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 break;
             case "Users":
                 position = 1;
-                break;
+                break;/*
             case "UCs":
                 position = 2;
                 break;
@@ -124,9 +119,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 break;
             case "Children":
                 position = 6;
-                break;
+                break;*/
             case "Childlist":
-                position = 7;
+                position = 2;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -151,7 +146,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._HOST_URL + UsersContract.singleUser._URI);
                     position = 1;
                     break;
-                case "UCs":
+                /*case "UCs":
                     url = new URL(MainApp._HOST_URL + UCsContract.singleUCs._URI);
                     position = 2;
                     break;
@@ -170,10 +165,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 case "Children":
                     url = new URL(MainApp._HOST_URL + ChildrenContract.singleChild._URI);
                     position = 6;
-                    break;
+                    break;*/
                 case "Childlist":
                     url = new URL(MainApp._HOST_URL + ChildList.singleChildList._URI);
-                    position = 7;
+                    position = 2;
                     break;
 
             }
@@ -228,7 +223,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Users":
                             db.syncUser(jsonArray);
                             position = 1;
-                            break;
+                            break;/*
                         case "UCs":
                             db.syncUCs(jsonArray);
                             position = 2;
@@ -248,10 +243,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Children":
                             db.syncChildren(jsonArray);
                             position = 6;
-                            break;
+                            break;*/
                         case "Childlist":
                             db.syncChildlist(jsonArray);
-                            position = 7;
+                            position = 2;
                             break;
                     }
 

@@ -332,7 +332,7 @@ public class SyncActivity extends AppCompatActivity {
                     new GetAllData(mContext, "Users", syncListAdapter, list).execute();
 
 //                  getting UCs!!
-                    Toast.makeText(SyncActivity.this, "Sync UCs", Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(SyncActivity.this, "Sync UCs", Toast.LENGTH_SHORT).show();
 
                     if (listActivityCreated) {
                         model = new SyncModel();
@@ -375,7 +375,7 @@ public class SyncActivity extends AppCompatActivity {
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "Children", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "Children", syncListAdapter, list).execute();*/
 
 //                    Getting Childlist
                     Toast.makeText(SyncActivity.this, "Sync Childlist", Toast.LENGTH_SHORT).show();
