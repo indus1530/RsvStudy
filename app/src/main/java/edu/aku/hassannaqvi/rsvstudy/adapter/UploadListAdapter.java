@@ -20,6 +20,7 @@ public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.Up
 
     public UploadListAdapter(List<SyncModel> uploadlist) {
         this.uploadlist = uploadlist;
+        this.setHasStableIds(true);
     }
 
     private int checkStatus(int i) {

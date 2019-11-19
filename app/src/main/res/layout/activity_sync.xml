@@ -40,8 +40,7 @@
                 android:id="@+id/rv_sync_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                tools:listitem="@layout/sync_list_adapter"></android.support.v7.widget.RecyclerView>
+                tools:listitem="@layout/sync_list_adapter" />
 
             <TextView
                 android:id="@+id/no_item"

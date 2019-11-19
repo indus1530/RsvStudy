@@ -30,6 +30,7 @@
 
     <!--Start RSV Study Strings-->
     <string name="Section1"> ایڈریس اور شناخت کی معلومات </string>
+    <string name="studyId"> (study ID) مطالعہ کی شناخت اعداد </string>
     <string name="RSID"> شُرکا کا شناختی نمبر # </string>
     <string name="RS7"> ماں کا موجودہ شناختی آئی ڈی </string>
     <string name="RS8"> ماں کا مستقل شناختی آئی ڈی </string>
