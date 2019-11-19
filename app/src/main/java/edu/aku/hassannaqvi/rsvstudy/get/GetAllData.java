@@ -172,7 +172,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     position = 6;
                     break;
                 case "Childlist":
-                    url = new URL(MainApp._HOST_URLL + ChildList.singleChildList._URI);
+                    url = new URL(MainApp._HOST_URL + ChildList.singleChildList._URI);
                     position = 7;
                     break;
 

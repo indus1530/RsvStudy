@@ -13,11 +13,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
@@ -31,7 +32,7 @@ public class Section01Activity extends AppCompatActivity {
     ActivityF1Section01Binding bi;
     private List<String> dssID, motherName, fatherName, hHhead, studyId;
     private DatabaseHelper db;
-    private ChildrenContract cContract;
+    private Collection<ChildList> cContract;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -66,6 +67,7 @@ public class Section01Activity extends AppCompatActivity {
 
 
     private void clickListener() {
+        db = new DatabaseHelper(this);
 
         bi.RSID.addTextChangedListener(new TextWatcher() {
             @Override
@@ -93,24 +95,21 @@ public class Section01Activity extends AppCompatActivity {
                 if (!formValidation())
                     return;
 
-                /*cContract = db.getChildById(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
+                cContract = db.getChildlistBy(bi.RSID.getText().toString());
 
-                if (cContract == null)
-                    cContract = db.getChildById("f1", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());*/
-
-                if (cContract == null) {
-                    Toast.makeText(Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                /*if (cContract == null) {
+                    Toast.makeText(Section01Activity.this, "Study ID not Found!", Toast.LENGTH_SHORT).show();
                     ClearClass.ClearAllFields(bi.ll0101, false);
                     bi.ll0101.setVisibility(View.GONE);
                     return;
-                }
+                }*/
                 ClearClass.ClearAllFields(bi.ll0101, true);
                 bi.ll0101.setVisibility(View.VISIBLE);
-                bi.RS7.setText(cContract.getChild_name());
-                bi.RS8.setText(cContract.getF_name());
-                bi.RS10.setText(cContract.getF_name());
-                bi.RS11.setText(cContract.getF_name());
-                bi.RS12.setText(cContract.getF_name());
+                /*bi.RS7.setText(cContract.getDssid());
+                bi.RS8.setText(cContract.getDssid());
+                bi.RS10.setText(cContract.getMother_name());
+                bi.RS11.setText(cContract.getFather_name());
+                bi.RS12.setText(cContract.getHhhead());*/
                 bi.RS7.setEnabled(false);
                 bi.RS8.setEnabled(false);
                 bi.RS10.setEnabled(false);
