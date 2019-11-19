@@ -279,7 +279,7 @@
 
                     </android.support.v7.widget.CardView>
 
-                    <!--RS13 - Date Picker-->
+                    <!--&lt;!&ndash;RS13 - Date Picker&ndash;&gt;
                     <android.support.v7.widget.CardView
                         android:id="@+id/RS22cv"
                         android:layout_width="match_parent"
@@ -312,7 +312,7 @@
 
                     </android.support.v7.widget.CardView>
 
-                    <!--RS14-->
+                    &lt;!&ndash;RS14&ndash;&gt;
                     <android.support.v7.widget.CardView
                         android:id="@+id/RS14cv"
                         style="@style/cardView">
@@ -339,7 +339,7 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </android.support.v7.widget.CardView>-->
 
 
                     <LinearLayout
