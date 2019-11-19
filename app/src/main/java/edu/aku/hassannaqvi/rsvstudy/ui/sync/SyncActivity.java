@@ -174,7 +174,7 @@ public class SyncActivity extends AppCompatActivity {
                     FormsContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FormsContract.FormsTable.TABLE_NAME,
-                    db.getUnsyncedForms("f1"), 0, uploadListAdapter, uploadlist
+                    db.getUnsyncedForms(), 0, uploadListAdapter, uploadlist
             ).execute();
             /*Toast.makeText(getApplicationContext(), "Syncing Form Two", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
