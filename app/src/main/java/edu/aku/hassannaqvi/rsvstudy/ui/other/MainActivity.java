@@ -465,7 +465,7 @@ public class MainActivity extends Activity {
             switch (id) {
                 case R.id.form01:
                     oF = new Intent(MainActivity.this, Section01Activity.class);
-                    MainApp.formtype = "f1";
+                    //MainApp.formtype = "f1";
                     break;
 
             }
