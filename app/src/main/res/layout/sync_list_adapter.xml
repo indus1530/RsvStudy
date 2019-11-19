@@ -19,20 +19,28 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="37.5dp"
         android:layout_marginBottom="2dp"
-        app:cardCornerRadius="6dp"
-        app:cardElevation="4dp">
+        android:background="@color/white"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <FrameLayout
+            <!-- <FrameLayout
+                 android:id="@+id/status_color"
+                 android:layout_width="20dp"
+                 android:layout_height="match_parent"
+                 android:background="@color/red"
+                 android:elevation="5.20dp" />-->
+
+            <View
                 android:id="@+id/status_color"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:background="@color/red"
-                android:elevation="5.20dp"></FrameLayout>
+                android:elevation="5.20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,14 +76,11 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-
-                <FrameLayout
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/black">
-
-                </FrameLayout>
+                    android:layout_height="2dp"
+                    android:layout_margin="12dp"
+                    android:background="@color/black" />
 
                 <TextView
                     android:id="@+id/tv_msg"
@@ -84,6 +89,7 @@
                     android:layout_marginLeft="17.50dp"
                     android:layout_marginRight="17.50dp"
                     android:layout_marginBottom="17.50dp"
+
                     tools:text="Results:    " />
             </LinearLayout>
         </LinearLayout>
