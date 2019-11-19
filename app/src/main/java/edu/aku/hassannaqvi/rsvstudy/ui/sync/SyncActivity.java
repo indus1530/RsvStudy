@@ -172,10 +172,11 @@ public class SyncActivity extends AppCompatActivity {
                     "Form One",
                     "updateSyncedForms",
                     FormsContract.class,
-                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "01.php"),
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    FormsContract.FormsTable.TABLE_NAME,
                     db.getUnsyncedForms("f1"), 0, uploadListAdapter, uploadlist
             ).execute();
-            Toast.makeText(getApplicationContext(), "Syncing Form Two", Toast.LENGTH_SHORT).show();
+            /*Toast.makeText(getApplicationContext(), "Syncing Form Two", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -216,7 +217,7 @@ public class SyncActivity extends AppCompatActivity {
                     FormsContract.class,
                     MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "04.php"),
                     db.getUnsyncedForms("f4"), 3, uploadListAdapter, uploadlist
-            ).execute();
+            ).execute();*/
             bi.noDataItem.setVisibility(View.GONE);
 
             uploadlistActivityCreated = false;

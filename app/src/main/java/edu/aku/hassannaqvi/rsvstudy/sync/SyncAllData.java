@@ -4,8 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -41,40 +39,23 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
-    private String syncClass, url, updateSyncClass;
+    private String syncClass, url, tableName, updateSyncClass;
     private Class contractClass;
     private Collection dbData;
-    private TextView syncStatus;
 
-
-    public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, String url, Collection dbData, View syncStatus) {
+    public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, String url, String tableName, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
         mContext = context;
         this.syncClass = syncClass;
         this.updateSyncClass = updateSyncClass;
         this.contractClass = contractClass;
         this.url = url;
-        this.dbData = dbData;
-        this.position = position;
-        //this.syncStatus = (TextView) syncStatus;
-        TAG = "Get" + syncClass;
-        uploadlist.get(position).settableName(syncClass);
-    }
-
-    public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, String url, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
-        mContext = context;
-        this.syncClass = syncClass;
-        this.updateSyncClass = updateSyncClass;
-        this.contractClass = contractClass;
-        this.url = url;
+        this.tableName = tableName;
         this.dbData = dbData;
         this.position = position;
         this.adapter = adapter;
         this.uploadlist = uploadlist;
-        //this.syncStatus = (TextView) syncStatus;
         TAG = "Get" + syncClass;
         uploadlist.get(position).settableName(syncClass);
-       /* uploadlist.get(position).setstatusID(0);
-        uploadlist.get(position).setmessage("");*/
     }
 
     @Override
@@ -164,7 +145,14 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                         e.printStackTrace();
                     }
 
-                    wr.writeBytes(jsonSync.toString().replace("\uFEFF", "") + "\n");
+                    //TODO table server
+                    JSONArray jsonParam = new JSONArray();
+                    jsonParam
+                            .put(tableName)
+                            .put(jsonSync.toString().replace("\uFEFF", "") + "\n");
+
+
+                    wr.writeBytes(String.valueOf(jsonParam));
                     wr.flush();
 
 

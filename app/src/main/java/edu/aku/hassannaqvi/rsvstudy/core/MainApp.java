@@ -50,6 +50,8 @@ public class MainApp extends Application {
     public static final Integer _PORT = 80; // Port - with colon (:)
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/rsv/api/";// .TEST server;
 
+    public static final String _SERVER_URL = "sync.php";
+
 
     public static final String _UPDATE_URL = "https://" + MainApp._IP + "/pulseox/app/app-debug.apk";
     public static final String _APP_UPDATE_URL = "https://" + MainApp._IP + "/pulseox/app/baseline/";
