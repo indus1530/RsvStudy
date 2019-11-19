@@ -20,6 +20,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.contracts.AreasContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.AreasContract.singleAreas;
+import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract.singleChild;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
@@ -53,9 +54,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleUser.ROW_PASSWORD + " TEXT,"
             + singleUser.FULL_NAME + " TEXT"
             + " );";
-    public static final String DATABASE_NAME = "po_hhs.db";
-    public static final String DB_NAME = "po_hhs_copy.db";
-    public static final String PROJECT_NAME = "DMU-PO-HHS";
+    public static final String DATABASE_NAME = "rsvStudy.db";
+    public static final String DB_NAME = "rsvStudy_copy.db";
+    public static final String PROJECT_NAME = "DMU-RSVSTUDY";
     private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
@@ -96,6 +97,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SQL_SELECT_MWRA =
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
     private static final String SQL_DELETE_CHILDREN = "DROP TABLE IF EXISTS " + singleChild.TABLE_NAME;
+    private static final String SQL_DELETE_CHILDLIST = "DROP TABLE IF EXISTS " + ChildList.singleChildList.TABLE_NAME;
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + singleUCs.TABLE_NAME;
@@ -148,6 +150,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleChild.COLUMN_F_NAME + " TEXT,"
             + singleChild.COLUMN_REF_DATE + " TEXT, "
             + singleChild.COLUMN_LUID + " TEXT );";
+    final String SQL_CREATE_CHILDLIST = "CREATE TABLE " + ChildList.singleChildList.TABLE_NAME + "("
+            + ChildList.singleChildList._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + ChildList.singleChildList.COLUMN_DSSID + " TEXT,"
+            + ChildList.singleChildList.COLUMN_MOTHER_NAME + " TEXT,"
+            + ChildList.singleChildList.COLUMN_FATHER_NAME + " TEXT, "
+            + ChildList.singleChildList.COLUMN_HHHEAD + " TEXT,"
+            + ChildList.singleChildList.COLUMN_STUDY_ID + " TEXT );";
     private final String TAG = "DatabaseHelper";
 
 
@@ -166,6 +175,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
         db.execSQL(SQL_CREATE_CHILDREN);
+        db.execSQL(SQL_CREATE_CHILDLIST);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_LHW_TABLE);
@@ -178,6 +188,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL("DROP TABLE IF EXISTS " + lhwEntry.TABLE_NAME);
         db.execSQL(SQL_DELETE_CHILDREN);
+        db.execSQL(SQL_DELETE_CHILDLIST);
         db.execSQL(SQL_DELETE_VILLAGES);
         db.execSQL(SQL_DELETE_TALUKAS);
         db.execSQL(SQL_DELETE_UCS);
@@ -209,6 +220,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(singleChild.COLUMN_LUID, cc.getLuid());
 
                 db.insert(singleChild.TABLE_NAME, null, values);
+            }
+            db.close();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void syncChildlist(JSONArray cList) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(ChildList.singleChildList.TABLE_NAME, null, null);
+
+        try {
+            JSONArray jsonArray = cList;
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCL = jsonArray.getJSONObject(i);
+
+                ChildList cl = new ChildList();
+                cl.sync(jsonObjectCL);
+                Log.i(TAG, "syncChildlist: " + jsonObjectCL.toString());
+
+                ContentValues values = new ContentValues();
+
+                values.put(ChildList.singleChildList.COLUMN_DSSID, cl.getDssid());
+                values.put(ChildList.singleChildList.COLUMN_MOTHER_NAME, cl.getMother_name());
+                values.put(ChildList.singleChildList.COLUMN_FATHER_NAME, cl.getFather_name());
+                values.put(ChildList.singleChildList.COLUMN_HHHEAD, cl.getHhhead());
+                values.put(ChildList.singleChildList.COLUMN_STUDY_ID, cl.getStudy_id());
+
+                db.insert(ChildList.singleChildList.TABLE_NAME, null, values);
             }
             db.close();
 
@@ -642,6 +684,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allCC;
+    }
+
+    public Collection<ChildList> getChildlistBy(String study_id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                ChildList.singleChildList._ID,
+                ChildList.singleChildList.COLUMN_DSSID,
+                ChildList.singleChildList.COLUMN_MOTHER_NAME,
+                ChildList.singleChildList.COLUMN_FATHER_NAME,
+                ChildList.singleChildList.COLUMN_HHHEAD,
+                ChildList.singleChildList.COLUMN_STUDY_ID
+        };
+
+        String whereClause = ChildList.singleChildList.COLUMN_STUDY_ID + " = ? ";
+        String[] whereArgs = {study_id};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                ChildList.singleChildList.COLUMN_STUDY_ID + " ASC";
+
+        Collection<ChildList> allCL = new ArrayList<>();
+        try {
+            c = db.query(
+                    ChildList.singleChildList.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                ChildList cl = new ChildList();
+                allCL.add(cl.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allCL;
     }
 
 

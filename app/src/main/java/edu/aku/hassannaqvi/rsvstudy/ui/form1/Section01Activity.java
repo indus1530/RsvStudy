@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -14,19 +17,21 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
+import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section01Activity extends AppCompatActivity {
 
     public static String DOB;
     ActivityF1Section01Binding bi;
-    private List<String> ucName, talukaNames, villageNames, chwNames;
-    private List<String> ucCode, talukaCodes, villageCodes, chwCodes;
+    private List<String> dssID, motherName, fatherName, hHhead, studyId;
     private DatabaseHelper db;
+    private ChildrenContract cContract;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -34,49 +39,89 @@ public class Section01Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section01);
         bi.setCallback(this);
-        //this.setTitle("RSV Study section 1");
-        //initializingComponents();
+        clickListener();
 
     }
 
-    private void initializingComponents() {
-        db = new DatabaseHelper(this);
-        //populateSpinner(this);
-
-        //bi.pocfa12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
-    }
-
-    /*public void populateSpinner(final Context context) {
-        // Spinner Drop down elements
-        chwNames = new ArrayList<>();
-        chwCodes = new ArrayList<>();
-
-        chwNames.add("....");
-        chwCodes.add("....");
-
-        Collection<LHWContract> dc = db.getAllLhw();
-
-        for (LHWContract d : dc) {
-            chwNames.add(d.getLhwname());
-            chwCodes.add(d.getLhwcode());
+    /*@Override
+    public void afterTextChanged(Editable s) {
+        if (bind.A4005.getText().hashCode() == s.hashCode()) {
+            if (bind.A4005.getText().toString().trim().length() > 0 && Integer.parseInt(bind.A4005.getText().toString().trim()) > 7) {
+                ClearAllcontrol.ClearAllC(bind.A4006cv);
+                bind.A4006cv.setVisibility(View.GONE);
+            } else {
+                bind.A4006cv.setVisibility(View.VISIBLE);
+            }
         }
 
-        bi.RS13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, chwNames));
+        if (bind.A4011.getText().hashCode() == s.hashCode()) {
+            if (bind.A4011.getText().toString().trim().length() > 0 && Integer.parseInt(bind.A4011.getText().toString().trim()) >= 1) {
+                ClearAllcontrol.ClearAllC(bind.A4012cv);
+                bind.A4012cv.setVisibility(View.GONE);
+            } else {
+                bind.A4012cv.setVisibility(View.VISIBLE);
+            }
+        }
+    }*/
 
-        bi.RS13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+    private void clickListener() {
+
+        bi.RSID.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) return;
-                bi.chwcode.setText("LHW Code: " + chwCodes.get(i));
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                bi.ll0101.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.ll0101, false);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
 
             }
         });
 
-    }*/
+        bi.checkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!formValidation())
+                    return;
+
+                /*cContract = db.getChildById(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
+
+                if (cContract == null)
+                    cContract = db.getChildById("f1", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());*/
+
+                if (cContract == null) {
+                    Toast.makeText(Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.ll0101, false);
+                    bi.ll0101.setVisibility(View.GONE);
+                    return;
+                }
+                ClearClass.ClearAllFields(bi.ll0101, true);
+                bi.ll0101.setVisibility(View.VISIBLE);
+                bi.RS7.setText(cContract.getChild_name());
+                bi.RS8.setText(cContract.getF_name());
+                bi.RS10.setText(cContract.getF_name());
+                bi.RS11.setText(cContract.getF_name());
+                bi.RS12.setText(cContract.getF_name());
+                bi.RS7.setEnabled(false);
+                bi.RS8.setEnabled(false);
+                bi.RS10.setEnabled(false);
+                bi.RS11.setEnabled(false);
+                bi.RS12.setEnabled(false);
+            }
+        });
+
+    }
+
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -98,19 +143,6 @@ public class Section01Activity extends AppCompatActivity {
     public void BtnEnd() {
         MainApp.endActivity(this, this);
 
-        /*if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll01))
-            return;
-
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            MainApp.endActivity(this, this);
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }*/
     }
 
 
