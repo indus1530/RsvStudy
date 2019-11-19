@@ -701,8 +701,8 @@ public class MainActivity extends Activity {
 
             return new AlertDialog.Builder(getActivity())
                     .setIcon(R.drawable.exclamation)
-                    .setTitle("PO-HHS APP is available!")
-                    .setMessage("PO-HHS App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
+                    .setTitle("RSVSTUDY APP is available!")
+                    .setMessage("RSVSTUDY App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
                     .setPositiveButton("INSTALL!!",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {

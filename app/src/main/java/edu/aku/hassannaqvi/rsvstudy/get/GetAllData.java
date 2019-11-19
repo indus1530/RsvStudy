@@ -17,6 +17,7 @@ import java.net.URL;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.adapter.SyncListAdapter;
+import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TalukasContract;
@@ -78,7 +79,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "Children":
                 position = 6;
                 break;
-            case "BLRandom":
+            case "Childlist":
                 position = 7;
                 break;
         }
@@ -124,7 +125,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "Children":
                 position = 6;
                 break;
-            case "BLRandom":
+            case "Childlist":
                 position = 7;
                 break;
         }
@@ -169,6 +170,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 case "Children":
                     url = new URL(MainApp._HOST_URL + ChildrenContract.singleChild._URI);
                     position = 6;
+                    break;
+                case "Childlist":
+                    url = new URL(MainApp._HOST_URL + ChildList.singleChildList._URI);
+                    position = 7;
                     break;
 
             }
@@ -243,6 +248,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Children":
                             db.syncChildren(jsonArray);
                             position = 6;
+                            break;
+                        case "Childlist":
+                            db.syncChildlist(jsonArray);
+                            position = 7;
                             break;
                     }
 

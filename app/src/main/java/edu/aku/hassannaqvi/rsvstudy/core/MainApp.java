@@ -48,7 +48,7 @@ public class MainApp extends Application {
     /*F38158 TEST SERVER*/
     public static final String _IP = "f38158";// .TEST server
     public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";// .TEST server;
+    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/rsv/api/";// .TEST server;
 
 
     public static final String _UPDATE_URL = "https://" + MainApp._IP + "/pulseox/app/app-debug.apk";
