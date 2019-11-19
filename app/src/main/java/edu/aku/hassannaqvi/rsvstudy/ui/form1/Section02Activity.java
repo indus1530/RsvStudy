@@ -102,7 +102,7 @@ public class Section02Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                if (bi.RS17b.isChecked()) {
+                if (bi.RS17b.isChecked() || bi.RS21b.isChecked()) {
                     finish();
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
                 } else {

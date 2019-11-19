@@ -686,7 +686,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allCC;
     }
 
-    public Collection<ChildList> getChildlistBy(String study_id) {
+    public ChildList getChildlistBy(String study_id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -706,7 +706,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy =
                 ChildList.singleChildList.COLUMN_STUDY_ID + " ASC";
 
-        Collection<ChildList> allCL = new ArrayList<>();
+        ChildList allCL = null;
         try {
             c = db.query(
                     ChildList.singleChildList.TABLE_NAME,  // The table to query
@@ -718,8 +718,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                ChildList cl = new ChildList();
-                allCL.add(cl.hydrate(c));
+                allCL = new ChildList().hydrate(c);
+                //allCL.add(cl.hydrate(c));
             }
         } finally {
             if (c != null) {

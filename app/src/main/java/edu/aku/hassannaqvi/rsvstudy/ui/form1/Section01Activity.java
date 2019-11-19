@@ -13,7 +13,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -32,7 +31,7 @@ public class Section01Activity extends AppCompatActivity {
     ActivityF1Section01Binding bi;
     private List<String> dssID, motherName, fatherName, hHhead, studyId;
     private DatabaseHelper db;
-    private Collection<ChildList> cContract;
+    private ChildList cContract;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -97,19 +96,19 @@ public class Section01Activity extends AppCompatActivity {
 
                 cContract = db.getChildlistBy(bi.RSID.getText().toString());
 
-                /*if (cContract == null) {
+                if (cContract == null) {
                     Toast.makeText(Section01Activity.this, "Study ID not Found!", Toast.LENGTH_SHORT).show();
                     ClearClass.ClearAllFields(bi.ll0101, false);
                     bi.ll0101.setVisibility(View.GONE);
                     return;
-                }*/
+                }
                 ClearClass.ClearAllFields(bi.ll0101, true);
                 bi.ll0101.setVisibility(View.VISIBLE);
-                /*bi.RS7.setText(cContract.getDssid());
+                bi.RS7.setText(cContract.getDssid());
                 bi.RS8.setText(cContract.getDssid());
                 bi.RS10.setText(cContract.getMother_name());
                 bi.RS11.setText(cContract.getFather_name());
-                bi.RS12.setText(cContract.getHhhead());*/
+                bi.RS12.setText(cContract.getHhhead());
                 bi.RS7.setEnabled(false);
                 bi.RS8.setEnabled(false);
                 bi.RS10.setEnabled(false);
@@ -184,6 +183,8 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS10", bi.RS10.getText().toString());
         SA.put("RS11", bi.RS11.getText().toString());
         SA.put("RS12", bi.RS12.getText().toString());
+        SA.put("RS13", bi.RS13.getText().toString());
+        SA.put("RS14", bi.RS14.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);

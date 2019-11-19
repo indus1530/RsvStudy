@@ -39,8 +39,8 @@
     <string name="RS10"> ماں کا نام </string>
     <string name="RS11"> والد کا نام </string>
     <string name="RS12"> گھر کے سربراہ کا نام </string>
-    <string name="RS13"> سی ایچ ڈبلیو کا نام اور کوڈ </string>
-    <string name="RS14"> وِزِٹ کی تاریخ (پہلی کوشش) </string>
+    <string name="RS13"> بچے کی تاریخِ پیدایش </string>
+    <string name="RS14"> بچے کی عمر (مہینے) </string>
 
     <string name="Section2"> رضاکارانہ طور پر دیکھ بھال کرنے والا </string>
     <string name="RS17"> ماں یا دیکھ بھال کرنے والے نے مطالعے میں حصہ لینے کے بارے میں مطمئن رضامندی دی ہے </string>
