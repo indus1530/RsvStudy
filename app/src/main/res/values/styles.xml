@@ -22,7 +22,10 @@
 
     <style name="AppTheme1" parent="Theme.AppCompat.NoActionBar">
         <item name="buttonStyle">@style/buttons</item>
-
+        <item name="android:fillAfter">true</item>
+        <item name="android:enterFadeDuration">600</item>
+        <item name="android:exitFadeDuration">200</item>
+        <item name="android:animateLayoutChanges">true</item>
         <item name="android:typeface">sans</item>
         <!--        <item name="android:toolbarStyle">@style/ActionBar</item>-->
         <!--        <item name="actionBarStyle">@style/ActionBar</item>-->
