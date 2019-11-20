@@ -146,10 +146,15 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                     }
 
                     //TODO table server
+                    JSONObject jsonTable = new JSONObject();
+                    jsonTable.put("table", tableName);
+
+
                     JSONArray jsonParam = new JSONArray();
                     jsonParam
-                            .put(tableName)
-                            .put(jsonSync.toString().replace("\uFEFF", "") + "\n");
+                            .put(jsonTable)
+                            .put(jsonSync);
+//                            .put(jsonSync.toString().replace("\uFEFF", "") + "\n");
 
 
                     wr.writeBytes(String.valueOf(jsonParam));
@@ -174,6 +179,8 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                 e.printStackTrace();
             } catch (IOException e) {
 
+                e.printStackTrace();
+            } catch (JSONException e) {
                 e.printStackTrace();
             } finally {
                 if (connection != null)
