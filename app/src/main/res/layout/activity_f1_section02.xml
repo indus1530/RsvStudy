@@ -370,8 +370,7 @@
                     android:text="@string/nextSection"
                     android:textColor="@color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:visibility='@{RS17b.checked ? View.GONE : View.VISIBLE }' />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btnEnd"
