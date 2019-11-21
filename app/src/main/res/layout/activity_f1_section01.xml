@@ -87,7 +87,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    tools:visibility="visible">
 
                     <!--RS7-->
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -279,7 +280,7 @@
 
                     </android.support.v7.widget.CardView>
 
-                    <!--&lt;!&ndash;RS13 - Date Picker&ndash;&gt;
+                    <!--RS13 - Date Picker-->
                     <android.support.v7.widget.CardView
                         android:id="@+id/RS22cv"
                         android:layout_width="match_parent"
@@ -312,7 +313,7 @@
 
                     </android.support.v7.widget.CardView>
 
-                    &lt;!&ndash;RS14&ndash;&gt;
+                    <!--RS14-->
                     <android.support.v7.widget.CardView
                         android:id="@+id/RS14cv"
                         style="@style/cardView">
@@ -334,12 +335,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:digits="@string/ed_sentence"
+                                android:enabled="false"
                                 android:hint="@string/RS14"
                                 android:inputType="textShortMessage" />
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>-->
+                    </android.support.v7.widget.CardView>
 
 
                     <LinearLayout
