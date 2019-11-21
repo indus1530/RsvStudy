@@ -56,14 +56,16 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="@android:color/white" />
 
-                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RS24"
                             style="@style/textInput"
-                            android:focusable="false"
-                            android:hint="DD/MM/YYYY"
-                            android:textColor="@android:color/black"
-                            app:dateFormat="dd-MM-yyyy"
-                            app:maxDate="CR_DATE" />
+                            android:digits="@string/ed_numbersOnly"
+                            android:hint="@string/month"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue="99"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
@@ -90,13 +92,11 @@
                             android:id="@+id/RS25"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="@string/ed_numbersOnly"
                             android:inputType="number"
-                            android:hint="@string/RS25"
-                            android:maxLength="2"
+                            android:hint="@string/num"
+                            app:mask="##"
                             app:maxValue="99"
                             app:minValue="1"
-                            app:required="true"
                             app:type="range" />
 
                     </LinearLayout>
@@ -124,9 +124,8 @@
                             android:id="@+id/RS26"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="@string/ed_numbersOnly"
                             android:inputType="number"
-                            android:hint="@string/RS26"
+                            android:hint="@string/num"
                             android:maxLength="2"
                             app:maxValue="99"
                             app:minValue="1"

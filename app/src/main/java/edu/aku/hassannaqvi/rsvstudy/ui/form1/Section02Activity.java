@@ -19,6 +19,8 @@ import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
+import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.convertDateFormat;
+
 public class Section02Activity extends AppCompatActivity {
 
     ActivityF1Section02Binding bi;
@@ -29,6 +31,7 @@ public class Section02Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section02);
         bi.setCallback(this);
         //this.setTitle("RSV Study section 2");
+        bi.RS22.setMinDate(convertDateFormat(Section01Activity.DOB));
         setupSkips();
 
     }
