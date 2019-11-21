@@ -103,6 +103,7 @@ public class Section01Activity extends AppCompatActivity {
 
                 Long months = DateUtils.ageInMonthsByDOB(DateUtils.getCalendarDate(bi.RS13.getText().toString()));
                 bi.RS14.setText(String.valueOf(months));
+                bi.RS14.setEnabled(false);
 
             }
 
@@ -206,9 +207,9 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS9", bi.RS9.getText().toString());
         SA.put("RS10", bi.RS10.getText().toString());
         SA.put("RS11", bi.RS11.getText().toString());
-        SA.put("RS12", bi.RS12.getText().toString());/*
+        SA.put("RS12", bi.RS12.getText().toString());
         SA.put("RS13", bi.RS13.getText().toString());
-        SA.put("RS14", bi.RS14.getText().toString());*/
+        SA.put("RS14", bi.RS14.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);
