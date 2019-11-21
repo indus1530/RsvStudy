@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.form1.Section031Activity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section031Activity" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dullWhile"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Section3" />
+
+            <LinearLayout
+                android:id="@+id/ll03A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--RS033 Radio Button - Multiple-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS33"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS331"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf30331"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf30331a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf30331b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS332"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf30332"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf30332a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf30332b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS333"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf30333"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf30333a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf30333b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS334"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf30334"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf30334a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf30334b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS335"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf30335"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf30335a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf30335b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/uother"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf303396"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf303396a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf303396b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/RSf303396x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:hint="@string/specify"
+                            android:inputType="textShortMessage"
+                            android:tag="RSf303396a"
+                            android:text='@{RSf303396a.checked? RSf303396x.getText().toString() : "" }'
+                            android:visibility='@{RSf303396a.checked? View.VISIBLE : View.GONE}' />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RS034 Radio Button-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS34"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf3034"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RSf3034a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3034b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/llrsv01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility='@{RSf3034b.checked ? View.GONE : View.VISIBLE }'>
+
+                    <!--RS035 Radio Button-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/RS35"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <RadioGroup
+                                android:id="@+id/RSf3035"
+                                style="@style/radiogroup">
+
+                                <RadioButton
+                                    android:id="@+id/RSf3035a"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS351" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3035b"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS352" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3035c"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS353" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3035d"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS354" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3035e"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS355" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3035f"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS356" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--RS036 Radio Button-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/RS36"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <RadioGroup
+                                android:id="@+id/RSf3036"
+                                style="@style/radiogroup">
+
+                                <RadioButton
+                                    android:id="@+id/RSf3036a"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS361" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3036b"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS362" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3036c"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS363" />
+
+                                <RadioButton
+                                    android:id="@+id/RSf3036d"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RS364" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <!--RS037 Radio Button-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS37"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf3037"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/RSf3037a"
+                                style="@style/radiobutton"
+                                android:text="@string/RS371" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3037b"
+                                style="@style/radiobutton"
+                                android:text="@string/RS372" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3037c"
+                                style="@style/radiobutton"
+                                android:text="@string/RS373" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3037d"
+                                style="@style/radiobutton"
+                                android:text="@string/RS374" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3037e"
+                                style="@style/radiobutton"
+                                android:text="@string/RS375" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3037f"
+                                style="@style/radiobutton"
+                                android:text="@string/RS376" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3037g"
+                                style="@style/radiobutton"
+                                android:text="@string/RS377" />
+
+                            <RadioButton
+                                android:id="@+id/RSf303796"
+                                style="@style/radiobutton"
+                                android:text="@string/RS37x" />
+
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/RSf303796x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:hint="@string/specify"
+                            android:inputType="textShortMessage"
+                            android:tag="RSf303796"
+                            android:text='@{RSf303796.checked? RSf303796x.getText().toString() : "" }'
+                            android:visibility='@{RSf303796.checked? View.VISIBLE : View.GONE}' />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RS038 Radio Button-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS37"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf3038"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/RSf3038a"
+                                style="@style/radiobutton"
+                                android:text="@string/RS381" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3038b"
+                                style="@style/radiobutton"
+                                android:text="@string/RS382" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3038c"
+                                style="@style/radiobutton"
+                                android:text="@string/RS383" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3038d"
+                                style="@style/radiobutton"
+                                android:text="@string/RS384" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3038e"
+                                style="@style/radiobutton"
+                                android:text="@string/RS385" />
+
+                            <RadioButton
+                                android:id="@+id/RSf303896"
+                                style="@style/radiobutton"
+                                android:text="@string/RS38x" />
+
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/RSf303896x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_sentence"
+                            android:hint="@string/specify"
+                            android:inputType="textShortMessage"
+                            android:tag="RSf303896"
+                            android:text='@{RSf303896.checked? RSf303896x.getText().toString() : "" }'
+                            android:visibility='@{RSf303896.checked? View.VISIBLE : View.GONE}' />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RS039 Radio Button-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS39"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf3039"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/RSf3039a"
+                                style="@style/radiobutton"
+                                android:text="@string/RS391" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3039b"
+                                style="@style/radiobutton"
+                                android:text="@string/RS392" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3039c"
+                                style="@style/radiobutton"
+                                android:text="@string/RS393" />
+
+                            <RadioButton
+                                android:id="@+id/RSf303996"
+                                style="@style/radiobutton"
+                                android:text="@string/RS39x" />
+
+                            <EditText
+                                android:id="@+id/RSf303996x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/ed_sentence"
+                                android:hint="@string/RS39x"
+                                android:inputType="textShortMessage"
+                                android:tag="RSf303996"
+                                android:text='@{RSf303996.checked? RSf303996x.getText().toString() : "" }'
+                                android:visibility='@{RSf303996.checked? View.VISIBLE : View.GONE}' />
+
+                            <RadioButton
+                                android:id="@+id/RSf3039d"
+                                style="@style/radiobutton"
+                                android:text="@string/RS394" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RS040 Radio Button-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS40"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RSf3040"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/RSf3040a"
+                                style="@style/radiobutton"
+                                android:text="@string/RS401" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3040b"
+                                style="@style/radiobutton"
+                                android:text="@string/RS402" />
+
+                            <RadioButton
+                                android:id="@+id/RSf3040c"
+                                style="@style/radiobutton"
+                                android:text="@string/RS403" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="32dp">
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:text="@string/nextSection"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnEnd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_red_light"
+                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:text="@string/end_interview"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>

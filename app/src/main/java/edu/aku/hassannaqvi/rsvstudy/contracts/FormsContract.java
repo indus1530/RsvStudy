@@ -28,6 +28,7 @@ public class FormsContract {
     private String sC = "";
     private String sD = "";
     private String sE = "";
+    private String sF = "";
     private String endingdatetime = "";
 
     private String gpsLat = "";
@@ -66,6 +67,7 @@ public class FormsContract {
         this.sC = jsonObject.getString(FormsTable.COLUMN_SC);
         this.sD = jsonObject.getString(FormsTable.COLUMN_SD);
         this.sE = jsonObject.getString(FormsTable.COLUMN_SE);
+        this.sF = jsonObject.getString(FormsTable.COLUMN_SF);
         this.gpsLat = jsonObject.getString(FormsTable.COLUMN_GPSLAT);
         this.gpsLng = jsonObject.getString(FormsTable.COLUMN_GPSLNG);
         this.gpsDT = jsonObject.getString(FormsTable.COLUMN_GPSDATE);
@@ -96,6 +98,7 @@ public class FormsContract {
         this.sC = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SC));
         this.sD = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SD));
         this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
+        this.sF = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SF));
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
         this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
         this.gpsDT = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSDATE));
@@ -137,6 +140,9 @@ public class FormsContract {
         }
         if (!this.sE.equals("")) {
             json.put(FormsTable.COLUMN_SE, this.sE.equals("") ? JSONObject.NULL : new JSONObject(this.sE));
+        }
+        if (!this.sF.equals("")) {
+            json.put(FormsTable.COLUMN_SF, this.sF.equals("") ? JSONObject.NULL : new JSONObject(this.sF));
         }
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
         json.put(FormsTable.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
@@ -266,6 +272,14 @@ public class FormsContract {
         this.sE = sE;
     }
 
+    public String getsF() {
+        return sF;
+    }
+
+    public void setsF(String sF) {
+        this.sF = sF;
+    }
+
     public String getEndingdatetime() {
         return endingdatetime;
     }
@@ -358,6 +372,7 @@ public class FormsContract {
         public static final String COLUMN_SC = "sC";
         public static final String COLUMN_SD = "sD";
         public static final String COLUMN_SE = "sE";
+        public static final String COLUMN_SF = "sF";
         public static final String COLUMN_GPSLAT = "gpslat";
         public static final String COLUMN_GPSLNG = "gpslng";
         public static final String COLUMN_GPSDATE = "gpsdate";

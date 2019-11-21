@@ -165,7 +165,7 @@ public class Section04Activity extends AppCompatActivity {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
-        int updcount = db.updateSD();
+        int updcount = db.updateSE();
 
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
@@ -178,78 +178,78 @@ public class Section04Activity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
-        JSONObject SD = new JSONObject();
+        JSONObject SE = new JSONObject();
 
-        SD.put("RS41", bi.RS41a.isChecked() ? "1"
+        SE.put("RS41", bi.RS41a.isChecked() ? "1"
                 : bi.RS41b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS421", bi.RS421a.isChecked() ? "1"
+        SE.put("RS421", bi.RS421a.isChecked() ? "1"
                 : bi.RS421b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS422", bi.RS422a.isChecked() ? "1"
+        SE.put("RS422", bi.RS422a.isChecked() ? "1"
                 : bi.RS422b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS423", bi.RS423a.isChecked() ? "1"
+        SE.put("RS423", bi.RS423a.isChecked() ? "1"
                 : bi.RS423b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS424", bi.RS424a.isChecked() ? "1"
+        SE.put("RS424", bi.RS424a.isChecked() ? "1"
                 : bi.RS424b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS4296", bi.RS4296a.isChecked() ? "1"
+        SE.put("RS4296", bi.RS4296a.isChecked() ? "1"
                 : bi.RS4296b.isChecked() ? "2"
                 : "0");
-        SD.put("RS4296ax", bi.RS4296ax.getText().toString());
+        SE.put("RS4296ax", bi.RS4296ax.getText().toString());
 
-        SD.put("RS43", bi.RS43a.isChecked() ? "1"
+        SE.put("RS43", bi.RS43a.isChecked() ? "1"
                 : bi.RS43b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS441", bi.RS441a.isChecked() ? "1"
+        SE.put("RS441", bi.RS441a.isChecked() ? "1"
                 : bi.RS441b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS442", bi.RS442a.isChecked() ? "1"
+        SE.put("RS442", bi.RS442a.isChecked() ? "1"
                 : bi.RS442b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS443", bi.RS443a.isChecked() ? "1"
+        SE.put("RS443", bi.RS443a.isChecked() ? "1"
                 : bi.RS443b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS444", bi.RS444a.isChecked() ? "1"
+        SE.put("RS444", bi.RS444a.isChecked() ? "1"
                 : bi.RS444b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS445", bi.RS445a.isChecked() ? "1"
+        SE.put("RS445", bi.RS445a.isChecked() ? "1"
                 : bi.RS445b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RS4496", bi.RS4496a.isChecked() ? "1"
+        SE.put("RS4496", bi.RS4496a.isChecked() ? "1"
                 : bi.RS4496b.isChecked() ? "2"
                 : "0");
-        SD.put("RS4496ax", bi.RS4496ax.getText().toString());
+        SE.put("RS4496ax", bi.RS4496ax.getText().toString());
 
-        SD.put("RS45", bi.RS45a.isChecked() ? "1"
+        SE.put("RS45", bi.RS45a.isChecked() ? "1"
                 : bi.RS45b.isChecked() ? "2"
                 : bi.RS4598.isChecked() ? "98"
                 : "0");
 
-        SD.put("RS46", bi.RS46.getText().toString());
+        SE.put("RS46", bi.RS46.getText().toString());
 
-        SD.put("RS47", bi.RS47.getText().toString());
+        SE.put("RS47", bi.RS47.getText().toString());
 
-        SD.put("RS48", bi.RS48a.isChecked() ? "1"
+        SE.put("RS48", bi.RS48a.isChecked() ? "1"
                 : bi.RS48b.isChecked() ? "2"
                 : bi.RS4898.isChecked() ? "98"
                 : "0");
 
 
-        MainApp.fc.setsD(String.valueOf(SD));
+        MainApp.fc.setsE(String.valueOf(SE));
 
 
     }
