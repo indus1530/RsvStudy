@@ -42,7 +42,7 @@ public class Section01Activity extends AppCompatActivity {
         bi.setCallback(this);
         clickListener();
 
-        // bi.RS13.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -8));
+        bi.RS13.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -8));
 
     }
 
@@ -71,6 +71,7 @@ public class Section01Activity extends AppCompatActivity {
     private void clickListener() {
         db = new DatabaseHelper(this);
 
+
         bi.RSID.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -81,7 +82,7 @@ public class Section01Activity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 bi.ll0101.setVisibility(View.GONE);
-                ClearClass.ClearAllFields(bi.ll0101, false);
+                ClearClass.ClearAllFields(bi.ll0101, null);
             }
 
             @Override
@@ -104,7 +105,6 @@ public class Section01Activity extends AppCompatActivity {
                 Long months = DateUtils.ageInMonthsByDOB(DateUtils.getCalendarDate(bi.RS13.getText().toString()));
                 bi.RS14.setText(String.valueOf(months));
                 DOB = bi.RS13.getText().toString();
-                bi.RS14.setEnabled(false);
 
             }
 
@@ -125,11 +125,11 @@ public class Section01Activity extends AppCompatActivity {
 
                 if (cContract == null) {
                     Toast.makeText(Section01Activity.this, "Study ID not Found!", Toast.LENGTH_SHORT).show();
-                    ClearClass.ClearAllFields(bi.ll0101, false);
+                    ClearClass.ClearAllFields(bi.ll0101, null);
                     bi.ll0101.setVisibility(View.GONE);
                     return;
                 }
-                ClearClass.ClearAllFields(bi.ll0101, true);
+                ClearClass.ClearAllFields(bi.ll0101, null);
                 bi.ll0101.setVisibility(View.VISIBLE);
                 bi.RS7.setText(cContract.getDssid());
                 bi.RS8.setText(cContract.getDssid());

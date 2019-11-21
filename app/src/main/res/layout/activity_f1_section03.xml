@@ -62,8 +62,8 @@
                             android:digits="@string/ed_numbersOnly"
                             android:hint="@string/month"
                             android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="99"
+                            app:mask="####"
+                            app:maxValue="1200"
                             app:minValue="1"
                             app:type="range" />
 

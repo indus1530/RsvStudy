@@ -53,6 +53,7 @@ public class Section02Activity extends AppCompatActivity {
                     bi.RS20cv.setVisibility(View.GONE);
                     bi.RS21cv.setVisibility(View.GONE);
                     bi.RS22cv.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.GONE);
                 } else {
                     ClearClass.ClearAllFields(bi.RS18cv, null);
                     bi.RS18cv.setVisibility(View.GONE);
