@@ -70,7 +70,7 @@ public class Section05Activity extends AppCompatActivity {
 
                 if (checkedId == bi.RS55b.getId()) {
                     ClearClass.ClearAllFields(bi.RS56cv, null);
-                    bi.RS50cv.setVisibility(View.GONE);
+                    bi.RS56cv.setVisibility(View.GONE);
                 } else {
                     bi.RS56cv.setVisibility(View.VISIBLE);
                 }
@@ -108,7 +108,7 @@ public class Section05Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS57b.getId()) {
+                if (checkedId == bi.RS63b.getId()) {
                     ClearClass.ClearAllFields(bi.RS64cv, null);
                     bi.RS64cv.setVisibility(View.GONE);
                 } else {

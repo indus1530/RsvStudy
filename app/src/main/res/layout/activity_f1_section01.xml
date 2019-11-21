@@ -375,7 +375,8 @@
                             android:text="@string/end_interview"
                             android:textColor="@color/white"
                             android:textSize="24sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:visibility="gone" />
 
                     </LinearLayout>
 
