@@ -70,7 +70,7 @@ public class Section05Activity extends AppCompatActivity {
 
                 if (checkedId == bi.RS55b.getId()) {
                     ClearClass.ClearAllFields(bi.RS56cv, null);
-                    bi.RS50cv.setVisibility(View.GONE);
+                    bi.RS56cv.setVisibility(View.GONE);
                 } else {
                     bi.RS56cv.setVisibility(View.VISIBLE);
                 }
@@ -103,12 +103,28 @@ public class Section05Activity extends AppCompatActivity {
             }
         });
 
+        bi.RS58.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS58b.getId()) {
+                    ClearClass.ClearAllFields(bi.RS59cv, null);
+                    ClearClass.ClearAllFields(bi.RS60cv, null);
+                    bi.RS59cv.setVisibility(View.GONE);
+                    bi.RS60cv.setVisibility(View.GONE);
+                } else {
+                    bi.RS59cv.setVisibility(View.VISIBLE);
+                    bi.RS60cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
 
         bi.RS63.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS57b.getId()) {
+                if (checkedId == bi.RS63b.getId()) {
                     ClearClass.ClearAllFields(bi.RS64cv, null);
                     bi.RS64cv.setVisibility(View.GONE);
                 } else {
@@ -134,6 +150,22 @@ public class Section05Activity extends AppCompatActivity {
                 } else {
                     bi.RS68cv.setVisibility(View.VISIBLE);
                     bi.RS69cv.setVisibility(View.VISIBLE);
+                    bi.RS70cv.setVisibility(View.VISIBLE);
+                    bi.RS71cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.RS69.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS69b.getId()) {
+                    ClearClass.ClearAllFields(bi.RS70cv, null);
+                    ClearClass.ClearAllFields(bi.RS71cv, null);
+                    bi.RS70cv.setVisibility(View.GONE);
+                    bi.RS71cv.setVisibility(View.GONE);
+                } else {
                     bi.RS70cv.setVisibility(View.VISIBLE);
                     bi.RS71cv.setVisibility(View.VISIBLE);
                 }
