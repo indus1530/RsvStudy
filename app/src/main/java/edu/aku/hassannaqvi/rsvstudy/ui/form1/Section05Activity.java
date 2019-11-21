@@ -11,6 +11,11 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
@@ -18,6 +23,10 @@ import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
+
+import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.ageInMonthsByDOB;
+import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.ageInYearByDOB;
+import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.convertDateFormat;
 
 public class Section05Activity extends AppCompatActivity {
 
@@ -31,6 +40,19 @@ public class Section05Activity extends AppCompatActivity {
         bi.setCallback(this);
         db = new DatabaseHelper(this);
         setupSkips();
+
+        bi.RS52a.setMaxvalue(ageInYearByDOB(convertDateFormat(Section01Activity.DOB)));
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = null;
+        try {
+            date = formatter.parse(Section01Activity.DOB);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Calendar calender = Calendar.getInstance();
+        calender.setTime(date);
+        bi.RS52b.setMaxvalue(ageInMonthsByDOB(calender));
 
 
     }

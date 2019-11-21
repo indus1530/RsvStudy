@@ -199,10 +199,9 @@
                         android:digits="@string/ed_numbersOnly"
                         android:hint="@string/year"
                         android:inputType="number"
-                        app:mask="####"
-                        app:maxValue="2019"
-                        app:minValue="2012"
-                        app:pattern="[0-9]{4,4}"
+                        app:mask="#"
+                        app:maxValue="8"
+                        app:minValue="0"
                         app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -213,9 +212,8 @@
                         android:hint="@string/month"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue="12"
-                        app:minValue="1"
-                        app:pattern="[0-9]{1,2}"
+                        app:maxValue="84"
+                        app:minValue="0"
                         app:type="range" />
 
                 </LinearLayout>

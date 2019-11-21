@@ -64,6 +64,11 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
+            android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section031Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section04Activity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
