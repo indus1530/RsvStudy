@@ -710,14 +710,14 @@
     <string name="pocfc12"> آ خري وامي اسڪور </string>
 
 
-    <string name="istatus"> انٽرويو جو نتيجو </string>
-    <string name="istatus1"> مڪمل ٿيو </string>
-    <string name="istatus2"> انڪار ڪيو </string>
-    <string name="istatus3"> گھر مستقل طور بند آھي </string>
-    <string name="istatus4"> گھر عارضي طور بند آھي </string>
-    <string name="istatus5"> رڪيل </string>
-    <string name="istatus6"> گھر خالي ھو </string>
-    <string name="istatus7"> مڪمل نه ٿيو </string>
+    <string name="istatus"> انٹرویو کا نتیجہ </string>
+    <string name="istatus1"> مکمل </string>
+    <string name="istatus2"> انکار کر دیا </string>
+    <string name="istatus3"> گھر مستقل طور پر بند ہے </string>
+    <string name="istatus4"> گھر عارضی طور پر بند ہے </string>
+    <string name="istatus5"> نامکمل </string>
+    <string name="istatus6"> گھر پر کوئی نہیں تھا </string>
+    <string name="istatus7"> مکمل نہیں ہوسکا </string>
 
     <string name="pocfd"> سيڪشن 04.ھٿ ڌوئڻ </string>
     <string name="pocfd01"> ڇا توهان ھٿ ڌوئڻ لاءِ صابڻ يا پائوڊر / صرف استعمال ڪندا آهيو </string>
