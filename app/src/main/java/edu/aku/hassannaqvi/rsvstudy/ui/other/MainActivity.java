@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
                         editorDownload.commit();
 
                         Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
-                        bi.lblAppVersion.setText("PO APP New Version " + newVer + "  Downloaded.");
+                        bi.lblAppVersion.setText("RSV STUDY APP New Version " + newVer + "  Downloaded.");
 
                         ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
                         List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
