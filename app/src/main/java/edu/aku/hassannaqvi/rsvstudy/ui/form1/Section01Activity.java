@@ -103,7 +103,7 @@ public class Section01Activity extends AppCompatActivity {
                 if (bi.RS13.getText().toString().isEmpty()) return;
 
                 Long months = DateUtils.ageInMonthsByDOB(DateUtils.getCalendarDate(bi.RS13.getText().toString()));
-                bi.RS14.setText(String.valueOf(months));
+                bi.RS14.setText(months + " month");
                 DOB = bi.RS13.getText().toString();
 
             }

@@ -18,6 +18,8 @@ import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section04Binding;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
+import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.convertDateFormat;
+
 public class Section04Activity extends AppCompatActivity {
 
     ActivityF1Section04Binding bi;
@@ -28,6 +30,8 @@ public class Section04Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04);
         bi.setCallback(this);
         setupSkips();
+
+        bi.RS46.setMinDate(convertDateFormat(Section01Activity.DOB));
 
         /*bi.pocff03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

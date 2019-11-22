@@ -26,7 +26,6 @@ import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.ageInMonthsByDOB;
 import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.ageInYearByDOB;
-import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.convertDateFormat;
 
 public class Section05Activity extends AppCompatActivity {
 
@@ -41,7 +40,7 @@ public class Section05Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         setupSkips();
 
-        bi.RS52a.setMaxvalue(ageInYearByDOB(convertDateFormat(Section01Activity.DOB)));
+        bi.RS52a.setMaxvalue(ageInYearByDOB(Section01Activity.DOB));
 
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         Date date = null;
@@ -52,7 +51,7 @@ public class Section05Activity extends AppCompatActivity {
         }
         Calendar calender = Calendar.getInstance();
         calender.setTime(date);
-        bi.RS52b.setMaxvalue(ageInMonthsByDOB(calender));
+        bi.RS52b.setMaxvalue(ageInMonthsByDOB(calender) % 12);
 
 
     }
