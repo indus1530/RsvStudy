@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
                         editorDownload.commit();
 
                         Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
-                        bi.lblAppVersion.setText("RSV STUDY APP New Version " + newVer + "  Downloaded.");
+                        bi.lblAppVersion.setText(getResources().getString(R.string.app_name) + newVer + "  Downloaded.");
 
                         ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
                         List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
@@ -474,7 +474,6 @@ public class MainActivity extends Activity {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
         }
 
-
     }
 
     public void openA(View v) {
@@ -701,8 +700,8 @@ public class MainActivity extends Activity {
 
             return new AlertDialog.Builder(getActivity())
                     .setIcon(R.drawable.exclamation)
-                    .setTitle("RSVSTUDY APP is available!")
-                    .setMessage("RSVSTUDY App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
+                    .setTitle(getResources().getString(R.string.app_name) + " is available!")
+                    .setMessage(getResources().getString(R.string.app_name) + " " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
                     .setPositiveButton("INSTALL!!",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {
