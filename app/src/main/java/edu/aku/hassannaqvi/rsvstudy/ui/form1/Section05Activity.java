@@ -131,11 +131,17 @@ public class Section05Activity extends AppCompatActivity {
                 if (checkedId == bi.RS58b.getId()) {
                     ClearClass.ClearAllFields(bi.RS59cv, null);
                     ClearClass.ClearAllFields(bi.RS60cv, null);
+                    ClearClass.ClearAllFields(bi.RS61cv, null);
+                    ClearClass.ClearAllFields(bi.RS62cv, null);
                     bi.RS59cv.setVisibility(View.GONE);
                     bi.RS60cv.setVisibility(View.GONE);
+                    bi.RS61cv.setVisibility(View.GONE);
+                    bi.RS62cv.setVisibility(View.GONE);
                 } else {
                     bi.RS59cv.setVisibility(View.VISIBLE);
                     bi.RS60cv.setVisibility(View.VISIBLE);
+                    bi.RS61cv.setVisibility(View.VISIBLE);
+                    bi.RS62cv.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -170,6 +176,26 @@ public class Section05Activity extends AppCompatActivity {
                     bi.RS71cv.setVisibility(View.GONE);
                 } else {
                     bi.RS68cv.setVisibility(View.VISIBLE);
+                    bi.RS69cv.setVisibility(View.VISIBLE);
+                    bi.RS70cv.setVisibility(View.VISIBLE);
+                    bi.RS71cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        bi.RS68.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS6897.getId()) {
+                    ClearClass.ClearAllFields(bi.RS69cv, null);
+                    ClearClass.ClearAllFields(bi.RS70cv, null);
+                    ClearClass.ClearAllFields(bi.RS71cv, null);
+                    bi.RS69cv.setVisibility(View.GONE);
+                    bi.RS70cv.setVisibility(View.GONE);
+                    bi.RS71cv.setVisibility(View.GONE);
+                } else {
                     bi.RS69cv.setVisibility(View.VISIBLE);
                     bi.RS70cv.setVisibility(View.VISIBLE);
                     bi.RS71cv.setVisibility(View.VISIBLE);

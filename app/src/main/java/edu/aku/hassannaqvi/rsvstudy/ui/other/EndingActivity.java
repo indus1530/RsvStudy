@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -47,6 +48,10 @@ public class EndingActivity extends Activity {
     RadioButton istatus8;
     @BindView(R.id.istatus888x)
     EditText istatus888x;
+    @BindView(R.id.RS82cv)
+    CardView RS82cv;
+    @BindView(R.id.RS82)
+    EditText RS82;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -59,6 +64,7 @@ public class EndingActivity extends Activity {
 
         if (check) {
             istatus1.setEnabled(true);
+            RS82cv.setEnabled(true);
             istatus2.setEnabled(false);
             istatus3.setEnabled(false);
             istatus4.setEnabled(false);
@@ -72,6 +78,8 @@ public class EndingActivity extends Activity {
         } else {
             //fldGrpmn0823Reason.setVisibility(View.GONE);
             istatus1.setEnabled(false);
+            RS82cv.setEnabled(false);
+            RS82.setText(null);
         }
 
         istatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -148,6 +156,8 @@ public class EndingActivity extends Activity {
                 : istatus7.isChecked() ? "7"
                 : istatus8.isChecked() ? "8"
                 : "0");
+
+        MainApp.fc.setIstatus88x(istatus888x.getText().toString());
 
         MainApp.fc.setIstatus88x(istatus888x.getText().toString());
         MainApp.fc.setEndingdatetime(dtToday);
