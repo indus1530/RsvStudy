@@ -86,7 +86,6 @@
         <activity
             android:name="edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
