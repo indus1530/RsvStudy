@@ -2,116 +2,57 @@ package edu.aku.hassannaqvi.rsvstudy.ui.other;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityEndingBinding;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
-import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
+import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class EndingActivity extends Activity {
 
-    private static final String TAG = EndingActivity.class.getSimpleName();
-    @BindView(R.id.scrollView01)
-    ScrollView scrollView01;
-    @BindView(R.id.istatus)
-    RadioGroup istatus;
-    @BindView(R.id.istatus1)
-    RadioButton istatus1;
-    @BindView(R.id.istatus2)
-    RadioButton istatus2;
-    @BindView(R.id.istatus3)
-    RadioButton istatus3;
-    @BindView(R.id.istatus4)
-    RadioButton istatus4;
-    @BindView(R.id.istatus5)
-    RadioButton istatus5;
-    @BindView(R.id.istatus6)
-    RadioButton istatus6;
-    @BindView(R.id.istatus7)
-    RadioButton istatus7;
-    @BindView(R.id.istatus8)
-    RadioButton istatus8;
-    @BindView(R.id.istatus888x)
-    EditText istatus888x;
-    @BindView(R.id.RS82)
-    DatePickerInputEditText RS82;
+    ActivityEndingBinding bi;
+
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ending);
-        ButterKnife.bind(this);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
+        bi.setCallback(this);
 
-        RS82.setMaxDate(DateUtils.getMonthsBack("dd/MM/yyyy", 1));
-        RS82.setMinDate(DateUtils.getDaysBack("dd/MM/yyyy", 1));
+
+        bi.RS82.setMaxDate(DateUtils.getMonthsBack("dd/MM/yyyy", 1));
+        bi.RS82.setMinDate(DateUtils.getDaysBack("dd/MM/yyyy", 1));
 
         Boolean check = getIntent().getExtras().getBoolean("complete");
 
         if (check) {
-            istatus1.setEnabled(true);
-            RS82.setEnabled(true);
-            istatus2.setEnabled(false);
-            istatus3.setEnabled(false);
-            istatus4.setEnabled(false);
-            istatus5.setEnabled(false);
-            istatus6.setEnabled(false);
-            istatus7.setEnabled(false);
-            istatus8.setEnabled(false);
-            istatus888x.setEnabled(false);
-            istatus888x.setText(null);
+            bi.istatus1.setEnabled(true);
+            bi.istatus2.setEnabled(false);
+            bi.istatus3.setEnabled(false);
+            bi.istatus4.setEnabled(false);
+            bi.istatus5.setEnabled(false);
+            bi.istatus6.setEnabled(false);
+            bi.istatus7.setEnabled(false);
+            bi.istatus8.setEnabled(false);
 
         } else {
             //fldGrpmn0823Reason.setVisibility(View.GONE);
-            istatus1.setEnabled(false);
-            RS82.setEnabled(false);
-            RS82.setText(null);
+            bi.istatus1.setEnabled(false);
         }
 
-        istatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
-
-                if (istatus1.isChecked()) {
-                    RS82.setVisibility(View.VISIBLE);
-                    RS82.requestFocus();
-                } else {
-                    RS82.setText(null);
-                    RS82.setVisibility(View.GONE);
-                }
-
-                if (istatus8.isChecked()) {
-                    istatus888x.setVisibility(View.VISIBLE);
-                    istatus888x.requestFocus();
-                } else {
-                    istatus888x.setText(null);
-                    istatus888x.setVisibility(View.GONE);
-                }
-
-
-            }
-        });
 
     }
 
-    @OnClick(R.id.btn_End)
-    void onBtnEndClick() {
+    public void BtnContinue() {
 
         Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
@@ -160,19 +101,19 @@ public class EndingActivity extends Activity {
     private void SaveDraft() {
         Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
-        MainApp.fc.setIstatus(istatus1.isChecked() ? "1"
-                : istatus2.isChecked() ? "2"
-                : istatus3.isChecked() ? "3"
-                : istatus4.isChecked() ? "4"
-                : istatus5.isChecked() ? "4"
-                : istatus6.isChecked() ? "6"
-                : istatus7.isChecked() ? "7"
-                : istatus8.isChecked() ? "8"
+        MainApp.fc.setIstatus(bi.istatus1.isChecked() ? "1"
+                : bi.istatus2.isChecked() ? "2"
+                : bi.istatus3.isChecked() ? "3"
+                : bi.istatus4.isChecked() ? "4"
+                : bi.istatus5.isChecked() ? "4"
+                : bi.istatus6.isChecked() ? "6"
+                : bi.istatus7.isChecked() ? "7"
+                : bi.istatus8.isChecked() ? "8"
                 : "0");
 
-        MainApp.fc.setIstatus88x(istatus888x.getText().toString());
+        MainApp.fc.setIstatus88x(bi.istatus888x.getText().toString());
 
-        MainApp.fc.setNextVisit(RS82.getText().toString());
+        MainApp.fc.setNextVisit(bi.RS82.getText().toString());
         MainApp.fc.setEndingdatetime(dtToday);
 
         Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
@@ -195,32 +136,7 @@ public class EndingActivity extends Activity {
     }
 
     private boolean formValidation() {
-        Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
-
-        if (istatus.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "ERROR(Not Selected): " + getString(R.string.dcstatus), Toast.LENGTH_LONG).show();
-            istatus1.setError("Please Select One");    // Set Error on last radio button
-            Log.i(TAG, "istatus: This data is Required!");
-            return false;
-        } else {
-            istatus1.setError(null);
-        }
-
-        if (istatus8.isChecked()) {
-
-            if (istatus888x.getText().toString().isEmpty()) {
-                Toast.makeText(this, "ERROR(empty): " + getString(R.string.uother), Toast.LENGTH_SHORT).show();
-                istatus888x.setError("This data is Required!");    // Set Error on last radio button
-                Log.i(TAG, "istatus888x: This data is Required!");
-                return false;
-            } else {
-                istatus888x.setError(null);
-            }
-
-        }
-
-
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.llend);
     }
 
 
