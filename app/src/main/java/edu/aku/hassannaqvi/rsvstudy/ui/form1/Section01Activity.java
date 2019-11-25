@@ -42,7 +42,7 @@ public class Section01Activity extends AppCompatActivity {
         bi.setCallback(this);
         clickListener();
 
-        bi.RS13.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -8));
+//        bi.RS13.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -8));
 
     }
 
@@ -103,7 +103,7 @@ public class Section01Activity extends AppCompatActivity {
                 if (bi.RS13.getText().toString().isEmpty()) return;
 
                 Long months = DateUtils.ageInMonthsByDOB(DateUtils.getCalendarDate(bi.RS13.getText().toString()));
-                bi.RS14.setText(months + " month");
+                bi.RS14.setText(months + " month(s)");
                 DOB = bi.RS13.getText().toString();
 
             }
@@ -129,10 +129,13 @@ public class Section01Activity extends AppCompatActivity {
                     bi.ll0101.setVisibility(View.GONE);
                     return;
                 }
+                MainApp.DOB = cContract.getDob();
+
                 ClearClass.ClearAllFields(bi.ll0101, null);
                 bi.ll0101.setVisibility(View.VISIBLE);
                 bi.RS7.setText(cContract.getDssid());
                 bi.RS8.setText(cContract.getDssid());
+                bi.RS13.setText(cContract.getDob());
                 bi.RS10.setText(cContract.getMother_name());
                 bi.RS11.setText(cContract.getFather_name());
                 bi.RS12.setText(cContract.getHhhead());
@@ -141,6 +144,7 @@ public class Section01Activity extends AppCompatActivity {
                 bi.RS10.setEnabled(false);
                 bi.RS11.setEnabled(false);
                 bi.RS12.setEnabled(false);
+                bi.RS13.setEnabled(false);
             }
         });
 
@@ -211,6 +215,7 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS12", bi.RS12.getText().toString());
         SA.put("RS13", bi.RS13.getText().toString());
         SA.put("RS14", bi.RS14.getText().toString());
+        SA.put("RS15", bi.RS15.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);

@@ -14,6 +14,16 @@ public class ChildList {
     private String hhhead;
     private String study_id;
 
+    private String dob;
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
 
     public ChildList() {
     }
@@ -39,13 +49,13 @@ public class ChildList {
         return study_id;
     }
 
-
     public ChildList sync(JSONObject jsonObject) throws JSONException {
         this.dssid = jsonObject.getString(singleChildList.COLUMN_DSSID);
         this.mother_name = jsonObject.getString(singleChildList.COLUMN_MOTHER_NAME);
         this.father_name = jsonObject.getString(singleChildList.COLUMN_FATHER_NAME);
         this.hhhead = jsonObject.getString(singleChildList.COLUMN_HHHEAD);
         this.study_id = jsonObject.getString(singleChildList.COLUMN_STUDY_ID);
+        this.dob = jsonObject.getString(singleChildList.COLUMN_DOB);
 
         return this;
     }
@@ -56,6 +66,7 @@ public class ChildList {
         this.father_name = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_FATHER_NAME));
         this.hhhead = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_HHHEAD));
         this.study_id = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_STUDY_ID));
+        this.dob = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_DOB));
 
         return this;
     }
@@ -88,6 +99,7 @@ public class ChildList {
         json.put(singleChildList.COLUMN_FATHER_NAME, this.father_name == null ? JSONObject.NULL : this.father_name);
         json.put(singleChildList.COLUMN_HHHEAD, this.hhhead == null ? JSONObject.NULL : this.hhhead);
         json.put(singleChildList.COLUMN_STUDY_ID, this.study_id == null ? JSONObject.NULL : this.study_id);
+        json.put(singleChildList.COLUMN_DOB, this.dob == null ? JSONObject.NULL : this.dob);
 
         return json;
     }
@@ -100,6 +112,7 @@ public class ChildList {
         public static final String COLUMN_MOTHER_NAME = "mother_name";
         public static final String COLUMN_FATHER_NAME = "father_name";
         public static final String COLUMN_HHHEAD = "hhhead";
+        public static final String COLUMN_DOB = "dob";
         public static final String COLUMN_STUDY_ID = "study_id";
 
         public static final String _URI = "childlist.php";

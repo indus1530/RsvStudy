@@ -31,7 +31,7 @@ public class Section02Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section02);
         bi.setCallback(this);
         //this.setTitle("RSV Study section 2");
-        bi.RS22.setMinDate(convertDateFormat(Section01Activity.DOB));
+        bi.RS22.setMinDate(convertDateFormat(MainApp.DOB));
         setupSkips();
 
     }

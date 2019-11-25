@@ -555,13 +555,11 @@
                         android:id="@+id/RS46"
                         android:layout_marginStart="20dp"
                         android:layout_weight="70"
-                        android:focusable="false"
                         android:hint="DD/MM/YYYY"
                         android:textColor="@android:color/black"
                         app:dateFormat="dd-MM-yyyy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:maxDate="CR_DATE" />
+                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
@@ -584,12 +582,16 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/RS47" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:maxLength="3"
+                        app:maxValue="365"
+                        app:minValue="1"
                         android:id="@+id/RS47"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:digits="@string/ed_numbersOnly"
                         android:hint="@string/day"
+                        app:type="range"
                         android:inputType="number" />
 
                 </LinearLayout>

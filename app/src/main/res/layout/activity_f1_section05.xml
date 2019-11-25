@@ -198,11 +198,7 @@
                         android:layout_height="wrap_content"
                         android:digits="@string/ed_numbersOnly"
                         android:hint="@string/year"
-                        android:inputType="number"
-                        app:mask="#"
-                        app:maxValue="8"
-                        app:minValue="0"
-                        app:type="range" />
+                        android:inputType="number" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/RS52b"
@@ -210,11 +206,7 @@
                         android:layout_height="wrap_content"
                         android:digits="@string/ed_numbersOnly"
                         android:hint="@string/month"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="84"
-                        app:minValue="0"
-                        app:type="range" />
+                        android:inputType="number" />
 
                 </LinearLayout>
 

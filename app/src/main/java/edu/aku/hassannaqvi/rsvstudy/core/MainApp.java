@@ -79,6 +79,7 @@ public class MainApp extends Application {
     public static Boolean admin = false;
     public static FormsContract fc;
     public static String userName = "0000";
+    public static String DOB = "";
     //    Total No of members got from Section A
 
     public static int TotalMembersCount = 0;

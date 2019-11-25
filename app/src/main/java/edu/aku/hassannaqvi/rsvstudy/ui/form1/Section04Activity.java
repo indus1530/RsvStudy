@@ -15,6 +15,7 @@ import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section04Binding;
+import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
@@ -29,10 +30,13 @@ public class Section04Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04);
         bi.setCallback(this);
+
+
+        bi.RS46.setMinDate(DateUtils.convertDateFormat(MainApp.DOB));
+        String maxDate = DateUtils.addYearsByDate(DateUtils.getCalendarDate(DateUtils.convertDateFormat(MainApp.DOB)), "dd/MM/yyyy", 1);
+        bi.RS46.setMaxDate(maxDate);
+
         setupSkips();
-
-        bi.RS46.setMinDate(convertDateFormat(Section01Activity.DOB));
-
         /*bi.pocff03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -145,7 +149,6 @@ public class Section04Activity extends AppCompatActivity {
 
 
     }
-
 
 
     public void BtnContinue() {

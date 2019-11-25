@@ -157,6 +157,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + ChildList.singleChildList.COLUMN_MOTHER_NAME + " TEXT,"
             + ChildList.singleChildList.COLUMN_FATHER_NAME + " TEXT, "
             + ChildList.singleChildList.COLUMN_HHHEAD + " TEXT,"
+            + ChildList.singleChildList.COLUMN_DOB + " TEXT,"
             + ChildList.singleChildList.COLUMN_STUDY_ID + " TEXT );";
     private final String TAG = "DatabaseHelper";
 
@@ -250,6 +251,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(ChildList.singleChildList.COLUMN_FATHER_NAME, cl.getFather_name());
                 values.put(ChildList.singleChildList.COLUMN_HHHEAD, cl.getHhhead());
                 values.put(ChildList.singleChildList.COLUMN_STUDY_ID, cl.getStudy_id());
+                values.put(ChildList.singleChildList.COLUMN_DOB, cl.getDob());
 
                 db.insert(ChildList.singleChildList.TABLE_NAME, null, values);
             }
@@ -696,7 +698,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ChildList.singleChildList.COLUMN_MOTHER_NAME,
                 ChildList.singleChildList.COLUMN_FATHER_NAME,
                 ChildList.singleChildList.COLUMN_HHHEAD,
-                ChildList.singleChildList.COLUMN_STUDY_ID
+                ChildList.singleChildList.COLUMN_STUDY_ID,
+                ChildList.singleChildList.COLUMN_DOB,
         };
 
         String whereClause = ChildList.singleChildList.COLUMN_STUDY_ID + " = ? ";

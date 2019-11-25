@@ -40,12 +40,12 @@ public class Section05Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         setupSkips();
 
-        bi.RS52a.setMaxvalue(ageInYearByDOB(Section01Activity.DOB));
+        bi.RS52a.setMaxvalue(ageInYearByDOB(MainApp.DOB));
 
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         Date date = null;
         try {
-            date = formatter.parse(Section01Activity.DOB);
+            date = formatter.parse(MainApp.DOB);
         } catch (ParseException e) {
             e.printStackTrace();
         }
