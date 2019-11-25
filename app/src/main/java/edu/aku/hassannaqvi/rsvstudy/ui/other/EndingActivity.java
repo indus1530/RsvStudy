@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -16,7 +17,7 @@ import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityEndingBinding;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
-public class EndingActivity extends Activity {
+public class EndingActivity extends AppCompatActivity {
 
     ActivityEndingBinding bi;
 

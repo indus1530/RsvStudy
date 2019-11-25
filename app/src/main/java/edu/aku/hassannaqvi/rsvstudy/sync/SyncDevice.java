@@ -33,6 +33,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
     public SyncDevice(Context context) {
         this.context = context;
 
+
     }
 
     @Override

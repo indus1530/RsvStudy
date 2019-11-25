@@ -70,7 +70,6 @@
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                                 android:id="@+id/RS82"
                                 style="@style/textInput"
-                                android:focusable="false"
                                 android:hint="@string/RS82"
                                 android:text='@{istatus1.checked? RS82.getText().toString() : "" }'
                                 android:textColor="@android:color/black"
