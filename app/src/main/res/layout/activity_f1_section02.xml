@@ -256,6 +256,11 @@
                             android:text="@string/RS20d" />
 
                         <RadioButton
+                            android:id="@+id/RS20e"
+                            style="@style/radiobutton"
+                            android:text="@string/RS20e" />
+
+                        <RadioButton
                             android:id="@+id/RS2096"
                             style="@style/radiobutton"
                             android:text="@string/RS2096" />

@@ -171,6 +171,7 @@ public class Section02Activity extends AppCompatActivity {
                 : bi.RS20b.isChecked() ? "2"
                 : bi.RS20c.isChecked() ? "3"
                 : bi.RS20d.isChecked() ? "4"
+                : bi.RS20e.isChecked() ? "5"
                 : bi.RS2096.isChecked() ? "96"
                 : "0");
         SB.put("RS20x", bi.RS2096x.getText().toString());

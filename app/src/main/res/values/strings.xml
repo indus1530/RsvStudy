@@ -66,6 +66,7 @@
     <string name="RS20b"> وہ دوسرے شہر منتقل ہوگئی ہے </string>
     <string name="RS20c"> وہ اس قابل نہیں ہے </string>
     <string name="RS20d"> مسلسل غیر حاظر ہے </string>
+    <string name="RS20e"> وہ گھر پر موجود نہیں ہے </string>
     <string name="RS2096"> دیگر </string>
     <string name="RS21">2.05: کیا بچہ زندہ ہے </string>
     <string name="RS21a">  ہاں، اب بھی زندہ ہے </string>
@@ -253,9 +254,9 @@
     <string name="RS421"> کھانسی </string>
     <string name="RS422"> سرد / بہتی ہوئی ناک </string>
     <string name="RS423"> سانس لینے میں مشکل </string>
-    <string name="RS424"> ڈی چیسٹ اندرا </string>
+    <string name="RS424"> پسلیاں چلنا </string>
     <string name="RS4296"> دیگر </string>
-    <string name="RS4296x"> دیگر </string>
+    <string name="RS4296x"> وضاحت کریں </string>
     <string name="RS428"> پتہ نہیں </string>
 
     <string name="RS43">4.03: کیا آپ نے کبھی اس بیماری یا مشکل کے لیے کسی ڈاکٹر کو دکھایا؟ </string>
