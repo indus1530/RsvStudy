@@ -197,7 +197,7 @@ public class Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
-        MainApp.fc.setRef_ID(bi.RSID.getText().toString());
+        MainApp.fc.setStudy_Id(bi.RSID.getText().toString());
         //MainApp.fc.setCode_lhw(chwCodes.get(bi.RS13.getSelectedItemPosition()));
         //MainApp.fc.setRef_ID(bi.chwcode.getText().toString());
 

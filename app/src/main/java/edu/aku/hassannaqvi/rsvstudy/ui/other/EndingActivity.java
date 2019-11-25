@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -22,6 +21,8 @@ import butterknife.OnClick;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
+import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
 public class EndingActivity extends Activity {
 
@@ -48,10 +49,8 @@ public class EndingActivity extends Activity {
     RadioButton istatus8;
     @BindView(R.id.istatus888x)
     EditText istatus888x;
-    @BindView(R.id.RS82cv)
-    CardView RS82cv;
     @BindView(R.id.RS82)
-    EditText RS82;
+    DatePickerInputEditText RS82;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -60,11 +59,14 @@ public class EndingActivity extends Activity {
         setContentView(R.layout.activity_ending);
         ButterKnife.bind(this);
 
+        RS82.setMaxDate(DateUtils.getMonthsBack("dd/MM/yyyy", 1));
+        RS82.setMinDate(DateUtils.getDaysBack("dd/MM/yyyy", 1));
+
         Boolean check = getIntent().getExtras().getBoolean("complete");
 
         if (check) {
             istatus1.setEnabled(true);
-            RS82cv.setEnabled(true);
+            RS82.setEnabled(true);
             istatus2.setEnabled(false);
             istatus3.setEnabled(false);
             istatus4.setEnabled(false);
@@ -78,13 +80,22 @@ public class EndingActivity extends Activity {
         } else {
             //fldGrpmn0823Reason.setVisibility(View.GONE);
             istatus1.setEnabled(false);
-            RS82cv.setEnabled(false);
+            RS82.setEnabled(false);
             RS82.setText(null);
         }
 
         istatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
+
+                if (istatus1.isChecked()) {
+                    RS82.setVisibility(View.VISIBLE);
+                    RS82.requestFocus();
+                } else {
+                    RS82.setText(null);
+                    RS82.setVisibility(View.GONE);
+                }
+
                 if (istatus8.isChecked()) {
                     istatus888x.setVisibility(View.VISIBLE);
                     istatus888x.requestFocus();
@@ -92,6 +103,8 @@ public class EndingActivity extends Activity {
                     istatus888x.setText(null);
                     istatus888x.setVisibility(View.GONE);
                 }
+
+
             }
         });
 
@@ -159,7 +172,7 @@ public class EndingActivity extends Activity {
 
         MainApp.fc.setIstatus88x(istatus888x.getText().toString());
 
-        MainApp.fc.setIstatus88x(istatus888x.getText().toString());
+        MainApp.fc.setNextVisit(RS82.getText().toString());
         MainApp.fc.setEndingdatetime(dtToday);
 
         Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
@@ -196,7 +209,7 @@ public class EndingActivity extends Activity {
         if (istatus8.isChecked()) {
 
             if (istatus888x.getText().toString().isEmpty()) {
-                Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.uother), Toast.LENGTH_SHORT).show();
                 istatus888x.setError("This data is Required!");    // Set Error on last radio button
                 Log.i(TAG, "istatus888x: This data is Required!");
                 return false;

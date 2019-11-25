@@ -474,6 +474,7 @@ public class MainActivity extends Activity {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
         }
 
+
     }
 
     public void openA(View v) {

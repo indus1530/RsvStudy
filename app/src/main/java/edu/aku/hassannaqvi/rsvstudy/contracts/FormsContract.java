@@ -21,14 +21,14 @@ public class FormsContract {
     private String user = ""; // Interviewer
     private String istatus = ""; // Interview Status
     private String istatus88x = ""; // Interview Status
-    private String code_lhw = "";
-    private String ref_id = "";
+    private String Study_Id = "";
     private String sA = "";
     private String sB = ""; // for section 02 and 03
     private String sC = "";
     private String sD = "";
     private String sE = "";
     private String sF = "";
+    private String NextVisit = "";
     private String endingdatetime = "";
 
     private String gpsLat = "";
@@ -59,8 +59,8 @@ public class FormsContract {
         this.user = jsonObject.getString(FormsTable.COLUMN_USER);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
-        this.code_lhw = jsonObject.getString(FormsTable.COLUMN_CODE_LHW);
-        this.ref_id = jsonObject.getString(FormsTable.COLUMN_REF_ID);
+        this.Study_Id = jsonObject.getString(FormsTable.COLUMN_STUDY_ID);
+        this.NextVisit = jsonObject.getString(FormsTable.COLUMN_NEXT_VISIT);
         this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
         this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.sB = jsonObject.getString(FormsTable.COLUMN_SB);
@@ -90,8 +90,8 @@ public class FormsContract {
         this.user = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_USER));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
-        this.code_lhw = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CODE_LHW));
-        this.ref_id = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_REF_ID));
+        this.Study_Id = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STUDY_ID));
+        this.NextVisit = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_NEXT_VISIT));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
         this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
         this.sB = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SB));
@@ -122,8 +122,8 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
-        json.put(FormsTable.COLUMN_CODE_LHW, this.code_lhw == null ? JSONObject.NULL : this.code_lhw);
-        json.put(FormsTable.COLUMN_REF_ID, this.ref_id == null ? JSONObject.NULL : this.ref_id);
+        json.put(FormsTable.COLUMN_STUDY_ID, this.Study_Id == null ? JSONObject.NULL : this.Study_Id);
+        json.put(FormsTable.COLUMN_NEXT_VISIT, this.NextVisit == null ? JSONObject.NULL : this.NextVisit);
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
         if (!this.sA.equals("")) {
@@ -216,20 +216,20 @@ public class FormsContract {
         this.istatus88x = istatus88x;
     }
 
-    public String getCode_lhw() {
-        return code_lhw;
+    public String getStudy_Id() {
+        return Study_Id;
     }
 
-    public void setCode_lhw(String code_lhw) {
-        this.code_lhw = code_lhw;
+    public void setStudy_Id(String Study_Id) {
+        this.Study_Id = Study_Id;
     }
 
-    public String getRef_ID() {
-        return ref_id;
+    public String getNextVisit() {
+        return NextVisit;
     }
 
-    public void setRef_ID(String ref_id) {
-        this.ref_id = ref_id;
+    public void setNextVisit(String NextVisit) {
+        this.NextVisit = NextVisit;
     }
 
     public String getsA() {
@@ -364,8 +364,8 @@ public class FormsContract {
         public static final String COLUMN_USER = "user";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
-        public static final String COLUMN_CODE_LHW = "code_lhw";
-        public static final String COLUMN_REF_ID = "ref_id";
+        public static final String COLUMN_STUDY_ID = "Study_Id";
+        public static final String COLUMN_NEXT_VISIT = "NextVisit";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
         public static final String COLUMN_SA = "sA";
         public static final String COLUMN_SB = "sB";

@@ -52,6 +52,7 @@ public class Section05Activity extends AppCompatActivity {
         Calendar calender = Calendar.getInstance();
         calender.setTime(date);
         bi.RS52b.setMaxvalue(ageInMonthsByDOB(calender) % 12);
+        bi.RS52b.setMinvalue(ageInMonthsByDOB(calender) % 12);
 
 
     }

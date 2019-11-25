@@ -66,8 +66,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_FORMDATE + " TEXT," +
             FormsTable.COLUMN_APPVERSION + " TEXT," +
             FormsTable.COLUMN_FORMTYPE + " TEXT," +
-            FormsTable.COLUMN_CODE_LHW + " TEXT," +
-            FormsTable.COLUMN_REF_ID + " TEXT," +
+            FormsTable.COLUMN_STUDY_ID + " TEXT," +
+            FormsTable.COLUMN_NEXT_VISIT + " TEXT," +
             FormsTable.COLUMN_USER + " TEXT," +
             FormsTable.COLUMN_SA + " TEXT," +
             FormsTable.COLUMN_SB + " TEXT," +
@@ -789,14 +789,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsTable.COLUMN_FORMTYPE,
                 FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_CODE_LHW,
-                FormsTable.COLUMN_REF_ID,
+                FormsTable.COLUMN_STUDY_ID,
+                FormsTable.COLUMN_NEXT_VISIT,
                 FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,
         };
 
-        String whereClause = FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsTable.COLUMN_CODE_LHW + " =? AND " + FormsTable.COLUMN_REF_ID + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?";
+        String whereClause = FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsTable.COLUMN_STUDY_ID + " =? AND " + FormsTable.COLUMN_NEXT_VISIT + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?";
         String[] whereArgs = {sType, codeLhw, refId, "1"};
         String groupBy = null;
         String having = null;
@@ -1079,8 +1079,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_PROJECT_NAME, fc.getProjectName());
         values.put(FormsTable.COLUMN_UID, fc.get_UID());
         values.put(FormsTable.COLUMN_FORMDATE, fc.getFormDate());
-        values.put(FormsTable.COLUMN_CODE_LHW, fc.getCode_lhw());
-        values.put(FormsTable.COLUMN_REF_ID, fc.getRef_ID());
+        values.put(FormsTable.COLUMN_STUDY_ID, fc.getStudy_Id());
+        values.put(FormsTable.COLUMN_NEXT_VISIT, fc.getNextVisit());
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
@@ -1848,8 +1848,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
-                FormsTable.COLUMN_CODE_LHW,
-                FormsTable.COLUMN_REF_ID,
+                FormsTable.COLUMN_STUDY_ID,
+                FormsTable.COLUMN_NEXT_VISIT,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,
