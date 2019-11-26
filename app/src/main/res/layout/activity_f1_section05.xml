@@ -29,6 +29,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/HeadingTitle"
                 android:text="@string/Section5" />
 
 
@@ -400,11 +401,17 @@
 
 
             <TextView
-
+                style="@style/HeadingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/section6" />
 
+            <TextView
+                style="@style/sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/section6sub"
+                android:visibility="visible" />
             <!--RS57 - Radio-->
             <android.support.v7.widget.CardView
                 android:id="@+id/RS57cv"
@@ -859,7 +866,7 @@
 
 
             <TextView
-
+                style="@style/HeadingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/section7" />
@@ -1355,6 +1362,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/HeadingTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -1467,7 +1475,7 @@
                     android:orientation="vertical">
 
                     <TextView
-
+                        style="@style/HeadingTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"

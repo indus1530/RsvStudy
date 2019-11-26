@@ -16,6 +16,7 @@
         <item name="android:fillAfter">true</item>
         <item name="android:enterFadeDuration">600</item>
         <item name="android:exitFadeDuration">200</item>
+
         <item name="android:animateLayoutChanges">true</item>
         <!-- Customize your theme here. -->
     </style>
@@ -35,6 +36,11 @@
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
         <item name="android:background">@drawable/rsv_bg</item>
         <item name="android:padding">18dp</item>
+    </style>
+
+    <style name="TestDisabled">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="ActionBar">
@@ -79,6 +85,7 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">12dp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
 
@@ -111,8 +118,8 @@
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:background">#d6d6d6</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">#ef6d6d</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:visibility">invisible</item>
         <item name="android:padding">16dp</item>
