@@ -110,6 +110,20 @@ public class DateUtils {
         return calendar;
     }
 
+    public static Calendar getDate(String value) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        Calendar calendar = Calendar.getInstance();
+        try {
+            Date date = sdf.parse(value);
+            calendar.setTime(date);
+            return calendar;
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return calendar;
+    }
+
     public static long ageInYearByDOB(String dateStr) {
         Calendar cal = getCalendarDate(dateStr);
         Date dob = cal.getTime();
