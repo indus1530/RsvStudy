@@ -35,120 +35,112 @@ public class Section01Activity extends AppCompatActivity {
     private ChildList cContract;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
+    ChildList childData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section01);
         bi.setCallback(this);
-        clickListener();
 
-//        bi.RS13.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -8));
+        childData = getIntent().getParcelableExtra("data");
 
+        setupViews();
     }
 
-    /*@Override
-    public void afterTextChanged(Editable s) {
-        if (bind.A4005.getText().hashCode() == s.hashCode()) {
-            if (bind.A4005.getText().toString().trim().length() > 0 && Integer.parseInt(bind.A4005.getText().toString().trim()) > 7) {
-                ClearAllcontrol.ClearAllC(bind.A4006cv);
-                bind.A4006cv.setVisibility(View.GONE);
-            } else {
-                bind.A4006cv.setVisibility(View.VISIBLE);
-            }
-        }
+    private void setupViews() {
 
-        if (bind.A4011.getText().hashCode() == s.hashCode()) {
-            if (bind.A4011.getText().toString().trim().length() > 0 && Integer.parseInt(bind.A4011.getText().toString().trim()) >= 1) {
-                ClearAllcontrol.ClearAllC(bind.A4012cv);
-                bind.A4012cv.setVisibility(View.GONE);
-            } else {
-                bind.A4012cv.setVisibility(View.VISIBLE);
-            }
-        }
-    }*/
-
-
-    private void clickListener() {
-        db = new DatabaseHelper(this);
-
-
-        bi.RSID.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                bi.ll0101.setVisibility(View.GONE);
-                ClearClass.ClearAllFields(bi.ll0101, null);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        bi.RS13.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                if (bi.RS13.getText().toString().isEmpty()) return;
-
-                Long months = DateUtils.ageInMonthsByDOB(DateUtils.getDate(bi.RS13.getText().toString()));
-                bi.RS14.setText(months + " month(s)");
-                DOB = bi.RS13.getText().toString();
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-        bi.checkBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (!formValidation())
-                    return;
-
-                cContract = db.getChildlistBy(bi.RSID.getText().toString());
-
-                if (cContract == null) {
-                    Toast.makeText(Section01Activity.this, "Study ID not Found!", Toast.LENGTH_SHORT).show();
-                    ClearClass.ClearAllFields(bi.ll0101, null);
-                    bi.ll0101.setVisibility(View.GONE);
-                    return;
-                }
-                MainApp.DOB = cContract.getDob();
-
-                ClearClass.ClearAllFields(bi.ll0101, null);
-                bi.ll0101.setVisibility(View.VISIBLE);
-                bi.RS7.setText(cContract.getDssid());
-                bi.RS8.setText(cContract.getDssid());
-                bi.RS13.setText(cContract.getDob());
-                bi.RS10.setText(cContract.getMother_name());
-                bi.RS11.setText(cContract.getFather_name());
-                bi.RS12.setText(cContract.getHhhead());
-                bi.RS7.setEnabled(false);
-                bi.RS8.setEnabled(false);
-                bi.RS10.setEnabled(false);
-                bi.RS11.setEnabled(false);
-                bi.RS12.setEnabled(false);
-                bi.RS13.setEnabled(false);
-            }
-        });
-
+        bi.dssID.setText(childData.getDssid());
+        bi.studyID.setText(childData.getStudy_id());
+        bi.fatherName.setText(childData.getFather_name());
+        bi.motherName.setText(childData.getMother_name());
+        bi.dob.setText(childData.getDob());
+        bi.gender.setText(childData.equals("1") ? "Male" : "Female");
+        bi.genderImage.setImageResource(childData.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
+        bi.months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
     }
+
+//    private void clickListener() {
+//        db = new DatabaseHelper(this);
+//
+//
+//        bi.RSID.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//                bi.ll0101.setVisibility(View.GONE);
+//                ClearClass.ClearAllFields(bi.ll0101, null);
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
+//
+//        bi.RS13.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//
+//                if (bi.RS13.getText().toString().isEmpty()) return;
+//
+//                Long months = DateUtils.ageInMonthsByDOB(DateUtils.getDate(bi.RS13.getText().toString()));
+//                bi.RS14.setText(months + " month(s)");
+//                DOB = bi.RS13.getText().toString();
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//
+//            }
+//        });
+//
+////        bi.checkBtn.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View v) {
+////
+////                if (!formValidation())
+////                    return;
+////
+////                cContract = db.getChildlistBy(bi.RSID.getText().toString());
+////
+////                if (cContract == null) {
+////                    Toast.makeText(Section01Activity.this, "Study ID not Found!", Toast.LENGTH_SHORT).show();
+////                    ClearClass.ClearAllFields(bi.ll0101, null);
+////                    bi.ll0101.setVisibility(View.GONE);
+////                    return;
+////                }
+////                MainApp.DOB = cContract.getDob();
+////
+////                ClearClass.ClearAllFields(bi.ll0101, null);
+////                bi.ll0101.setVisibility(View.VISIBLE);
+////                bi.RS7.setText(cContract.getDssid());
+////                bi.RS8.setText(cContract.getDssid());
+////                bi.RS13.setText(cContract.getDob());
+////                bi.RS10.setText(cContract.getMother_name());
+////                bi.RS11.setText(cContract.getFather_name());
+////                bi.RS12.setText(cContract.getHhhead());
+////                bi.RS7.setEnabled(false);
+////                bi.RS8.setEnabled(false);
+////                bi.RS10.setEnabled(false);
+////                bi.RS11.setEnabled(false);
+////                bi.RS12.setEnabled(false);
+////                bi.RS13.setEnabled(false);
+////            }
+////        });
+//
+//    }
 
 
     public void BtnContinue() {
@@ -201,21 +193,21 @@ public class Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
-        MainApp.fc.setStudy_Id(bi.RSID.getText().toString());
+        MainApp.fc.setStudy_Id(childData.getDssid());
         //MainApp.fc.setCode_lhw(chwCodes.get(bi.RS13.getSelectedItemPosition()));
         //MainApp.fc.setRef_ID(bi.chwcode.getText().toString());
 
         JSONObject SA = new JSONObject();
 
-        SA.put("RS7", bi.RS7.getText().toString());
-        SA.put("RS8", bi.RS8.getText().toString());
-        SA.put("RS9", bi.RS9.getText().toString());
-        SA.put("RS10", bi.RS10.getText().toString());
-        SA.put("RS11", bi.RS11.getText().toString());
-        SA.put("RS12", bi.RS12.getText().toString());
-        SA.put("RS13", bi.RS13.getText().toString());
-        SA.put("RS14", bi.RS14.getText().toString());
-        SA.put("RS15", bi.RS15.getText().toString());
+//        SA.put("RS7", bi.RS7.getText().toString());
+//        SA.put("RS8", bi.RS8.getText().toString());
+//        SA.put("RS9", bi.RS9.getText().toString());
+//        SA.put("RS10", bi.RS10.getText().toString());
+//        SA.put("RS11", bi.RS11.getText().toString());
+//        SA.put("RS12", bi.RS12.getText().toString());
+//        SA.put("RS13", bi.RS13.getText().toString());
+//        SA.put("RS14", bi.RS14.getText().toString());
+//        SA.put("RS15", bi.RS15.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);

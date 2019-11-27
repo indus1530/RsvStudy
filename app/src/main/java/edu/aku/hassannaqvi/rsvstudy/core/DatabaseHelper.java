@@ -158,6 +158,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + ChildList.singleChildList.COLUMN_FATHER_NAME + " TEXT, "
             + ChildList.singleChildList.COLUMN_HHHEAD + " TEXT,"
             + ChildList.singleChildList.COLUMN_DOB + " TEXT,"
+            + ChildList.singleChildList.COLUMN_GENDER + " TEXT,"
+            + ChildList.singleChildList.COLUMN_AREACODE + " TEXT,"
             + ChildList.singleChildList.COLUMN_STUDY_ID + " TEXT );";
     private final String TAG = "DatabaseHelper";
 
@@ -252,6 +254,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(ChildList.singleChildList.COLUMN_HHHEAD, cl.getHhhead());
                 values.put(ChildList.singleChildList.COLUMN_STUDY_ID, cl.getStudy_id());
                 values.put(ChildList.singleChildList.COLUMN_DOB, cl.getDob());
+                values.put(ChildList.singleChildList.COLUMN_GENDER, cl.getGender());
+                values.put(ChildList.singleChildList.COLUMN_AREACODE, cl.getAreacode());
 
                 db.insert(ChildList.singleChildList.TABLE_NAME, null, values);
             }
@@ -864,6 +868,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             while (c.moveToNext()) {
                 UCsContract dc = new UCsContract();
                 allDC.add(dc.HydrateUCs(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+    public List<ChildList> getChildList(String areaCode) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                ChildList.singleChildList.COLUMN_DSSID,
+                ChildList.singleChildList.COLUMN_GENDER,
+                ChildList.singleChildList.COLUMN_STUDY_ID,
+                ChildList.singleChildList.COLUMN_DOB,
+                ChildList.singleChildList.COLUMN_FATHER_NAME,
+                ChildList.singleChildList.COLUMN_MOTHER_NAME,
+                ChildList.singleChildList.COLUMN_AREACODE,
+                ChildList.singleChildList.COLUMN_HHHEAD,
+
+        };
+
+        String whereClause = ChildList.singleChildList.COLUMN_AREACODE + "=?";
+        String[] whereArgs = new String[]{areaCode};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                ChildList.singleChildList._ID + " ASC";
+
+        List<ChildList> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    ChildList.singleChildList.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                ChildList dc = new ChildList();
+                allDC.add(dc.hydrate(c));
             }
         } finally {
             if (c != null) {

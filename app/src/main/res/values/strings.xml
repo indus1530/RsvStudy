@@ -28,6 +28,8 @@
     <string name="street">Street</string>
     <string name="cluster"> کلسٹر نمبر </string>
 
+    <string name="dialogCheck">کیا آپ منتخب کئیے گئے بچے کے بارے میں اسکرین پر ظاہر کی گئی معلومات کے درست ہونے کی تصدیق کرتے ہیں؟</string>
+
     <!--Start RSV Study Strings-->
     <string name="Section1"> ایڈریس اور شناخت کی معلومات </string>
     <string name="studyId"> (study ID) مطالعہ کی شناخت اعداد </string>

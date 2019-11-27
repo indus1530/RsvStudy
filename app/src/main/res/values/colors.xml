@@ -24,6 +24,7 @@
     <color name="dullWhite">#d6d6d6</color>
     <color name="white">#ffffff</color>
     <color name="colorText">#050505</color>
+    <color name="ticker_red">#80ff0000</color>
 
     <color name="black_overlay">#66000000</color>
     <color name="dullWhileOverlay">#99d6d6d6</color>
@@ -36,5 +37,12 @@
 
     <color name="darkRed">#D50000</color>
     <color name="lightOrange">#f7f6e0</color>
+
+    <color name="enrolled">#92D050</color>
+    <color name="locked">#FFFF43</color>
+    <color name="shifted">#5B9BD5</color>
+    <color name="died">#A5A5A5</color>
+    <color name="refused">#EC701C</color>
+    <color name="factory">#B260C8</color>
 
 </resources>

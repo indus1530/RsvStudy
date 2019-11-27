@@ -6,7 +6,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <item name="android:textViewStyle">@style/labels</item>
+        <!--        <item name="android:textViewStyle">@style/labels</item>-->
         <item name="android:editTextStyle">@style/textInput</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
         <item name="checkboxStyle">@style/checkbox</item>
@@ -34,7 +34,7 @@
     </style>
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
-        <item name="android:background">@drawable/rsv_bg</item>
+        <item name="android:background">#e4e4e4</item>
         <item name="android:padding">18dp</item>
     </style>
 
@@ -157,6 +157,21 @@
 
     </style>
 
+    <style name="i_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:paddingStart">8dp</item>
+    </style>
+
     <style name="spinnerItemStyle">
         <item name="android:padding">10dp</item>
         <item name="android:textSize">24sp</item>
@@ -203,7 +218,7 @@
         <item name="android:padding">16dp</item>
         <item name="android:radius">2dp</item>
         <item name="android:elevation">1dp</item>
-        <item name="android:background">@drawable/background_grad</item>
+        <!--        <item name="android:background">@drawable/background_grad</item>-->
     </style>
 
     <style name="checkbox" parent="android:Widget.Material.Light.CompoundButton.CheckBox">

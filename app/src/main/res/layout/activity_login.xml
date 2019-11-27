@@ -252,6 +252,7 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:text="dmu@aku"
                         android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
@@ -291,6 +292,7 @@
 
 
                     <EditText
+                        android:text="aku?dmu"
                         android:id="@+id/password"
                         android:layout_width="wrap_content"
                         android:layout_height="56dp"

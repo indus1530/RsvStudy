@@ -1,52 +1,49 @@
 package edu.aku.hassannaqvi.rsvstudy.contracts;
 
 import android.database.Cursor;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ChildList {
+public class ChildList implements Parcelable {
 
     private String dssid;
     private String mother_name;
     private String father_name;
     private String hhhead;
     private String study_id;
+    public static final Creator<ChildList> CREATOR = new Creator<ChildList>() {
+        @Override
+        public ChildList createFromParcel(Parcel in) {
+            return new ChildList(in);
+        }
 
+        @Override
+        public ChildList[] newArray(int size) {
+            return new ChildList[size];
+        }
+    };
+    private String gender;
     private String dob;
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
 
 
     public ChildList() {
     }
 
+    private String areacode;
 
-    public String getDssid() {
-        return dssid;
-    }
-
-    public String getMother_name() {
-        return mother_name;
-    }
-
-    public String getFather_name() {
-        return father_name;
-    }
-
-    public String getHhhead() {
-        return hhhead;
-    }
-
-    public String getStudy_id() {
-        return study_id;
+    protected ChildList(Parcel in) {
+        dssid = in.readString();
+        mother_name = in.readString();
+        father_name = in.readString();
+        hhhead = in.readString();
+        study_id = in.readString();
+        gender = in.readString();
+        areacode = in.readString();
+        dob = in.readString();
     }
 
     public ChildList sync(JSONObject jsonObject) throws JSONException {
@@ -56,6 +53,9 @@ public class ChildList {
         this.hhhead = jsonObject.getString(singleChildList.COLUMN_HHHEAD);
         this.study_id = jsonObject.getString(singleChildList.COLUMN_STUDY_ID);
         this.dob = jsonObject.getString(singleChildList.COLUMN_DOB);
+        this.areacode = jsonObject.getString(singleChildList.COLUMN_AREACODE);
+        this.gender = jsonObject.getString(singleChildList.COLUMN_GENDER);
+
 
         return this;
     }
@@ -67,6 +67,8 @@ public class ChildList {
         this.hhhead = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_HHHEAD));
         this.study_id = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_STUDY_ID));
         this.dob = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_DOB));
+        this.gender = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_GENDER));
+        this.areacode = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_AREACODE));
 
         return this;
     }
@@ -104,6 +106,69 @@ public class ChildList {
         return json;
     }
 
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAreacode() {
+        return areacode;
+    }
+
+    public void setAreacode(String areacode) {
+        this.areacode = areacode;
+    }
+
+    public String getDssid() {
+        return dssid;
+    }
+
+    public String getMother_name() {
+        return mother_name;
+    }
+
+    public String getFather_name() {
+        return father_name;
+    }
+
+    public String getHhhead() {
+        return hhhead;
+    }
+
+    public String getStudy_id() {
+        return study_id;
+    }
+
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(dssid);
+        dest.writeString(mother_name);
+        dest.writeString(father_name);
+        dest.writeString(hhhead);
+        dest.writeString(study_id);
+        dest.writeString(gender);
+        dest.writeString(areacode);
+        dest.writeString(dob);
+    }
+
     public static abstract class singleChildList implements BaseColumns {
 
         public static final String TABLE_NAME = "childlist";
@@ -114,6 +179,8 @@ public class ChildList {
         public static final String COLUMN_HHHEAD = "hhhead";
         public static final String COLUMN_DOB = "dob";
         public static final String COLUMN_STUDY_ID = "study_id";
+        public static final String COLUMN_GENDER = "gender";
+        public static final String COLUMN_AREACODE = "areacode";
 
         public static final String _URI = "childlist.php";
     }
