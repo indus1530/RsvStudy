@@ -91,7 +91,7 @@ public class Section01Activity extends AppCompatActivity {
             }
         });
 
-        bi.RS15.addTextChangedListener(new TextWatcher() {
+        bi.RS13.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -100,9 +100,9 @@ public class Section01Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                // if (bi.RS13.getText().toString().isEmpty()) return;
+                if (bi.RS13.getText().toString().isEmpty()) return;
 
-                Long months = DateUtils.ageInMonthsByDOB(DateUtils.getCalendarDate(bi.RS13.getText().toString()));
+                Long months = DateUtils.ageInMonthsByDOB(DateUtils.getDate(bi.RS13.getText().toString()));
                 bi.RS14.setText(months + " month(s)");
                 DOB = bi.RS13.getText().toString();
 
