@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/rsv_bg"
         android:layoutDirection="rtl"
-        android:animateLayoutChanges="true"
+        android:animateLayoutChanges="false"
         android:padding="16dp">
 
         <LinearLayout

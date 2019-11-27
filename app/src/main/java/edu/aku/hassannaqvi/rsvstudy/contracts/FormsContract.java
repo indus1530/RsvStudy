@@ -1,10 +1,15 @@
 package edu.aku.hassannaqvi.rsvstudy.contracts;
 
 import android.database.Cursor;
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -41,7 +46,30 @@ public class FormsContract {
     private String synced_date = "";
     private String appversion = "";
 
+    public static final String DATE_FORMAT = "yyyy-mm-dd";
+
+    public static final String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.rsvstudy";
+
+    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
+
+    public static final String PATH_FORMS = "forms";
     public FormsContract() {
+    }
+
+    public static String getDbDateString(Date date) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
+        return sdf.format(date);
+    }
+
+    public static Date getDateFromDb(String dateText) {
+        SimpleDateFormat dbDateFormat = new SimpleDateFormat(DATE_FORMAT);
+        try {
+            return dbDateFormat.parse(dateText);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public String getAppversion() {
@@ -350,7 +378,9 @@ public class FormsContract {
 
     public void setSynced_date(String synced_date) {
         this.synced_date = synced_date;
+
     }
+
 
     public static abstract class FormsTable implements BaseColumns {
 
@@ -383,6 +413,6 @@ public class FormsContract {
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
 
-//        public static String _URL = "sync.php";
+        public static String _URL = "sync.php";
     }
 }

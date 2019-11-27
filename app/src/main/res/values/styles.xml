@@ -17,7 +17,7 @@
         <item name="android:enterFadeDuration">600</item>
         <item name="android:exitFadeDuration">200</item>
 
-        <item name="android:animateLayoutChanges">true</item>
+        <item name="android:animateLayoutChanges">false</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -26,7 +26,7 @@
         <item name="android:fillAfter">true</item>
         <item name="android:enterFadeDuration">600</item>
         <item name="android:exitFadeDuration">200</item>
-        <item name="android:animateLayoutChanges">true</item>
+        <item name="android:animateLayoutChanges">false</item>
         <item name="android:typeface">sans</item>
         <!--        <item name="android:toolbarStyle">@style/ActionBar</item>-->
         <!--        <item name="actionBarStyle">@style/ActionBar</item>-->
