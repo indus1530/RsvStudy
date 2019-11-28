@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
@@ -28,6 +31,8 @@ public class ChildListActivity extends AppCompatActivity {
     DatabaseHelper db;
     ChildListAdapter adapter;
     List<ChildList> list;
+    ArrayList<String> dssids;
+    ArrayList<ChildList> filteredItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,19 +46,62 @@ public class ChildListActivity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        gettingDataFromDB();
+        setListener();
+        setupViews();
     }
 
-    private void gettingDataFromDB() {
+    private void setupViews() {
 
-        list = db.getChildList(String.valueOf(areaCode));
-
-        adapter = new ChildListAdapter(this, list);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setItemPrefetchEnabled(false);
         bi.childlist.setLayoutManager(manager);
         bi.childlist.setHasFixedSize(true);
         bi.childlist.setItemAnimator(null);
+        list = db.getChildList(String.valueOf(areaCode));
+        setupRecyclerView(list);
+
+    }
+
+
+    private void setListener() {
+
+        bi.filterDSS.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filteredItems = new ArrayList<>();
+                if (!s.toString().equals("")) {
+                    for (int i = 0; i < list.size(); i++) {
+                        if (list.get(i).getDssid().toLowerCase().contains(s.toString().toLowerCase())) {
+                            filteredItems.add(list.get(i));
+
+                        }
+                    }
+                    setupRecyclerView(filteredItems);
+                } else {
+                    setupRecyclerView(list);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+    }
+
+    private void setupRecyclerView(List<ChildList> list) {
+
+        adapter = new ChildListAdapter(ChildListActivity.this, filteredItems);
+        bi.childlist.setAdapter(adapter);
+
+        adapter = new ChildListAdapter(this, list);
         bi.childlist.setAdapter(adapter);
 
         adapter.setItemClicked(new ChildListAdapter.OnItemClicked() {
@@ -92,9 +140,7 @@ public class ChildListActivity extends AppCompatActivity {
 
                 dialog.show();
 
-
             }
         });
-
     }
 }
