@@ -23,7 +23,11 @@
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustResize|stateHidden">
-        <activity android:name=".ui.ChildListActivity"></activity>
+        <activity
+            android:name=".ui.ChildListActivity"
+            android:theme="@style/AppTheme1"
+
+            />
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"

@@ -1,177 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <com.balysv.materialripple.MaterialRippleLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/parentLayout"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:mrl_rippleColor="#e6e6e6e6">
+        android:layout_height="88dp"
+        android:layout_margin="8dp"
+        android:elevation="1dp"
+        android:padding="16dp"
 
-        <RelativeLayout
-            android:id="@+id/parentLayout"
+        android:radius="2dp">
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-
-            <android.support.v7.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/genderImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/boy" />
 
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+
+                    <TextView
+                        android:id="@+id/dssID"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_weight="1"
+                        android:text="AGAS04068A1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
 
 
-                        <View
-                            android:layout_width="10dp"
-                            android:layout_height="0dp" />
+                    <TextView
+                        android:id="@+id/motherName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SAIRA / M. Hussain"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
+                    <TextView
+                        android:id="@+id/dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:text="7 Months"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-                        <ImageView
-                            android:id="@+id/genderImage"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/boy" />
-
-                        <View
-                            android:layout_width="10dp"
-                            android:layout_height="0dp" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/dssID"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="AGAS04068A1"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-
-                            <!--                            <LinearLayout-->
-                            <!--                                android:layout_width="match_parent"-->
-                            <!--                                android:layout_height="wrap_content"-->
-                            <!--                                android:layout_marginTop="5dp"-->
-                            <!--                                android:orientation="horizontal">-->
-
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/studyID"-->
-                            <!--                                    android:layout_width="0dp"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:layout_marginStart="10dp"-->
-                            <!--                                    android:layout_weight="1"-->
-                            <!--                                    android:text="35019" />-->
-
-                            <!--                            </LinearLayout>-->
-
-                            <TextView
-                                android:id="@+id/motherName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="SAIRA / M. Hussain"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                            <TextView
-                                android:id="@+id/dob"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:layout_weight="1"
-                                android:text="7 Months"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/studyID"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="20dp"
-                                    android:gravity="end"
-                                    android:text="12345"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                    android:textStyle="bold" />
-
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1">
-
-
-                                <LinearLayout
-                                    android:layout_width="110dp"
-                                    android:layout_height="30dp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_gravity="end"
-                                    android:background="@color/enrolled"
-                                    android:gravity="center"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Enrolled"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-                            </RelativeLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="bottom"
-                        android:background="#e6e6e6e6" />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
 
-        </RelativeLayout>
-    </com.balysv.materialripple.MaterialRippleLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/studyID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textColor="@color/colorPrimary" />
+
+
+                    <TextView
+                        android:id="@+id/child_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:text="Selected"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#FFFFFF" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 
 </layout>
