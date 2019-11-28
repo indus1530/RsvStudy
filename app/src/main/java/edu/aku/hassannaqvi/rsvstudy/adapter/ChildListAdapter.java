@@ -14,6 +14,7 @@ import java.util.List;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ItemChildListBinding;
+import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
 public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.ViewHolder> {
 
@@ -45,10 +46,8 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
 
         holder.bi.dssID.setText(mList.get(i).getDssid());
         holder.bi.studyID.setText(mList.get(i).getStudy_id());
-        holder.bi.fatherName.setText(mList.get(i).getFather_name());
-        holder.bi.motherName.setText(mList.get(i).getMother_name());
-        holder.bi.dob.setText(mList.get(i).getDob());
-        holder.bi.gender.setText(mList.get(i).getGender().equals("1") ? "Male" : "Female");
+        holder.bi.motherName.setText(mList.get(i).getMother_name() + " / " + mList.get(i).getFather_name());
+        holder.bi.dob.setText(DateUtils.ageInMonthsByDOB(DateUtils.getDate(mList.get(i).getDob())) + " month(s)");
         holder.bi.genderImage.setImageResource(mList.get(i).getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
 
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {

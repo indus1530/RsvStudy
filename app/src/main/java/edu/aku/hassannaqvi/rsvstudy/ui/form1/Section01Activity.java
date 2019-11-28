@@ -199,15 +199,15 @@ public class Section01Activity extends AppCompatActivity {
 
         JSONObject SA = new JSONObject();
 
-//        SA.put("RS7", bi.RS7.getText().toString());
+        SA.put("RS7", childData.getDssid());
 //        SA.put("RS8", bi.RS8.getText().toString());
-//        SA.put("RS9", bi.RS9.getText().toString());
-//        SA.put("RS10", bi.RS10.getText().toString());
-//        SA.put("RS11", bi.RS11.getText().toString());
-//        SA.put("RS12", bi.RS12.getText().toString());
-//        SA.put("RS13", bi.RS13.getText().toString());
-//        SA.put("RS14", bi.RS14.getText().toString());
-//        SA.put("RS15", bi.RS15.getText().toString());
+        SA.put("RS9", bi.RS9.getText().toString());
+        SA.put("RS10", childData.getMother_name());
+        SA.put("RS11", childData.getFather_name());
+        SA.put("RS12", childData.getHhhead());
+        SA.put("RS13", childData.getDob());
+        SA.put("RS14", String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
+        SA.put("RS15", bi.RS15.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);

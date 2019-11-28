@@ -13,6 +13,7 @@
 
 
         <android.support.v7.widget.RecyclerView
+            tools:listitem="@layout/item_child_list"
             android:id="@+id/childlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
