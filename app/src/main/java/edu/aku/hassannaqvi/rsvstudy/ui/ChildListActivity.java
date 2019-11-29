@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,7 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
+import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
 public class ChildListActivity extends AppCompatActivity {
 
@@ -33,6 +36,7 @@ public class ChildListActivity extends AppCompatActivity {
     List<ChildList> list;
     ArrayList<String> dssids;
     ArrayList<ChildList> filteredItems;
+    private TextView dssID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,13 +116,27 @@ public class ChildListActivity extends AppCompatActivity {
                 View view = LayoutInflater.from(ChildListActivity.this).inflate(R.layout.layout_dialoge, null);
                 builder.setView(view);
                 final AlertDialog dialog = builder.create();
-
                 Button cancel, start;
                 final CheckBox check;
                 cancel = view.findViewById(R.id.cancel);
                 start = view.findViewById(R.id.start);
                 check = view.findViewById(R.id.checkChild);
-
+                dssID = view.findViewById(R.id.dssID);
+                TextView studyID = view.findViewById(R.id.studyID);
+                TextView fatherName = view.findViewById(R.id.fatherName);
+                TextView motherName = view.findViewById(R.id.motherName);
+                TextView dob = view.findViewById(R.id.dob);
+                TextView gender = view.findViewById(R.id.gender);
+                ImageView genderImage = view.findViewById(R.id.genderImage);
+                TextView months = view.findViewById(R.id.months);
+                dssID.setText(item.getDssid());
+                studyID.setText(item.getStudy_id());
+                fatherName.setText(item.getFather_name());
+                motherName.setText(item.getMother_name());
+                dob.setText(item.getDob());
+                gender.setText(item.equals("1") ? "Male" : "Female");
+                genderImage.setImageResource(item.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
+                months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(item.getDob()))));
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -133,7 +151,6 @@ public class ChildListActivity extends AppCompatActivity {
                 cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
                         dialog.dismiss();
                     }
                 });
