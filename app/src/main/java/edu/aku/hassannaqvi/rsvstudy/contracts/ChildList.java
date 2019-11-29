@@ -15,6 +15,24 @@ public class ChildList implements Parcelable {
     private String father_name;
     private String hhhead;
     private String study_id;
+
+    private String iStatus;
+
+    protected ChildList(Parcel in) {
+        dssid = in.readString();
+        mother_name = in.readString();
+        father_name = in.readString();
+        hhhead = in.readString();
+        study_id = in.readString();
+        gender = in.readString();
+        areacode = in.readString();
+        dob = in.readString();
+        iStatus = in.readString();
+    }
+
+    public String getiStatus() {
+        return iStatus;
+    }
     public static final Creator<ChildList> CREATOR = new Creator<ChildList>() {
         @Override
         public ChildList createFromParcel(Parcel in) {
@@ -35,15 +53,8 @@ public class ChildList implements Parcelable {
 
     private String areacode;
 
-    protected ChildList(Parcel in) {
-        dssid = in.readString();
-        mother_name = in.readString();
-        father_name = in.readString();
-        hhhead = in.readString();
-        study_id = in.readString();
-        gender = in.readString();
-        areacode = in.readString();
-        dob = in.readString();
+    public void setiStatus(String iStatus) {
+        this.iStatus = iStatus;
     }
 
     public ChildList sync(JSONObject jsonObject) throws JSONException {
@@ -69,6 +80,7 @@ public class ChildList implements Parcelable {
         this.dob = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_DOB));
         this.gender = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_GENDER));
         this.areacode = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_AREACODE));
+
 
         return this;
     }
@@ -102,6 +114,7 @@ public class ChildList implements Parcelable {
         json.put(singleChildList.COLUMN_HHHEAD, this.hhhead == null ? JSONObject.NULL : this.hhhead);
         json.put(singleChildList.COLUMN_STUDY_ID, this.study_id == null ? JSONObject.NULL : this.study_id);
         json.put(singleChildList.COLUMN_DOB, this.dob == null ? JSONObject.NULL : this.dob);
+        json.put(singleChildList.COLUMN_ISTATUS, this.iStatus == null ? JSONObject.NULL : this.iStatus);
 
         return json;
     }
@@ -167,6 +180,7 @@ public class ChildList implements Parcelable {
         dest.writeString(gender);
         dest.writeString(areacode);
         dest.writeString(dob);
+        dest.writeString(iStatus);
     }
 
     public static abstract class singleChildList implements BaseColumns {
@@ -181,6 +195,7 @@ public class ChildList implements Parcelable {
         public static final String COLUMN_STUDY_ID = "study_id";
         public static final String COLUMN_GENDER = "gender";
         public static final String COLUMN_AREACODE = "areacode";
+        public static final String COLUMN_ISTATUS = "isstatus";
 
         public static final String _URI = "childlist.php";
     }

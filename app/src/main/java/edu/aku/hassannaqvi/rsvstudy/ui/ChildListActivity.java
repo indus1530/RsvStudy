@@ -53,12 +53,6 @@ public class ChildListActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        manager.setItemPrefetchEnabled(false);
-        bi.childlist.setLayoutManager(manager);
-        bi.childlist.setHasFixedSize(true);
-        bi.childlist.setItemAnimator(null);
         list = db.getChildList(String.valueOf(areaCode));
         setupRecyclerView(list);
 
@@ -99,6 +93,10 @@ public class ChildListActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(List<ChildList> list) {
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        bi.childlist.setLayoutManager(manager);
+        bi.childlist.setHasFixedSize(true);
+        bi.childlist.setItemAnimator(null);
         adapter = new ChildListAdapter(this, list);
         bi.childlist.setAdapter(adapter);
         adapter.setItemClicked(new ChildListAdapter.OnItemClicked() {

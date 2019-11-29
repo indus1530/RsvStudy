@@ -25,7 +25,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     public ChildListAdapter(Context mContext, List<ChildList> mList) {
         this.mContext = mContext;
         this.mList = mList;
-        this.setHasStableIds(true);
+
     }
 
     public void setItemClicked(OnItemClicked itemClicked) {
