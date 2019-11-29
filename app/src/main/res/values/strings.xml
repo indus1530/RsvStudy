@@ -31,8 +31,8 @@
     <string name="dialogCheck">کیا آپ منتخب کئیے گئے بچے کے بارے میں اسکرین پر ظاہر کی گئی معلومات کے درست ہونے کی تصدیق کرتے ہیں؟</string>
 
     <!--Start RSV Study Strings-->
-    <string name="Section1"> ایڈریس اور شناخت کی معلومات </string>
-    <string name="studyId"> (study ID) مطالعہ کی شناخت اعداد </string>
+    <string name="Section1"> شناخت کی معلومات </string>
+    <string name="studyId"> ANISA Stydy ID </string>
     <string name="RSID"> شُرکا کا شناختی نمبر # </string>
     <string name="RS7">1.11: ماں کا موجودہ شناختی آئی ڈی </string>
     <string name="RS8">1.12: ماں کا مستقل شناختی آئی ڈی </string>
@@ -423,6 +423,7 @@
     <string name="ed_sentence">QWERTYUIOPASDFGHJKLZXCVBNM qwertyuiopasdfghjklzxcvbnm,.?-#()1234567890</string>
     <string name="ed_numbersOnly"> 12345 67890</string>
     <string name="num">اعداد</string>
+    <string name="gender">جنس</string>
 
 
 </resources>
