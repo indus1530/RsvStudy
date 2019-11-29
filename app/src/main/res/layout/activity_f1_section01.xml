@@ -38,16 +38,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <RelativeLayout
-                    android:id="@+id/parentLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layoutDirection="ltr">
-
 
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
@@ -55,9 +45,6 @@
                         app:cardCornerRadius="10dp">
 
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -65,21 +52,14 @@
                                 android:orientation="horizontal">
 
 
-                                <View
-                                    android:layout_width="10dp"
-                                    android:layout_height="0dp" />
-
 
                                 <ImageView
                                     android:id="@+id/genderImage"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="56dp"
+                                    android:layout_height="56dp"
                                     android:layout_gravity="center_vertical"
                                     android:src="@drawable/boy" />
 
-                                <View
-                                    android:layout_width="10dp"
-                                    android:layout_height="0dp" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -89,13 +69,15 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="10dp"
+                                        android:layout_marginTop="8dp"
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="Study ID:"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/studyId"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -103,8 +85,8 @@
                                             android:id="@+id/studyID"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
                                             android:text="35019"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -112,13 +94,15 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp"
+                                        android:layout_marginTop="1dp"
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="DSS ID:"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/RS7"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -126,8 +110,9 @@
                                             android:id="@+id/dssID"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
+
                                             android:text="AGAS04068A1"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -135,13 +120,16 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp"
+                                        android:layout_marginTop="1dp"
+
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="Mother Name:"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/RS10"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -149,8 +137,9 @@
                                             android:id="@+id/motherName"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
+
                                             android:text="SAIRA"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -158,13 +147,16 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp"
+                                        android:layout_marginTop="1dp"
+
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="Father Name:"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/RS11"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -172,8 +164,9 @@
                                             android:id="@+id/fatherName"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
+
                                             android:text="M.HUSSAIN"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -181,13 +174,16 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp"
+                                        android:layout_marginTop="1dp"
+
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="Date Of Birth:"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/RS13"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -195,8 +191,9 @@
                                             android:id="@+id/dob"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
+
                                             android:text="DOB"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -204,13 +201,17 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp"
+
+                                        android:layout_marginTop="1dp"
+
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="Age (months):"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/RS14"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -218,8 +219,9 @@
                                             android:id="@+id/months"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
+
                                             android:text="Months"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -227,13 +229,16 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp"
+                                        android:layout_marginTop="1dp"
+
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:text="Gender:"
+                                            android:layout_weight="1"
+
+                                            android:text="@string/gender"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                             android:textStyle="bold" />
 
@@ -241,8 +246,9 @@
                                             android:id="@+id/gender"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
                                             android:layout_weight="1"
+                                            android:gravity="center"
+
                                             android:text="Male"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                                     </LinearLayout>
@@ -259,10 +265,8 @@
                             </LinearLayout>
 
 
-                        </RelativeLayout>
                     </android.support.v7.widget.CardView>
 
-                </RelativeLayout>
                 <!--RS9-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/RS9cv"
@@ -341,7 +345,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_weight="70"
                             android:focusable="false"
-                            android:hint="DD/MM/YYYY"
+                            android:hint="DD-MM-YYYY"
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy"
                             app:maxDate="CR_DATE" />

@@ -1,54 +1,32 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.other;
 
-import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.DownloadManager;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.databinding.DataBindingUtil;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.rsvstudy.FormsList;
@@ -61,8 +39,6 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.ChildListActivity;
-import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
-import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section04Activity;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -152,36 +128,38 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
             rSumText += "--------------------------------------------------\r\n";
-            rSumText += "[ FORM ID ] \t[Form Status] \t[Sync Status]----------\r\n";
+            rSumText += "[ DSS ID ] \t[Form Status] \t[Sync Status]\r\n";
             rSumText += "--------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
                 if (fc.getIstatus() != null) {
                     switch (fc.getIstatus()) {
                         case "1":
-                            iStatus = "\tComplete";
+                            iStatus = "Complete";
                             break;
                         case "2":
-                            iStatus = "\tIncomplete";
+                            iStatus = "Incomplete";
                             break;
                         case "3":
-                            iStatus = "\tRefused";
+                            iStatus = "Refused";
                             break;
                         case "4":
-                            iStatus = "\tRefused";
+                            iStatus = "Refused";
                             break;
                         default:
-                            iStatus = "\tN/A";
+                            iStatus = "N/A";
                     }
                 } else {
-                    iStatus = "\tN/A";
+                    iStatus = "N/A";
                 }
 
-                rSumText += fc.getsE();
+                rSumText += fc.getStudy_Id();
+                rSumText += "\t\t\t\t\t";
 
-                rSumText += " " + iStatus + " ";
+                rSumText += iStatus;
+                rSumText += "\t\t\t\t\t";
 
-                rSumText += (fc.getSynced() == null ? "\t\tNot Synced" : "\t\tSynced");
+                rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
                 rSumText += "--------------------------------------------------\r\n";
             }

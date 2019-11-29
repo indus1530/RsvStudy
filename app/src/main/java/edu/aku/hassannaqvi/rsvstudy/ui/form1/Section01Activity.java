@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -23,7 +20,6 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
-import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section01Activity extends AppCompatActivity {
@@ -55,6 +51,7 @@ public class Section01Activity extends AppCompatActivity {
         bi.fatherName.setText(childData.getFather_name());
         bi.motherName.setText(childData.getMother_name());
         bi.dob.setText(childData.getDob());
+        MainApp.DOB = childData.getDob();
         bi.gender.setText(childData.equals("1") ? "Male" : "Female");
         bi.genderImage.setImageResource(childData.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
         bi.months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
