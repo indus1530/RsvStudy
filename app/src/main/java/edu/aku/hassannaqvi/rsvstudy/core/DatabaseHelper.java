@@ -895,13 +895,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
 
-        String whereClause = ChildList.singleChildList.COLUMN_AREACODE + "=?";
+        String whereClause = ChildList.singleChildList.COLUMN_AREACODE + " = ? ";
         String[] whereArgs = new String[]{areaCode};
         String groupBy = null;
         String having = null;
-
-        String orderBy =
-                ChildList.singleChildList._ID + " ASC";
+        String orderBy = null;
 
         List<ChildList> allDC = new ArrayList<>();
         try {

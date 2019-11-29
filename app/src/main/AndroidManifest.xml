@@ -75,6 +75,7 @@
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ui.other.EndingActivity"

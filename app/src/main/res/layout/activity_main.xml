@@ -459,7 +459,8 @@
                             android:layout_margin="@dimen/cardview_compat_inset_shadow"
                             android:layout_weight="1"
                             android:clickable="true"
-                            android:foreground="?android:attr/selectableItemBackground">
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:onClick="@{() -> callback.openDB()}">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"

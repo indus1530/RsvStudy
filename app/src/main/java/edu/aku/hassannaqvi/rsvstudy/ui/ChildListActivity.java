@@ -23,6 +23,7 @@ import edu.aku.hassannaqvi.rsvstudy.adapter.ChildListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
+import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutDialogeBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
@@ -101,54 +102,48 @@ public class ChildListActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(List<ChildList> list) {
-
-        adapter = new ChildListAdapter(ChildListActivity.this, filteredItems);
-        bi.childlist.setAdapter(adapter);
-
         adapter = new ChildListAdapter(this, list);
         bi.childlist.setAdapter(adapter);
-
         adapter.setItemClicked(new ChildListAdapter.OnItemClicked() {
             @Override
             public void onItemClick(final ChildList item, int position) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(ChildListActivity.this);
                 View view = LayoutInflater.from(ChildListActivity.this).inflate(R.layout.layout_dialoge, null);
+                final LayoutDialogeBinding bi = DataBindingUtil.bind(view);
                 builder.setView(view);
                 final AlertDialog dialog = builder.create();
-                Button cancel, start;
-                final CheckBox check;
-                cancel = view.findViewById(R.id.cancel);
-                start = view.findViewById(R.id.start);
-                check = view.findViewById(R.id.checkChild);
-                dssID = view.findViewById(R.id.dssID);
-                TextView studyID = view.findViewById(R.id.studyID);
-                TextView fatherName = view.findViewById(R.id.fatherName);
-                TextView motherName = view.findViewById(R.id.motherName);
-                TextView dob = view.findViewById(R.id.dob);
-                TextView gender = view.findViewById(R.id.gender);
-                ImageView genderImage = view.findViewById(R.id.genderImage);
-                TextView months = view.findViewById(R.id.months);
-                dssID.setText(item.getDssid());
-                studyID.setText(item.getStudy_id());
-                fatherName.setText(item.getFather_name());
-                motherName.setText(item.getMother_name());
-                dob.setText(item.getDob());
-                gender.setText(item.equals("1") ? "Male" : "Female");
-                genderImage.setImageResource(item.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
-                months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(item.getDob()))));
-                start.setOnClickListener(new View.OnClickListener() {
+//                cancel = view.findViewById(R.id.cancel);
+//                start = view.findViewById(R.id.start);
+//                check = view.findViewById(R.id.checkChild);
+//                dssID = view.findViewById(R.id.dssID);
+//                TextView studyID = view.findViewById(R.id.studyID);
+//                TextView fatherName = view.findViewById(R.id.fatherName);
+//                TextView motherName = view.findViewById(R.id.motherName);
+//                TextView dob = view.findViewById(R.id.dob);
+//                TextView gender = view.findViewById(R.id.gender);
+//                ImageView genderImage = view.findViewById(R.id.genderImage);
+//                TextView months = view.findViewById(R.id.months);
+                bi.dssID.setText(item.getDssid());
+                bi.studyID.setText(item.getStudy_id());
+                bi.fatherName.setText(item.getFather_name());
+                bi.motherName.setText(item.getMother_name());
+                bi.dob.setText(item.getDob());
+                bi.gender.setText(item.equals("1") ? "Male" : "Female");
+                bi.genderImage.setImageResource(item.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
+                bi.months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(item.getDob()))));
+                bi.start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (!check.isChecked()) {
-                            check.setError("Required field");
+                        if (!bi.checkChild.isChecked()) {
+                            bi.checkChild.setError("Required field");
                             return;
                         }
                         startActivity(new Intent(ChildListActivity.this, Section01Activity.class).putExtra("data", item));
                         dialog.dismiss();
                     }
                 });
-                cancel.setOnClickListener(new View.OnClickListener() {
+                bi.cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         dialog.dismiss();

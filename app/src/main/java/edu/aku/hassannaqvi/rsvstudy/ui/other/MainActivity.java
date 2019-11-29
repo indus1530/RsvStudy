@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void openDB(View v) {
+    public void openDB() {
         Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
         startActivity(dbmanager);
     }

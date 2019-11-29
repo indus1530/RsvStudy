@@ -208,6 +208,9 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS13", childData.getDob());
         SA.put("RS14", String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
         SA.put("RS15", bi.RS15.getText().toString());
+        SA.put("RS16", bi.RS16a.isChecked() ? "1" : bi.RS16b.isChecked() ? "2"
+                : bi.RS16c.isChecked() ? "3" : bi.RS1696.isChecked() ? "96" : "0");
+        SA.put("RS1696x", bi.RS1696x.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
         MainApp.setGPS(this);
