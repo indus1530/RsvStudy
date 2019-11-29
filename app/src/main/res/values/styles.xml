@@ -16,7 +16,7 @@
         <item name="android:fillAfter">true</item>
         <item name="android:enterFadeDuration">600</item>
         <item name="android:exitFadeDuration">200</item>
-
+        <item name="android:layoutDirection">rtl</item>
         <item name="android:animateLayoutChanges">false</item>
         <!-- Customize your theme here. -->
     </style>
@@ -138,6 +138,7 @@
         <item name="android:singleLine">true</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
+        <item name="android:typeface">sans</item>
         <item name="android:focusableInTouchMode">true</item>
     </style>
     ​
