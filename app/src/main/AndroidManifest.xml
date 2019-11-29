@@ -76,6 +76,7 @@
             android:name=".core.AndroidDatabaseManager"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
+            android:parentActivityName=".ui.other.MainActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ui.other.EndingActivity"
@@ -84,6 +85,8 @@
         <activity
             android:name=".ui.sync.SyncActivity"
             android:screenOrientation="portrait"
+            android:parentActivityName=".ui.other.MainActivity"
+
             android:theme="@style/AppTheme1" />
         <activity android:name=".FormsList" />
 
