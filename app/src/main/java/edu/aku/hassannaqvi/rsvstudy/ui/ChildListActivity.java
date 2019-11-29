@@ -74,7 +74,6 @@ public class ChildListActivity extends AppCompatActivity {
                     for (int i = 0; i < list.size(); i++) {
                         if (list.get(i).getDssid().toLowerCase().contains(s.toString().toLowerCase())) {
                             filteredItems.add(list.get(i));
-
                         }
                     }
                     setupRecyclerView(filteredItems);
@@ -96,7 +95,6 @@ public class ChildListActivity extends AppCompatActivity {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         bi.childlist.setLayoutManager(manager);
         bi.childlist.setHasFixedSize(true);
-        bi.childlist.setItemAnimator(null);
         adapter = new ChildListAdapter(this, list);
         bi.childlist.setAdapter(adapter);
         adapter.setItemClicked(new ChildListAdapter.OnItemClicked() {
@@ -108,17 +106,6 @@ public class ChildListActivity extends AppCompatActivity {
                 final LayoutDialogeBinding bi = DataBindingUtil.bind(view);
                 builder.setView(view);
                 final AlertDialog dialog = builder.create();
-//                cancel = view.findViewById(R.id.cancel);
-//                start = view.findViewById(R.id.start);
-//                check = view.findViewById(R.id.checkChild);
-//                dssID = view.findViewById(R.id.dssID);
-//                TextView studyID = view.findViewById(R.id.studyID);
-//                TextView fatherName = view.findViewById(R.id.fatherName);
-//                TextView motherName = view.findViewById(R.id.motherName);
-//                TextView dob = view.findViewById(R.id.dob);
-//                TextView gender = view.findViewById(R.id.gender);
-//                ImageView genderImage = view.findViewById(R.id.genderImage);
-//                TextView months = view.findViewById(R.id.months);
                 bi.dssID.setText(item.getDssid());
                 bi.studyID.setText(item.getStudy_id());
                 bi.fatherName.setText(item.getFather_name());

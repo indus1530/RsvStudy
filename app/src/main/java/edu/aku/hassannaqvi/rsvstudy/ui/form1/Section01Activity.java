@@ -57,89 +57,6 @@ public class Section01Activity extends AppCompatActivity {
         bi.months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
     }
 
-//    private void clickListener() {
-//        db = new DatabaseHelper(this);
-//
-//
-//        bi.RSID.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//                bi.ll0101.setVisibility(View.GONE);
-//                ClearClass.ClearAllFields(bi.ll0101, null);
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//            }
-//        });
-//
-//        bi.RS13.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//                if (bi.RS13.getText().toString().isEmpty()) return;
-//
-//                Long months = DateUtils.ageInMonthsByDOB(DateUtils.getDate(bi.RS13.getText().toString()));
-//                bi.RS14.setText(months + " month(s)");
-//                DOB = bi.RS13.getText().toString();
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable editable) {
-//
-//            }
-//        });
-//
-////        bi.checkBtn.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////
-////                if (!formValidation())
-////                    return;
-////
-////                cContract = db.getChildlistBy(bi.RSID.getText().toString());
-////
-////                if (cContract == null) {
-////                    Toast.makeText(Section01Activity.this, "Study ID not Found!", Toast.LENGTH_SHORT).show();
-////                    ClearClass.ClearAllFields(bi.ll0101, null);
-////                    bi.ll0101.setVisibility(View.GONE);
-////                    return;
-////                }
-////                MainApp.DOB = cContract.getDob();
-////
-////                ClearClass.ClearAllFields(bi.ll0101, null);
-////                bi.ll0101.setVisibility(View.VISIBLE);
-////                bi.RS7.setText(cContract.getDssid());
-////                bi.RS8.setText(cContract.getDssid());
-////                bi.RS13.setText(cContract.getDob());
-////                bi.RS10.setText(cContract.getMother_name());
-////                bi.RS11.setText(cContract.getFather_name());
-////                bi.RS12.setText(cContract.getHhhead());
-////                bi.RS7.setEnabled(false);
-////                bi.RS8.setEnabled(false);
-////                bi.RS10.setEnabled(false);
-////                bi.RS11.setEnabled(false);
-////                bi.RS12.setEnabled(false);
-////                bi.RS13.setEnabled(false);
-////            }
-////        });
-//
-//    }
-
-
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -215,16 +132,6 @@ public class Section01Activity extends AppCompatActivity {
         /*DOB = getDOB();*/
 
     }
-
-
-    /*private String getDOB() {
-        if (bi.pocfa11a.isChecked())
-            return DateUtils.convertDateFormat(bi.pocfa12.getText().toString());
-        else return DateUtils.getDOB("dd/MM/yyyy",
-                Integer.valueOf(bi.pocfa13y.getText().toString()),
-                Integer.valueOf(bi.pocfa13m.getText().toString()),
-                Integer.valueOf(bi.pocfa13d.getText().toString()));
-    }*/
 
     private boolean formValidation() {
         return ValidatorClass.EmptyCheckingContainer(this, bi.ll01);

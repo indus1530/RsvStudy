@@ -943,6 +943,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
 
+
         String whereClause = ChildList.singleChildList.COLUMN_AREACODE + " = ? ";
         String[] whereArgs = new String[]{areaCode};
         String groupBy = null;
