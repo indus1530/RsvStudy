@@ -38,11 +38,11 @@
     <color name="darkRed">#D50000</color>
     <color name="lightOrange">#f7f6e0</color>
 
-    <color name="enrolled">#92D050</color>
-    <color name="locked">#FFFF43</color>
-    <color name="shifted">#5B9BD5</color>
-    <color name="died">#A5A5A5</color>
-    <color name="refused">#EC701C</color>
-    <color name="factory">#B260C8</color>
+    <color name="enrolled">#3392D050</color>
+    <color name="locked">#33ffff41</color>
+    <color name="shifted">#335B9BD5</color>
+    <color name="died">#33A5A5A5</color>
+    <color name="refused">#33EC701C</color>
+
 
 </resources>

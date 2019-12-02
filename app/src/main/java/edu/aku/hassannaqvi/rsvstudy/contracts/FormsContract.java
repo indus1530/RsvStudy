@@ -36,6 +36,8 @@ public class FormsContract {
     private String NextVisit = "";
     private String endingdatetime = "";
 
+
+
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -45,6 +47,16 @@ public class FormsContract {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String status = "";
 
     public static final String DATE_FORMAT = "yyyy-mm-dd";
 
@@ -134,6 +146,7 @@ public class FormsContract {
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
+        this.status = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STATUS));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
 
         return this;
@@ -179,6 +192,7 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
+        json.put(FormsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
         json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
 
         return json;
@@ -412,6 +426,7 @@ public class FormsContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
+        public static final String COLUMN_STATUS= "status";
 
         public static String _URL = "sync.php";
     }

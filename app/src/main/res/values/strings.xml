@@ -47,7 +47,8 @@
     <string name="RS16"> کیا گھر اور بچے کی شناخت ہوگئی ہے؟ </string>
     <string name="RS16a"> ہاں گھر اور بچے کی شناخت ہوگی ہے </string>
     <string name="RS16b">   نہیں گھر پر کوئی موجود نہیں ہے    </string>
-    <string name="RS16c"> گھر  تبدیل کر لیا گیا ہے  </string>
+    <string name="RS16d"> گھر  تبدیل کر لیا گیا ہے  </string>
+    <string name="RS16c"> گھر پر تالا لگا ہوا ہے  </string>
 
     <string name="Section2"> رضاکارانہ طور پر دیکھ بھال کرنے والا </string>
     <string name="RS17">2.01: ماں یا دیکھ بھال کرنے والے نے مطالعے میں حصہ لینے کے بارے میں مطمئن رضامندی دی ہے </string>

@@ -40,7 +40,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, final int i) {
 
-        ItemChildListBinding bi = DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.item_child_list, null, true);
+        ItemChildListBinding bi = DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.item_child_list, viewGroup, false);
         return new ViewHolder(bi);
     }
 
@@ -56,7 +56,9 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!db.isDataExists(mList.get(i).getDssid())) {
+                if (db.isDataExists(mList.get(i).getDssid()) && db.getChildStatus(mList.get(i).getDssid()).equals("3")
+                        || db.isDataExists(mList.get(i).getDssid()) && db.getChildStatus(mList.get(i).getDssid()).equals("4")
+                        || db.isDataExists(mList.get(i).getDssid()) && db.getChildStatus(mList.get(i).getDssid()).equals("5")) {
                     itemClicked.onItemClick(mList.get(i), i);
                 } else {
                     Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
@@ -66,9 +68,30 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         });
 
         if (db.isDataExists(mList.get(i).getDssid())) {
-            holder.bi.checkIcon.setVisibility(View.VISIBLE);
+            holder.bi.childStatus.setVisibility(View.VISIBLE);
+            if (db.getChildStatus(mList.get(i).getDssid()).equals("1")) {
+                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.enrolled));
+                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.enrolled));
+                holder.bi.childStatus.setText("Enrolled");
+            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("2")) {
+                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.died));
+                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.died));
+                holder.bi.childStatus.setText("Died");
+            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("3")) {
+                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.locked));
+                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.locked));
+                holder.bi.childStatus.setText("Locked");
+            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("4")) {
+                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.refused));
+                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.refused));
+                holder.bi.childStatus.setText("Refused");
+            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("5")) {
+                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.shifted));
+                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.shifted));
+                holder.bi.childStatus.setText("Shifted");
+            }
         } else {
-            holder.bi.checkIcon.setVisibility(View.GONE);
+            holder.bi.childStatus.setVisibility(View.GONE);
         }
 
 

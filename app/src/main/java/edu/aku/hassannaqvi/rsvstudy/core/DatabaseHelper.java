@@ -65,6 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + FormsTable.COLUMN_UID + " TEXT," +
             FormsTable.COLUMN_FORMDATE + " TEXT," +
             FormsTable.COLUMN_APPVERSION + " TEXT," +
+            FormsTable.COLUMN_STATUS + " TEXT," +
             FormsTable.COLUMN_FORMTYPE + " TEXT," +
             FormsTable.COLUMN_STUDY_ID + " TEXT," +
             FormsTable.COLUMN_NEXT_VISIT + " TEXT," +
@@ -1201,6 +1202,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_DEVICETAGID, fc.getDevicetagID());
         values.put(FormsTable.COLUMN_DEVICEID, fc.getDeviceID());
         values.put(FormsTable.COLUMN_APPVERSION, fc.getAppversion());
+        values.put(FormsTable.COLUMN_STATUS, fc.getStatus());
         values.put(FormsTable.COLUMN_FORMTYPE, fc.getFormType());
 
         // Insert the new row, returning the primary key value of the new row
@@ -1269,6 +1271,45 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursorCount > 0;
 
 
+    }
+
+    public String getChildStatus(String studyID) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable.COLUMN_STATUS,
+                FormsTable.COLUMN_STUDY_ID
+        };
+
+        String selection = FormsTable.COLUMN_STUDY_ID + " = ? ";
+        String[] selectionArgs = {studyID};
+
+        String orderBy = null;
+
+        String status = "";
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    selection,               // The columns for the WHERE clause
+                    selectionArgs,                 // The values for the WHERE clause
+                    null,                   // don't group the rows
+                    null,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                status = c.getString(c.getColumnIndex(FormsTable.COLUMN_STATUS));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return status;
     }
 
     public Long addMWRA(MWRAContract mc) {
@@ -1630,6 +1671,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_DEVICETAGID,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_STATUS,
                 FormsTable.COLUMN_FORMTYPE,
 
         };
@@ -1689,6 +1731,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_DEVICETAGID,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_STATUS,
                 FormsTable.COLUMN_FORMTYPE,
 
         };
@@ -2000,6 +2043,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_DEVICETAGID,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_STATUS,
                 FormsTable.COLUMN_FORMTYPE
         };
 
@@ -2242,6 +2286,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
         values.put(FormsTable.COLUMN_NEXT_VISIT, MainApp.fc.getNextVisit());
+        values.put(FormsTable.COLUMN_STATUS, MainApp.fc.getStatus());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
 
 

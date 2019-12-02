@@ -63,15 +63,21 @@ public class Section01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId != bi.RS16a.getId()) {
-                    bi.btnContinue.setVisibility(View.GONE);
-                    bi.btnEnd.setVisibility(View.VISIBLE);
-                } else {
-                    bi.btnContinue.setVisibility(View.VISIBLE);
-                    bi.btnEnd.setVisibility(View.GONE);
+                if (checkedId == bi.RS16c.getId()) {
+                    MainApp.status = 3;
+                } else if(checkedId == bi.RS16d.getId()) {
+                    MainApp.status = 5;
+
+                }
+                if (checkedId == bi.RS16b.getId()) {
+                    MainApp.status = 2;
+                } else if(checkedId == bi.RS16a.getId()) {
+                    MainApp.status = 1;
+
                 }
             }
         });
+
     }
 
     public void BtnContinue() {
@@ -152,7 +158,9 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS14", String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
         SA.put("RS15", bi.RS15.getText().toString());
         SA.put("RS16", bi.RS16a.isChecked() ? "1" : bi.RS16b.isChecked() ? "2"
-                : bi.RS16c.isChecked() ? "3" : bi.RS1696.isChecked() ? "96" : "0");
+                : bi.RS16c.isChecked() ? "3"
+                : bi.RS16d.isChecked() ? "4"
+                : bi.RS1696.isChecked() ? "96" : "0");
         SA.put("RS1696x", bi.RS1696x.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));

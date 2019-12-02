@@ -4,6 +4,7 @@
 
 
     <android.support.v7.widget.CardView
+        style="@style/cardView"
         android:id="@+id/parentLayout"
         android:layout_width="match_parent"
         android:layout_height="88dp"
@@ -113,24 +114,20 @@
 
 
                     <TextView
+                        android:padding="10dp"
                         android:id="@+id/child_status"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/gray"
+                        android:background="@color/enrolled"
                         android:gravity="center"
                         android:text="Selected"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/black" />
 
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="bottom"
-                android:background="#FFFFFF" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
