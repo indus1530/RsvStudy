@@ -1238,6 +1238,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        return newRowId;
 //    }
 
+
+    public boolean isDataExists(String studyId) {
+        SQLiteDatabase db = getReadableDatabase();
+
+// New value for one column
+        String[] columns = {
+                FormsTable.COLUMN_STUDY_ID,
+        };
+
+// Which row to update, based on the ID
+        String selection = FormsTable.COLUMN_STUDY_ID + " = ? ";
+        String[] selectionArgs = {studyId};
+        Cursor cursor = db.query(FormsTable.TABLE_NAME, //Table to query
+                columns,                    //columns to return
+                selection,                  //columns for the WHERE clause
+                selectionArgs,              //The values for the WHERE clause
+                null,                       //group the rows
+                null,                       //filter by row groups
+                null);                      //The sort order
+
+        if (cursor.moveToFirst()) {
+//            MainApp.projIDs = cursor.getString(cursor.getColumnIndex(UsersTable.COLUMN_PROJ_IDS));
+            cursor.moveToNext();
+        }
+        int cursorCount = cursor.getCount();
+
+        cursor.close();
+        db.close();
+        return cursorCount > 0;
+
+
+    }
+
     public Long addMWRA(MWRAContract mc) {
 
         // Gets the data repository in write mode

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -55,6 +57,21 @@ public class Section01Activity extends AppCompatActivity {
         bi.gender.setText(childData.equals("1") ? "Male" : "Female");
         bi.genderImage.setImageResource(childData.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
         bi.months.setText(String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
+
+
+        bi.RS16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.RS16a.getId()) {
+                    bi.btnContinue.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.VISIBLE);
+                } else {
+                    bi.btnContinue.setVisibility(View.VISIBLE);
+                    bi.btnEnd.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -75,7 +92,19 @@ public class Section01Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                MainApp.endActivity(this, this);
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+        }
+
 
     }
 

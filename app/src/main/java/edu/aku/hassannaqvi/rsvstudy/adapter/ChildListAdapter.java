@@ -7,11 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
+import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ItemChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
@@ -21,10 +23,12 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     OnItemClicked itemClicked;
     private Context mContext;
     private List<ChildList> mList;
+    DatabaseHelper db;
 
     public ChildListAdapter(Context mContext, List<ChildList> mList) {
         this.mContext = mContext;
         this.mList = mList;
+        db = new DatabaseHelper(mContext);
 
     }
 
@@ -41,7 +45,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int i) {
 
         holder.bi.dssID.setText(mList.get(i).getDssid());
         holder.bi.studyID.setText(mList.get(i).getStudy_id());
@@ -52,10 +56,21 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!db.isDataExists(mList.get(i).getDssid())) {
+                    itemClicked.onItemClick(mList.get(i), i);
+                } else {
+                    Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
+                }
 
-                itemClicked.onItemClick(mList.get(i), i);
             }
         });
+
+        if (db.isDataExists(mList.get(i).getDssid())) {
+            holder.bi.checkIcon.setVisibility(View.VISIBLE);
+        } else {
+            holder.bi.checkIcon.setVisibility(View.GONE);
+        }
+
 
     }
 
