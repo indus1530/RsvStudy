@@ -56,13 +56,19 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (db.isDataExists(mList.get(i).getDssid()) && db.getChildStatus(mList.get(i).getDssid()).equals("3")
-                        || db.isDataExists(mList.get(i).getDssid()) && db.getChildStatus(mList.get(i).getDssid()).equals("4")
-                        || db.isDataExists(mList.get(i).getDssid()) && db.getChildStatus(mList.get(i).getDssid()).equals("5")) {
-                    itemClicked.onItemClick(mList.get(i), i);
+                if (db.isDataExists(mList.get(i).getDssid())) {
+                    if (db.getChildStatus(mList.get(i).getDssid()).equals("3")
+                            || db.getChildStatus(mList.get(i).getDssid()).equals("4")
+                            || db.getChildStatus(mList.get(i).getDssid()).equals("5")) {
+                        itemClicked.onItemClick(mList.get(i), i);
+                    } else {
+                        Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
+                    }
+
                 } else {
-                    Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
+                    itemClicked.onItemClick(mList.get(i), i);
                 }
+
 
             }
         });
