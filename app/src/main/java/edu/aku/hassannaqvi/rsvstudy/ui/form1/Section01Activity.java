@@ -90,12 +90,12 @@ public class Section01Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-            }
                 if (bi.RS16a.isChecked()) {
-                finish();
-                startActivity(new Intent(this, Section02Activity.class));
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                    finish();
+                    startActivity(new Intent(this, Section02Activity.class));
+                } else{
+                    Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                }
             }
         }
     }
@@ -161,7 +161,8 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS13", childData.getDob());
         SA.put("RS14", String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
         SA.put("RS15", bi.RS15.getText().toString());
-        SA.put("RS16", bi.RS16a.isChecked() ? "1" : bi.RS16b.isChecked() ? "2"
+        SA.put("RS16", bi.RS16a.isChecked() ? "1"
+                : bi.RS16b.isChecked() ? "2"
                 : bi.RS16c.isChecked() ? "3"
                 : bi.RS16d.isChecked() ? "4"
                 : bi.RS1696.isChecked() ? "96" : "0");
