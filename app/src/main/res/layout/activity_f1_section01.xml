@@ -729,7 +729,8 @@
                     android:text="@string/start_interview"
                     android:textColor="@color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility='@{RS16a.checked? View.VISIBLE : View.GONE}'/>
 
                 <Button
                     android:id="@+id/btn_End"
@@ -743,7 +744,7 @@
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:visibility="gone" />
+                    android:visibility='@{RS16a.checked? View.GONE : View.VISIBLE}' />
             </LinearLayout>
 
         </LinearLayout>

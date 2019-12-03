@@ -22,6 +22,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
+import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section01Activity extends AppCompatActivity {
@@ -88,6 +89,9 @@ public class Section01Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+
+            }
+                if (bi.RS16a.isChecked()) {
                 finish();
                 startActivity(new Intent(this, Section02Activity.class));
             } else {
