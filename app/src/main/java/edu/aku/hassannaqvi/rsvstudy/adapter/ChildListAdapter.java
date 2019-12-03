@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ItemChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
@@ -56,48 +58,76 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (db.isDataExists(mList.get(i).getDssid())) {
-                    if (db.getChildStatus(mList.get(i).getDssid()).equals("3")
-                            || db.getChildStatus(mList.get(i).getDssid()).equals("4")
-                            || db.getChildStatus(mList.get(i).getDssid()).equals("5")) {
-                        itemClicked.onItemClick(mList.get(i), i);
-                    } else {
-                        Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
-                    }
 
-                } else {
+                ArrayList<FormsContract> ChildData = new ArrayList<>();
+                ChildData = db.isDataExists(mList.get(i).getDssid());
+
+                if (ChildData.size() != 1) {
                     itemClicked.onItemClick(mList.get(i), i);
+                } else {
+
+                    Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
                 }
 
 
             }
         });
 
-        if (db.isDataExists(mList.get(i).getDssid())) {
+        ArrayList<FormsContract> ChildData = new ArrayList<>();
+        ChildData = db.isDataExists(mList.get(i).getDssid());
+        if (ChildData.size() == 1) {
             holder.bi.childStatus.setVisibility(View.VISIBLE);
-            if (db.getChildStatus(mList.get(i).getDssid()).equals("1")) {
-                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.enrolled));
-                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.enrolled));
-                holder.bi.childStatus.setText("Enrolled");
-            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("2")) {
-                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.died));
-                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.died));
-                holder.bi.childStatus.setText("Died");
-            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("3")) {
-                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.locked));
-                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.locked));
-                holder.bi.childStatus.setText("Locked");
-            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("4")) {
-                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.refused));
-                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.refused));
-                holder.bi.childStatus.setText("Refused");
-            } else if (db.getChildStatus(mList.get(i).getDssid()).equals("5")) {
-                holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.shifted));
-                holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.shifted));
-                holder.bi.childStatus.setText("Shifted");
+
+            FormsContract fc = ChildData.get(0);
+                   /* if ( fc.getStatus().equals("3")
+                        || fc.getStatus().equals("4")
+                        || fc.getStatus().equals("5")) {
+                    itemClicked.onItemClick(mList.get(i), i);
+                } else {
+                    Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
+                }*/
+            switch (fc.getStatus()) {
+
+                case "1":
+                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.enrolled));
+                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.enrolled));
+                    holder.bi.childStatus.setText("Enrolled");
+
+                    break;
+                case "2":
+                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.died));
+                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.died));
+                    holder.bi.childStatus.setText("Died");
+
+                    break;
+                case "3":
+                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.locked));
+                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.locked));
+                    holder.bi.childStatus.setText("Locked");
+
+                    break;
+                case "4":
+                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.refused));
+                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.refused));
+                    holder.bi.childStatus.setText("Refused");
+
+                    break;
+                case "5":
+                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.shifted));
+                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.shifted));
+                    holder.bi.childStatus.setText("Shifted");
+                    break;
+                default:
+
+                    holder.bi.childStatus.setVisibility(View.GONE);
+                    holder.bi.parentLayout.setClickable(true);
+
             }
+
         } else {
+
             holder.bi.childStatus.setVisibility(View.GONE);
+            holder.bi.parentLayout.setClickable(true);
         }
 
 

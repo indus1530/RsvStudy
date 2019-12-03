@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     iStatus = "N/A";
                 }
 
-                rSumText += fc.getStudy_Id();
+                rSumText += fc.getDSSID();
                 rSumText += "\t\t\t\t\t";
 
                 rSumText += iStatus;
