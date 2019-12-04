@@ -1241,7 +1241,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //    }
 
 
-    public ArrayList<FormsContract> isDataExists(String studyId) {
+    public FormsContract isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = null;
 
@@ -1258,7 +1258,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + FormsTable.COLUMN_ISTATUS + " = ?";
         String[] selectionArgs = new String[]{studyId, "1"};
 
-        ArrayList<FormsContract> allFC = new ArrayList<>();
+        FormsContract allFC = new FormsContract();
         try {
             c = db.query(FormsTable.TABLE_NAME, //Table to query
                     columns,                    //columns to return
@@ -1269,11 +1269,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     null);                   // The sort order
 
             while (c.moveToNext()) {
-                FormsContract fc = new FormsContract();
-                fc.setDSSID(c.getString(c.getColumnIndex(FormsTable.COLUMN_DSSID)));
-                fc.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
-                fc.setStatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_STATUS)));
-                allFC.add(fc);
+                allFC.setDSSID(c.getString(c.getColumnIndex(FormsTable.COLUMN_DSSID)));
+                allFC.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
+                allFC.setStatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_STATUS)));
             }
         } finally {
             if (c != null) {
@@ -1288,8 +1286,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getChildStatus(String studyID) {
 
+    public String getChildStatus(String studyID) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {

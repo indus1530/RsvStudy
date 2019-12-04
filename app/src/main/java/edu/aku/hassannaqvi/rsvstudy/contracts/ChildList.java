@@ -15,7 +15,6 @@ public class ChildList implements Parcelable {
     private String father_name;
     private String hhhead;
     private String study_id;
-
     private String childstatus;
 
     protected ChildList(Parcel in) {

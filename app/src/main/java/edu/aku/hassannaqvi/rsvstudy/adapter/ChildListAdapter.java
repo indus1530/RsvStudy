@@ -26,6 +26,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     private Context mContext;
     private List<ChildList> mList;
     DatabaseHelper db;
+    FormsContract ChildData;
 
     public ChildListAdapter(Context mContext, List<ChildList> mList) {
         this.mContext = mContext;
@@ -59,26 +60,32 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
             @Override
             public void onClick(View v) {
 
-                ArrayList<FormsContract> ChildData = new ArrayList<>();
+                FormsContract ChildData;
                 ChildData = db.isDataExists(mList.get(i).getDssid());
-
-                if (ChildData.size() != 1) {
+                if (ChildData != null) {
                     itemClicked.onItemClick(mList.get(i), i);
                 } else {
-
                     Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
                 }
+//                ArrayList<FormsContract> ChildData = new ArrayList<>();
+//                ChildData = db.isDataExists(mList.get(i).getDssid());
+//
+//                if (ChildData.size() != 1) {
+//                    itemClicked.onItemClick(mList.get(i), i);
+//                } else {
+//
+//                    Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
+//                }
 
 
             }
         });
 
-        ArrayList<FormsContract> ChildData = new ArrayList<>();
-        ChildData = db.isDataExists(mList.get(i).getDssid());
-        if (ChildData.size() == 1) {
-            holder.bi.childStatus.setVisibility(View.VISIBLE);
 
-            FormsContract fc = ChildData.get(0);
+        ChildData = db.isDataExists(mList.get(i).getDssid());
+        if (ChildData != null) {
+            holder.bi.childStatus.setVisibility(View.VISIBLE);
+//            FormsContract fc = ChildData.get(0);
                    /* if ( fc.getStatus().equals("3")
                         || fc.getStatus().equals("4")
                         || fc.getStatus().equals("5")) {
@@ -86,8 +93,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
                 } else {
                     Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
                 }*/
-            switch (fc.getStatus()) {
-
+            switch (ChildData.getStatus()) {
                 case "1":
                     holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.enrolled));
                     holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.enrolled));
@@ -118,16 +124,16 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
                     holder.bi.childStatus.setText("Shifted");
                     break;
                 default:
-
                     holder.bi.childStatus.setVisibility(View.GONE);
-                    holder.bi.parentLayout.setClickable(true);
+                    holder.bi.parentLayout.setBackgroundTintList(null);
 
             }
 
         } else {
 
             holder.bi.childStatus.setVisibility(View.GONE);
-            holder.bi.parentLayout.setClickable(true);
+            holder.bi.parentLayout.setBackgroundTintList(null);
+
         }
 
 

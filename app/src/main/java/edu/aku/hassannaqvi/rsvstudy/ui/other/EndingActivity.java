@@ -118,11 +118,11 @@ public class EndingActivity extends AppCompatActivity {
 //                MainApp.status == 4 && bi.istatus1.isChecked()? "4"
         MainApp.fc.setIstatus88x(bi.istatus888x.getText().toString());
 
-        MainApp.fc.setStatus(MainApp.status == 3 && bi.istatus1.isChecked()? "3"
-                : MainApp.status == 5 && bi.istatus1.isChecked()? "5"
-                : MainApp.status == 2 && bi.istatus1.isChecked()? "2"
-                : MainApp.status == 1 && bi.istatus1.isChecked()? "1"
-                : MainApp.status == 4 && bi.istatus1.isChecked()? "4"
+        MainApp.fc.setStatus(MainApp.status == 3 && bi.istatus1.isChecked() ? "3"
+                : MainApp.status == 5 && bi.istatus1.isChecked() ? "5"
+                : MainApp.status == 2 && bi.istatus1.isChecked() ? "2"
+                : MainApp.status == 1 && bi.istatus1.isChecked() ? "1"
+                : MainApp.status == 4 && bi.istatus1.isChecked() ? "4"
                 : "0");
 
         MainApp.fc.setNextVisit(bi.RS82.getText().toString());
