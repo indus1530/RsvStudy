@@ -730,7 +730,7 @@
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:visibility='@{RS16a.checked? View.VISIBLE : View.GONE}'/>
+                    android:visibility='@{RS16a.checked? View.VISIBLE : View.GONE}' />
 
                 <Button
                     android:id="@+id/btn_End"

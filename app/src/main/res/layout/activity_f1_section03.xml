@@ -94,7 +94,7 @@
                                 android:text='@{RS24b.checked ? RS24bx.getText().toString() : ""}'
                                 android:visibility='@{RS24b.checked ? View.VISIBLE : View.GONE}'
                                 app:mask="##"
-                                app:maxValue="12"
+                                app:maxValue="11"
                                 app:minValue="1"
                                 app:type="range" />
 
