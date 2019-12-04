@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class DateUtils {
 
@@ -140,6 +141,28 @@ public class DateUtils {
         double ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30.4375;
         long age = (long) Math.floor(ageInMonths);
         return age;
+    }
+
+    public static long ageInDaysByDOB(String dateStr) {
+        Calendar cal = getCalDate(dateStr);
+        Date dob = cal.getTime();
+        Date today = new Date();
+        Long diff = today.getTime() - dob.getTime();
+        long ageInDays = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+        return ageInDays;
+    }
+
+    public static Calendar getCalDate(String value) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        Calendar calendar = Calendar.getInstance();
+        try {
+            Date date = sdf.parse(value);
+            calendar.setTime(date);
+            return calendar;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return calendar;
     }
 
     public static String getYearsAndMonthsBack(String format, int month, int year) {

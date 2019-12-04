@@ -1013,37 +1013,30 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-            </LinearLayout>
 
-
-            <!--RS70 - CheckBox-->
-            <android.support.v7.widget.CardView
-                android:id="@+id/RS70cv"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="@string/RS70"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
-
+                <!--RS70 - CheckBox-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RS70cv"
+                    style="@style/cardView">
 
                     <LinearLayout
-                        android:id="@+id/checkMainLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS70"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+                        <LinearLayout
+                            android:id="@+id/checkMainLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
                             android:tag="0">
 
                             <CheckBox
@@ -1063,13 +1056,6 @@
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS70c" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:tag="-1">
 
                             <CheckBox
                                 android:id="@+id/RS70d"
@@ -1088,13 +1074,6 @@
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS70f" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:tag="-1">
 
                             <CheckBox
                                 android:id="@+id/RS70g"
@@ -1113,13 +1092,6 @@
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS70i" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:tag="-1">
 
                             <CheckBox
                                 android:id="@+id/RS70j"
@@ -1138,19 +1110,15 @@
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS70l" />
+
+
                         </LinearLayout>
+
+
                     </LinearLayout>
 
+                </android.support.v7.widget.CardView>
 
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <LinearLayout
-                android:id="@+id/ll06"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <!--RS71 - Radio-->
                 <android.support.v7.widget.CardView
