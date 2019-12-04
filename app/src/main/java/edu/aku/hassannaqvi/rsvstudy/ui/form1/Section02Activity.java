@@ -87,8 +87,10 @@ public class Section02Activity extends AppCompatActivity {
                 if (checkedId != bi.RS21b.getId()) {
                     ClearClass.ClearAllFields(bi.RS22cv, null);
                     bi.RS22cv.setVisibility(View.GONE);
+                    MainApp.status = 1;
                 } else {
                     bi.RS22cv.setVisibility(View.VISIBLE);
+                    MainApp.status = 2;
                 }
             }
         });

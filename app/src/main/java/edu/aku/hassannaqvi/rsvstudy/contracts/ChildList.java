@@ -15,7 +15,6 @@ public class ChildList implements Parcelable {
     private String father_name;
     private String hhhead;
     private String study_id;
-
     private String iStatus;
 
     protected ChildList(Parcel in) {
@@ -80,8 +79,6 @@ public class ChildList implements Parcelable {
         this.dob = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_DOB));
         this.gender = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_GENDER));
         this.areacode = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_AREACODE));
-
-
         return this;
     }
 

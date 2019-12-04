@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
@@ -61,18 +62,11 @@ public class Section01Activity extends AppCompatActivity {
         bi.RS16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-
                 if (checkedId == bi.RS16c.getId()) {
                     MainApp.status = 3;
-                } else if(checkedId == bi.RS16d.getId()) {
-                    MainApp.status = 5;
-
                 }
-                if (checkedId == bi.RS16b.getId()) {
-                    MainApp.status = 2;
-                } else if(checkedId == bi.RS16a.getId()) {
-                    MainApp.status = 1;
-
+                if (checkedId == bi.RS16d.getId()) {
+                    MainApp.status = 5;
                 }
             }
         });
@@ -87,11 +81,10 @@ public class Section01Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-
                 if (bi.RS16a.isChecked()) {
                     finish();
                     startActivity(new Intent(this, Section02Activity.class));
-                } else{
+                } else {
                     Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -107,7 +100,8 @@ public class Section01Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                MainApp.endActivity(this, this);
+                finish();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
