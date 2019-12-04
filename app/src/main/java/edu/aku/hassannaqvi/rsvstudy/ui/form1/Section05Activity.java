@@ -5,6 +5,8 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -252,7 +254,6 @@ public class Section05Activity extends AppCompatActivity {
     }
 
 
-
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -276,7 +277,32 @@ public class Section05Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll05);
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll05)) {
+            return false;
+        }
+        if (!checkBoxValidate(bi.checkMainLayout)) {
+            return false;
+        }
+        return ValidatorClass.EmptyCheckingContainer(this, bi.ll06);
+    }
+
+    boolean checkBoxValidate(LinearLayout layout) {
+        for (int i = 0; i < layout.getChildCount(); i++) {
+            LinearLayout lyt = (LinearLayout) layout.getChildAt(i);
+            for (int j = 0; j < lyt.getChildCount(); j++) {
+                CheckBox chbks = (CheckBox) lyt.getChildAt(j);
+                if (!chbks.isChecked()) {
+                    chbks.setError("This field is required");
+                    chbks.requestFocus();
+                    return false;
+                } else {
+                    chbks.setError(null);
+                    chbks.clearFocus();
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private void SaveDraft() throws JSONException {

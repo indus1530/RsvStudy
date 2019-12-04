@@ -54,6 +54,7 @@ public class Section02Activity extends AppCompatActivity {
                     bi.RS21cv.setVisibility(View.GONE);
                     bi.RS22cv.setVisibility(View.GONE);
                     bi.btnEnd.setVisibility(View.GONE);
+                    MainApp.status = 4;
                 } else {
                     ClearClass.ClearAllFields(bi.RS18cv, null);
                     bi.RS18cv.setVisibility(View.GONE);
@@ -91,16 +92,6 @@ public class Section02Activity extends AppCompatActivity {
                 } else {
                     bi.RS22cv.setVisibility(View.VISIBLE);
                     MainApp.status = 2;
-                }
-            }
-        });
-
-        bi.RS17.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS17b.getId()) {
-                    MainApp.status = 4;
                 }
             }
         });
