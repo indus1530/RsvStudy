@@ -1848,7 +1848,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //                singleIm.COLUMN_DSSID,*/
 //                singleIm.COLUMN_DEVICETAGID,
 //                singleIm.COLUMN_DEVICEID,
-//                singleIm.COLUMN_ISTATUS
+//                singleIm.COLUMN_CHILD_STATUS
 //
 //        };
 //        String whereClause = singleIm.COLUMN_SYNCED + " is null";
