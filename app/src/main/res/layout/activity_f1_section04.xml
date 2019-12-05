@@ -591,7 +591,7 @@
                         android:hint="@string/day"
                         android:inputType="number"
                         android:maxLength="3"
-                        app:maxValue="0"
+                        app:maxValue="365"
                         app:minValue="1"
                         app:type="range" />
 
