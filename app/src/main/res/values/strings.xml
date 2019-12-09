@@ -35,6 +35,7 @@
     <string name="RS16a"> ہاں گھر اور بچے کی شناخت ہوگی ہے </string>
     <string name="RS16b">   نہیں گھر پر کوئی موجود نہیں ہے    </string>
     <string name="RS16d"> گھر  تبدیل کر لیا گیا ہے  </string>
+    <string name="RS16e"> ڈی ایس ایس آئیڈی درست نہیں ہے   </string>
     <string name="RS16c"> گھر پر تالا لگا ہوا ہے  </string>
 
     <string name="Section2"> رضاکارانہ طور پر دیکھ بھال کرنے والا </string>
@@ -190,7 +191,7 @@
     <string name="RS3225"> کرسی </string>
     <string name="RS3226"> بستر </string>
     <string name="RS3227"> گدا </string>
-    <string name="RS3228"> سوفا </string>
+    <string name="RS3228"> صوفہ </string>
     <string name="RS3229"> ٹیبل </string>
     <string name="RS3230"> الماری یا دراز </string>
 

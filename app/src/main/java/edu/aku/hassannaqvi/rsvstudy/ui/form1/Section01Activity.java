@@ -62,11 +62,14 @@ public class Section01Activity extends AppCompatActivity {
         bi.RS16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == bi.RS16c.getId()) {
+                if (checkedId == bi.RS16c.getId() || checkedId == bi.RS16b.getId()) {
                     MainApp.status = 3;
                 }
                 if (checkedId == bi.RS16d.getId()) {
                     MainApp.status = 5;
+                }
+                if (checkedId == bi.RS16e.getId()) {
+                    MainApp.status = 6;
                 }
             }
         });

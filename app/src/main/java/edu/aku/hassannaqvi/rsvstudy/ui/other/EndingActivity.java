@@ -94,13 +94,13 @@ public class EndingActivity extends AppCompatActivity {
                 Intent endSec = new Intent(this, MainActivity.class);
                 startActivity(endSec);
             } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     private void SaveDraft() {
-        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         MainApp.fc.setIstatus(bi.istatus1.isChecked() ? "1"
                 : bi.istatus2.isChecked() ? "2"
@@ -123,25 +123,22 @@ public class EndingActivity extends AppCompatActivity {
                 : MainApp.status == 2 && bi.istatus1.isChecked() ? "2"
                 : MainApp.status == 1 && bi.istatus1.isChecked() ? "1"
                 : MainApp.status == 4 && bi.istatus1.isChecked() ? "4"
+                : MainApp.status == 6 && bi.istatus1.isChecked() ? "6"
                 : "0");
 
         MainApp.fc.setNextVisit(bi.RS82.getText().toString());
         MainApp.fc.setEndingdatetime(dtToday);
 
-        Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
     }
 
     private boolean UpdateDB() {
         DatabaseHelper db = new DatabaseHelper(this);
 
         int updcount = db.updateEnding();
-        if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
+        //            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+        //            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+        return updcount == 1;
 
 //        return true;
 

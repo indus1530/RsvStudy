@@ -53,7 +53,8 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.dssID.setText(mList.get(i).getDssid());
         holder.bi.studyID.setText(mList.get(i).getStudy_id());
         holder.bi.motherName.setText(mList.get(i).getMother_name() + " / " + mList.get(i).getFather_name());
-        holder.bi.dob.setText(DateUtils.ageInMonthsByDOB(DateUtils.getDate(mList.get(i).getDob())) + " month(s)");
+        holder.bi.dob.setText(mList.get(i).getDob());
+        holder.bi.childIndex.setText(String.valueOf(i + 1));
         holder.bi.genderImage.setImageResource(mList.get(i).getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
 
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +64,12 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
                 FormsContract ChildData;
                 ChildData = db.isDataExists(mList.get(i).getDssid());
                 if (ChildData != null) {
-                    itemClicked.onItemClick(mList.get(i), i);
+                    if (!ChildData.getStatus().contains("1") && !ChildData.getStatus().contains("2")) {
+                        itemClicked.onItemClick(mList.get(i), i);
+                    } else {
+                        Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
+                    }
+
                 } else {
                     Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
                 }
@@ -122,6 +128,11 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
                     holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.shifted));
                     holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.shifted));
                     holder.bi.childStatus.setText("Shifted");
+                    break;
+                case "6":
+                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.dssIncorrect));
+                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.dssIncorrect));
+                    holder.bi.childStatus.setText("Incorrect DSS ID");
                     break;
                 default:
                     holder.bi.childStatus.setVisibility(View.GONE);

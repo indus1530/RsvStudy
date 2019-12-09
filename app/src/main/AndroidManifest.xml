@@ -51,6 +51,7 @@
         <activity
             android:name=".ui.form1.Section01Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ui.form1.Section02Activity"

@@ -37,7 +37,6 @@ public class FormsContract {
     private String endingdatetime = "";
 
 
-
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -59,7 +58,6 @@ public class FormsContract {
     }
 
 
-
     public static final String DATE_FORMAT = "yyyy-mm-dd";
 
     public static final String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.rsvstudy";
@@ -67,6 +65,7 @@ public class FormsContract {
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
     public static final String PATH_FORMS = "forms";
+
     public FormsContract() {
     }
 
@@ -407,7 +406,7 @@ public class FormsContract {
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_FORMTYPE = "formtype";
-        public static final String COLUMN_USER = "user";
+        public static final String COLUMN_USER = "username";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
         public static final String COLUMN_DSSID = "DSSID";
@@ -428,7 +427,7 @@ public class FormsContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
-        public static final String COLUMN_STATUS= "status";
+        public static final String COLUMN_STATUS = "status";
 
         public static String _URL = "sync.php";
     }
