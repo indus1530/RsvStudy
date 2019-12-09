@@ -77,29 +77,6 @@
                                 app:dateFormat="dd-MM-yyyy"
                                 app:minDate="CR_DATE" />
 
-                            <RadioButton
-                                android:id="@+id/istatus2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus2"
-                                android:textSize="25sp" />
-
-                            <RadioButton
-                                android:id="@+id/istatus3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus3"
-                                android:textSize="25sp" />
-
-                            <RadioButton
-                                android:id="@+id/istatus4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus4"
-                                android:textSize="25sp" />
 
                             <RadioButton
                                 android:id="@+id/istatus5"
@@ -109,40 +86,7 @@
                                 android:text="@string/istatus5"
                                 android:textSize="25sp" />
 
-                            <RadioButton
-                                android:id="@+id/istatus6"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus6"
-                                android:textSize="25sp" />
 
-                            <RadioButton
-                                android:id="@+id/istatus7"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus7"
-                                android:textSize="25sp" />
-
-                            <RadioButton
-                                android:id="@+id/istatus8"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/uother"
-                                android:textSize="25sp" />
-
-                            <EditText
-                                android:id="@+id/istatus888x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:digits="@string/ed_sentence"
-                                android:hint="@string/specify"
-                                android:inputType="textShortMessage"
-                                android:text='@{istatus8.checked? istatus888x.getText().toString() : "" }'
-                                android:visibility='@{istatus8.checked? View.VISIBLE : View.GONE}' />
 
                         </RadioGroup>
 

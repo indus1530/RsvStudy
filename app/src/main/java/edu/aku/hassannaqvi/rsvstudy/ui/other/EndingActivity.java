@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.other;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -37,13 +36,8 @@ public class EndingActivity extends AppCompatActivity {
 
         if (check) {
             bi.istatus1.setEnabled(true);
-            bi.istatus2.setEnabled(false);
-            bi.istatus3.setEnabled(false);
-            bi.istatus4.setEnabled(false);
+
             bi.istatus5.setEnabled(false);
-            bi.istatus6.setEnabled(false);
-            bi.istatus7.setEnabled(false);
-            bi.istatus8.setEnabled(false);
 
         } else {
             //fldGrpmn0823Reason.setVisibility(View.GONE);
@@ -103,20 +97,15 @@ public class EndingActivity extends AppCompatActivity {
 //        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         MainApp.fc.setIstatus(bi.istatus1.isChecked() ? "1"
-                : bi.istatus2.isChecked() ? "2"
-                : bi.istatus3.isChecked() ? "3"
-                : bi.istatus4.isChecked() ? "4"
+
                 : bi.istatus5.isChecked() ? "5"
-                : bi.istatus6.isChecked() ? "6"
-                : bi.istatus7.isChecked() ? "7"
-                : bi.istatus8.isChecked() ? "8"
+
                 : "0");
 
 //        MainApp.status == 5 && bi.istatus1.isChecked()? "5" ||
 //                MainApp.status == 2 && bi.istatus1.isChecked()? "2" ||
 //                MainApp.status == 1 && bi.istatus1.isChecked()? "1" ||
 //                MainApp.status == 4 && bi.istatus1.isChecked()? "4"
-        MainApp.fc.setIstatus88x(bi.istatus888x.getText().toString());
 
         MainApp.fc.setStatus(MainApp.status == 3 && bi.istatus1.isChecked() ? "3"
                 : MainApp.status == 5 && bi.istatus1.isChecked() ? "5"
