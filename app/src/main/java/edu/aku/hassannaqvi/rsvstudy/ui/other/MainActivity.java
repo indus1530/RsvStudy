@@ -209,8 +209,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void syncServer(View view) {
-
+    public void syncServer() {
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);

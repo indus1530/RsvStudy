@@ -43,6 +43,7 @@
     <color name="shifted">#335B9BD5</color>
     <color name="died">#33A5A5A5</color>
     <color name="refused">#33EC701C</color>
+    <color name="dssIncorrect">#337f00ff</color>
 
 
 </resources>

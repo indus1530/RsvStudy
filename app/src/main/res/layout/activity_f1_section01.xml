@@ -62,8 +62,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingEnd="8dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:paddingEnd="8dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -72,21 +72,21 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
                                     android:text="@string/studyId"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                     android:textStyle="bold" />
 
                                 <TextView
                                     android:id="@+id/studyID"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="35019"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -99,10 +99,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
 
                                     android:text="@string/RS7"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -110,11 +110,11 @@
 
                                 <TextView
                                     android:id="@+id/dssID"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="AGAS04068A1"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -128,10 +128,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
 
                                     android:text="@string/RS10"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -139,11 +139,11 @@
 
                                 <TextView
                                     android:id="@+id/motherName"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="SAIRA"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -157,10 +157,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
 
                                     android:text="@string/RS11"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -168,11 +168,11 @@
 
                                 <TextView
                                     android:id="@+id/fatherName"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="M.HUSSAIN"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -186,10 +186,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
 
                                     android:text="@string/RS13"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -197,11 +197,11 @@
 
                                 <TextView
                                     android:id="@+id/dob"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="DOB"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -216,10 +216,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
 
                                     android:text="@string/RS14"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -227,11 +227,11 @@
 
                                 <TextView
                                     android:id="@+id/months"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="Months"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -245,10 +245,10 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    style="@null"
 
                                     android:text="@string/gender"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -256,11 +256,11 @@
 
                                 <TextView
                                     android:id="@+id/gender"
+                                    style="@null"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    style="@null"
 
                                     android:text="Male"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -405,6 +405,11 @@
                                 android:id="@+id/RS16d"
                                 style="@style/radiobutton"
                                 android:text="@string/RS16d" />
+
+                            <RadioButton
+                                android:id="@+id/RS16e"
+                                style="@style/radiobutton"
+                                android:text="@string/RS16e" />
 
                             <RadioButton
                                 android:id="@+id/RS1696"

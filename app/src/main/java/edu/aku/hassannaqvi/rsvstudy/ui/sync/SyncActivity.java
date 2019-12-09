@@ -159,9 +159,9 @@ public class SyncActivity extends AppCompatActivity {
 
             DatabaseHelper db = new DatabaseHelper(this);
             //syncStatus.setText(null);
-            new SyncDevice(this).execute();
+//            new SyncDevice(this).execute();
 //  *******************************************************Forms*********************************
-            Toast.makeText(getApplicationContext(), "Syncing Form One", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -169,7 +169,7 @@ public class SyncActivity extends AppCompatActivity {
             }
             new SyncAllData(
                     this,
-                    "Form One",
+                    "Forms",
                     "updateSyncedForms",
                     FormsContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
@@ -309,7 +309,7 @@ public class SyncActivity extends AppCompatActivity {
 
                 @Override
                 public void run() {
-                    new SyncDevice(SyncActivity.this).execute();
+//                    new SyncDevice(SyncActivity.this).execute();
 //                  getting VersionApp
                     Toast.makeText(SyncActivity.this, "Sync VersionApp", Toast.LENGTH_SHORT).show();
 
