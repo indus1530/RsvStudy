@@ -134,10 +134,24 @@ public class DateUtils {
         return ageInYears;
     }
 
+    public static long getDateDiff(Date date1, Date date2, TimeUnit timeUnit) {
+        long diffInMillies = date2.getTime() - date1.getTime();
+        return timeUnit.convert(diffInMillies, TimeUnit.MILLISECONDS);
+    }
+
     public static long ageInMonthsByDOB(Calendar cal) {
         Date dob = cal.getTime();
         Date today = new Date();
         Long diff = today.getTime() - dob.getTime();
+        double ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30.4375;
+        long age = (long) Math.floor(ageInMonths);
+        return age;
+    }
+
+    public static long dobDiff(Calendar cal, Calendar cal2) {
+        Date dob = cal.getTime();
+        Date visitDate = cal2.getTime();
+        Long diff = visitDate.getTime() - dob.getTime();
         double ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30.4375;
         long age = (long) Math.floor(ageInMonths);
         return age;

@@ -4,15 +4,20 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
@@ -74,6 +79,28 @@ public class Section01Activity extends AppCompatActivity {
             }
         });
 
+        bi.RS15.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                //calculating age in months w.r.t visit date
+                Long afterVisitDate = DateUtils.dobDiff(DateUtils.getCalDate(childData.getDob()), DateUtils.getCalDate(bi.RS15.getText().toString()));
+//                Long actualDOB = DateUtils.ageInMonthsByDOB(DateUtils.getCalDate(childData.getDob()));
+                bi.dobInMonths.setText(afterVisitDate + " month(s)");
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     public void BtnContinue() {
