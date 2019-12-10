@@ -32,11 +32,11 @@ public class Section031Activity extends AppCompatActivity {
 
     private void setListeners() {
 
-        bi.RSf3034.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.RS34.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (bi.RSf3034b.isChecked()) {
+                if (bi.RS34b.isChecked()) {
                     ClearClass.ClearAllFields(bi.llrsv01, null);
                 }
             }
@@ -82,75 +82,75 @@ public class Section031Activity extends AppCompatActivity {
 
         JSONObject SD = new JSONObject();
 
-        SD.put("RSf30331", bi.RSf30331a.isChecked() ? "1"
-                : bi.RSf30331b.isChecked() ? "2"
+        SD.put("RS331", bi.RS331a.isChecked() ? "1"
+                : bi.RS331b.isChecked() ? "2"
                 : "0");
-        SD.put("RSf30332", bi.RSf30332a.isChecked() ? "1"
-                : bi.RSf30332b.isChecked() ? "2"
+        SD.put("RS332", bi.RS332a.isChecked() ? "1"
+                : bi.RS332b.isChecked() ? "2"
                 : "0");
-        SD.put("RSf30333", bi.RSf30333a.isChecked() ? "1"
-                : bi.RSf30333b.isChecked() ? "2"
+        SD.put("RS333", bi.RS333a.isChecked() ? "1"
+                : bi.RS333b.isChecked() ? "2"
                 : "0");
-        SD.put("RSf30334", bi.RSf30334a.isChecked() ? "1"
-                : bi.RSf30334b.isChecked() ? "2"
+        SD.put("RS334", bi.RS334a.isChecked() ? "1"
+                : bi.RS334b.isChecked() ? "2"
                 : "0");
-        SD.put("RSf30335", bi.RSf30335a.isChecked() ? "1"
-                : bi.RSf30335b.isChecked() ? "2"
+        SD.put("RS335", bi.RS335a.isChecked() ? "1"
+                : bi.RS335b.isChecked() ? "2"
                 : "0");
-        SD.put("RSf303396", bi.RSf303396a.isChecked() ? "1"
-                : bi.RSf303396b.isChecked() ? "2"
+        SD.put("RS3396", bi.RS3396a.isChecked() ? "1"
+                : bi.RS3396b.isChecked() ? "2"
                 : "0");
-        SD.put("RSf303396x", bi.RSf303396x.getText().toString());
+        SD.put("RS3396x", bi.RS3396x.getText().toString());
 
-        SD.put("RSf3034", bi.RSf3034a.isChecked() ? "1"
-                : bi.RSf3034b.isChecked() ? "2"
-                : "0");
-
-        SD.put("RSf3035", bi.RSf3035a.isChecked() ? "1"
-                : bi.RSf3035b.isChecked() ? "2"
-                : bi.RSf3035c.isChecked() ? "3"
-                : bi.RSf3035d.isChecked() ? "4"
-                : bi.RSf3035e.isChecked() ? "5"
-                : bi.RSf3035f.isChecked() ? "6"
+        SD.put("RS34", bi.RS34a.isChecked() ? "1"
+                : bi.RS34b.isChecked() ? "2"
                 : "0");
 
-        SD.put("RSf3036", bi.RSf3036a.isChecked() ? "1"
-                : bi.RSf3036b.isChecked() ? "2"
-                : bi.RSf3036c.isChecked() ? "3"
-                : bi.RSf3036d.isChecked() ? "4"
+        SD.put("RS35", bi.RS35a.isChecked() ? "1"
+                : bi.RS35b.isChecked() ? "2"
+                : bi.RS35c.isChecked() ? "3"
+                : bi.RS35d.isChecked() ? "4"
+                : bi.RS35e.isChecked() ? "5"
+                : bi.RS35f.isChecked() ? "6"
                 : "0");
 
-        SD.put("RSf3037", bi.RSf3037a.isChecked() ? "1"
-                : bi.RSf3037b.isChecked() ? "2"
-                : bi.RSf3037c.isChecked() ? "3"
-                : bi.RSf3037d.isChecked() ? "4"
-                : bi.RSf3037e.isChecked() ? "5"
-                : bi.RSf3037f.isChecked() ? "6"
-                : bi.RSf3037g.isChecked() ? "7"
-                : bi.RSf303796.isChecked() ? "96"
+        SD.put("RS36", bi.RS36a.isChecked() ? "1"
+                : bi.RS36b.isChecked() ? "2"
+                : bi.RS36c.isChecked() ? "3"
+                : bi.RS36d.isChecked() ? "4"
                 : "0");
-        SD.put("RSf303796x", bi.RSf303796x.getText().toString());
 
-        SD.put("RSf3038", bi.RSf3038a.isChecked() ? "1"
-                : bi.RSf3038b.isChecked() ? "2"
-                : bi.RSf3038c.isChecked() ? "3"
-                : bi.RSf3038d.isChecked() ? "4"
-                : bi.RSf3038e.isChecked() ? "5"
-                : bi.RSf303896.isChecked() ? "96"
+        SD.put("RS37", bi.RS37a.isChecked() ? "1"
+                : bi.RS37b.isChecked() ? "2"
+                : bi.RS37c.isChecked() ? "3"
+                : bi.RS37d.isChecked() ? "4"
+                : bi.RS37e.isChecked() ? "5"
+                : bi.RS37f.isChecked() ? "6"
+                : bi.RS37g.isChecked() ? "7"
+                : bi.RS3796.isChecked() ? "96"
                 : "0");
-        SD.put("RSf303896x", bi.RSf303896x.getText().toString());
+        SD.put("RS3796x", bi.RS3796x.getText().toString());
 
-        SD.put("RSf3039", bi.RSf3039a.isChecked() ? "1"
-                : bi.RSf3039b.isChecked() ? "2"
-                : bi.RSf3039c.isChecked() ? "3"
-                : bi.RSf3039d.isChecked() ? "4"
-                : bi.RSf303996.isChecked() ? "96"
+        SD.put("RS38", bi.RS38a.isChecked() ? "1"
+                : bi.RS38b.isChecked() ? "2"
+                : bi.RS38c.isChecked() ? "3"
+                : bi.RS38d.isChecked() ? "4"
+                : bi.RS38e.isChecked() ? "5"
+                : bi.RS3896.isChecked() ? "96"
                 : "0");
-        SD.put("RSf303996x", bi.RSf303996x.getText().toString());
+        SD.put("RS3896x", bi.RS3896x.getText().toString());
 
-        SD.put("RSf3040", bi.RSf3040a.isChecked() ? "1"
-                : bi.RSf3040b.isChecked() ? "2"
-                : bi.RSf3040c.isChecked() ? "3"
+        SD.put("RS39", bi.RS39a.isChecked() ? "1"
+                : bi.RS39b.isChecked() ? "2"
+                : bi.RS39c.isChecked() ? "3"
+                : bi.RS39d.isChecked() ? "4"
+                : bi.RS3996.isChecked() ? "96"
+                : "0");
+        SD.put("RS3996x", bi.RS3996x.getText().toString());
+
+        SD.put("RS40", bi.RS40a.isChecked() ? "1"
+                : bi.RS40b.isChecked() ? "2"
+                : bi.RS40c.isChecked() ? "3"
                 : "0");
 
         MainApp.fc.setsD(String.valueOf(SD));
