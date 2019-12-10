@@ -5,8 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -417,18 +415,18 @@ public class Section05Activity extends AppCompatActivity {
                 : "0");
 
         //RS70
-        SF.put("RS70a", bi.RS70a.isChecked() ? "1" : "0");
-        SF.put("RS70b", bi.RS70b.isChecked() ? "2" : "0");
-        SF.put("RS70c", bi.RS70c.isChecked() ? "3" : "0");
-        SF.put("RS70d", bi.RS70d.isChecked() ? "4" : "0");
-        SF.put("RS70e", bi.RS70e.isChecked() ? "5" : "0");
-        SF.put("RS70f", bi.RS70f.isChecked() ? "6" : "0");
-        SF.put("RS70g", bi.RS70g.isChecked() ? "7" : "0");
-        SF.put("RS70h", bi.RS70h.isChecked() ? "8" : "0");
-        SF.put("RS70i", bi.RS70i.isChecked() ? "9" : "0");
-        SF.put("RS70j", bi.RS70j.isChecked() ? "10" : "0");
-        SF.put("RS70k", bi.RS70k.isChecked() ? "11" : "0");
-        SF.put("RS70l", bi.RS70l.isChecked() ? "12" : "0");
+        SF.put("RS70jan", bi.RS70a.isChecked() ? "1" : "0");
+        SF.put("RS70feb", bi.RS70b.isChecked() ? "2" : "0");
+        SF.put("RS70mar", bi.RS70c.isChecked() ? "3" : "0");
+        SF.put("RS70apr", bi.RS70d.isChecked() ? "4" : "0");
+        SF.put("RS70may", bi.RS70e.isChecked() ? "5" : "0");
+        SF.put("RS70jun", bi.RS70f.isChecked() ? "6" : "0");
+        SF.put("RS70jul", bi.RS70g.isChecked() ? "7" : "0");
+        SF.put("RS70aug", bi.RS70h.isChecked() ? "8" : "0");
+        SF.put("RS70sep", bi.RS70i.isChecked() ? "9" : "0");
+        SF.put("RS70oct", bi.RS70j.isChecked() ? "10" : "0");
+        SF.put("RS70nov", bi.RS70k.isChecked() ? "11" : "0");
+        SF.put("RS70dec", bi.RS70l.isChecked() ? "12" : "0");
 
         //RS71
         SF.put("RS71", bi.RS71a.isChecked() ? "1"

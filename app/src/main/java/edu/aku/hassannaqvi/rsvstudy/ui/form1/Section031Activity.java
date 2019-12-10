@@ -120,13 +120,13 @@ public class Section031Activity extends AppCompatActivity {
                 : bi.RS36d.isChecked() ? "4"
                 : "0");
 
-        SD.put("RS37", bi.RS37a.isChecked() ? "1"
-                : bi.RS37b.isChecked() ? "2"
-                : bi.RS37c.isChecked() ? "3"
-                : bi.RS37d.isChecked() ? "4"
-                : bi.RS37e.isChecked() ? "5"
-                : bi.RS37f.isChecked() ? "6"
-                : bi.RS37g.isChecked() ? "7"
+        SD.put("RS37", bi.RS37a.isChecked() ? "11"
+                : bi.RS37b.isChecked() ? "21"
+                : bi.RS37c.isChecked() ? "31"
+                : bi.RS37d.isChecked() ? "41"
+                : bi.RS37e.isChecked() ? "42"
+                : bi.RS37f.isChecked() ? "43"
+                : bi.RS37g.isChecked() ? "51"
                 : bi.RS3796.isChecked() ? "96"
                 : "0");
         SD.put("RS3796x", bi.RS3796x.getText().toString());

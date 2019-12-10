@@ -6,18 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
@@ -181,7 +178,7 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS11", childData.getFather_name());
         SA.put("RS12", childData.getHhhead());
         SA.put("RS13", childData.getDob());
-        SA.put("RS14", String.valueOf(DateUtils.ageInMonthsByDOB(DateUtils.getDate(childData.getDob()))));
+        SA.put("RS14", bi.months.getText().toString());
         SA.put("RS15", bi.RS15.getText().toString());
         SA.put("RS16", bi.RS16a.isChecked() ? "1"
                 : bi.RS16b.isChecked() ? "2"
