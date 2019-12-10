@@ -13,20 +13,7 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
-    <string name="talukaname"> تعلقي جو نالو</string>
-    <string name="ucname">يونين ڪائونسل جو نالو</string>
-    <string name="lhwname"> ليڊي هيلٿ ورڪر جو نالو</string>
-    <string name="villagename"> ڳوٺ جو نالو </string>
-    <string name="lhwcode"> ليڊي هيلٿ ورڪر جو کوڈ </string>
-    <string name="household">گھر جو نمبر </string>
-    <string name="householdhint">XXX-X</string>
-    <string name="location">Location</string>
-    <string name="urban">Urban</string>
-    <string name="rural">Rural</string>
-    <string name="mixed">Mixed</string>
-    <string name="block">Block/ Muhalla</string>
-    <string name="street">Street</string>
-    <string name="cluster"> کلسٹر نمبر </string>
+
 
     <string name="dialogCheck">کیا آپ منتخب کئیے گئے بچے کے بارے میں اسکرین پر ظاہر کی گئی معلومات کے درست ہونے کی تصدیق کرتے ہیں؟</string>
 
@@ -350,13 +337,13 @@
     <string name="section8"> خاندان کی بیماری کے لئے اسکریننگ </string>
     <string name="RS74">8.01: کیا ماں کو کبھی یہ مسائل ہوئے ؟ </string>
     <string name="RS741"> دمہ </string>
-    <string name="RS742"> رائینایٹس </string>
-    <string name="RS743"> ایکزیما </string>
+    <string name="RS742">رائینایٹس (ناک کی سوزش)  </string>
+    <string name="RS743"> ایکزیما (جلد پر سُرخ داغ اور خارش) </string>
 
     <string name="RS75">8.02: کیا والد کو کبھی یہ مسائل ہوئے ؟ </string>
     <string name="RS751"> دمہ </string>
-    <string name="RS752"> رائینایٹس </string>
-    <string name="RS753"> ایکزیما </string>
+    <string name="RS752"> رائینایٹس (ناک کی سوزش) </string>
+    <string name="RS753"> ایکزیما (جلد پر سُرخ داغ اور خارش) </string>
 
 
     <string name="Section9"> پیش قدمی عوامل </string>
@@ -377,7 +364,7 @@
     <string name="Section92"> 2 پیش قدمی عوامل </string>
     <string name="RS77">9.02: کیا آپ کے بچے کو کسی غذا سے الرجی ہے؟ </string>
     <string name="RS78">9.03: آپ کے بچے کو کون سی غذا سے الرجی ہے؟ </string>
-    <string name="RS79">9.04: برائے مہربانی ھیلتھ کارڈ تحقیقی کارکن کے حوالے کر دیں </string>
+    <string name="RS79">9.04: برائے مہربانی تصدیق کریں کہ آپ نے ھیلتھ کارڈ بچے کی ماں یا رضامندی دینے والے شخص کے حوالے کر دیا ہے۔ </string>
     <string name="RS80">10.01: انٹرویو کا اختتام ہوگیا؟ </string>
     <string name="RS82">10.03: اگلے دورے کی تاریخ </string>
     <!--End RSV Study Strings-->

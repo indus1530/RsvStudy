@@ -174,9 +174,9 @@ public class Section01Activity extends AppCompatActivity {
 
         JSONObject SA = new JSONObject();
 
-        SA.put("RS7", childData.getDssid());
-//        SA.put("RS8", bi.RS8.getText().toString());
-        SA.put("RS9", bi.RS9.getText().toString());
+        SA.put("RS07", childData.getDssid());
+//        SA.put("RS08", bi.RS8.getText().toString());
+        SA.put("RS09", bi.RS9.getText().toString());
         SA.put("RS10", childData.getMother_name());
         SA.put("RS11", childData.getFather_name());
         SA.put("RS12", childData.getHhhead());
