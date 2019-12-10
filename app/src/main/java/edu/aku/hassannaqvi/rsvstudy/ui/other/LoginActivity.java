@@ -121,7 +121,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
 
     @BindView(R.id.syncData)
-    TextView syncData;
+    Button syncData;
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
