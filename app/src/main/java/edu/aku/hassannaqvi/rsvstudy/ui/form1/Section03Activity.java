@@ -76,7 +76,7 @@ public class Section03Activity extends AppCompatActivity {
         SC.put("RS25", bi.RS25.getText().toString());
         SC.put("RS26", bi.RS26.getText().toString());
 
-        SC.put("RSf3027", bi.RS27a.isChecked() ? "1"
+        SC.put("RS27", bi.RS27a.isChecked() ? "1"
                 : bi.RS27b.isChecked() ? "2"
                 : bi.RS27c.isChecked() ? "3"
                 : bi.RS27d.isChecked() ? "4"
@@ -100,7 +100,7 @@ public class Section03Activity extends AppCompatActivity {
                 : "0");
         SC.put("RS2796x", bi.RS2796x.getText().toString());
 
-        SC.put("RSf3028", bi.RS28a.isChecked() ? "1"
+        SC.put("RS28", bi.RS28a.isChecked() ? "1"
                 : bi.RS28b.isChecked() ? "2"
                 : bi.RS28c.isChecked() ? "3"
                 : bi.RS28d.isChecked() ? "4"
@@ -117,144 +117,144 @@ public class Section03Activity extends AppCompatActivity {
                 : "0");
         SC.put("RS2896x", bi.RS2896x.getText().toString());
 
-        SC.put("RSf3029", bi.RSf3029a.isChecked() ? "1"
-                : bi.RSf3029b.isChecked() ? "2"
-                : bi.RSf3029c.isChecked() ? "3"
-                : bi.RSf3029d.isChecked() ? "4"
-                : bi.RSf3029e.isChecked() ? "5"
-                : bi.RSf3029f.isChecked() ? "6"
-                : bi.RSf3029g.isChecked() ? "7"
-                : bi.RSf3029h.isChecked() ? "8"
-                : bi.RSf3029i.isChecked() ? "9"
-                : bi.RSf3029j.isChecked() ? "10"
-                : bi.RSf3029k.isChecked() ? "11"
-                : bi.RSf3029l.isChecked() ? "12"
-                : bi.RSf3029m.isChecked() ? "13"
-                : bi.RSf3029n.isChecked() ? "14"
-                : bi.RSf3029o.isChecked() ? "15"
-                : bi.RSf3029p.isChecked() ? "16"
-                : bi.RSf3029q.isChecked() ? "17"
-                : bi.RSf302996.isChecked() ? "96"
+        SC.put("RS29", bi.RS29a.isChecked() ? "1"
+                : bi.RS29b.isChecked() ? "2"
+                : bi.RS29c.isChecked() ? "3"
+                : bi.RS29d.isChecked() ? "4"
+                : bi.RS29e.isChecked() ? "5"
+                : bi.RS29f.isChecked() ? "6"
+                : bi.RS29g.isChecked() ? "7"
+                : bi.RS29h.isChecked() ? "8"
+                : bi.RS29i.isChecked() ? "9"
+                : bi.RS29j.isChecked() ? "10"
+                : bi.RS29k.isChecked() ? "11"
+                : bi.RS29l.isChecked() ? "12"
+                : bi.RS29m.isChecked() ? "13"
+                : bi.RS29n.isChecked() ? "14"
+                : bi.RS29o.isChecked() ? "15"
+                : bi.RS29p.isChecked() ? "16"
+                : bi.RS29q.isChecked() ? "17"
+                : bi.RS2996.isChecked() ? "96"
                 : "0");
-        SC.put("RSf302996x", bi.RSf302996x.getText().toString());
+        SC.put("RS2996x", bi.RS2996x.getText().toString());
 
-        SC.put("RSf3030", bi.RSf3030a.isChecked() ? "1"
-                : bi.RSf3030b.isChecked() ? "2"
-                : bi.RSf3030c.isChecked() ? "3"
-                : bi.RSf3030d.isChecked() ? "4"
-                : bi.RSf3030e.isChecked() ? "5"
-                : bi.RSf3030f.isChecked() ? "6"
-                : bi.RSf3030g.isChecked() ? "7"
-                : bi.RSf303096.isChecked() ? "96"
+        SC.put("RS30", bi.RS30a.isChecked() ? "1"
+                : bi.RS30b.isChecked() ? "2"
+                : bi.RS30c.isChecked() ? "3"
+                : bi.RS30d.isChecked() ? "4"
+                : bi.RS30e.isChecked() ? "5"
+                : bi.RS30f.isChecked() ? "6"
+                : bi.RS30g.isChecked() ? "7"
+                : bi.RS3096.isChecked() ? "96"
                 : "0");
-        SC.put("RSf303096x", bi.RSf303096x.getText().toString());
+        SC.put("RS3096x", bi.RS3096x.getText().toString());
 
-        SC.put("RSf3031", bi.RSf3031a.isChecked() ? "1"
-                : bi.RSf3031b.isChecked() ? "2"
-                : bi.RSf3031c.isChecked() ? "3"
-                : bi.RSf3031d.isChecked() ? "4"
-                : bi.RSf3031e.isChecked() ? "5"
-                : bi.RSf3031f.isChecked() ? "6"
-                : bi.RSf3031g.isChecked() ? "7"
-                : bi.RSf3031h.isChecked() ? "8"
-                : bi.RSf3031i.isChecked() ? "9"
-                : bi.RSf3031j.isChecked() ? "10"
-                : bi.RSf3031k.isChecked() ? "11"
-                : bi.RSf3031l.isChecked() ? "12"
-                : bi.RSf3031m.isChecked() ? "13"
-                : bi.RSf303196.isChecked() ? "96"
+        SC.put("RS31", bi.RS31a.isChecked() ? "1"
+                : bi.RS31b.isChecked() ? "2"
+                : bi.RS31c.isChecked() ? "3"
+                : bi.RS31d.isChecked() ? "4"
+                : bi.RS31e.isChecked() ? "5"
+                : bi.RS31f.isChecked() ? "6"
+                : bi.RS31g.isChecked() ? "7"
+                : bi.RS31h.isChecked() ? "8"
+                : bi.RS31i.isChecked() ? "9"
+                : bi.RS31j.isChecked() ? "10"
+                : bi.RS31k.isChecked() ? "11"
+                : bi.RS31l.isChecked() ? "12"
+                : bi.RS31m.isChecked() ? "13"
+                : bi.RS3196.isChecked() ? "96"
                 : "0");
-        SC.put("RSf303196x", bi.RSf303196x.getText().toString());
+        SC.put("RS3196x", bi.RS3196x.getText().toString());
 
-        SC.put("RSf30321", bi.RSf30321a.isChecked() ? "1"
-                : bi.RSf30321b.isChecked() ? "2"
+        SC.put("RS321", bi.RS321a.isChecked() ? "1"
+                : bi.RS321b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30322", bi.RSf30322a.isChecked() ? "1"
-                : bi.RSf30322b.isChecked() ? "2"
+        SC.put("RS322", bi.RS322a.isChecked() ? "1"
+                : bi.RS322b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30323", bi.RSf30323a.isChecked() ? "1"
-                : bi.RSf30323b.isChecked() ? "2"
+        SC.put("RS323", bi.RS323a.isChecked() ? "1"
+                : bi.RS323b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30324", bi.RSf30324a.isChecked() ? "1"
-                : bi.RSf30324b.isChecked() ? "2"
+        SC.put("RS324", bi.RS324a.isChecked() ? "1"
+                : bi.RS324b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30325", bi.RSf30325a.isChecked() ? "1"
-                : bi.RSf30325b.isChecked() ? "2"
+        SC.put("RS325", bi.RS325a.isChecked() ? "1"
+                : bi.RS325b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30326", bi.RSf30326a.isChecked() ? "1"
-                : bi.RSf30326b.isChecked() ? "2"
+        SC.put("RS326", bi.RS326a.isChecked() ? "1"
+                : bi.RS326b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30327", bi.RSf30327a.isChecked() ? "1"
-                : bi.RSf30327b.isChecked() ? "2"
+        SC.put("RS327", bi.RS327a.isChecked() ? "1"
+                : bi.RS327b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30328", bi.RSf30328a.isChecked() ? "1"
-                : bi.RSf30328b.isChecked() ? "2"
+        SC.put("RS328", bi.RS328a.isChecked() ? "1"
+                : bi.RS328b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf30329", bi.RSf30329a.isChecked() ? "1"
-                : bi.RSf30329b.isChecked() ? "2"
+        SC.put("RS329", bi.RS329a.isChecked() ? "1"
+                : bi.RS329b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303210", bi.RSf303210a.isChecked() ? "1"
-                : bi.RSf303210b.isChecked() ? "2"
+        SC.put("RS3210", bi.RS3210a.isChecked() ? "1"
+                : bi.RS3210b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303211", bi.RSf303211a.isChecked() ? "1"
-                : bi.RSf303211b.isChecked() ? "2"
+        SC.put("RS3211", bi.RS3211a.isChecked() ? "1"
+                : bi.RS3211b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303212", bi.RSf303212a.isChecked() ? "1"
-                : bi.RSf303212b.isChecked() ? "2"
+        SC.put("RS3212", bi.RS3212a.isChecked() ? "1"
+                : bi.RS3212b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303213", bi.RSf303213a.isChecked() ? "1"
-                : bi.RSf303213b.isChecked() ? "2"
+        SC.put("RS3213", bi.RS3213a.isChecked() ? "1"
+                : bi.RS3213b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303214", bi.RSf303214a.isChecked() ? "1"
-                : bi.RSf303214b.isChecked() ? "2"
+        SC.put("RS3214", bi.RS3214a.isChecked() ? "1"
+                : bi.RS3214b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303215", bi.RSf303215a.isChecked() ? "1"
-                : bi.RSf303215b.isChecked() ? "2"
+        SC.put("RS3215", bi.RS3215a.isChecked() ? "1"
+                : bi.RS3215b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303216", bi.RSf303216a.isChecked() ? "1"
-                : bi.RSf303216b.isChecked() ? "2"
+        SC.put("RS3216", bi.RS3216a.isChecked() ? "1"
+                : bi.RS3216b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303217", bi.RSf303217a.isChecked() ? "1"
-                : bi.RSf303217b.isChecked() ? "2"
+        SC.put("RS3217", bi.RS3217a.isChecked() ? "1"
+                : bi.RS3217b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303218", bi.RSf303218a.isChecked() ? "1"
-                : bi.RSf303218b.isChecked() ? "2"
+        SC.put("RS3218", bi.RS3218a.isChecked() ? "1"
+                : bi.RS3218b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303219", bi.RSf303219a.isChecked() ? "1"
-                : bi.RSf303219b.isChecked() ? "2"
+        SC.put("RS3219", bi.RS3219a.isChecked() ? "1"
+                : bi.RS3219b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303220", bi.RSf303220a.isChecked() ? "1"
-                : bi.RSf303220b.isChecked() ? "2"
+        SC.put("RS3220", bi.RS3220a.isChecked() ? "1"
+                : bi.RS3220b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303221", bi.RSf303221a.isChecked() ? "1"
-                : bi.RSf303221b.isChecked() ? "2"
+        SC.put("RS3221", bi.RS3221a.isChecked() ? "1"
+                : bi.RS3221b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303222", bi.RSf303222a.isChecked() ? "1"
-                : bi.RSf303222b.isChecked() ? "2"
+        SC.put("RS3222", bi.RS3222a.isChecked() ? "1"
+                : bi.RS3222b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303223", bi.RSf303223a.isChecked() ? "1"
-                : bi.RSf303223b.isChecked() ? "2"
+        SC.put("RS3223", bi.RS3223a.isChecked() ? "1"
+                : bi.RS3223b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303224", bi.RSf303224a.isChecked() ? "1"
-                : bi.RSf303224b.isChecked() ? "2"
+        SC.put("RS3224", bi.RS3224a.isChecked() ? "1"
+                : bi.RS3224b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303225", bi.RSf303225a.isChecked() ? "1"
-                : bi.RSf303225b.isChecked() ? "2"
+        SC.put("RS3225", bi.RS3225a.isChecked() ? "1"
+                : bi.RS3225b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303226", bi.RSf303226a.isChecked() ? "1"
-                : bi.RSf303226b.isChecked() ? "2"
+        SC.put("RS3226", bi.RS3226a.isChecked() ? "1"
+                : bi.RS3226b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303227", bi.RSf303227a.isChecked() ? "1"
-                : bi.RSf303227b.isChecked() ? "2"
+        SC.put("RS3227", bi.RS3227a.isChecked() ? "1"
+                : bi.RS3227b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303228", bi.RSf303228a.isChecked() ? "1"
-                : bi.RSf303228b.isChecked() ? "2"
+        SC.put("RS3228", bi.RS3228a.isChecked() ? "1"
+                : bi.RS3228b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303229", bi.RSf303229a.isChecked() ? "1"
-                : bi.RSf303229b.isChecked() ? "2"
+        SC.put("RS3229", bi.RS3229a.isChecked() ? "1"
+                : bi.RS3229b.isChecked() ? "2"
                 : "0");
-        SC.put("RSf303230", bi.RSf303230a.isChecked() ? "1"
-                : bi.RSf303230b.isChecked() ? "2"
+        SC.put("RS3230", bi.RS3230a.isChecked() ? "1"
+                : bi.RS3230b.isChecked() ? "2"
                 : "0");
 
         MainApp.fc.setsC(String.valueOf(SC));
