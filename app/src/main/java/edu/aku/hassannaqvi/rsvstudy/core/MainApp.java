@@ -75,7 +75,7 @@ public class MainApp extends Application {
     public static final long MILLISECONDS_IN_2Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_2_YEAR;
     //public static final long MILLISECONDS_IN_100_YEAR = MILLISECONDS_IN_YEAR * 100;
     public static String deviceId;
-    public static int status  = 0;
+    public static int status = 0;
 
     public static Boolean admin = false;
     public static FormsContract fc;
@@ -99,6 +99,7 @@ public class MainApp extends Application {
     public static int positionIm = 0;
     public static boolean flag = true;
     public static int versionCode;
+    public static int followUp = 2;
     public static String versionName;
     public static String hh01txt = "0000";
     public static String hh02txt;

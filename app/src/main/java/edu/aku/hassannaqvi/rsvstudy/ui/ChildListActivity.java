@@ -22,6 +22,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutDialogeBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
 public class ChildListActivity extends AppCompatActivity {
@@ -121,7 +122,7 @@ public class ChildListActivity extends AppCompatActivity {
                             bi.checkChild.setError("Required field");
                             return;
                         }
-                        startActivity(new Intent(ChildListActivity.this, Section01Activity.class).putExtra("data", item));
+                        startActivity(new Intent(ChildListActivity.this, Section05Activity.class).putExtra("data", item));
                         dialog.dismiss();
                     }
                 });
