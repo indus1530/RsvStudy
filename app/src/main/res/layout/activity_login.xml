@@ -194,10 +194,10 @@
 
     <ScrollView
         android:id="@+id/login_form"
-        android:background="@drawable/rsv_splash"
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        android:layout_height="match_parent"
+        android:background="@drawable/rsv_splash">
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -346,9 +346,9 @@
                     android:background="@drawable/buttonshapewhitebg"
                     android:text="@string/action_sign_in"
                     android:textAllCaps="false"
-                    android:textStyle="bold"
                     android:textColor="#96ffffff"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/syncData"
