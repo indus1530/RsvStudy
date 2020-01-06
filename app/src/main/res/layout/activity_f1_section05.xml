@@ -909,7 +909,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility='@{RS72a.checked? View.GONE : View.VISIBLE}'>
+                    android:visibility='@{RS7297.checked? View.GONE : View.VISIBLE}'>
 
                     <!--RS73 - Radio-->
                     <android.support.v7.widget.CardView

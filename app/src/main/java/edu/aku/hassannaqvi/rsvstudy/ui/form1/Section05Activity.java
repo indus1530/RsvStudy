@@ -55,7 +55,7 @@ public class Section05Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS72a.getId()) {
+                if (checkedId == bi.RS7297.getId()) {
                     ClearClass.ClearAllFields(bi.RS7375Layout, null);
                 }
             }
