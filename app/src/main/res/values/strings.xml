@@ -380,9 +380,7 @@
     <string name="Section92"> 2 پیش قدمی عوامل </string>
     <string name="RS81">9.02: کیا آپ کے بچے کو کسی غذا سے الرجی ہے؟ </string>
     <string name="RS82">9.03: آپ کے بچے کو کون سی غذا سے الرجی ہے؟ </string>
-    <string name="RS83">کیا آپ کے بچے کو پچھلے چھ مہینوں
-میں ایکزیما ہوا ہے؟ )جلد پر سُرخ داغ اور
-خارش(</string>
+    <string name="RS83"> کیا آپ کے بچے کو پچھلے چھ مہینوں میں ایکزیما ہوا ہے ؟ ( جلد پر سُرخ داغ اور خارش ) </string>
     <string name="RS84">ایکزیما کس جگہ ہوا تھا؟</string>
     <string name="RS84a">چہرہ</string>
     <string name="RS84b">گردن</string>
@@ -391,8 +389,104 @@
     <string name="RS84e">کرب</string>
     <string name="RS84f">گھٹنوں</string>
     <string name="RS84g">ٹخنوں</string>
-    <string name="RS85">کیا ہیلتھ کا خیال رکھنے والے نے ہیلتھ
-کارڈ دکھایا؟</string>
+    <string name="RS85"> کیا ہیلتھ کا خیال رکھنے والے نے ہیلتھ کارڈ دکھایا؟ </string>
+
+
+    <!-- FORM 2 - B-->
+    <string name="Section10"> 2. General Information </string>
+    <string name="RS101"> 2.01 Outside Temperature (°C) </string>
+    <string name="RS102"> 2.02 Height of the child (cm) </string>
+    <string name="RS103"> 2.03 Weight of the child (kg) </string>
+
+    <string name="Section11"> 3.0 Pre-Exercise Spirometry </string>
+    <string name="RS111"> 3.01 Pre-exercise spirometry performed </string>
+    <string name="RS112"> 3.02 Reasons for not performing spirometry </string>
+    <string name="RS113A"> 3.03A Test start time </string>
+    <string name="RS113B"> 3.03B Test End time </string>
+    <string name="RS114A"> 3.04A Total number of test conducted </string>
+    <string name="RS114B"> 3.04B Total number of acceptable test </string>
+    <string name="RS115"> 3.05 Has the child successfully completed three spirometry tests </string>
+    <string name="RS116"> 3.06 Reason for not completing three spirometry tests </string>
+    <string name="RS116a"> Dizziness </string>
+    <string name="RS116b"> Cough </string>
+    <string name="RS116c"> Child is not cooperating </string>
+    <string name="RS116d"> Machine not working </string>
+
+    <string name="RS117"> 3.07: T E S T S </string>
+    <string name="RS117A"> 3.07A: Quality of the test </string>
+    <string name="RS117Aa"> Good quality and test is acceptable </string>
+    <string name="RS117Ab"> Cough, glottis closure or double peaks </string>
+    <string name="RS117Ac"> Back extrapolate volume large </string>
+    <string name="RS117Ad"> Short Expiration </string>
+    <string name="RS117Ae"> Plateau Not Achieved </string>
+    <string name="RS117Af"> Insufficient efforts </string>
+    <string name="RS117Ag"> FVC Variable </string>
+    <string name="RS117Ah"> FEV1 Variable </string>
+    <string name="RS117Ai"> PEF Variable </string>
+    <string name="RS117Aj"> Not Attempt  </string>
+    <string name="RS117B"> 3.07B: Test Accepted </string>
+    <string name="RS117C"> 3.07C: FVC (L) </string>
+    <string name="RS117D"> 3.07D: FEV1 (L) </string>
+    <string name="RS117E"> 3.07E: FEV1/FVC (%) </string>
+
+    <string name="RS1116"> 3.16: Does the child need to come for a next clinical session to complete the spirometry test </string>
+    <string name="RS1116Hint"> A child needs to visit the clinic again if he/she does not complete the three acceptable spirometry test and parents do not withdrawn the consent for the test </string>
+    <string name="RS1117"> 3.17: Date of Next Clinical Session </string>
+
+    <string name="Section12"> 4.0  Post-Exercise Spirometry </string>
+    <string name="RS121"> 4.01: Has the child performed exercise challenge test </string>
+    <string name="RS122A"> 4.02A: Exercise Start Time </string>
+    <string name="RS122B"> 4.02B: Exercise Stop Time </string>
+    <string name="RS122C"> 4.02C: Distance covered (meters) </string>
+    <string name="RS122D"> 4.02D: Heart Rate Before Exercise </string>
+    <string name="RS122E"> 4.02E: Heart Rate After Exercise </string>
+
+    <string name="RS123"> 4.03: Post Exercise Spirometry Performed </string>
+    <string name="RS124"> 4.04: Reasons for not performing spirometry </string>
+    <string name="RS125A"> 4.05A: Total number of test conducted </string>
+    <string name="RS125B"> 4.05B: Total number of acceptable test </string>
+    <string name="RS126"> 4.06: Has the child successfully completed three post exercise spirometry tests </string>
+    <string name="RS127"> 4.07: Reason for not completing three spirometry tests </string>
+    <string name="RS127a"> Dizziness </string>
+    <string name="RS127b"> Cough </string>
+    <string name="RS127c"> Child is not cooperating </string>
+    <string name="RS127d"> Machine Not Working </string>
+
+    <string name="RS128"> 4.08: T E S T S </string>
+    <string name="RS128A"> 4.08A: Quality of the test </string>
+    <string name="RS128Aa"> Good quality and test is acceptable </string>
+    <string name="RS128Ab"> Cough, glottis closure or double peaks </string>
+    <string name="RS128Ac"> Back extrapolate volume large </string>
+    <string name="RS128Ad"> Short Expiration </string>
+    <string name="RS128Ae"> Plateau Not Achieved </string>
+    <string name="RS128Af"> Insufficient efforts </string>
+    <string name="RS128Ag"> FVC Variable </string>
+    <string name="RS128Ah"> FEV1 Variable </string>
+    <string name="RS128Ai"> PEF Variable </string>
+    <string name="RS128Aj"> Not Attempt  </string>
+    <string name="RS128B"> 4.08B: Test Accepted </string>
+    <string name="RS128C"> 4.08C: FVC (L) </string>
+    <string name="RS128D"> 4.08D: FEV1 (L) </string>
+    <string name="RS128E"> 4.08E: FEV1/FVC (%) </string>
+
+    <string name="RS1217"> 4.17: Does the child need to attend a clinical session to complete the exercise challenge test  </string>
+    <string name="RS1217Hint"> A child needs to visit the clinic again if he/she does not complete the three acceptable spirometry test after completion the exercise and parents do not withdrawn the consent for the test </string>
+    <string name="RS1218"> 4.18: Date of next clinical session </string>
+
+    <string name="Section13"> 5.0  Eosinophil count test </string>
+    <string name="RS131"> 5.01:  Blood drawn for eosinophil count </string>
+    <string name="RS132"> 5.02:  Reason for not collecting blood </string>
+    <string name="RS132a"> Caregiver did not consent for blood collection </string>
+    <string name="RS132b"> Collection failure </string>
+    <string name="RS132c"> Child was not cooperative </string>
+    <string name="RS133"> 5.03:  Does the child need to visit the clinic for performing the eosinophil test </string>
+    <string name="RS133Hint"> A child needs to visit the clinic again if he/she does not provide the blood samples and parents do not withdrawn the consent for the test </string>
+    <string name="RS134"> 5.04:  Date of next clinical visit </string>
+
+    <string name="RS141"> 6.0:  Do the child need to attend a clinical visit to perform any uncompleted test </string>
+    <string name="RS142"> 6.01:  Date of next clinic visit </string>
+    <string name="RS143"> 6.02:  Name of the person conducted the clinical assessment </string>
+
     <!--End RSV Study Strings-->
 
     <string name="end_interview"> اختتام </string>
