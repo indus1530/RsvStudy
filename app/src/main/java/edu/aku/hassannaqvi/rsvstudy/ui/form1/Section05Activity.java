@@ -4,16 +4,13 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
@@ -25,9 +22,6 @@ import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
-
-import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.ageInMonthsByDOB;
-import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.ageInYearByDOB;
 
 public class Section05Activity extends AppCompatActivity {
 
@@ -55,9 +49,8 @@ public class Section05Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS7297.getId()) {
+                if (checkedId == bi.RS7297.getId())
                     ClearClass.ClearAllFields(bi.RS7375Layout, null);
-                }
             }
         });
 
@@ -80,6 +73,8 @@ public class Section05Activity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.RS82cv, null);
                 }
             }
+
+
         });
 
         bi.RS69.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -87,7 +82,9 @@ public class Section05Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.RS69b.getId()) {
+
                     ClearClass.ClearAllFields(bi.RS70cv, null);
+
                 }
             }
         });
