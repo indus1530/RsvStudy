@@ -11,11 +11,13 @@ import org.json.JSONObject;
 public class ChildList implements Parcelable {
 
     private String dssid;
+    private String child_name;
     private String mother_name;
     private String father_name;
     private String hhhead;
     private String study_id;
     private String childstatus;
+
 
     protected ChildList(Parcel in) {
         dssid = in.readString();
@@ -27,11 +29,21 @@ public class ChildList implements Parcelable {
         areacode = in.readString();
         dob = in.readString();
         childstatus = in.readString();
+        child_name = in.readString();
+    }
+
+    public String getChild_name() {
+        return child_name;
+    }
+
+    public void setChild_name(String child_name) {
+        this.child_name = child_name;
     }
 
     public String getChildstatus() {
         return childstatus;
     }
+
     public static final Creator<ChildList> CREATOR = new Creator<ChildList>() {
         @Override
         public ChildList createFromParcel(Parcel in) {
@@ -58,6 +70,7 @@ public class ChildList implements Parcelable {
 
     public ChildList sync(JSONObject jsonObject) throws JSONException {
         this.dssid = jsonObject.getString(singleChildList.COLUMN_DSSID);
+        this.child_name = jsonObject.getString(singleChildList.COLUMN_CHILD_NAME);
         this.mother_name = jsonObject.getString(singleChildList.COLUMN_MOTHER_NAME);
         this.father_name = jsonObject.getString(singleChildList.COLUMN_FATHER_NAME);
         this.hhhead = jsonObject.getString(singleChildList.COLUMN_HHHEAD);
@@ -79,6 +92,7 @@ public class ChildList implements Parcelable {
         this.dob = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_DOB));
         this.gender = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_GENDER));
         this.areacode = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_AREACODE));
+        this.child_name = cursor.getString(cursor.getColumnIndex(singleChildList.COLUMN_CHILD_NAME));
 
 
         return this;
@@ -114,6 +128,7 @@ public class ChildList implements Parcelable {
         json.put(singleChildList.COLUMN_STUDY_ID, this.study_id == null ? JSONObject.NULL : this.study_id);
         json.put(singleChildList.COLUMN_DOB, this.dob == null ? JSONObject.NULL : this.dob);
         json.put(singleChildList.COLUMN_CHILD_STATUS, this.childstatus == null ? JSONObject.NULL : this.childstatus);
+        json.put(singleChildList.COLUMN_CHILD_NAME, this.child_name == null ? JSONObject.NULL : this.child_name);
 
         return json;
     }
@@ -180,6 +195,7 @@ public class ChildList implements Parcelable {
         dest.writeString(areacode);
         dest.writeString(dob);
         dest.writeString(childstatus);
+        dest.writeString(child_name);
     }
 
     public static abstract class singleChildList implements BaseColumns {
@@ -187,6 +203,7 @@ public class ChildList implements Parcelable {
         public static final String TABLE_NAME = "childlist";
         public static final String _ID = "_ID";
         public static final String COLUMN_DSSID = "dssid";
+        public static final String COLUMN_CHILD_NAME = "child_name";
         public static final String COLUMN_MOTHER_NAME = "mother_name";
         public static final String COLUMN_FATHER_NAME = "father_name";
         public static final String COLUMN_HHHEAD = "hhhead";

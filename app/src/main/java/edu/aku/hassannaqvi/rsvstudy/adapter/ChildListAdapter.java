@@ -49,6 +49,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int i) {
 
         holder.bi.dssID.setText(mList.get(i).getDssid());
+        holder.bi.childName.setText(mList.get(i).getChild_name().equals("null") ? "Child Name Not found" : mList.get(i).getChild_name());
         holder.bi.studyID.setText(mList.get(i).getStudy_id());
         holder.bi.motherName.setText(mList.get(i).getMother_name() + " / " + mList.get(i).getFather_name());
         holder.bi.dob.setText(mList.get(i).getDob());

@@ -150,6 +150,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final String SQL_CREATE_CHILDLIST = "CREATE TABLE " + ChildList.singleChildList.TABLE_NAME + "("
             + ChildList.singleChildList._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + ChildList.singleChildList.COLUMN_DSSID + " TEXT,"
+            + ChildList.singleChildList.COLUMN_CHILD_NAME + " TEXT,"
             + ChildList.singleChildList.COLUMN_MOTHER_NAME + " TEXT,"
             + ChildList.singleChildList.COLUMN_FATHER_NAME + " TEXT, "
             + ChildList.singleChildList.COLUMN_HHHEAD + " TEXT,"
@@ -245,6 +246,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ContentValues values = new ContentValues();
 
                 values.put(ChildList.singleChildList.COLUMN_DSSID, cl.getDssid());
+                values.put(ChildList.singleChildList.COLUMN_CHILD_NAME, cl.getChild_name());
                 values.put(ChildList.singleChildList.COLUMN_MOTHER_NAME, cl.getMother_name());
                 values.put(ChildList.singleChildList.COLUMN_FATHER_NAME, cl.getFather_name());
                 values.put(ChildList.singleChildList.COLUMN_HHHEAD, cl.getHhhead());
@@ -700,6 +702,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ChildList.singleChildList.COLUMN_HHHEAD,
                 ChildList.singleChildList.COLUMN_STUDY_ID,
                 ChildList.singleChildList.COLUMN_DOB,
+                ChildList.singleChildList.COLUMN_CHILD_NAME,
         };
 
         String whereClause = ChildList.singleChildList.COLUMN_STUDY_ID + " = ? ";
@@ -888,6 +891,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ChildList.singleChildList.COLUMN_MOTHER_NAME,
                 ChildList.singleChildList.COLUMN_AREACODE,
                 ChildList.singleChildList.COLUMN_HHHEAD,
+                ChildList.singleChildList.COLUMN_CHILD_NAME,
 
         };
 
