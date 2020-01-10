@@ -1,6 +1,6 @@
 <resources>
     <!--new Strings-->
-    <string name="app_name">ANISA RSV Study App</string>
+    <string name="app_name">ANISA RSV Study App (2nd Followup)</string>
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
     <string name="btnUpload">Upload</string>

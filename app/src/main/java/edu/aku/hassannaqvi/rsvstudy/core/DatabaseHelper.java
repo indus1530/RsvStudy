@@ -49,9 +49,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + UsersContract.singleUser.ROW_PASSWORD + " TEXT,"
             + UsersContract.singleUser.FULL_NAME + " TEXT"
             + " );";
-    public static final String DATABASE_NAME = "rsvStudy.db";
-    public static final String DB_NAME = "rsvStudy_copy.db";
-    public static final String PROJECT_NAME = "DMU-RSVSTUDY";
+    public static final String DATABASE_NAME = "rsvStudy2.db";
+    public static final String DB_NAME = "rsvStudy_copy2.db";
+    public static final String PROJECT_NAME = "DMU-RSVSTUDY2";
     private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsContract.FormsTable.TABLE_NAME + "("
