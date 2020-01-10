@@ -30,16 +30,16 @@ import java.util.Date;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.rsvstudy.FormsList;
-import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.AreasContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.rsvstudy.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.ChildListActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

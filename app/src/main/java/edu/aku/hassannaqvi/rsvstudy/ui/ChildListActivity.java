@@ -15,13 +15,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.adapter.ChildListAdapter;
-import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutDialogeBinding;
-import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section01Activity;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 

@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.databinding.UploadListAdapterBinding;
-import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
 
 public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.UploadListViewHolder> {
     List<SyncModel> uploadlist;
