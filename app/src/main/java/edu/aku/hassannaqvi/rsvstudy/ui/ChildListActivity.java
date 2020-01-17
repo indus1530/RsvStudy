@@ -110,6 +110,7 @@ public class ChildListActivity extends AppCompatActivity {
                 bi.studyID.setText(item.getStudy_id());
                 bi.fatherName.setText(item.getFather_name());
                 bi.motherName.setText(item.getMother_name());
+                bi.childName.setText(item.getChild_name().equals("null") ? "Child Name Not Found" : item.getChild_name());
                 bi.dob.setText(item.getDob());
                 bi.gender.setText(item.equals("1") ? "Male" : "Female");
                 bi.genderImage.setImageResource(item.getGender().equals("1") ? R.drawable.boy : R.drawable.girl);
