@@ -10,12 +10,12 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section031Binding;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section031Binding;
 
 
 public class Section031Activity extends AppCompatActivity {

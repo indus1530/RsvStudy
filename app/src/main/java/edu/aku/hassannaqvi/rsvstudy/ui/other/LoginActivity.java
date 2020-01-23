@@ -65,12 +65,12 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TalukasContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.UCsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
+import edu.aku.hassannaqvi.rsvstudy.R;
 
 import static java.lang.Thread.sleep;
 

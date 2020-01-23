@@ -13,15 +13,15 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 
 public class Section05Activity extends AppCompatActivity {
 
@@ -173,6 +173,8 @@ public class Section05Activity extends AppCompatActivity {
 //        //RS49
         SF.put("f_type", MainApp.followUp);
 
+        SF.put("RS15", bi.RS15.getText().toString());
+
         //RS50
         SF.put("RS50", bi.RS50a.isChecked() ? "1"
                 : bi.RS50b.isChecked() ? "2"
@@ -229,6 +231,7 @@ public class Section05Activity extends AppCompatActivity {
 //
 //        //RS59
         SF.put("RS59", bi.RS59.getText().toString());
+
 //
 //        //RS60
         SF.put("RS60", bi.RS60a.isChecked() ? "1"

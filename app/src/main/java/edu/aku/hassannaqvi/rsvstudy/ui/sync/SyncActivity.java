@@ -27,17 +27,16 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
-import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.adapter.SyncListAdapter;
+import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.rsvstudy.get.GetAllData;
-import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.rsvstudy.sync.SyncAllData;
-import edu.aku.hassannaqvi.rsvstudy.sync.SyncDevice;
 
 public class SyncActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;

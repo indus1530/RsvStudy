@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
@@ -17,7 +16,6 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ItemChildListBinding;
-import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
 public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.ViewHolder> {
 
@@ -51,6 +49,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int i) {
 
         holder.bi.dssID.setText(mList.get(i).getDssid());
+        holder.bi.childName.setText(mList.get(i).getChild_name().equals("null") ? "Child Name Not found" : mList.get(i).getChild_name());
         holder.bi.studyID.setText(mList.get(i).getStudy_id());
         holder.bi.motherName.setText(mList.get(i).getMother_name() + " / " + mList.get(i).getFather_name());
         holder.bi.dob.setText(mList.get(i).getDob());

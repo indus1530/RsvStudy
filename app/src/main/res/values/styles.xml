@@ -222,8 +222,9 @@
         <item name="android:textSize">24sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
         <item name="android:background">@color/white</item>
+        <item name="android:padding">10dp</item>
         <!--        <item name="android:button">@color/colorPrimary</item>-->
         <item name="android:elevation">1dp</item>
         <item name="android:radius">2dp</item>
@@ -254,6 +255,7 @@
         <item name="android:drawablePadding">12dp</item>
         <item name="android:background">@color/white</item>
         <item name="android:padding">12dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
 
 
     </style>

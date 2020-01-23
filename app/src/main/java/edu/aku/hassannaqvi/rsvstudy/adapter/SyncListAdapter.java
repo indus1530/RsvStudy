@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.databinding.SyncListAdapterBinding;
-import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
 
 public class SyncListAdapter extends RecyclerView.Adapter<SyncListAdapter.SyncListViewHolder> {
     List<SyncModel> synclist;

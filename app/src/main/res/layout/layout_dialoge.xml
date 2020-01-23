@@ -60,6 +60,30 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:text="Child Name:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/childName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="Child Name"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="Study ID:"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textStyle="bold" />
@@ -239,33 +263,36 @@
                 android:id="@+id/checkChild"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/dialogCheck"
                 android:drawablePadding="32dp"
+                android:text="@string/dialogCheck"
                 android:textSize="24sp"
                 android:typeface="serif"
 
 
                 />
         </android.support.v7.widget.LinearLayoutCompat>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
             android:padding="4dp">
+
             <Button
                 android:id="@+id/start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
                 android:layout_margin="4dp"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="@string/yes"
                 android:textColor="@color/white" />
+
             <Button
                 android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
                 android:layout_margin="4dp"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="@string/no"
                 android:textColor="@color/white" />
 
