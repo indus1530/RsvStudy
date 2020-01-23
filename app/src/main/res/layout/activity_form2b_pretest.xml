@@ -542,7 +542,7 @@
                         android:orientation="vertical" />
 
                     <Button
-                        android:id="@+id/RS117Btn"
+                        android:id="@+id/AddTest"
                         style="@style/buttons"
                         android:background="@android:color/holo_green_dark"
                         android:text="Add Test"
@@ -663,6 +663,7 @@
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
             </LinearLayout>
 
         </LinearLayout>

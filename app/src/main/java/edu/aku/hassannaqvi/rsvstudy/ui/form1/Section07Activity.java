@@ -40,6 +40,8 @@ public class Section07Activity extends AppCompatActivity {
         item = getIntent().getParcelableExtra("data");
         setupSkips();
 
+        bi.llsec07.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
 
     }
 
@@ -130,55 +132,53 @@ public class Section07Activity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.fc.setDSSID(item.getDssid());*/
 
-        JSONObject SF = new JSONObject();
+        JSONObject json = new JSONObject();
 
         //RS49
-        SF.put("f_type", MainApp.followUp);
+        json.put("f_type", MainApp.followUp);
 
         //RS131
-        SF.put("RS131", bi.RS131a.isChecked() ? "1"
+        json.put("RS131", bi.RS131a.isChecked() ? "1"
                 : bi.RS131b.isChecked() ? "2"
                 : "0");
 
         //RS132
-        SF.put("RS132", bi.RS132a.isChecked() ? "1"
+        json.put("RS132", bi.RS132a.isChecked() ? "1"
                 : bi.RS132b.isChecked() ? "2"
                 : bi.RS132c.isChecked() ? "3"
                 : bi.RS13296.isChecked() ? "96"
                 : "0");
-        SF.put("RS13296x", bi.RS13296x.getText().toString());
+        json.put("RS13296x", bi.RS13296x.getText().toString());
 
 
         //RS133
-        SF.put("RS133", bi.RS133a.isChecked() ? "1"
+        json.put("RS133", bi.RS133a.isChecked() ? "1"
                 : bi.RS133b.isChecked() ? "2"
                 : "0");
 
         //RS134
-        SF.put("RS134", bi.RS134.getText().toString());
+        json.put("RS134", bi.RS134.getText().toString());
 
 
         //RS141
-        SF.put("RS141", bi.RS141a.isChecked() ? "1"
+        json.put("RS141", bi.RS141a.isChecked() ? "1"
                 : bi.RS141b.isChecked() ? "2"
                 : "0");
 
         //RS142
-        SF.put("RS142", bi.RS142.getText().toString());
+        json.put("RS142", bi.RS142.getText().toString());
 
         //RS143
-        SF.put("RS143", bi.RS143.getText().toString());
+        json.put("RS143", bi.RS143.getText().toString());
 
-
-        MainApp.fc.setsF(String.valueOf(SF));
-        MainApp.setGPS(this);
+        //MainApp.fc.setsF(String.valueOf(json));
 
     }
 
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        /*DatabaseHelper db = new DatabaseHelper(this);
         long updcount = db.addForm(MainApp.fc);
 
         MainApp.fc.set_ID(String.valueOf(updcount));
@@ -190,7 +190,9 @@ public class Section07Activity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+
+        return true;
 
 
     }

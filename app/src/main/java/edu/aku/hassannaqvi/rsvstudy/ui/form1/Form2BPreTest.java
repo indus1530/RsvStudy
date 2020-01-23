@@ -45,16 +45,24 @@ public class Form2BPreTest extends AppCompatActivity {
         RS117List = new ArrayList<>();
 
 
-        bi.RS117Btn.setOnClickListener(new View.OnClickListener() {
+        bi.AddTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (ValidatorClass.EmptyCheckingContainer(Form2BPreTest.this, bi.RS117View) == false) {
-                    Toast.makeText(Form2BPreTest.this, "Please fill first Test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Form2BPreTest.this, "Fields are empty!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (RS117List.size() == 7) {
+                /*try {
+                    SaveRS117Tests();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }*/
+                bi.RS117Items.removeAllViews();
+
+
+                if (RS117List.size() == 8) {
                     Toast.makeText(Form2BPreTest.this, "Can't add more than 8 tests", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -79,10 +87,12 @@ public class Form2BPreTest extends AppCompatActivity {
             public void onClick(View view) {
                 bi.RS117Items.removeView(rowView);
                 RS117List.remove(rowView);
+
             }
         });
 
     }
+
 
 
     public void BtnContinue() {
@@ -106,6 +116,41 @@ public class Form2BPreTest extends AppCompatActivity {
 
     public void BtnEnd() {
         MainApp.endActivity(this, this);
+    }
+
+
+    private void SaveRS117Tests() throws JSONException {
+        MainApp.fc.setDSSID(item.getDssid());
+        MainApp.fc.get_UID();
+        JSONObject SFa = new JSONObject();
+
+        int counterRS117 = 1;
+        for (View view : RS117List) {
+            LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(view);
+            SFa.put("RS117" + String.format("%02d", counterRS117) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
+                    : layoutTestsBinding.RS117Ab.isChecked() ? "2"
+                    : layoutTestsBinding.RS117Ac.isChecked() ? "3"
+                    : layoutTestsBinding.RS117Ad.isChecked() ? "4"
+                    : layoutTestsBinding.RS117Ae.isChecked() ? "5"
+                    : layoutTestsBinding.RS117Af.isChecked() ? "6"
+                    : layoutTestsBinding.RS117Ag.isChecked() ? "7"
+                    : layoutTestsBinding.RS117Ah.isChecked() ? "8"
+                    : layoutTestsBinding.RS117Ai.isChecked() ? "9"
+                    : layoutTestsBinding.RS117Aj.isChecked() ? "10"
+                    : "0");
+            SFa.put("RS117" + String.format("%02d", counterRS117) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
+                    : layoutTestsBinding.RS117Bb.isChecked() ? "2"
+                    : "0");
+            SFa.put("RS117" + String.format("%02d", counterRS117) + "C", layoutTestsBinding.RS117C.getText().toString());
+            SFa.put("RS117" + String.format("%02d", counterRS117) + "D", layoutTestsBinding.RS117D.getText().toString());
+            SFa.put("RS117" + String.format("%02d", counterRS117) + "E", layoutTestsBinding.RS117E.getText().toString());
+
+            counterRS117++;
+
+        }
+
+        MainApp.fc.setsF(String.valueOf(SFa));
+
     }
 
 
@@ -186,40 +231,14 @@ public class Form2BPreTest extends AppCompatActivity {
         //RS117E
         SF.put("RS117E", bi.RS117E.getText().toString());*/
 
-
-        int counterRS117 = 1;
-        for (View view : RS117List) {
-            LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(view);
-            SF.put("RS117" + String.format("%02d", counterRS117) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
-                    : layoutTestsBinding.RS117Ab.isChecked() ? "2"
-                    : layoutTestsBinding.RS117Ac.isChecked() ? "3"
-                    : layoutTestsBinding.RS117Ad.isChecked() ? "4"
-                    : layoutTestsBinding.RS117Ae.isChecked() ? "5"
-                    : layoutTestsBinding.RS117Af.isChecked() ? "6"
-                    : layoutTestsBinding.RS117Ag.isChecked() ? "7"
-                    : layoutTestsBinding.RS117Ah.isChecked() ? "8"
-                    : layoutTestsBinding.RS117Ai.isChecked() ? "9"
-                    : layoutTestsBinding.RS117Aj.isChecked() ? "10"
-                    : "0");
-            SF.put("RS117" + String.format("%02d", counterRS117) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
-                    : layoutTestsBinding.RS117Bb.isChecked() ? "2"
-                    : "0");
-            SF.put("RS117" + String.format("%02d", counterRS117) + "C", layoutTestsBinding.RS117C.getText().toString());
-            SF.put("RS117" + String.format("%02d", counterRS117) + "D", layoutTestsBinding.RS117D.getText().toString());
-            SF.put("RS117" + String.format("%02d", counterRS117) + "E", layoutTestsBinding.RS117E.getText().toString());
-
-            counterRS117++;
-        }
-
-
-        MainApp.fc.setsF(String.valueOf(SF));
+        //MainApp.fc.setsF(String.valueOf(SF));
 
     }
 
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        /*DatabaseHelper db = new DatabaseHelper(this);
         long updcount = db.addForm(MainApp.fc);
 
         MainApp.fc.set_ID(String.valueOf(updcount));
@@ -231,7 +250,9 @@ public class Form2BPreTest extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+
+        return true;
 
 
     }
