@@ -59,7 +59,12 @@ public class Form2BPreTest extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }*/
-                bi.RS117Items.removeAllViews();
+
+
+                for (int i = 0; i < bi.RS117Items.getChildCount(); i++) {
+                    View child = bi.RS117Items.getChildAt(i);
+                    child.setEnabled(false);
+                }
 
 
                 if (RS117List.size() == 8) {
@@ -122,12 +127,12 @@ public class Form2BPreTest extends AppCompatActivity {
     private void SaveRS117Tests() throws JSONException {
         MainApp.fc.setDSSID(item.getDssid());
         MainApp.fc.get_UID();
-        JSONObject SFa = new JSONObject();
+        JSONObject json = new JSONObject();
 
         int counterRS117 = 1;
         for (View view : RS117List) {
             LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(view);
-            SFa.put("RS117" + String.format("%02d", counterRS117) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
+            json.put("RS117" + String.format("%02d", counterRS117) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
                     : layoutTestsBinding.RS117Ab.isChecked() ? "2"
                     : layoutTestsBinding.RS117Ac.isChecked() ? "3"
                     : layoutTestsBinding.RS117Ad.isChecked() ? "4"
@@ -138,18 +143,18 @@ public class Form2BPreTest extends AppCompatActivity {
                     : layoutTestsBinding.RS117Ai.isChecked() ? "9"
                     : layoutTestsBinding.RS117Aj.isChecked() ? "10"
                     : "0");
-            SFa.put("RS117" + String.format("%02d", counterRS117) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
+            json.put("RS117" + String.format("%02d", counterRS117) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
                     : layoutTestsBinding.RS117Bb.isChecked() ? "2"
                     : "0");
-            SFa.put("RS117" + String.format("%02d", counterRS117) + "C", layoutTestsBinding.RS117C.getText().toString());
-            SFa.put("RS117" + String.format("%02d", counterRS117) + "D", layoutTestsBinding.RS117D.getText().toString());
-            SFa.put("RS117" + String.format("%02d", counterRS117) + "E", layoutTestsBinding.RS117E.getText().toString());
+            json.put("RS117" + String.format("%02d", counterRS117) + "C", layoutTestsBinding.RS117C.getText().toString());
+            json.put("RS117" + String.format("%02d", counterRS117) + "D", layoutTestsBinding.RS117D.getText().toString());
+            json.put("RS117" + String.format("%02d", counterRS117) + "E", layoutTestsBinding.RS117E.getText().toString());
 
             counterRS117++;
 
         }
 
-        MainApp.fc.setsF(String.valueOf(SFa));
+        MainApp.fc.setsF(String.valueOf(json));
 
     }
 
@@ -164,45 +169,45 @@ public class Form2BPreTest extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.fc.setDSSID(item.getDssid());*/
 
-        JSONObject SF = new JSONObject();
+        JSONObject json = new JSONObject();
 
         //RS49
-        SF.put("f_type", MainApp.followUp);
+        json.put("f_type", MainApp.followUp);
 
         //RS111
-        SF.put("RS111", bi.RS111a.isChecked() ? "1"
+        json.put("RS111", bi.RS111a.isChecked() ? "1"
                 : bi.RS111b.isChecked() ? "2"
                 : "0");
 
         //RS112
-        SF.put("RS112", bi.RS112.getText().toString());
+        json.put("RS112", bi.RS112.getText().toString());
 
         //RS113A
-        SF.put("RS113A", bi.RS113A.getText().toString());
+        json.put("RS113A", bi.RS113A.getText().toString());
 
         //RS113B
-        SF.put("RS113B", bi.RS113B.getText().toString());
+        json.put("RS113B", bi.RS113B.getText().toString());
 
 
         //RS114A
-        SF.put("RS114A", bi.RS114A.getText().toString());
+        json.put("RS114A", bi.RS114A.getText().toString());
 
         //RS114B
-        SF.put("RS114B", bi.RS114B.getText().toString());
+        json.put("RS114B", bi.RS114B.getText().toString());
 
         //RS115
-        SF.put("RS115", bi.RS115a.isChecked() ? "1"
+        json.put("RS115", bi.RS115a.isChecked() ? "1"
                 : bi.RS115b.isChecked() ? "2"
                 : "0");
 
         //RS116
-        SF.put("RS116", bi.RS116a.isChecked() ? "1"
+        json.put("RS116", bi.RS116a.isChecked() ? "1"
                 : bi.RS116b.isChecked() ? "2"
                 : bi.RS116c.isChecked() ? "3"
                 : bi.RS116d.isChecked() ? "4"
                 : bi.RS11696.isChecked() ? "96"
                 : "0");
-        SF.put("RS11696x", bi.RS11696x.getText().toString());
+        json.put("RS11696x", bi.RS11696x.getText().toString());
 
         /*//RS117A
         SF.put("RS117A", bi.RS117Aa.isChecked() ? "1"

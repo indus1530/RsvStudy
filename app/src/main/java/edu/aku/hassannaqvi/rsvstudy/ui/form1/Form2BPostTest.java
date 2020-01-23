@@ -54,12 +54,16 @@ public class Form2BPostTest extends AppCompatActivity {
                     return;
                 }
 
+                //bi.RS128Items.getChildAt(0).setEnabled(false);
+
+
                 if (RS128List.size() == 7) {
                     Toast.makeText(Form2BPostTest.this, "Can't add more than 8 tests", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 addViewInRS128();
+                bi.RS128Items.getChildAt(0).setEnabled(false);
 
             }
         });
@@ -120,18 +124,18 @@ public class Form2BPostTest extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.fc.setDSSID(item.getDssid());*/
 
-        JSONObject SF = new JSONObject();
+        JSONObject json = new JSONObject();
 
         //RS49
-        SF.put("f_type", MainApp.followUp);
+        json.put("f_type", MainApp.followUp);
 
         //RS121
-        SF.put("RS121", bi.RS121a.isChecked() ? "1"
+        json.put("RS121", bi.RS121a.isChecked() ? "1"
                 : bi.RS121b.isChecked() ? "2"
                 : "0");
 
         //RS128A
-        SF.put("RS128A", bi.RS128Aa.isChecked() ? "1"
+        json.put("RS128A", bi.RS128Aa.isChecked() ? "1"
                 : bi.RS128Ab.isChecked() ? "2"
                 : bi.RS128Ac.isChecked() ? "3"
                 : bi.RS128Ad.isChecked() ? "4"
@@ -144,24 +148,24 @@ public class Form2BPostTest extends AppCompatActivity {
                 : "0");
 
         //RS128B
-        SF.put("RS128B", bi.RS128Ba.isChecked() ? "1"
+        json.put("RS128B", bi.RS128Ba.isChecked() ? "1"
                 : bi.RS128Bb.isChecked() ? "2"
                 : "0");
 
         //RS128C
-        SF.put("RS128C", bi.RS128C.getText().toString());
+        json.put("RS128C", bi.RS128C.getText().toString());
 
         //RS128D
-        SF.put("RS128D", bi.RS128D.getText().toString());
+        json.put("RS128D", bi.RS128D.getText().toString());
 
         //RS128E
-        SF.put("RS128E", bi.RS128E.getText().toString());
+        json.put("RS128E", bi.RS128E.getText().toString());
 
 
         int counterRS128 = 2;
         for (View view : RS128List) {
             LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(view);
-            SF.put("RS128" + String.format("%02d", counterRS128) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
+            json.put("RS128" + String.format("%02d", counterRS128) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
                     : layoutTestsBinding.RS117Ab.isChecked() ? "2"
                     : layoutTestsBinding.RS117Ac.isChecked() ? "3"
                     : layoutTestsBinding.RS117Ad.isChecked() ? "4"
@@ -172,18 +176,18 @@ public class Form2BPostTest extends AppCompatActivity {
                     : layoutTestsBinding.RS117Ai.isChecked() ? "9"
                     : layoutTestsBinding.RS117Aj.isChecked() ? "10"
                     : "0");
-            SF.put("RS128" + String.format("%02d", counterRS128) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
+            json.put("RS128" + String.format("%02d", counterRS128) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
                     : layoutTestsBinding.RS117Bb.isChecked() ? "2"
                     : "0");
-            SF.put("RS128" + String.format("%02d", counterRS128) + "C", layoutTestsBinding.RS117C.getText().toString());
-            SF.put("RS128" + String.format("%02d", counterRS128) + "D", layoutTestsBinding.RS117D.getText().toString());
-            SF.put("RS128" + String.format("%02d", counterRS128) + "E", layoutTestsBinding.RS117E.getText().toString());
+            json.put("RS128" + String.format("%02d", counterRS128) + "C", layoutTestsBinding.RS117C.getText().toString());
+            json.put("RS128" + String.format("%02d", counterRS128) + "D", layoutTestsBinding.RS117D.getText().toString());
+            json.put("RS128" + String.format("%02d", counterRS128) + "E", layoutTestsBinding.RS117E.getText().toString());
 
             counterRS128++;
         }
 
 
-        MainApp.fc.setsF(String.valueOf(SF));
+        MainApp.fc.setsF(String.valueOf(json));
 
     }
 
