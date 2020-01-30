@@ -399,7 +399,7 @@ public class FormsContract {
 
     public static abstract class FormsTable implements BaseColumns {
 
-        public static final String TABLE_NAME = "forms";
+        public static final String TABLE_NAME = "forms2";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "projectname";
         public static final String COLUMN_ID = "_id";

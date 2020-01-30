@@ -30,16 +30,18 @@ import java.util.Date;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.rsvstudy.FormsList;
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.adapter.BottomSheetFragment;
 import edu.aku.hassannaqvi.rsvstudy.contracts.AreasContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.rsvstudy.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.ChildListActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
-import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         db = new DatabaseHelper(this);
+
 
         Collection<FormsContract> todaysForms = db.getTodayForms();
         Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
@@ -196,6 +199,38 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    /**
+     * f_type
+     * 0 = followup
+     * 1= assessment
+     */
+    public void openForm(final FormType formType) {
+        if (!MainApp.userName.equals("0000")) {
+            final BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
+            bottomSheetFragment.show(getSupportFragmentManager(), "bottomSheet");
+            bottomSheetFragment.setItemClick(new BottomSheetFragment.OnItemClick() {
+                @Override
+                public void OnItemClick(int position) {
+                    if (formType != FormType.ASSESSMENT) {
+                        Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
+                                .putExtra(Constants.FORMTYPE, formType).putExtra("code", position + 1);
+                        startActivity(oF);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Under Development", Toast.LENGTH_SHORT).show();
+                    }
+                    bottomSheetFragment.dismiss();
+                }
+            });
+
+
+        } else {
+            Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
+        }
+
+
+    }
+
 
     public void openDB() {
         Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);

@@ -760,11 +760,11 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <EditText
-                            android:hint="@string/RS67a"
                             android:id="@+id/RS67"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:enabled="@{RS6798.checked? false : true}"
+                            android:hint="@string/RS67a"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text='@{RS6798.checked? ""  : RS67.getText().toString()}' />
