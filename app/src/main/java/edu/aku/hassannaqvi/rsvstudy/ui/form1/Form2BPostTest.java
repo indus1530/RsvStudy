@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -23,6 +24,8 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bPosttestBinding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutTestsBinding;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Form2BPostTest extends AppCompatActivity {
@@ -43,6 +46,7 @@ public class Form2BPostTest extends AppCompatActivity {
 
         item = getIntent().getParcelableExtra("data");
         RS128List = new ArrayList<>();
+        setupSkips();
 
 
         bi.RS128Btn.setOnClickListener(new View.OnClickListener() {
@@ -54,8 +58,6 @@ public class Form2BPostTest extends AppCompatActivity {
                     return;
                 }
 
-                //bi.RS128Items.getChildAt(0).setEnabled(false);
-
 
                 if (RS128List.size() == 7) {
                     Toast.makeText(Form2BPostTest.this, "Can't add more than 8 tests", Toast.LENGTH_SHORT).show();
@@ -63,13 +65,67 @@ public class Form2BPostTest extends AppCompatActivity {
                 }
 
                 addViewInRS128();
-                bi.RS128Items.getChildAt(0).setEnabled(false);
+                //bi.RS128Items.getChildAt(0).setEnabled(false);
 
             }
         });
 
 
     }
+
+
+    private void setupSkips() {
+
+        bi.RS131.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS131b.getId()) {
+                    bi.RS132cv.setVisibility(View.VISIBLE);
+                    bi.RS133cv.setVisibility(View.VISIBLE);
+                    bi.RS134cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS132cv, null);
+                    ClearClass.ClearAllFields(bi.RS133cv, null);
+                    ClearClass.ClearAllFields(bi.RS134cv, null);
+                    bi.RS132cv.setVisibility(View.GONE);
+                    bi.RS133cv.setVisibility(View.GONE);
+                    bi.RS134cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.RS133.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS133a.getId()) {
+                    bi.RS134cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS134cv, null);
+                    bi.RS134cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.RS141.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RS141a.getId()) {
+                    bi.RS142cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RS142cv, null);
+                    bi.RS142cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+    }
+
 
 
     private void addViewInRS128() {
@@ -99,7 +155,7 @@ public class Form2BPostTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Section07Activity.class).putExtra("complete", true));
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -187,6 +243,41 @@ public class Form2BPostTest extends AppCompatActivity {
         }
 
 
+        //RS131
+        json.put("RS131", bi.RS131a.isChecked() ? "1"
+                : bi.RS131b.isChecked() ? "2"
+                : "0");
+
+        //RS132
+        json.put("RS132", bi.RS132a.isChecked() ? "1"
+                : bi.RS132b.isChecked() ? "2"
+                : bi.RS132c.isChecked() ? "3"
+                : bi.RS13296.isChecked() ? "96"
+                : "0");
+        json.put("RS13296x", bi.RS13296x.getText().toString());
+
+
+        //RS133
+        json.put("RS133", bi.RS133a.isChecked() ? "1"
+                : bi.RS133b.isChecked() ? "2"
+                : "0");
+
+        //RS134
+        json.put("RS134", bi.RS134.getText().toString());
+
+
+        //RS141
+        json.put("RS141", bi.RS141a.isChecked() ? "1"
+                : bi.RS141b.isChecked() ? "2"
+                : "0");
+
+        //RS142
+        json.put("RS142", bi.RS142.getText().toString());
+
+        //RS143
+        json.put("RS143", bi.RS143.getText().toString());
+
+
         MainApp.fc.setsF(String.valueOf(json));
 
     }
@@ -217,9 +308,9 @@ public class Form2BPostTest extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 }

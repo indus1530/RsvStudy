@@ -54,18 +54,6 @@ public class Form2BPreTest extends AppCompatActivity {
                     return;
                 }
 
-                /*try {
-                    SaveRS117Tests();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }*/
-
-
-                for (int i = 1; i < bi.RS117Items.getChildCount(); i++) {
-                    View child = bi.RS117Items.getChildAt(i);
-                    child.setEnabled(false);
-                }
-
 
                 if (RS117List.size() == 7) {
                     Toast.makeText(Form2BPreTest.this, "Can't add more than 8 tests", Toast.LENGTH_SHORT).show();
