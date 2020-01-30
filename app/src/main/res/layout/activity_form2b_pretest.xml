@@ -488,7 +488,7 @@
                         style="@style/buttons"
                         android:background="@android:color/holo_green_dark"
                         android:text="Add Test"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 

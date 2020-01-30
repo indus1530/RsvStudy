@@ -304,7 +304,7 @@ public class MainApp extends Application {
                                                 int id) {
                                 activity.finish();
                                 Intent end_intent = new Intent(context, EndingActivity.class);
-                                end_intent.putExtra("check", false);
+                                end_intent.putExtra("complete", false);
                                 context.startActivity(end_intent);
                             }
                         });

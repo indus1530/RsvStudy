@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.rsvstudy.ui;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,7 +24,10 @@ import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutDialogeBinding;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPreTest;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 
 public class ChildListActivity extends AppCompatActivity {
@@ -35,6 +41,7 @@ public class ChildListActivity extends AppCompatActivity {
     ArrayList<String> dssids;
     ArrayList<ChildList> filteredItems;
     private TextView dssID;
+    FormType formType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,9 @@ public class ChildListActivity extends AppCompatActivity {
         this.setTitle("Child List");
 
         areaCode = getIntent().getIntExtra("code", 0);
+
+        Bundle bundle = getIntent().getExtras();
+        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
 
         db = new DatabaseHelper(this);
 
@@ -101,11 +111,18 @@ public class ChildListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(final ChildList item, int position) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(ChildListActivity.this);
+                final Dialog dialog = new Dialog(ChildListActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 View view = LayoutInflater.from(ChildListActivity.this).inflate(R.layout.layout_dialoge, null);
                 final LayoutDialogeBinding bi = DataBindingUtil.bind(view);
-                builder.setView(view);
-                final AlertDialog dialog = builder.create();
+                dialog.setContentView(view);
+                dialog.setCancelable(false);
+                WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+                params.copyFrom(dialog.getWindow().getAttributes());
+                params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+                params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                dialog.show();
+                dialog.getWindow().setAttributes(params);
                 bi.dssID.setText(item.getDssid());
                 bi.studyID.setText(item.getStudy_id());
                 bi.fatherName.setText(item.getFather_name());
@@ -122,7 +139,8 @@ public class ChildListActivity extends AppCompatActivity {
                             bi.checkChild.setError("Required field");
                             return;
                         }
-                        startActivity(new Intent(ChildListActivity.this, Section05Activity.class).putExtra("data", item));
+                        startActivity(new Intent(ChildListActivity.this, formType == FormType.FOLLOWUP ? Section05Activity.class
+                                : Form2BPreTest.class).putExtra("data", item));
                         dialog.dismiss();
                     }
                 });

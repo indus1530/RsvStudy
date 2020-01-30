@@ -212,13 +212,14 @@ public class MainActivity extends AppCompatActivity {
             bottomSheetFragment.setItemClick(new BottomSheetFragment.OnItemClick() {
                 @Override
                 public void OnItemClick(int position) {
-                    if (formType != FormType.ASSESSMENT) {
-                        Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
-                                .putExtra(Constants.FORMTYPE, formType).putExtra("code", position + 1);
-                        startActivity(oF);
-                    } else {
-                        Toast.makeText(MainActivity.this, "Under Development", Toast.LENGTH_SHORT).show();
-                    }
+                    Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
+                            .putExtra(Constants.FORMTYPE, formType).putExtra("code", position + 1);
+                    startActivity(oF);
+//                    if (formType != FormType.ASSESSMENT) {
+//
+//                    } else {
+//                        Toast.makeText(MainActivity.this, "Under Development", Toast.LENGTH_SHORT).show();
+//                    }
                     bottomSheetFragment.dismiss();
                 }
             });

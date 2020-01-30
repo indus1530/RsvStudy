@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="9"
-            android:text="Bhens Colony"
+            android:text="Bilal Colony"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </LinearLayout>
@@ -69,7 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="9"
-            android:text="BH"
+            android:text="Bhens Colony"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </LinearLayout>

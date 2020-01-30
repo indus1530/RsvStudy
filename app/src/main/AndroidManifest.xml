@@ -27,6 +27,7 @@
 
         <activity
             android:name=".ui.ChildListActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
 
         <activity
@@ -83,10 +84,10 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
-        <activity
-            android:name=".ui.form1.Section06Activity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--        <activity-->
+        <!--            android:name=".ui.form1.Section06Activity"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:windowSoftInputMode="adjustResize|stateHidden" />-->
 
         <activity
             android:name=".ui.form1.Section07Activity"
@@ -96,11 +97,13 @@
         <activity
             android:name=".ui.form1.Form2BPreTest"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Form2BPostTest"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
