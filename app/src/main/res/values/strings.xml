@@ -392,17 +392,18 @@
 
     <!-- FORM 2 - B-->
     <string name="Section10"> 2. General Information </string>
-    <string name="RS101"> 2.01:  Outside Temperature (°C) </string>
-    <string name="RS102"> 2.02:  Height of the child (cm) </string>
-    <string name="RS103"> 2.03:  Weight of the child (kg) </string>
+    <string name="RS101"> 2.01:\t Outside Temperature (°C) </string>
+    <string name="RS102"> 2.02:\t Height of the child (cm) </string>
+    <string name="RS103"> 2.03:\t Weight of the child (kg) </string>
 
     <string name="Section11"> 3.0 Pre-Exercise Spirometry </string>
-    <string name="RS111"> 3.01:  Pre-exercise spirometry performed </string>
-    <string name="RS112"> 3.02:  Reasons for not performing spirometry </string>
-    <string name="RS113A"> 3.03A:  Test Start Time </string>
-    <string name="RS113B"> 3.03B:  Test End Time </string>
-    <string name="RS114A"> 3.04A:  Total number of test conducted </string>
-    <string name="RS114B"> 3.04B:  Total number of acceptable test </string>
+    <string name="RS111"> 3.01:\t Pre-exercise spirometry performed </string>
+    <string name="RS113"> 6.02:\t Name of the person conducted the clinical assessment </string>
+    <string name="RS112"> 3.02:\t Reasons for not performing spirometry </string>
+    <string name="RS113A"> 3.03A:\t Test Start Time </string>
+    <string name="RS113B"> 3.03B:\t Test End Time </string>
+    <string name="RS114A"> 3.04A:\t Total number of test conducted </string>
+    <string name="RS114B"> 3.04B:\t Total number of acceptable test </string>
     <string name="RS115"> 3.05: Has the child successfully completed three spirometry tests </string>
     <string name="RS116"> 3.06: Reason for not completing three spirometry tests </string>
     <string name="RS116a"> Dizziness </string>

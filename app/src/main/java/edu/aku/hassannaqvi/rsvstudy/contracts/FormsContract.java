@@ -430,5 +430,6 @@ public class FormsContract {
         public static final String COLUMN_STATUS = "status";
 
         public static String _URL = "sync.php";
+
     }
 }
