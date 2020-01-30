@@ -163,9 +163,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS113 - EditText -->
+                <!--RS113TS - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS113cv"
+                    android:id="@+id/RS113TScv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -175,10 +175,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS113" />
+                            android:text="@string/RS113TS" />
 
                         <EditText
-                            android:id="@+id/RS113"
+                            android:id="@+id/RS113TS"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/Especify"
                             android:maxLength="20" />

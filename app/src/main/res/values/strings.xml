@@ -398,7 +398,7 @@
 
     <string name="Section11"> 3.0 Pre-Exercise Spirometry </string>
     <string name="RS111"> 3.01:\t Pre-exercise spirometry performed </string>
-    <string name="RS113"> 6.02:\t Name of the person conducted the clinical assessment </string>
+    <string name="RS113TS"> Test Assessor </string>
     <string name="RS112"> 3.02:\t Reasons for not performing spirometry </string>
     <string name="RS113A"> 3.03A:\t Test Start Time </string>
     <string name="RS113B"> 3.03B:\t Test End Time </string>
