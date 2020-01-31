@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-            <!--   RS117View   -->
+            <!--   RST307View   -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,6 +46,34 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
+
+                        <LinearLayout
+                            android:id="@+id/llRST307A"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/RST307A" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/RST307A"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:hint="@string/Especify"
+                                android:maxLength="1"
+                                app:maxValue="8"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -54,61 +82,61 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="@string/RS117A" />
+                                android:text="@string/RST307B" />
 
                             <RadioGroup
-                                android:id="@+id/RS117A"
+                                android:id="@+id/RST307B"
                                 style="@style/radiogroup">
 
                                 <RadioButton
-                                    android:id="@+id/RS117Aa"
+                                    android:id="@+id/RST307Ba"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Aa" />
+                                    android:text="@string/RST307Ba" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ab"
+                                    android:id="@+id/RST307Bb"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ab" />
+                                    android:text="@string/RST307Bb" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ac"
+                                    android:id="@+id/RST307Bc"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ac" />
+                                    android:text="@string/RST307Bc" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ad"
+                                    android:id="@+id/RST307Bd"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ad" />
+                                    android:text="@string/RST307Bd" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ae"
+                                    android:id="@+id/RST307Be"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ae" />
+                                    android:text="@string/RST307Be" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Af"
+                                    android:id="@+id/RST307Bf"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Af" />
+                                    android:text="@string/RST307Bf" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ag"
+                                    android:id="@+id/RST307Bg"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ag" />
+                                    android:text="@string/RST307Bg" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ah"
+                                    android:id="@+id/RST307Bh"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ah" />
+                                    android:text="@string/RST307Bh" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ai"
+                                    android:id="@+id/RST307Bi"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Ai" />
+                                    android:text="@string/RST307Bi" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Aj"
+                                    android:id="@+id/RST307Bj"
                                     style="@style/radiobutton"
-                                    android:text="@string/RS117Aj" />
+                                    android:text="@string/RST307Bj" />
 
                             </RadioGroup>
 
@@ -116,7 +144,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/llRS117B"
+                            android:id="@+id/llRST307C"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10sp"
@@ -125,16 +153,16 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="@string/RS117B" />
+                                android:text="@string/RST307C" />
 
 
                             <RadioGroup
-                                android:id="@+id/RS117B"
+                                android:id="@+id/RST307C"
                                 style="@style/radiogroup"
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/RS117Ba"
+                                    android:id="@+id/RST307Ca"
                                     style="@style/radiobutton"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
@@ -142,7 +170,7 @@
                                     android:text="@string/Eyes" />
 
                                 <RadioButton
-                                    android:id="@+id/RS117Bb"
+                                    android:id="@+id/RST307Cb"
                                     style="@style/radiobutton"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
@@ -155,7 +183,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/llRS117C"
+                            android:id="@+id/llRST307D"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5sp"
@@ -166,10 +194,10 @@
                                 style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="@string/RS117C" />
+                                android:text="@string/RST307D" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/RS117C"
+                                android:id="@+id/RST307D"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -183,7 +211,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/llRS117D"
+                            android:id="@+id/llRST307E"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5sp"
@@ -194,10 +222,10 @@
                                 style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="@string/RS117D" />
+                                android:text="@string/RST307E" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/RS117D"
+                                android:id="@+id/RST307E"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -211,7 +239,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/llRS117E"
+                            android:id="@+id/llRST307F"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5sp"
@@ -222,10 +250,10 @@
                                 style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="@string/RS117E" />
+                                android:text="@string/RST307F" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/RS117E"
+                                android:id="@+id/RST307F"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
