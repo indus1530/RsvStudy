@@ -65,9 +65,9 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="##"
-                                app:maxValue="90"
-                                app:minValue="10"
+                                android:maxLength="1"
+                                app:maxValue="8"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
