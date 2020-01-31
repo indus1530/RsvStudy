@@ -78,92 +78,11 @@ public class Form2BPostTest extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                ClearClass.ClearAllFields(bi.RST404cv, null);
-                ClearClass.ClearAllFields(bi.RST405Acv, null);
-                ClearClass.ClearAllFields(bi.RST405Bcv, null);
-                ClearClass.ClearAllFields(bi.RST406Acv, null);
-                ClearClass.ClearAllFields(bi.RST406Bcv, null);
-                ClearClass.ClearAllFields(bi.RST407cv, null);
-                ClearClass.ClearAllFields(bi.RST408cv, null);
-                bi.RST404cv.setVisibility(View.GONE);
-                bi.RST405Acv.setVisibility(View.GONE);
-                bi.RST405Bcv.setVisibility(View.GONE);
-                bi.RST406Acv.setVisibility(View.GONE);
-                bi.RST406Bcv.setVisibility(View.GONE);
-                bi.RST407cv.setVisibility(View.GONE);
-                bi.RST408cv.setVisibility(View.GONE);
-
-                if (checkedId == bi.RST403a.getId()) {
-                    bi.RST405Acv.setVisibility(View.VISIBLE);
-                    bi.RST405Bcv.setVisibility(View.VISIBLE);
-                    bi.RST406Acv.setVisibility(View.VISIBLE);
-                    bi.RST406Bcv.setVisibility(View.VISIBLE);
-                    bi.RST407cv.setVisibility(View.VISIBLE);
-                    bi.RST408cv.setVisibility(View.VISIBLE);
-                } else if (checkedId == bi.RST403b.getId()) {
+                if (checkedId == bi.RST403b.getId()) {
                     bi.RST404cv.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-
-        bi.RST417.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RST417a.getId()) {
-                    bi.RST418cv.setVisibility(View.VISIBLE);
                 } else {
-                    ClearClass.ClearAllFields(bi.RST418cv, null);
-                    bi.RST418cv.setVisibility(View.GONE);
-                }
-            }
-        });
-
-
-        bi.RST501.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RST501b.getId()) {
-                    bi.RST502cv.setVisibility(View.VISIBLE);
-                    bi.RST503cv.setVisibility(View.VISIBLE);
-                    bi.RST504cv.setVisibility(View.VISIBLE);
-                } else {
-                    ClearClass.ClearAllFields(bi.RST502cv, null);
-                    ClearClass.ClearAllFields(bi.RST503cv, null);
-                    ClearClass.ClearAllFields(bi.RST504cv, null);
-                    bi.RST502cv.setVisibility(View.GONE);
-                    bi.RST503cv.setVisibility(View.GONE);
-                    bi.RST504cv.setVisibility(View.GONE);
-                }
-            }
-        });
-
-
-        bi.RST503.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RST503a.getId()) {
-                    bi.RST504cv.setVisibility(View.VISIBLE);
-                } else {
-                    ClearClass.ClearAllFields(bi.RST504cv, null);
-                    bi.RST504cv.setVisibility(View.GONE);
-                }
-            }
-        });
-
-
-        bi.RST600.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RST600a.getId()) {
-                    bi.RST601cv.setVisibility(View.VISIBLE);
-                } else {
-                    ClearClass.ClearAllFields(bi.RST601cv, null);
-                    bi.RST601cv.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.RST404cv, null);
+                    bi.RST404cv.setVisibility(View.GONE);
                 }
             }
         });
@@ -235,80 +154,6 @@ public class Form2BPostTest extends AppCompatActivity {
 
         //RST404
         json.put("RST404", bi.RST404.getText().toString());
-
-        //RST405A
-        json.put("RST405A", bi.RST405A.getText().toString());
-
-        //RST405B
-        json.put("RST405B", bi.RST405B.getText().toString());
-
-        //RST406A
-        json.put("RST406A", bi.RST406A.getText().toString());
-
-        //RST406B
-        json.put("RST406B", bi.RST406B.getText().toString());
-
-
-        //RST407
-        json.put("RST407", bi.RST407a.isChecked() ? "1"
-                : bi.RST407b.isChecked() ? "2"
-                : "0");
-
-
-        //RST408
-        json.put("RST408", bi.RST408a.isChecked() ? "1"
-                : bi.RST408b.isChecked() ? "2"
-                : bi.RST408c.isChecked() ? "3"
-                : bi.RST408d.isChecked() ? "4"
-                : bi.RST40896.isChecked() ? "96"
-                : "0");
-        json.put("RST40896x", bi.RST40896x.getText().toString());
-
-
-        //RST417
-        json.put("RST417", bi.RST417a.isChecked() ? "1"
-                : bi.RST417b.isChecked() ? "2"
-                : "0");
-
-        //RST418
-        json.put("RST418", bi.RST418.getText().toString());
-
-
-        //RST501
-        json.put("RST501", bi.RST501a.isChecked() ? "1"
-                : bi.RST501b.isChecked() ? "2"
-                : "0");
-
-
-        //RST502
-        json.put("RST502", bi.RST502a.isChecked() ? "1"
-                : bi.RST502b.isChecked() ? "2"
-                : bi.RST502c.isChecked() ? "3"
-                : bi.RST50296.isChecked() ? "96"
-                : "0");
-        json.put("RST50296x", bi.RST50296x.getText().toString());
-
-
-        //RST503
-        json.put("RST503", bi.RST503a.isChecked() ? "1"
-                : bi.RST503b.isChecked() ? "2"
-                : "0");
-
-        //RST504
-        json.put("RST504", bi.RST504.getText().toString());
-
-
-        //RST600
-        json.put("RST600", bi.RST600a.isChecked() ? "1"
-                : bi.RST600b.isChecked() ? "2"
-                : "0");
-
-        //RST601
-        json.put("RST601", bi.RST601.getText().toString());
-
-        //RST6AS
-        json.put("RST6AS", bi.RST6AS.getText().toString());
-
 
         MainApp.fc.setsA(String.valueOf(json));
 

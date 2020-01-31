@@ -54,29 +54,29 @@ public class Form2BPreTest extends AppCompatActivity {
 
                 ClearClass.ClearAllFields(bi.RST302cv, null);
                 ClearClass.ClearAllFields(bi.RST3AScv, null);
-                ClearClass.ClearAllFields(bi.RST303Acv, null);
-                ClearClass.ClearAllFields(bi.RST303Bcv, null);
-                ClearClass.ClearAllFields(bi.RST304Acv, null);
-                ClearClass.ClearAllFields(bi.RST304Bcv, null);
-                ClearClass.ClearAllFields(bi.RST305cv, null);
-                ClearClass.ClearAllFields(bi.RST306cv, null);
+//                ClearClass.ClearAllFields(bi.RST303Acv, null);
+//                ClearClass.ClearAllFields(bi.RST303Bcv, null);
+//                ClearClass.ClearAllFields(bi.RST304Acv, null);
+//                ClearClass.ClearAllFields(bi.RST304Bcv, null);
+//                ClearClass.ClearAllFields(bi.RST305cv, null);
+//                ClearClass.ClearAllFields(bi.RST306cv, null);
                 bi.RST302cv.setVisibility(View.GONE);
                 bi.RST3AScv.setVisibility(View.GONE);
-                bi.RST303Acv.setVisibility(View.GONE);
-                bi.RST303Bcv.setVisibility(View.GONE);
-                bi.RST304Acv.setVisibility(View.GONE);
-                bi.RST304Bcv.setVisibility(View.GONE);
-                bi.RST305cv.setVisibility(View.GONE);
-                bi.RST306cv.setVisibility(View.GONE);
+//                bi.RST303Acv.setVisibility(View.GONE);
+//                bi.RST303Bcv.setVisibility(View.GONE);
+//                bi.RST304Acv.setVisibility(View.GONE);
+//                bi.RST304Bcv.setVisibility(View.GONE);
+//                bi.RST305cv.setVisibility(View.GONE);
+//                bi.RST306cv.setVisibility(View.GONE);
 
                 if (checkedId == bi.RST301a.getId()) {
                     bi.RST3AScv.setVisibility(View.VISIBLE);
-                    bi.RST303Acv.setVisibility(View.VISIBLE);
-                    bi.RST303Bcv.setVisibility(View.VISIBLE);
-                    bi.RST304Acv.setVisibility(View.VISIBLE);
-                    bi.RST304Bcv.setVisibility(View.VISIBLE);
-                    bi.RST305cv.setVisibility(View.VISIBLE);
-                    bi.RST306cv.setVisibility(View.VISIBLE);
+//                    bi.RST303Acv.setVisibility(View.VISIBLE);
+//                    bi.RST303Bcv.setVisibility(View.VISIBLE);
+//                    bi.RST304Acv.setVisibility(View.VISIBLE);
+//                    bi.RST304Bcv.setVisibility(View.VISIBLE);
+//                    bi.RST305cv.setVisibility(View.VISIBLE);
+//                    bi.RST306cv.setVisibility(View.VISIBLE);
                 } else if (checkedId == bi.RST301b.getId()) {
                     bi.RST302cv.setVisibility(View.VISIBLE);
                 }
@@ -84,7 +84,7 @@ public class Form2BPreTest extends AppCompatActivity {
         });
 
 
-        bi.RST305.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.RST305.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
@@ -109,7 +109,7 @@ public class Form2BPreTest extends AppCompatActivity {
                     bi.RST317cv.setVisibility(View.GONE);
                 }
             }
-        });
+        });*/
 
 
     }
@@ -173,7 +173,7 @@ public class Form2BPreTest extends AppCompatActivity {
         json.put("RST302", bi.RST302.getText().toString());
 
         //RST303A
-        json.put("RST303A", bi.RST303A.getText().toString());
+        /*json.put("RST303A", bi.RST303A.getText().toString());
 
         //RST303B
         json.put("RST303B", bi.RST303B.getText().toString());
@@ -204,7 +204,7 @@ public class Form2BPreTest extends AppCompatActivity {
                 : "0");
 
         //RST317
-        json.put("RST317", bi.RST317.getText().toString());
+        json.put("RST317", bi.RST317.getText().toString());*/
 
         MainApp.fc.setsA(String.valueOf(json));
 

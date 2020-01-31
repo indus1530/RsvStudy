@@ -210,7 +210,10 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RST303A - EditText -->
+                <!-- ELSE PART AFTER TEST -->
+                <!--
+
+                &lt;!&ndash;RST303A - EditText &ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST303Acv"
                     style="@style/cardView">
@@ -233,7 +236,7 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RST303B - EditText -->
+                &lt;!&ndash;RST303B - EditText &ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST303Bcv"
                     style="@style/cardView">
@@ -256,8 +259,8 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--   RST307View   -->
-                <!--<LinearLayout
+                &lt;!&ndash;   RST307View   &ndash;&gt;
+                &lt;!&ndash;<LinearLayout
                     android:id="@+id/RST307View"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -490,9 +493,9 @@
                         android:text="Add Test"
                         android:textColor="@color/white" />
 
-                </LinearLayout>-->
+                </LinearLayout>&ndash;&gt;
 
-                <!--RST304A - EditText -->
+                &lt;!&ndash;RST304A - EditText &ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST304Acv"
                     style="@style/cardView">
@@ -515,7 +518,7 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RST304B - EditText -->
+                &lt;!&ndash;RST304B - EditText &ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST304Bcv"
                     style="@style/cardView">
@@ -539,7 +542,7 @@
                 </android.support.v7.widget.CardView>
 
 
-                <!--RST305 - Radio-->
+                &lt;!&ndash;RST305 - Radio&ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST305cv"
                     style="@style/cardView">
@@ -579,7 +582,7 @@
                 </android.support.v7.widget.CardView>
 
 
-                <!--RST306 - Radio-->
+                &lt;!&ndash;RST306 - Radio&ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST306cv"
                     style="@style/cardView">
@@ -636,7 +639,7 @@
                 </android.support.v7.widget.CardView>
 
 
-                <!--RST316 - Radio-->
+                &lt;!&ndash;RST316 - Radio&ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST316cv"
                     style="@style/cardView">
@@ -682,7 +685,7 @@
                 </android.support.v7.widget.CardView>
 
 
-                <!--RST317 - Date Picker-->
+                &lt;!&ndash;RST317 - Date Picker&ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST317cv"
                     style="@style/cardView">
@@ -708,6 +711,7 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
+-->
 
 
             </LinearLayout>
