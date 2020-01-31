@@ -140,7 +140,6 @@ public class Form2BPreTest extends AppCompatActivity {
     }
 
 
-
     private void SaveDraft() throws JSONException {
 
         MainApp.fc = new FormsContract();
