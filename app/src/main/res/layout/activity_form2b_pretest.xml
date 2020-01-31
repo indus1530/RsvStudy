@@ -727,7 +727,7 @@
                     android:layout_weight="1"
                     android:background="@android:color/holo_red_light"
                     android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview"
+                    android:text="END"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -740,7 +740,7 @@
                     android:layout_weight="1"
                     android:background="@android:color/holo_green_light"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection"
+                    android:text="SAVE"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
