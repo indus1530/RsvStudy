@@ -1,19 +1,17 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
-import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,8 +20,7 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bPretestBinding;
-import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutTestsBinding;
-import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Form2BPreTest extends AppCompatActivity {
@@ -41,52 +38,81 @@ public class Form2BPreTest extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form2b_pretest);
         bi.setCallback(this);
         db = new DatabaseHelper(this);
-
         item = getIntent().getParcelableExtra("data");
-        RS117List = new ArrayList<>();
+        setupSkips();
 
-
-        bi.AddTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (ValidatorClass.EmptyCheckingContainer(Form2BPreTest.this, bi.RS117View) == false) {
-                    //Toast.makeText(Form2BPreTest.this, "Fields are empty!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-
-                if (RS117List.size() == 7) {
-                    Toast.makeText(Form2BPreTest.this, "Can't add more than 8 tests", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                addViewInRS117();
-
-            }
-        });
 
     }
 
 
-    private void addViewInRS117() {
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View rowView = inflater.inflate(R.layout.layout_tests, null);
-        bi.RS117Items.addView(rowView);
-        RS117List.add(rowView);
+    private void setupSkips() {
 
-        LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(rowView);
-        layoutTestsBinding.btnClearView.setOnClickListener(new View.OnClickListener() {
+
+        bi.RST301.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                bi.RS117Items.removeView(rowView);
-                RS117List.remove(rowView);
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
 
+                ClearClass.ClearAllFields(bi.RST302cv, null);
+                ClearClass.ClearAllFields(bi.RST3AScv, null);
+                ClearClass.ClearAllFields(bi.RST303Acv, null);
+                ClearClass.ClearAllFields(bi.RST303Bcv, null);
+                ClearClass.ClearAllFields(bi.RST304Acv, null);
+                ClearClass.ClearAllFields(bi.RST304Bcv, null);
+                ClearClass.ClearAllFields(bi.RST305cv, null);
+                ClearClass.ClearAllFields(bi.RST306cv, null);
+                bi.RST302cv.setVisibility(View.GONE);
+                bi.RST3AScv.setVisibility(View.GONE);
+                bi.RST303Acv.setVisibility(View.GONE);
+                bi.RST303Bcv.setVisibility(View.GONE);
+                bi.RST304Acv.setVisibility(View.GONE);
+                bi.RST304Bcv.setVisibility(View.GONE);
+                bi.RST305cv.setVisibility(View.GONE);
+                bi.RST306cv.setVisibility(View.GONE);
+
+                if (checkedId == bi.RST301a.getId()) {
+                    bi.RST3AScv.setVisibility(View.VISIBLE);
+                    bi.RST303Acv.setVisibility(View.VISIBLE);
+                    bi.RST303Bcv.setVisibility(View.VISIBLE);
+                    bi.RST304Acv.setVisibility(View.VISIBLE);
+                    bi.RST304Bcv.setVisibility(View.VISIBLE);
+                    bi.RST305cv.setVisibility(View.VISIBLE);
+                    bi.RST306cv.setVisibility(View.VISIBLE);
+                } else if (checkedId == bi.RST301b.getId()) {
+                    bi.RST302cv.setVisibility(View.VISIBLE);
+                }
             }
         });
 
-    }
 
+        bi.RST305.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RST305b.getId()) {
+                    bi.RST306cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RST306cv, null);
+                    bi.RST306cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.RST316.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RST316a.getId()) {
+                    bi.RST317cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RST317cv, null);
+                    bi.RST317cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+    }
 
 
     public void BtnContinue() {
@@ -98,7 +124,7 @@ public class Form2BPreTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(this, Form2BTest.class).putExtra("complete", true));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -126,116 +152,61 @@ public class Form2BPreTest extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        //RS49
-        json.put("f_type", MainApp.followUp);
+        //RST201
+        json.put("RST201", bi.RST201.getText().toString());
 
-        //RS111
-        json.put("RS111", bi.RS111a.isChecked() ? "1"
-                : bi.RS111b.isChecked() ? "2"
+        //RST202
+        json.put("RST202", bi.RST202.getText().toString());
+
+        //RST203
+        json.put("RST203", bi.RST203.getText().toString());
+
+        //RST301
+        json.put("RST301", bi.RST301a.isChecked() ? "1"
+                : bi.RST301b.isChecked() ? "2"
                 : "0");
 
-        //RS112
-        json.put("RS112", bi.RS112.getText().toString());
+        //RST3AS
+        json.put("RST3AS", bi.RST3AS.getText().toString());
 
-        /*//RS113A
-        json.put("RS113A", bi.RS113A.getText().toString());
+        //RST302
+        json.put("RST302", bi.RST302.getText().toString());
 
-        //RS113B
-        json.put("RS113B", bi.RS113B.getText().toString());*/
+        //RST303A
+        json.put("RST303A", bi.RST303A.getText().toString());
 
+        //RST303B
+        json.put("RST303B", bi.RST303B.getText().toString());
 
-        //RS114A
-        json.put("RS114A", bi.RS114A.getText().toString());
+        //RST304A
+        json.put("RST304A", bi.RST304A.getText().toString());
 
-        //RS114B
-        json.put("RS114B", bi.RS114B.getText().toString());
+        //RST304B
+        json.put("RST304B", bi.RST304B.getText().toString());
 
-        //RS115
-        json.put("RS115", bi.RS115a.isChecked() ? "1"
-                : bi.RS115b.isChecked() ? "2"
+        //RST305
+        json.put("RST305", bi.RST305a.isChecked() ? "1"
+                : bi.RST305b.isChecked() ? "2"
                 : "0");
 
-        //RS116
-        json.put("RS116", bi.RS116a.isChecked() ? "1"
-                : bi.RS116b.isChecked() ? "2"
-                : bi.RS116c.isChecked() ? "3"
-                : bi.RS116d.isChecked() ? "4"
-                : bi.RS11696.isChecked() ? "96"
+        //RST306
+        json.put("RST306", bi.RST306a.isChecked() ? "1"
+                : bi.RST306b.isChecked() ? "2"
+                : bi.RST306c.isChecked() ? "3"
+                : bi.RST306d.isChecked() ? "4"
+                : bi.RST30696.isChecked() ? "96"
                 : "0");
-        json.put("RS11696x", bi.RS11696x.getText().toString());
+        json.put("RST30696x", bi.RST30696x.getText().toString());
 
-        //RS117A
-        json.put("RS117A", bi.RS117Aa.isChecked() ? "1"
-                : bi.RS117Ab.isChecked() ? "2"
-                : bi.RS117Ac.isChecked() ? "3"
-                : bi.RS117Ad.isChecked() ? "4"
-                : bi.RS117Ae.isChecked() ? "5"
-                : bi.RS117Af.isChecked() ? "6"
-                : bi.RS117Ag.isChecked() ? "7"
-                : bi.RS117Ah.isChecked() ? "8"
-                : bi.RS117Ai.isChecked() ? "9"
-                : bi.RS117Aj.isChecked() ? "10"
+        //RST316
+        json.put("RST316", bi.RST316a.isChecked() ? "1"
+                : bi.RST316b.isChecked() ? "2"
                 : "0");
 
-        //RS117B
-        json.put("RS117B", bi.RS117Ba.isChecked() ? "1"
-                : bi.RS117Bb.isChecked() ? "2"
-                : "0");
+        //RST317
+        json.put("RST317", bi.RST317.getText().toString());
 
-        //RS117C
-        json.put("RS117C", bi.RS117C.getText().toString());
-
-        //RS117D
-        json.put("RS117D", bi.RS117D.getText().toString());
-
-        //RS117E
-        json.put("RS117E", bi.RS117E.getText().toString());
-
-
-        int counterRS117 = 2;
-        for (View view : RS117List) {
-            LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(view);
-            json.put("RS117" + String.format("%02d", counterRS117) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
-                    : layoutTestsBinding.RS117Ab.isChecked() ? "2"
-                    : layoutTestsBinding.RS117Ac.isChecked() ? "3"
-                    : layoutTestsBinding.RS117Ad.isChecked() ? "4"
-                    : layoutTestsBinding.RS117Ae.isChecked() ? "5"
-                    : layoutTestsBinding.RS117Af.isChecked() ? "6"
-                    : layoutTestsBinding.RS117Ag.isChecked() ? "7"
-                    : layoutTestsBinding.RS117Ah.isChecked() ? "8"
-                    : layoutTestsBinding.RS117Ai.isChecked() ? "9"
-                    : layoutTestsBinding.RS117Aj.isChecked() ? "10"
-                    : "0");
-            json.put("RS117" + String.format("%02d", counterRS117) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
-                    : layoutTestsBinding.RS117Bb.isChecked() ? "2"
-                    : "0");
-            json.put("RS117" + String.format("%02d", counterRS117) + "C", layoutTestsBinding.RS117C.getText().toString());
-            json.put("RS117" + String.format("%02d", counterRS117) + "D", layoutTestsBinding.RS117D.getText().toString());
-            json.put("RS117" + String.format("%02d", counterRS117) + "E", layoutTestsBinding.RS117E.getText().toString());
-
-            counterRS117++;
-
-        }
-
-
-        json.put("RS115", bi.RS115a.isChecked() ? "1"
-                : bi.RS115b.isChecked() ? "2"
-                : "0");
-
-        json.put("RS116", bi.RS116a.isChecked() ? "1"
-                : bi.RS116b.isChecked() ? "2"
-                : bi.RS116c.isChecked() ? "3"
-                : bi.RS116d.isChecked() ? "4"
-                : bi.RS11696.isChecked() ? "96"
-                : "0");
-        json.put("RS11696x", bi.RS11696x.getText().toString());
-
-
-        json.put("RS1116", bi.RS1116a.isChecked() ? "1"
-                : bi.RS1116b.isChecked() ? "2"
-                : "0");
-
-        json.put("RS1117", bi.RS1117.getText().toString());
+        MainApp.fc.setsA(String.valueOf(json));
 
     }
 
@@ -267,10 +238,10 @@ public class Form2BPreTest extends AppCompatActivity {
     }
 
 
-    /*@Override
+    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 
 
 }

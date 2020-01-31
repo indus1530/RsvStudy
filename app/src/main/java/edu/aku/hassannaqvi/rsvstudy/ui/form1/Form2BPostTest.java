@@ -1,11 +1,9 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
-import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -14,7 +12,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +20,6 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bPosttestBinding;
-import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutTestsBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
@@ -43,32 +39,8 @@ public class Form2BPostTest extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form2b_posttest);
         bi.setCallback(this);
         db = new DatabaseHelper(this);
-
         item = getIntent().getParcelableExtra("data");
-        RS128List = new ArrayList<>();
         setupSkips();
-
-
-        bi.RS128Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (ValidatorClass.EmptyCheckingContainer(Form2BPostTest.this, bi.RS128View) == false) {
-                    Toast.makeText(Form2BPostTest.this, "Please fill first Test", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-
-                if (RS128List.size() == 7) {
-                    Toast.makeText(Form2BPostTest.this, "Can't add more than 8 tests", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                addViewInRS128();
-                //bi.RS128Items.getChildAt(0).setEnabled(false);
-
-            }
-        });
 
 
     }
@@ -76,72 +48,126 @@ public class Form2BPostTest extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.RS131.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.RST401.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS131b.getId()) {
-                    bi.RS132cv.setVisibility(View.VISIBLE);
-                    bi.RS133cv.setVisibility(View.VISIBLE);
-                    bi.RS134cv.setVisibility(View.VISIBLE);
+                if (checkedId == bi.RST401a.getId()) {
+                    bi.RST402Acv.setVisibility(View.VISIBLE);
+                    bi.RST402Bcv.setVisibility(View.VISIBLE);
+                    bi.RST402Ccv.setVisibility(View.VISIBLE);
+                    bi.RST402Dcv.setVisibility(View.VISIBLE);
+                    bi.RST402Ecv.setVisibility(View.VISIBLE);
                 } else {
-                    ClearClass.ClearAllFields(bi.RS132cv, null);
-                    ClearClass.ClearAllFields(bi.RS133cv, null);
-                    ClearClass.ClearAllFields(bi.RS134cv, null);
-                    bi.RS132cv.setVisibility(View.GONE);
-                    bi.RS133cv.setVisibility(View.GONE);
-                    bi.RS134cv.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.RST402Acv, null);
+                    ClearClass.ClearAllFields(bi.RST402Bcv, null);
+                    ClearClass.ClearAllFields(bi.RST402Ccv, null);
+                    ClearClass.ClearAllFields(bi.RST402Dcv, null);
+                    ClearClass.ClearAllFields(bi.RST402Ecv, null);
+                    bi.RST402Acv.setVisibility(View.GONE);
+                    bi.RST402Bcv.setVisibility(View.GONE);
+                    bi.RST402Ccv.setVisibility(View.GONE);
+                    bi.RST402Dcv.setVisibility(View.GONE);
+                    bi.RST402Ecv.setVisibility(View.GONE);
                 }
             }
         });
 
 
-        bi.RS133.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.RST403.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS133a.getId()) {
-                    bi.RS134cv.setVisibility(View.VISIBLE);
-                } else {
-                    ClearClass.ClearAllFields(bi.RS134cv, null);
-                    bi.RS134cv.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.RST404cv, null);
+                ClearClass.ClearAllFields(bi.RST405Acv, null);
+                ClearClass.ClearAllFields(bi.RST405Bcv, null);
+                ClearClass.ClearAllFields(bi.RST406Acv, null);
+                ClearClass.ClearAllFields(bi.RST406Bcv, null);
+                ClearClass.ClearAllFields(bi.RST407cv, null);
+                ClearClass.ClearAllFields(bi.RST408cv, null);
+                bi.RST404cv.setVisibility(View.GONE);
+                bi.RST405Acv.setVisibility(View.GONE);
+                bi.RST405Bcv.setVisibility(View.GONE);
+                bi.RST406Acv.setVisibility(View.GONE);
+                bi.RST406Bcv.setVisibility(View.GONE);
+                bi.RST407cv.setVisibility(View.GONE);
+                bi.RST408cv.setVisibility(View.GONE);
+
+                if (checkedId == bi.RST403a.getId()) {
+                    bi.RST405Acv.setVisibility(View.VISIBLE);
+                    bi.RST405Bcv.setVisibility(View.VISIBLE);
+                    bi.RST406Acv.setVisibility(View.VISIBLE);
+                    bi.RST406Bcv.setVisibility(View.VISIBLE);
+                    bi.RST407cv.setVisibility(View.VISIBLE);
+                    bi.RST408cv.setVisibility(View.VISIBLE);
+                } else if (checkedId == bi.RST403b.getId()) {
+                    bi.RST404cv.setVisibility(View.VISIBLE);
                 }
             }
         });
 
 
-        bi.RS141.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.RST417.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.RS141a.getId()) {
-                    bi.RS142cv.setVisibility(View.VISIBLE);
+                if (checkedId == bi.RST417a.getId()) {
+                    bi.RST418cv.setVisibility(View.VISIBLE);
                 } else {
-                    ClearClass.ClearAllFields(bi.RS142cv, null);
-                    bi.RS142cv.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.RST418cv, null);
+                    bi.RST418cv.setVisibility(View.GONE);
                 }
             }
         });
 
 
-    }
-
-
-
-    private void addViewInRS128() {
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View rowView = inflater.inflate(R.layout.layout_tests, null);
-        bi.RS128Items.addView(rowView);
-        RS128List.add(rowView);
-
-        LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(rowView);
-        layoutTestsBinding.btnClearView.setOnClickListener(new View.OnClickListener() {
+        bi.RST501.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                bi.RS128Items.removeView(rowView);
-                RS128List.remove(rowView);
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RST501b.getId()) {
+                    bi.RST502cv.setVisibility(View.VISIBLE);
+                    bi.RST503cv.setVisibility(View.VISIBLE);
+                    bi.RST504cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RST502cv, null);
+                    ClearClass.ClearAllFields(bi.RST503cv, null);
+                    ClearClass.ClearAllFields(bi.RST504cv, null);
+                    bi.RST502cv.setVisibility(View.GONE);
+                    bi.RST503cv.setVisibility(View.GONE);
+                    bi.RST504cv.setVisibility(View.GONE);
+                }
             }
         });
+
+
+        bi.RST503.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RST503a.getId()) {
+                    bi.RST504cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RST504cv, null);
+                    bi.RST504cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.RST600.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.RST600a.getId()) {
+                    bi.RST601cv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.RST601cv, null);
+                    bi.RST601cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
 
     }
 
@@ -177,108 +203,114 @@ public class Form2BPostTest extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
-        MainApp.fc.setDSSID(item.getDssid());*/
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));*/
 
         JSONObject json = new JSONObject();
 
-        //RS49
-        json.put("f_type", MainApp.followUp);
-
-        //RS121
-        json.put("RS121", bi.RS121a.isChecked() ? "1"
-                : bi.RS121b.isChecked() ? "2"
+        //RST401
+        json.put("RST401", bi.RST401a.isChecked() ? "1"
+                : bi.RST401b.isChecked() ? "2"
                 : "0");
 
-        //RS128A
-        json.put("RS128A", bi.RS128Aa.isChecked() ? "1"
-                : bi.RS128Ab.isChecked() ? "2"
-                : bi.RS128Ac.isChecked() ? "3"
-                : bi.RS128Ad.isChecked() ? "4"
-                : bi.RS128Ae.isChecked() ? "5"
-                : bi.RS128Af.isChecked() ? "6"
-                : bi.RS128Ag.isChecked() ? "7"
-                : bi.RS128Ah.isChecked() ? "8"
-                : bi.RS128Ai.isChecked() ? "9"
-                : bi.RS128Aj.isChecked() ? "10"
+        //RST402A
+        json.put("RST402A", bi.RST402A.getText().toString());
+
+        //RST402B
+        json.put("RST402B", bi.RST402B.getText().toString());
+
+        //RST402C
+        json.put("RST402C", bi.RST402C.getText().toString());
+
+        //RST402D
+        json.put("RST402D", bi.RST402D.getText().toString());
+
+        //RST402E
+        json.put("RST402E", bi.RST402E.getText().toString());
+
+
+        //RST403
+        json.put("RST403", bi.RST403a.isChecked() ? "1"
+                : bi.RST403b.isChecked() ? "2"
                 : "0");
 
-        //RS128B
-        json.put("RS128B", bi.RS128Ba.isChecked() ? "1"
-                : bi.RS128Bb.isChecked() ? "2"
+        //RST404
+        json.put("RST404", bi.RST404.getText().toString());
+
+        //RST405A
+        json.put("RST405A", bi.RST405A.getText().toString());
+
+        //RST405B
+        json.put("RST405B", bi.RST405B.getText().toString());
+
+        //RST406A
+        json.put("RST406A", bi.RST406A.getText().toString());
+
+        //RST406B
+        json.put("RST406B", bi.RST406B.getText().toString());
+
+
+        //RST407
+        json.put("RST407", bi.RST407a.isChecked() ? "1"
+                : bi.RST407b.isChecked() ? "2"
                 : "0");
 
-        //RS128C
-        json.put("RS128C", bi.RS128C.getText().toString());
 
-        //RS128D
-        json.put("RS128D", bi.RS128D.getText().toString());
-
-        //RS128E
-        json.put("RS128E", bi.RS128E.getText().toString());
-
-
-        int counterRS128 = 2;
-        for (View view : RS128List) {
-            LayoutTestsBinding layoutTestsBinding = DataBindingUtil.bind(view);
-            json.put("RS128" + String.format("%02d", counterRS128) + "A", layoutTestsBinding.RS117Aa.isChecked() ? "1"
-                    : layoutTestsBinding.RS117Ab.isChecked() ? "2"
-                    : layoutTestsBinding.RS117Ac.isChecked() ? "3"
-                    : layoutTestsBinding.RS117Ad.isChecked() ? "4"
-                    : layoutTestsBinding.RS117Ae.isChecked() ? "5"
-                    : layoutTestsBinding.RS117Af.isChecked() ? "6"
-                    : layoutTestsBinding.RS117Ag.isChecked() ? "7"
-                    : layoutTestsBinding.RS117Ah.isChecked() ? "8"
-                    : layoutTestsBinding.RS117Ai.isChecked() ? "9"
-                    : layoutTestsBinding.RS117Aj.isChecked() ? "10"
-                    : "0");
-            json.put("RS128" + String.format("%02d", counterRS128) + "B", layoutTestsBinding.RS117Ba.isChecked() ? "1"
-                    : layoutTestsBinding.RS117Bb.isChecked() ? "2"
-                    : "0");
-            json.put("RS128" + String.format("%02d", counterRS128) + "C", layoutTestsBinding.RS117C.getText().toString());
-            json.put("RS128" + String.format("%02d", counterRS128) + "D", layoutTestsBinding.RS117D.getText().toString());
-            json.put("RS128" + String.format("%02d", counterRS128) + "E", layoutTestsBinding.RS117E.getText().toString());
-
-            counterRS128++;
-        }
+        //RST408
+        json.put("RST408", bi.RST408a.isChecked() ? "1"
+                : bi.RST408b.isChecked() ? "2"
+                : bi.RST408c.isChecked() ? "3"
+                : bi.RST408d.isChecked() ? "4"
+                : bi.RST40896.isChecked() ? "96"
+                : "0");
+        json.put("RST40896x", bi.RST40896x.getText().toString());
 
 
-        //RS131
-        json.put("RS131", bi.RS131a.isChecked() ? "1"
-                : bi.RS131b.isChecked() ? "2"
+        //RST417
+        json.put("RST417", bi.RST417a.isChecked() ? "1"
+                : bi.RST417b.isChecked() ? "2"
                 : "0");
 
-        //RS132
-        json.put("RS132", bi.RS132a.isChecked() ? "1"
-                : bi.RS132b.isChecked() ? "2"
-                : bi.RS132c.isChecked() ? "3"
-                : bi.RS13296.isChecked() ? "96"
-                : "0");
-        json.put("RS13296x", bi.RS13296x.getText().toString());
+        //RST418
+        json.put("RST418", bi.RST418.getText().toString());
 
 
-        //RS133
-        json.put("RS133", bi.RS133a.isChecked() ? "1"
-                : bi.RS133b.isChecked() ? "2"
+        //RST501
+        json.put("RST501", bi.RST501a.isChecked() ? "1"
+                : bi.RST501b.isChecked() ? "2"
                 : "0");
 
-        //RS134
-        json.put("RS134", bi.RS134.getText().toString());
+
+        //RST502
+        json.put("RST502", bi.RST502a.isChecked() ? "1"
+                : bi.RST502b.isChecked() ? "2"
+                : bi.RST502c.isChecked() ? "3"
+                : bi.RST50296.isChecked() ? "96"
+                : "0");
+        json.put("RST50296x", bi.RST50296x.getText().toString());
 
 
-        //RS141
-        json.put("RS141", bi.RS141a.isChecked() ? "1"
-                : bi.RS141b.isChecked() ? "2"
+        //RST503
+        json.put("RST503", bi.RST503a.isChecked() ? "1"
+                : bi.RST503b.isChecked() ? "2"
                 : "0");
 
-        //RS142
-        json.put("RS142", bi.RS142.getText().toString());
-
-        //RS143
-        json.put("RS143", bi.RS143.getText().toString());
+        //RST504
+        json.put("RST504", bi.RST504.getText().toString());
 
 
-        MainApp.fc.setsF(String.valueOf(json));
+        //RST600
+        json.put("RST600", bi.RST600a.isChecked() ? "1"
+                : bi.RST600b.isChecked() ? "2"
+                : "0");
+
+        //RST601
+        json.put("RST601", bi.RST601.getText().toString());
+
+        //RST6AS
+        json.put("RST6AS", bi.RST6AS.getText().toString());
+
+
+        MainApp.fc.setsA(String.valueOf(json));
 
     }
 

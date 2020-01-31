@@ -29,7 +29,7 @@
                 style="@style/HeadingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Section12" />
+                android:text="@string/SectionT4" />
 
             <LinearLayout
                 android:id="@+id/llpost"
@@ -37,9 +37,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!--RS121 - Radio-->
+                <!--RST401 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS121cv"
+                    android:id="@+id/RST401cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -49,22 +49,22 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS121" />
+                            android:text="@string/RST401" />
 
                         <RadioGroup
-                            android:id="@+id/RS121"
+                            android:id="@+id/RST401"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS121a"
+                                android:id="@+id/RST401a"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS121b"
+                                android:id="@+id/RST401b"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
@@ -76,9 +76,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS122A - EditText -->
+                <!--RST402A - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS121Acv"
+                    android:id="@+id/RST402Acv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -88,10 +88,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS122A" />
+                            android:text="@string/RST402A" />
 
                         <EditText
-                            android:id="@+id/RS122A"
+                            android:id="@+id/RST402A"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />
 
@@ -99,9 +99,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS122B - EditText -->
+                <!--RST402B - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS122Bcv"
+                    android:id="@+id/RST402Bcv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -111,10 +111,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS122B" />
+                            android:text="@string/RST402B" />
 
                         <EditText
-                            android:id="@+id/RS122B"
+                            android:id="@+id/RST402B"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />
 
@@ -122,9 +122,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS122C - EditText -->
+                <!--RST402C - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS122Ccv"
+                    android:id="@+id/RST402Ccv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -134,10 +134,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS122C" />
+                            android:text="@string/RST402C" />
 
                         <EditText
-                            android:id="@+id/RS122C"
+                            android:id="@+id/RST402C"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />
 
@@ -145,9 +145,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS122D - EditText -->
+                <!--RST402D - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS122Dcv"
+                    android:id="@+id/RST402Dcv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -157,10 +157,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS122D" />
+                            android:text="@string/RST402D" />
 
                         <EditText
-                            android:id="@+id/RS122D"
+                            android:id="@+id/RST402D"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />
 
@@ -168,9 +168,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS122E - EditText -->
+                <!--RST402E - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS122Ecv"
+                    android:id="@+id/RST402Ecv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -180,10 +180,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS122E" />
+                            android:text="@string/RST402E" />
 
                         <EditText
-                            android:id="@+id/RS122E"
+                            android:id="@+id/RST402E"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />
 
@@ -191,9 +191,10 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS123 - Radio-->
+
+                <!--RST403 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS123cv"
+                    android:id="@+id/RST403cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -203,22 +204,22 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS123" />
+                            android:text="@string/RST403" />
 
                         <RadioGroup
-                            android:id="@+id/RS123"
+                            android:id="@+id/RST403"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS123a"
+                                android:id="@+id/RST403a"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS123b"
+                                android:id="@+id/RST403b"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
@@ -230,9 +231,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS124 - EditText -->
+                <!--RST404 - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS124cv"
+                    android:id="@+id/RST404cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -242,10 +243,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS124" />
+                            android:text="@string/RST404" />
 
                         <EditText
-                            android:id="@+id/RS124"
+                            android:id="@+id/RST404"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/Especify" />
 
@@ -253,9 +254,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS125A - EditText -->
+                <!--RST405A - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS125Acv"
+                    android:id="@+id/RST405Acv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -265,10 +266,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS125A" />
+                            android:text="@string/RST405A" />
 
                         <EditText
-                            android:id="@+id/RS125A"
+                            android:id="@+id/RST405A"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/Especify" />
 
@@ -276,9 +277,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS125B - EditText -->
+                <!--RST405B - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS125Bcv"
+                    android:id="@+id/RST405Bcv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -288,10 +289,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS125B" />
+                            android:text="@string/RST405B" />
 
                         <EditText
-                            android:id="@+id/RS125B"
+                            android:id="@+id/RST405B"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/Especify" />
 
@@ -299,9 +300,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS126 - Radio-->
+                <!--RST406A - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS126cv"
+                    android:id="@+id/RST406Acv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -311,22 +312,68 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS126" />
+                            android:text="@string/RST406A" />
+
+                        <EditText
+                            android:id="@+id/RST406A"
+                            style="@style/EditTextNum"
+                            android:hint="@string/Especify" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RST406B - EditText -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RST406Bcv"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/RST406B" />
+
+                        <EditText
+                            android:id="@+id/RST406B"
+                            style="@style/EditTextNum"
+                            android:hint="@string/Especify" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RST407 - Radio-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RST407cv"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/RST407" />
 
                         <RadioGroup
-                            android:id="@+id/RS126"
+                            android:id="@+id/RST407"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS126a"
+                                android:id="@+id/RST407a"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS126b"
+                                android:id="@+id/RST407b"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
@@ -338,9 +385,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS127 - Radio-->
+                <!--RST408 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS127cv"
+                    android:id="@+id/RST408cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -350,43 +397,43 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS127" />
+                            android:text="@string/RST408" />
 
                         <RadioGroup
-                            android:id="@+id/RS127"
+                            android:id="@+id/RST408"
                             style="@style/radiogroup">
 
                             <RadioButton
-                                android:id="@+id/RS127a"
+                                android:id="@+id/RST408a"
                                 style="@style/radiobutton"
-                                android:text="@string/RS127a" />
+                                android:text="@string/RST408a" />
 
                             <RadioButton
-                                android:id="@+id/RS127b"
+                                android:id="@+id/RST408b"
                                 style="@style/radiobutton"
-                                android:text="@string/RS127b" />
+                                android:text="@string/RST408b" />
 
                             <RadioButton
-                                android:id="@+id/RS127c"
+                                android:id="@+id/RST408c"
                                 style="@style/radiobutton"
-                                android:text="@string/RS127c" />
+                                android:text="@string/RST408c" />
 
                             <RadioButton
-                                android:id="@+id/RS127d"
+                                android:id="@+id/RST408d"
                                 style="@style/radiobutton"
-                                android:text="@string/RS127d" />
+                                android:text="@string/RST408d" />
 
                             <RadioButton
-                                android:id="@+id/RS12796"
+                                android:id="@+id/RST40896"
                                 style="@style/radiobutton"
                                 android:text="@string/Eother" />
 
                             <EditText
-                                android:id="@+id/RS12796x"
+                                android:id="@+id/RST40896x"
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/Especify"
-                                android:text='@{RS12796.checked ? RS12796x.getText().toString() : "" }'
-                                android:visibility='@{RS12796.checked ? View.VISIBLE : View.GONE }' />
+                                android:text='@{RST40896.checked ? RST40896x.getText().toString() : "" }'
+                                android:visibility='@{RST40896.checked ? View.VISIBLE : View.GONE }' />
 
                         </RadioGroup>
 
@@ -395,247 +442,9 @@
                 </android.support.v7.widget.CardView>
 
 
-                <!--   RS128View   -->
-                <LinearLayout
-                    android:id="@+id/RS128View"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/RS128cv"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:layout_marginBottom="3sp"
-                                android:gravity="center"
-                                android:text="@string/RS128" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="3sp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    style="@style/i_textview"
-                                    android:text="@string/RS128A" />
-
-                                <RadioGroup
-                                    android:id="@+id/RS128A"
-                                    style="@style/radiogroup">
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Aa"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Aa" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ab"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ab" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ac"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ac" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ad"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ad" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ae"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ae" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Af"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Af" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ag"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ag" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ah"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ah" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ai"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Ai" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Aj"
-                                        style="@style/radiobutton"
-                                        android:text="@string/RS128Aj" />
-
-                                </RadioGroup>
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:id="@+id/llRS128B"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10sp"
-                                android:orientation="vertical">
-
-
-                                <TextView
-                                    style="@style/i_textview"
-                                    android:text="@string/RS128B" />
-
-
-                                <RadioGroup
-                                    android:id="@+id/RS128B"
-                                    style="@style/radiogroup"
-                                    android:layoutDirection="ltr"
-                                    android:orientation="horizontal">
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Ba"
-                                        style="@style/radiobutton"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="1"
-                                        android:padding="10dp"
-                                        android:text="@string/Eyes" />
-
-                                    <RadioButton
-                                        android:id="@+id/RS128Bb"
-                                        style="@style/radiobutton"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="1"
-                                        android:padding="10dp"
-                                        android:text="@string/Eno" />
-
-                                </RadioGroup>
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:id="@+id/llRS128C"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5sp"
-                                android:layoutDirection="ltr"
-                                android:orientation="horizontal">
-
-
-                                <TextView
-                                    style="@style/i_textview"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:text="@string/RS128C" />
-
-                                <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/RS128C"
-                                    style="@style/EditTextNum"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:hint="@string/Especify"
-                                    app:mask="##"
-                                    app:maxValue="90"
-                                    app:minValue="10"
-                                    app:type="range" />
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:id="@+id/llRS128D"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5sp"
-                                android:layoutDirection="ltr"
-                                android:orientation="horizontal">
-
-
-                                <TextView
-                                    style="@style/i_textview"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:text="@string/RS128D" />
-
-                                <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/RS128D"
-                                    style="@style/EditTextNum"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:hint="@string/Especify"
-                                    app:mask="##"
-                                    app:maxValue="90"
-                                    app:minValue="10"
-                                    app:type="range" />
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:id="@+id/llRS128E"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5sp"
-                                android:layoutDirection="ltr"
-                                android:orientation="horizontal">
-
-
-                                <TextView
-                                    style="@style/i_textview"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:text="@string/RS128E" />
-
-                                <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/RS128E"
-                                    style="@style/EditTextNum"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:hint="@string/Especify"
-                                    app:mask="##"
-                                    app:maxValue="90"
-                                    app:minValue="10"
-                                    app:type="range" />
-
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
-                    <LinearLayout
-                        android:id="@+id/RS128Items"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-
-                    <Button
-                        android:id="@+id/RS128Btn"
-                        style="@style/buttons"
-                        android:background="@android:color/holo_green_dark"
-                        android:text="Add Test"
-                        android:textColor="@color/black" />
-
-                </LinearLayout>
-
-
-                <!--RS1217 - Radio-->
+                <!--RST417 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS1217cv"
+                    android:id="@+id/RST417cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -645,28 +454,28 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS1217" />
+                            android:text="@string/RST417" />
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS1217Hint"
+                            android:text="@string/RST417Hint"
                             android:textSize="20dp"
                             android:textStyle="italic" />
 
                         <RadioGroup
-                            android:id="@+id/RS1217"
+                            android:id="@+id/RST417"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS1217a"
+                                android:id="@+id/RST417a"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS1217b"
+                                android:id="@+id/RST417b"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:padding="10dp"
@@ -678,9 +487,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS1218 - Date Picker-->
+                <!--RST418 - Date Picker-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS1218cv"
+                    android:id="@+id/RST418cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -690,10 +499,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS1218" />
+                            android:text="@string/RST418" />
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                            android:id="@+id/RS1218"
+                            android:id="@+id/RST418"
                             style="@style/EditTextDate"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
@@ -709,12 +518,12 @@
                     style="@style/HeadingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Section13" />
+                    android:text="@string/SectionT5" />
 
 
-                <!--RS131 - Radio-->
+                <!--RST501 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS131cv"
+                    android:id="@+id/RST501cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -724,22 +533,22 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS131" />
+                            android:text="@string/RST501" />
 
                         <RadioGroup
-                            android:id="@+id/RS131"
+                            android:id="@+id/RST501"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS131a"
+                                android:id="@+id/RST501a"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS131b"
+                                android:id="@+id/RST501b"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -751,9 +560,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS132 - Radio-->
+                <!--RST502 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS132cv"
+                    android:id="@+id/RST502cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -763,38 +572,38 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS132" />
+                            android:text="@string/RST502" />
 
                         <RadioGroup
-                            android:id="@+id/RS132"
+                            android:id="@+id/RST502"
                             style="@style/radiogroup">
 
                             <RadioButton
-                                android:id="@+id/RS132a"
+                                android:id="@+id/RST502a"
                                 style="@style/radiobutton"
-                                android:text="@string/RS132a" />
+                                android:text="@string/RST502a" />
 
                             <RadioButton
-                                android:id="@+id/RS132b"
+                                android:id="@+id/RST502b"
                                 style="@style/radiobutton"
-                                android:text="@string/RS132b" />
+                                android:text="@string/RST502b" />
 
                             <RadioButton
-                                android:id="@+id/RS132c"
+                                android:id="@+id/RST502c"
                                 style="@style/radiobutton"
-                                android:text="@string/RS132c" />
+                                android:text="@string/RST502c" />
 
                             <RadioButton
-                                android:id="@+id/RS13296"
+                                android:id="@+id/RST50296"
                                 style="@style/radiobutton"
                                 android:text="@string/Eother" />
 
                             <EditText
-                                android:id="@+id/RS13296x"
+                                android:id="@+id/RST50296x"
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/Especify"
-                                android:text='@{RS13296.checked ? RS13296x.getText().toString() : "" }'
-                                android:visibility='@{RS13296.checked ? View.VISIBLE : View.GONE }' />
+                                android:text='@{RST50296.checked ? RST50296x.getText().toString() : "" }'
+                                android:visibility='@{RST50296.checked ? View.VISIBLE : View.GONE }' />
 
                         </RadioGroup>
 
@@ -802,9 +611,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS133 - Radio-->
+                <!--RST503 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS133cv"
+                    android:id="@+id/RST503cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -814,27 +623,27 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS133" />
+                            android:text="@string/RST503" />
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS133Hint"
+                            android:text="@string/RST503Hint"
                             android:textSize="20dp"
                             android:textStyle="italic" />
 
                         <RadioGroup
-                            android:id="@+id/RS133"
+                            android:id="@+id/RST503"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS133a"
+                                android:id="@+id/RST503a"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS133b"
+                                android:id="@+id/RST503b"
                                 style="@style/radiobutton"
                                 android:layout_weight="1"
                                 android:text="@string/Eno" />
@@ -845,9 +654,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS134 - Date Picker-->
+                <!--RST504 - Date Picker-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS134cv"
+                    android:id="@+id/RST504cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -857,10 +666,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS134" />
+                            android:text="@string/RST504" />
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                            android:id="@+id/RS134"
+                            android:id="@+id/RST504"
                             style="@style/EditTextDate"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
@@ -871,9 +680,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS141 - Radio-->
+                <!--RST600 - Radio-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS141cv"
+                    android:id="@+id/RST600cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -883,22 +692,22 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS141" />
+                            android:text="@string/RST600" />
 
                         <RadioGroup
-                            android:id="@+id/RS141"
+                            android:id="@+id/RST600"
                             style="@style/radiogroup"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/RS141a"
+                                android:id="@+id/RST600a"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
-                                android:id="@+id/RS141b"
+                                android:id="@+id/RST600b"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -910,9 +719,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS142 - Date Picker-->
+                <!--RST601 - Date Picker-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS142cv"
+                    android:id="@+id/RST601cv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -922,10 +731,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS142" />
+                            android:text="@string/RST601" />
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                            android:id="@+id/RS142"
+                            android:id="@+id/RST601"
                             style="@style/EditTextDate"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
@@ -936,9 +745,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS143 - EditText -->
+                <!--RST6AS - EditText -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS143cv"
+                    android:id="@+id/RST6AScv"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -948,10 +757,10 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/RS143" />
+                            android:text="@string/RST6AS" />
 
                         <EditText
-                            android:id="@+id/RS143"
+                            android:id="@+id/RST6AS"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/Especify" />
 
