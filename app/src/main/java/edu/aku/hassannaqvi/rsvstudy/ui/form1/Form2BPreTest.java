@@ -144,14 +144,17 @@ public class Form2BPreTest extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         MainApp.fc = new FormsContract();
-        /*MainApp.fc.setDeviceID(MainApp.deviceId);
+        MainApp.fc.setDeviceID(MainApp.deviceId);
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
-        MainApp.fc.setDSSID(item.getDssid());*/
+        MainApp.fc.setDSSID(item.getDssid());
 
         JSONObject json = new JSONObject();
+
+        //DATE
+        json.put("PreTestDate", dtToday);
 
         //RST201
         json.put("RST201", bi.RST201.getText().toString());
@@ -172,40 +175,6 @@ public class Form2BPreTest extends AppCompatActivity {
 
         //RST302
         json.put("RST302", bi.RST302.getText().toString());
-
-        //RST303A
-        /*json.put("RST303A", bi.RST303A.getText().toString());
-
-        //RST303B
-        json.put("RST303B", bi.RST303B.getText().toString());
-
-        //RST304A
-        json.put("RST304A", bi.RST304A.getText().toString());
-
-        //RST304B
-        json.put("RST304B", bi.RST304B.getText().toString());
-
-        //RST305
-        json.put("RST305", bi.RST305a.isChecked() ? "1"
-                : bi.RST305b.isChecked() ? "2"
-                : "0");
-
-        //RST306
-        json.put("RST306", bi.RST306a.isChecked() ? "1"
-                : bi.RST306b.isChecked() ? "2"
-                : bi.RST306c.isChecked() ? "3"
-                : bi.RST306d.isChecked() ? "4"
-                : bi.RST30696.isChecked() ? "96"
-                : "0");
-        json.put("RST30696x", bi.RST30696x.getText().toString());
-
-        //RST316
-        json.put("RST316", bi.RST316a.isChecked() ? "1"
-                : bi.RST316b.isChecked() ? "2"
-                : "0");
-
-        //RST317
-        json.put("RST317", bi.RST317.getText().toString());*/
 
         MainApp.fc.setsA(String.valueOf(json));
 

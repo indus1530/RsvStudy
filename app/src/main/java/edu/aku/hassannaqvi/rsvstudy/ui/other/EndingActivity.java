@@ -9,12 +9,11 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
-import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
-import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityEndingBinding;
+import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class EndingActivity extends AppCompatActivity {
 
@@ -95,7 +94,6 @@ public class EndingActivity extends AppCompatActivity {
 
         MainApp.fc.setIstatus(bi.istatus1.isChecked() ? "1"
                 : bi.istatus5.isChecked() ? "5"
-
                 : "0");
 
 //        MainApp.status == 5 && bi.istatus1.isChecked()? "5" ||
@@ -110,6 +108,7 @@ public class EndingActivity extends AppCompatActivity {
                 : MainApp.status == 4 && bi.istatus1.isChecked() ? "4"
                 : MainApp.status == 6 && bi.istatus1.isChecked() ? "6"
                 : "0");
+
         MainApp.fc.setEndingdatetime(dtToday);
 
 //        Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
