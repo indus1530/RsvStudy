@@ -59,7 +59,6 @@ public class Section05Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId != bi.RS83a.getId()) {
-
                     ClearClass.ClearAllFields(bi.RS84cv, null);
                 }
             }
@@ -82,7 +81,6 @@ public class Section05Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.RS69b.getId()) {
-
                     ClearClass.ClearAllFields(bi.RS70cv, null);
 
                 }
