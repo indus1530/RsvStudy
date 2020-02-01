@@ -130,13 +130,14 @@ public class Section02Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
-
-        int updcount = db.updateSB();
-
-        //            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-        //            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-        return updcount == 1;
+//        DatabaseHelper db = new DatabaseHelper(this);
+//
+//        int updcount = db.updateSB();
+//
+//        //            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+//        //            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+//        return updcount == 1;
+        return true;
     }
 
     private void SaveDraft() throws JSONException {

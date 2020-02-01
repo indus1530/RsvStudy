@@ -51,6 +51,8 @@ public class EndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 MainApp.memFlag = 0;
+                MainApp.testCount = 1;
+                MainApp.acceptableTest = 0;
 
                 MainApp.TotalMembersCount = 0;
                 MainApp.TotalMWRACount = 0;

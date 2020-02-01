@@ -188,13 +188,14 @@ public class Section04Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+       /* DatabaseHelper db = new DatabaseHelper(this);
 
         int updcount = db.updateSE();
 
         //            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
         //            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-        return updcount == 1;
+        return updcount == 1;*/
+        return true;
     }
 
 

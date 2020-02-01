@@ -101,15 +101,15 @@ public class ChildList implements Parcelable {
 
     /*public ChildList hydrateForm(Cursor cursor) {
 
-        //this.dssid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_UID));
-        this.mother_name = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMTYPE));
-        this.study_id = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_CHILD_STATUS));
-        this.lhw_code = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_CODE_LHW));
-        this.caseid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_REF_ID));
-        this.ref_date = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMDATE));
+        //this.dssid = cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_UID));
+        this.mother_name = cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_FORMTYPE));
+        this.study_id = cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_CHILD_STATUS));
+        this.lhw_code = cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_CODE_LHW));
+        this.caseid = cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_REF_ID));
+        this.ref_date = cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_FORMDATE));
 
-        CrfChild formSa = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SA)), CrfChild.class);
-        CrfChild formSb = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SB)), CrfChild.class);
+        CrfChild formSa = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_SA)), CrfChild.class);
+        CrfChild formSb = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.TestTable.COLUMN_SB)), CrfChild.class);
 
         this.child_name = formSa.getPocfa09();
         this.f_name = formSb.getPocfb02();

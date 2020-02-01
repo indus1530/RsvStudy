@@ -64,11 +64,10 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="@string/Especify"
-                                android:maxLength="1"
-                                app:maxValue="8"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:hint="@string/RST307A" />
 
                         </LinearLayout>
 
@@ -289,12 +288,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical" />
 
-                    <Button
-                        android:id="@+id/AddTest"
-                        style="@style/buttons"
-                        android:background="@android:color/holo_green_dark"
-                        android:text="Add Test"
-                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
@@ -308,6 +301,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="32dp">
+
 
                 <Button
                     android:id="@+id/btnEnd"
@@ -334,6 +328,17 @@
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/AddTest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:onClick="@{() -> callback.addTest()}"
+                    android:text="Add Test"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 

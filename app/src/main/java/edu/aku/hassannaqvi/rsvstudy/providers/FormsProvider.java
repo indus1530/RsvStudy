@@ -64,10 +64,10 @@
           static {
               sFormsByDSSIDQueryBuilder = new SQLiteQueryBuilder();
               sFormsByDSSIDQueryBuilder.setTables(
-                      FormsContract.FormsTable.TABLE_NAME + " INNER JOIN " +
+                      FormsContract.TestTable.TABLE_NAME + " INNER JOIN " +
                               FormsContract.ChildrenTable.TABLE_NAME +
-                              " ON " + FormsContract.FormsTable.TABLE_NAME +
-                              "." + FormsContract.FormsTable.COLUMN_LOC_KEY +
+                              " ON " + FormsContract.TestTable.TABLE_NAME +
+                              "." + FormsContract.TestTable.COLUMN_LOC_KEY +
                               " = " + FormsContract.ChildrenTable.TABLE_NAME +
                               "." + FormsContract.ChildrenTable._ID);
           }
@@ -78,16 +78,16 @@
           private static final String sStudyIDWithStartDateSelection =
                   FormsContract.ChildrenTable.TABLE_NAME +
                           "." + FormsContract.ChildrenTable.COLUMN_CHILDREN_SETTING + " = ? AND " +
-                          FormsContract.FormsTable.COLUMN_DATETEXT + " >= ? ";
+                          FormsContract.TestTable.COLUMN_DATETEXT + " >= ? ";
 
           private static final String sStudyIDAndDaySelection =
                   FormsContract.ChildrenTable.TABLE_NAME +
                           "." + FormsContract.ChildrenTable.COLUMN_CHILDREN_SETTING + " = ? AND " +
-                          FormsContract.FormsTable.COLUMN_DATETEXT + " = ? ";
+                          FormsContract.TestTable.COLUMN_DATETEXT + " = ? ";
 
           private Cursor getFormsByStudyID(Uri uri, String[] projection, String sortOrder) {
-              String StudyID = FormsContract.FormsTable.getStudyIDFromUri(uri);
-              String startDate = FormsContract.FormsTable.getStartDateFromUri(uri);
+              String StudyID = FormsContract.TestTable.getStudyIDFromUri(uri);
+              String startDate = FormsContract.TestTable.getStartDateFromUri(uri);
 
               String[] selectionArgs;
               String selection;
@@ -113,8 +113,8 @@
 
           private Cursor getFormsByStudyIDAndDate(
                   Uri uri, String[] projection, String sortOrder) {
-              String StudyID = FormsContract.FormsTable.getStudyIDFromUri(uri);
-              String date = FormsContract.FormsTable.getDateFromUri(uri);
+              String StudyID = FormsContract.TestTable.getStudyIDFromUri(uri);
+              String date = FormsContract.TestTable.getDateFromUri(uri);
 
               return sFormsByDSSIDQueryBuilder.query(mOpenHelper.getReadableDatabase(),
                       projection,
@@ -185,11 +185,11 @@
 
          switch (match) {
              case FORMS_WITH_CHILDREN_AND_DATE:
-//                 return FormsContract.FormsTable.CONTENT_ITEM_TYPE;
+//                 return FormsContract.TestTable.CONTENT_ITEM_TYPE;
              case FORMS_WITH_CHILDREN:
-//                 return FormsContract.FormsTable.CONTENT_TYPE;
+//                 return FormsContract.TestTable.CONTENT_TYPE;
              case FORMS:
-//                 return FormsContract.FormsTable.CONTENT_TYPE;
+//                 return FormsContract.TestTable.CONTENT_TYPE;
 
                  /**
                   * TODO
@@ -211,9 +211,9 @@
 /*
          switch (match) {
              case FORMS: {
-                 long _id = db.insert(FormsContract.FormsTable.TABLE_NAME, null, values);
+                 long _id = db.insert(FormsContract.TestTable.TABLE_NAME, null, values);
                  if (_id > 0)
-                     returnUri = FormsContract.FormsTable.buildFormsUri(_id);
+                     returnUri = FormsContract.TestTable.buildFormsUri(_id);
                  else
                      throw new android.database.SQLException("Failed to insert row into " + uri);
                  break;

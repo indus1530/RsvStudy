@@ -186,7 +186,7 @@ public class SyncActivity extends AppCompatActivity {
                     "Form Two ",
                     "updateSyncedForms",
                     FormsContract.class,
-                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "02.php"),
+                    MainApp._HOST_URL + FormsContract.TestTable._URL.replace(".php", "02.php"),
                     db.getUnsyncedForms("f2"), 1, uploadListAdapter, uploadlist
             ).execute();
             Toast.makeText(getApplicationContext(), "Syncing Form Three", Toast.LENGTH_SHORT).show();
@@ -200,7 +200,7 @@ public class SyncActivity extends AppCompatActivity {
                     "Form Three",
                     "updateSyncedForms",
                     FormsContract.class,
-                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "03.php"),
+                    MainApp._HOST_URL + FormsContract.TestTable._URL.replace(".php", "03.php"),
                     db.getUnsyncedForms("f3"), 2, uploadListAdapter, uploadlist
             ).execute();
             Toast.makeText(getApplicationContext(), "Syncing Form Four", Toast.LENGTH_SHORT).show();
@@ -214,7 +214,7 @@ public class SyncActivity extends AppCompatActivity {
                     "Form Four",
                     "updateSyncedForms",
                     FormsContract.class,
-                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "04.php"),
+                    MainApp._HOST_URL + FormsContract.TestTable._URL.replace(".php", "04.php"),
                     db.getUnsyncedForms("f4"), 3, uploadListAdapter, uploadlist
             ).execute();*/
             bi.noDataItem.setVisibility(View.GONE);

@@ -50,14 +50,16 @@ public class Section03Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-
+/*
         DatabaseHelper db = new DatabaseHelper(this);
 
         int updcount = db.updateSC();
 
         //            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
         //            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-        return updcount == 1;
+        return updcount == 1;*/
+
+        return true;
     }
 
     public boolean formValidation() {

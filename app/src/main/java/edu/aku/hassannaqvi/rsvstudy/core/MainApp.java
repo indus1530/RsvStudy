@@ -28,6 +28,7 @@ import java.util.HashMap;
 
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.MWRAContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 
 
@@ -79,8 +80,11 @@ public class MainApp extends Application {
 
     public static Boolean admin = false;
     public static FormsContract fc;
+    public static TestContract tc;
     public static String userName = "0000";
     public static String DOB = "";
+    public static int testCount = 1;
+    public static int acceptableTest = 0;
     //    Total No of members got from Section A
 
     public static int TotalMembersCount = 0;
