@@ -21,6 +21,8 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForms2bAfterTestBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
@@ -31,6 +33,7 @@ public class Forms2BafterTest extends AppCompatActivity {
     ChildList item;
     List<View> RS128List;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    FormType formType;
 
 
     @Override
@@ -40,9 +43,25 @@ public class Forms2BafterTest extends AppCompatActivity {
         bi.setCallback(this);
         db = new DatabaseHelper(this);
         item = getIntent().getParcelableExtra("data");
+        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
+
+
+        setUIComponent();
         setupSkips();
 
 
+    }
+
+    private void setUIComponent() {
+        bi.forPostTest.setVisibility(formType == FormType.PRETEST ? View.GONE : View.VISIBLE);
+        bi.RST406A.setText(String.valueOf(MainApp.testCount));
+        bi.RST406B.setText(String.valueOf(MainApp.acceptableTest));
+
+        if (MainApp.acceptableTest >= 3) {
+            bi.RST407a.setChecked(true);
+        } else {
+            bi.RST407b.setChecked(true);
+        }
     }
 
 
@@ -154,20 +173,16 @@ public class Forms2BafterTest extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        /*MainApp.fc = new FormsContract();
-        MainApp.fc.setDeviceID(MainApp.deviceId);
-        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));*/
+//        MainApp.fc.setEndingdatetime(dtToday);
+
 
         JSONObject json = new JSONObject();
 
         //RST405A
-        json.put("RST405A", bi.RST405A.getText().toString());
+        json.put("RST405A", dtToday);
 
-        //RST405B
-        json.put("RST405B", bi.RST405B.getText().toString());
+/*        //RST405B
+        json.put("RST405B", bi.RST406A.getText().toString());*/
 
         //RST406A
         json.put("RST406A", bi.RST406A.getText().toString());
@@ -237,7 +252,7 @@ public class Forms2BafterTest extends AppCompatActivity {
         json.put("RST6AS", bi.RST6AS.getText().toString());
 
 
-        MainApp.fc.setsA(String.valueOf(json));
+        MainApp.fc.setsB(String.valueOf(json));
 
     }
 
@@ -245,20 +260,13 @@ public class Forms2BafterTest extends AppCompatActivity {
     private boolean UpdateDB() {
 
         DatabaseHelper db = new DatabaseHelper(this);
-        long updcount = db.addForm(MainApp.fc);
-
-        MainApp.fc.set_ID(String.valueOf(updcount));
-        if (updcount != 0) {
-            MainApp.fc.set_UID(
-                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
-            db.updateFormID();
+        int updcount = db.updateForm();
+        if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
         }
-
-
     }
 
 

@@ -21,7 +21,12 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bTestBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
+import edu.aku.hassannaqvi.rsvstudy.utils.Utils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
+
+import static edu.aku.hassannaqvi.rsvstudy.utils.Constants.MAXTEST;
 
 public class Form2BTest extends AppCompatActivity {
 
@@ -30,6 +35,7 @@ public class Form2BTest extends AppCompatActivity {
     ChildList item;
     List<View> RS117List;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    FormType formType;
 
 
     @Override
@@ -39,6 +45,7 @@ public class Form2BTest extends AppCompatActivity {
         bi.setCallback(this);
         db = new DatabaseHelper(this);
         item = getIntent().getParcelableExtra("data");
+        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
 
         setUIComponent();
 
@@ -58,7 +65,7 @@ public class Form2BTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Forms2BafterTest.class));
+                startActivity(new Intent(this, Forms2BafterTest.class).putExtra(Constants.FORMTYPE, formType));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -75,10 +82,14 @@ public class Form2BTest extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, Form2BTest.class).putExtra("data", item));
-                MainApp.testCount++;
-
+                if (MainApp.testCount != MAXTEST) {
+                    finish();
+                    startActivity(new Intent(this, Form2BTest.class).putExtra("data", item)
+                            .putExtra(Constants.FORMTYPE, formType));
+                    MainApp.testCount++;
+                } else {
+                    Utils.openDialog(this);
+                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -102,7 +113,11 @@ public class Form2BTest extends AppCompatActivity {
         MainApp.tc.set_UUID(MainApp.fc.get_UID());
         MainApp.tc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.tc.setDSSID(item.getDssid());
+        MainApp.tc.setFormType(formType == FormType.PRETEST ? "pre_test" : "post_test");
         MainApp.tc.setTestStatus(bi.RST307Ca.isChecked() ? "1" : "0");
+        if (bi.RST307Ca.isChecked()) {
+            MainApp.acceptableTest++;
+        }
 
         JSONObject json = new JSONObject();
         //RST307A
@@ -141,7 +156,7 @@ public class Form2BTest extends AppCompatActivity {
         //RST307F
         json.put("RST307F", bi.RST307F.getText().toString());
 
-        MainApp.fc.setsB(String.valueOf(json));
+        MainApp.tc.setsA(String.valueOf(json));
 
     }
 

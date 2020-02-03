@@ -155,7 +155,7 @@ public class Section031Activity extends AppCompatActivity {
                 : bi.RS40c.isChecked() ? "3"
                 : "0");
 
-        MainApp.fc.setsD(String.valueOf(SD));
+//        MainApp.fc.setsD(String.valueOf(SD));
 
     }
 

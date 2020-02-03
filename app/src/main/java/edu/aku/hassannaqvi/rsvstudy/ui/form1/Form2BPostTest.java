@@ -17,10 +17,13 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bPosttestBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
@@ -31,6 +34,7 @@ public class Form2BPostTest extends AppCompatActivity {
     ChildList item;
     List<View> RS128List;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    FormType formType;
 
 
     @Override
@@ -40,6 +44,7 @@ public class Form2BPostTest extends AppCompatActivity {
         bi.setCallback(this);
         db = new DatabaseHelper(this);
         item = getIntent().getParcelableExtra("data");
+        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
         setupSkips();
 
 
@@ -100,7 +105,8 @@ public class Form2BPostTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(this, Form2BTest.class)
+                        .putExtra("data", item).putExtra(Constants.FORMTYPE, formType));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -117,14 +123,18 @@ public class Form2BPostTest extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        /*MainApp.fc = new FormsContract();
+        MainApp.fc = new FormsContract();
         MainApp.fc.setDeviceID(MainApp.deviceId);
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));*/
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+        MainApp.fc.setDSSID(item.getDssid());
+        MainApp.fc.setFormType("post_test");
 
         JSONObject json = new JSONObject();
+
+        json.put("RST405A", dtToday);
 
         //RST401
         json.put("RST401", bi.RST401a.isChecked() ? "1"

@@ -13,6 +13,7 @@
     <color name="colorHeading">#00617d</color>
     <color name="colorHeadingText">#dcb46f</color>
 
+    <color name="orange600">#F4511E</color>
     <color name="black">#000000</color>
     <color name="blackOverlay">#66000000</color>
     <color name="dullBlack">#292929</color>

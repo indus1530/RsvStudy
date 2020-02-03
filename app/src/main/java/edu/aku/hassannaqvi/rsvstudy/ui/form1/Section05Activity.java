@@ -18,6 +18,8 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 import edu.aku.hassannaqvi.rsvstudy.R;
@@ -29,6 +31,7 @@ public class Section05Activity extends AppCompatActivity {
     DatabaseHelper db;
     ChildList item;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    FormType formType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class Section05Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
 
         item = getIntent().getParcelableExtra("data");
+        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
         setupSkips();
 
 
@@ -165,6 +169,7 @@ public class Section05Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.fc.setDSSID(item.getDssid());
+        MainApp.fc.setFormType("followup");
 
         JSONObject SF = new JSONObject();
 
@@ -469,7 +474,7 @@ public class Section05Activity extends AppCompatActivity {
                 : "0");
 
 
-        MainApp.fc.setsF(String.valueOf(SF));
+        MainApp.fc.setsA(String.valueOf(SF));
         MainApp.setGPS(this);
 
     }

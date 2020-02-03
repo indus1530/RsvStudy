@@ -259,7 +259,7 @@ public class Section03Activity extends AppCompatActivity {
                 : bi.RS3230b.isChecked() ? "2"
                 : "0");
 
-        MainApp.fc.setsC(String.valueOf(SC));
+        /*MainApp.fc.setsC(String.valueOf(SC));*/
 
     }
 

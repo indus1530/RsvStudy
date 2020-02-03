@@ -21,6 +21,8 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bPretestBinding;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
+import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
@@ -31,6 +33,7 @@ public class Form2BPreTest extends AppCompatActivity {
     ChildList item;
     List<View> RS117List;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    FormType formType;
 
 
     @Override
@@ -40,6 +43,7 @@ public class Form2BPreTest extends AppCompatActivity {
         bi.setCallback(this);
         db = new DatabaseHelper(this);
         item = getIntent().getParcelableExtra("data");
+        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
         setupSkips();
 
 
@@ -125,7 +129,8 @@ public class Form2BPreTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Form2BTest.class).putExtra("data", item));
+                startActivity(new Intent(this, Form2BTest.class).putExtra("data", item)
+                        .putExtra(Constants.FORMTYPE, formType));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -149,14 +154,18 @@ public class Form2BPreTest extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.fc.setDSSID(item.getDssid());
+        MainApp.fc.setFormType("pre_test");
 
         JSONObject json = new JSONObject();
 
         json.put("child_name", item.getChild_name());
+
         json.put("mother_name", item.getMother_name());
         json.put("father_name", item.getFather_name());
         json.put("hhhead", item.getHhhead());
         json.put("study_id", item.getStudy_id());
+
+        json.put("RST303A", dtToday);
         //RST201
         json.put("RST201", bi.RST201.getText().toString());
 

@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.other;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -18,6 +19,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -40,6 +43,8 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.ChildListActivity;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPostTest;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPreTest;
 import edu.aku.hassannaqvi.rsvstudy.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 
@@ -65,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     VersionAppContract versionAppContract;
     DatabaseHelper db;
     Long refID;
+    FormType fType;
     private ProgressDialog pd;
     private Boolean exit = false;
     private String rSumText = "";
@@ -211,19 +217,56 @@ public class MainActivity extends AppCompatActivity {
             bottomSheetFragment.show(getSupportFragmentManager(), "bottomSheet");
             bottomSheetFragment.setItemClick(new BottomSheetFragment.OnItemClick() {
                 @Override
-                public void OnItemClick(int position) {
-                    Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
-                            .putExtra(Constants.FORMTYPE, formType).putExtra("code", position + 1);
-                    startActivity(oF);
-//                    if (formType != FormType.ASSESSMENT) {
-//
-//                    } else {
-//                        Toast.makeText(MainActivity.this, "Under Development", Toast.LENGTH_SHORT).show();
-//                    }
-                    bottomSheetFragment.dismiss();
+                public void OnItemClick(final int position) {
+                    if (formType == FormType.ASSESSMENT) {
+                        final Dialog dialog = new Dialog(MainActivity.this);
+                        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        dialog.setContentView(R.layout.item_dialog_prepost);
+                        dialog.setCancelable(false);
+                        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+                        params.copyFrom(dialog.getWindow().getAttributes());
+                        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+                        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                        dialog.show();
+                        dialog.getWindow().setAttributes(params);
+                        dialog.findViewById(R.id.preTest).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
+                                        .putExtra(Constants.FORMTYPE, FormType.PRETEST).putExtra("code", position + 1);
+                                startActivity(oF);
+                                dialog.dismiss();
+                                bottomSheetFragment.dismiss();
+
+                            }
+                        });
+                        dialog.findViewById(R.id.postTest).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
+                                        .putExtra(Constants.FORMTYPE, FormType.POSTTEST).putExtra("code", position + 1);
+                                startActivity(oF);
+                                dialog.dismiss();
+                                bottomSheetFragment.dismiss();
+
+                            }
+                        });
+                        dialog.findViewById(R.id.btnCancel).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                    } else {
+                        Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
+                                .putExtra(Constants.FORMTYPE, FormType.FOLLOWUP).putExtra("code", position + 1);
+                        startActivity(oF);
+                        bottomSheetFragment.dismiss();
+                    }
+
                 }
             });
-
 
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();

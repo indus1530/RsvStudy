@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +23,12 @@ import edu.aku.hassannaqvi.rsvstudy.adapter.ChildListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
+import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutDialogeBinding;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPostTest;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPreTest;
+import edu.aku.hassannaqvi.rsvstudy.ui.form1.Forms2BafterTest;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
@@ -52,8 +56,6 @@ public class ChildListActivity extends AppCompatActivity {
         this.setTitle("Child List");
 
         areaCode = getIntent().getIntExtra("code", 0);
-
-        Bundle bundle = getIntent().getExtras();
         formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
 
         db = new DatabaseHelper(this);
@@ -110,7 +112,17 @@ public class ChildListActivity extends AppCompatActivity {
         adapter.setItemClicked(new ChildListAdapter.OnItemClicked() {
             @Override
             public void onItemClick(final ChildList item, int position) {
-
+                if (formType == FormType.POSTTEST) {
+                    if (!db.isChildExists(item.getDssid())) {
+                        Toast.makeText(ChildListActivity.this, "This child is not eligible for Post Test", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                } else if (formType == FormType.PRETEST) {
+                    if (db.isChildExists(item.getDssid())) {
+                        Toast.makeText(ChildListActivity.this, "This child is eligible for Post Test", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
                 final Dialog dialog = new Dialog(ChildListActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 View view = LayoutInflater.from(ChildListActivity.this).inflate(R.layout.layout_dialoge, null);
@@ -140,7 +152,9 @@ public class ChildListActivity extends AppCompatActivity {
                             return;
                         }
                         startActivity(new Intent(ChildListActivity.this, formType == FormType.FOLLOWUP ? Section05Activity.class
-                                : Form2BPreTest.class).putExtra("data", item));
+                                : formType == FormType.PRETEST ? Form2BPreTest.class : Form2BPostTest.class)
+                                .putExtra("data", item)
+                                .putExtra(Constants.FORMTYPE, formType));
                         dialog.dismiss();
                     }
                 });
@@ -153,6 +167,7 @@ public class ChildListActivity extends AppCompatActivity {
 
                 dialog.setTitle("Confirm Child");
                 dialog.show();
+
 
             }
         });

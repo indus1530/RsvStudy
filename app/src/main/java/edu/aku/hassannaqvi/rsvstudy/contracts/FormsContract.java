@@ -25,14 +25,20 @@ public class FormsContract {
     private String formDate = ""; // Date
     private String user = ""; // Interviewer
     private String istatus = ""; // Interview Status
+
+    private String sB = "";
+
+    public String getsB() {
+        return sB;
+    }
+
     private String istatus88x = ""; // Interview Status
     private String DSSID = "";
     private String sA = "";
-    private String sB = ""; // for section 02 and 03
-    private String sC = "";
-    private String sD = "";
-    private String sE = "";
-    private String sF = "";
+
+    public void setsB(String sB) {
+        this.sB = sB;
+    }
     private String NextVisit = "";
     private String endingdatetime = "";
 
@@ -104,8 +110,8 @@ public class FormsContract {
         this.NextVisit = jsonObject.getString(FormsTable.COLUMN_NEXT_VISIT);
         this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
         this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
-       /* this.sB = jsonObject.getString(TestTable.COLUMN_SB);
-        this.sC = jsonObject.getString(TestTable.COLUMN_SC);
+        this.sB = jsonObject.getString(FormsTable.COLUMN_SB);
+      /*  this.sC = jsonObject.getString(TestTable.COLUMN_SC);
         this.sD = jsonObject.getString(TestTable.COLUMN_SD);
         this.sE = jsonObject.getString(TestTable.COLUMN_SE);
         this.sF = jsonObject.getString(TestTable.COLUMN_SF);*/
@@ -135,8 +141,8 @@ public class FormsContract {
         this.NextVisit = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_NEXT_VISIT));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
         this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
-        /*this.sB = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SB));
-        this.sC = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SC));
+        this.sB = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SB));
+       /* this.sC = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SC));
         this.sD = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SD));
         this.sE = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SE));
         this.sF = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SF));*/
@@ -171,9 +177,9 @@ public class FormsContract {
         if (!this.sA.equals("")) {
             json.put(FormsTable.COLUMN_SA, this.sA.equals("") ? JSONObject.NULL : new JSONObject(this.sA));
         }
-//        if (!this.sB.equals("")) {
-//            json.put(TestTable.COLUMN_SB, this.sB.equals("") ? JSONObject.NULL : new JSONObject(this.sB));
-//        }
+        if (!this.sB.equals("")) {
+            json.put(FormsTable.COLUMN_SB, this.sB.equals("") ? JSONObject.NULL : new JSONObject(this.sB));
+        }
 //        if (!this.sC.equals("")) {
 //            json.put(TestTable.COLUMN_SC, this.sC.equals("") ? JSONObject.NULL : new JSONObject(this.sC));
 //        }
@@ -283,46 +289,6 @@ public class FormsContract {
         this.sA = sA;
     }
 
-    public String getsB() {
-        return sB;
-    }
-
-    public void setsB(String sB) {
-        this.sB = sB;
-    }
-
-    public String getsC() {
-        return sC;
-    }
-
-    public void setsC(String sC) {
-        this.sC = sC;
-    }
-
-    public String getsD() {
-        return sD;
-    }
-
-    public void setsD(String sD) {
-        this.sD = sD;
-    }
-
-    public String getsE() {
-        return sE;
-    }
-
-    public void setsE(String sE) {
-        this.sE = sE;
-    }
-
-    public String getsF() {
-        return sF;
-    }
-
-    public void setsF(String sF) {
-        this.sF = sF;
-    }
-
     public String getEndingdatetime() {
         return endingdatetime;
     }
@@ -413,11 +379,11 @@ public class FormsContract {
         public static final String COLUMN_NEXT_VISIT = "NextVisit";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
         public static final String COLUMN_SA = "sA";
-        /*public static final String COLUMN_SB = "sB";
-        public static final String COLUMN_SC = "sC";
-        public static final String COLUMN_SD = "sD";
-        public static final String COLUMN_SE = "sE";
-        public static final String COLUMN_SF = "sF";*/
+        public static final String COLUMN_SB = "sB";
+        /* public static final String COLUMN_SC = "sC";
+         public static final String COLUMN_SD = "sD";
+         public static final String COLUMN_SE = "sE";
+         public static final String COLUMN_SF = "sF";*/
         public static final String COLUMN_GPSLAT = "gpslat";
         public static final String COLUMN_GPSLNG = "gpslng";
         public static final String COLUMN_GPSDATE = "gpsdate";
