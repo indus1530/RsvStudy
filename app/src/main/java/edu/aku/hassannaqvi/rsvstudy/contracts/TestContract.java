@@ -87,10 +87,7 @@ public class TestContract {
         this._UID = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_UID));
         this.formDate = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_FORMDATE));
         this.user = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_USER));
-        this.istatus = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_ISTATUS));
-        this.istatus88x = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_ISTATUS88x));
         this.DSSID = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_DSSID));
-        this.endingdatetime = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_ENDINGDATETIME));
         this.sA = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_SA));
         this.deviceID = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(TestTable.COLUMN_DEVICETAGID));
@@ -111,8 +108,6 @@ public class TestContract {
         json.put(TestTable.COLUMN_UID, this._UID == null ? JSONObject.NULL : this._UID);
         json.put(TestTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(TestTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
-        json.put(TestTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
-        json.put(TestTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
         json.put(TestTable.COLUMN_DSSID, this.DSSID == null ? JSONObject.NULL : this.DSSID);
 
         json.put(TestTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);

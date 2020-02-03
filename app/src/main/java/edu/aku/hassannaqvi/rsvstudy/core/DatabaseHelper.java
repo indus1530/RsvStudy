@@ -1435,6 +1435,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
+    public void updateTestForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(TestTable.COLUMN_SYNCED, true);
+        values.put(TestTable.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = TestTable.COLUMN_ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                TestTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
     public void updateMWRAs(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1951,6 +1970,61 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             );
             while (c.moveToNext()) {
                 FormsContract fc = new FormsContract();
+                allFC.add(fc.Hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
+    public Collection<TestContract> getUnsyncedTestForms() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                TestTable.COLUMN_ID,
+                TestTable.COLUMN_UID,
+                TestTable.COLUMN_FORMTYPE,
+                TestTable.COLUMN_FORMDATE,
+                TestTable.COLUMN_USER,
+                TestTable.COLUMN_DSSID,
+                TestTable.COLUMN_SA,
+                TestTable.COLUMN_DEVICEID,
+                TestTable.COLUMN_DEVICETAGID,
+                TestTable.COLUMN_APPVERSION,
+                TestTable.COLUMN_UUID,
+                TestTable.COLUMN_TEST_STATUS,
+        };
+
+
+        String whereClause = TestTable.COLUMN_SYNCED + " is null";
+
+        String[] whereArgs = null;
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                TestTable.COLUMN_ID + " ASC";
+
+        Collection<TestContract> allFC = new ArrayList<TestContract>();
+        try {
+            c = db.query(
+                    TestTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                TestContract fc = new TestContract();
                 allFC.add(fc.Hydrate(c));
             }
         } finally {
