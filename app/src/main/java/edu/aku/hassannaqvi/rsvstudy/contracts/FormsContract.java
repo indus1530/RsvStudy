@@ -107,7 +107,6 @@ public class FormsContract {
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
         this.DSSID = jsonObject.getString(FormsTable.COLUMN_DSSID);
-        this.NextVisit = jsonObject.getString(FormsTable.COLUMN_NEXT_VISIT);
         this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
         this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.sB = jsonObject.getString(FormsTable.COLUMN_SB);
@@ -138,7 +137,6 @@ public class FormsContract {
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
         this.DSSID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DSSID));
-        this.NextVisit = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_NEXT_VISIT));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
         this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
         this.sB = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SB));
@@ -171,7 +169,6 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
         json.put(FormsTable.COLUMN_DSSID, this.DSSID == null ? JSONObject.NULL : this.DSSID);
-        json.put(FormsTable.COLUMN_NEXT_VISIT, this.NextVisit == null ? JSONObject.NULL : this.NextVisit);
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
         if (!this.sA.equals("")) {
@@ -376,7 +373,6 @@ public class FormsContract {
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
         public static final String COLUMN_DSSID = "DSSID";
-        public static final String COLUMN_NEXT_VISIT = "NextVisit";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
         public static final String COLUMN_SA = "sA";
         public static final String COLUMN_SB = "sB";

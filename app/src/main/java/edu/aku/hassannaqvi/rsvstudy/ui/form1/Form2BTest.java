@@ -110,7 +110,7 @@ public class Form2BTest extends AppCompatActivity {
         MainApp.tc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.tc.setUser(MainApp.userName);
         MainApp.tc.setFormDate(dtToday);
-        MainApp.tc.set_UUID(MainApp.fac.get_UID());
+        MainApp.tc.set_UUID(MainApp.fc.get_UID());
         MainApp.tc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.tc.setDSSID(item.getDssid());
         MainApp.tc.setFormType(formType == FormType.PRETEST ? "pre_test" : "post_test");

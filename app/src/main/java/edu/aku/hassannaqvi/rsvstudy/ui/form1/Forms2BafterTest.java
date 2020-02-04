@@ -156,7 +156,9 @@ public class Forms2BafterTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(this, EndingActivity.class)
+                        .putExtra(Constants.FORMTYPE, formType)
+                        .putExtra("complete", true));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -252,7 +254,7 @@ public class Forms2BafterTest extends AppCompatActivity {
         json.put("RST6AS", bi.RST6AS.getText().toString());
 
 
-        MainApp.fac.setsB(String.valueOf(json));
+        MainApp.fc.setsB(String.valueOf(json));
 
     }
 

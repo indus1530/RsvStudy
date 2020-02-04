@@ -26,7 +26,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.MWRAContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
@@ -225,7 +224,6 @@ public class MainApp extends Application {
         } catch (Exception e) {
             Log.e("GPS", "setGPS: " + e.getMessage());
         }
-
 
     }
 

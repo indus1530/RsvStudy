@@ -17,12 +17,10 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
-import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityForm2bPosttestBinding;
-import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
@@ -124,14 +122,14 @@ public class Form2BPostTest extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.fac = new FormsAssessmentContract();
-        MainApp.fac.setDeviceID(MainApp.deviceId);
-        MainApp.fac.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
-        MainApp.fac.setUser(MainApp.userName);
-        MainApp.fac.setFormDate(dtToday);
-        MainApp.fac.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
-        MainApp.fac.setDSSID(item.getDssid());
-        MainApp.fac.setFormType("post_test");
+        MainApp.fc = new FormsContract();
+        MainApp.fc.setDeviceID(MainApp.deviceId);
+        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        MainApp.fc.setUser(MainApp.userName);
+        MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+        MainApp.fc.setDSSID(item.getDssid());
+        MainApp.fc.setFormType("post_test");
 
         JSONObject json = new JSONObject();
 
@@ -166,7 +164,7 @@ public class Form2BPostTest extends AppCompatActivity {
         //RST404
         json.put("RST404", bi.RST404.getText().toString());
 
-        MainApp.fac.setsA(String.valueOf(json));
+        MainApp.fc.setsA(String.valueOf(json));
 
     }
 
@@ -174,13 +172,13 @@ public class Form2BPostTest extends AppCompatActivity {
     private boolean UpdateDB() {
 
         DatabaseHelper db = new DatabaseHelper(this);
-        long updcount = db.addForm(MainApp.fac);
+        long updcount = db.addForm(MainApp.fc);
 
-        MainApp.fac.set_ID(String.valueOf(updcount));
+        MainApp.fc.set_ID(String.valueOf(updcount));
         if (updcount != 0) {
-            MainApp.fac.set_UID(
-                    (MainApp.fac.getDeviceID() + MainApp.fac.get_ID()));
-            db.updateAssessmentFormID();
+            MainApp.fc.set_UID(
+                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
+            db.updateFormID();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
