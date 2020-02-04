@@ -19,6 +19,8 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract.FormsAssessmentTable;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract.TestTable;
@@ -55,6 +57,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "rsvStudy_copy2.db";
     public static final String PROJECT_NAME = "DMU-RSVSTUDY2";
     private static final int DATABASE_VERSION = 1;
+
+
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsContract.FormsTable.TABLE_NAME + "("
             + FormsContract.FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -85,6 +89,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsContract.FormsTable.COLUMN_SYNCED + " TEXT," +
             FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
+
+    private static final String SQL_CREATE_ASSESSMENT_FORMS = "CREATE TABLE "
+            + FormsAssessmentTable.TABLE_NAME + "("
+            + FormsAssessmentTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + FormsAssessmentTable.COLUMN_PROJECT_NAME + " TEXT,"
+            + FormsAssessmentTable.COLUMN_UID + " TEXT," +
+            FormsAssessmentTable.COLUMN_FORMDATE + " TEXT," +
+            FormsAssessmentTable.COLUMN_APPVERSION + " TEXT," +
+            FormsAssessmentTable.COLUMN_STATUS + " TEXT," +
+            FormsAssessmentTable.COLUMN_FORMTYPE + " TEXT," +
+            FormsAssessmentTable.COLUMN_DSSID + " TEXT," +
+            FormsAssessmentTable.COLUMN_USER + " TEXT," +
+            FormsAssessmentTable.COLUMN_SA + " TEXT," +
+            FormsAssessmentTable.COLUMN_SB + " TEXT," +
+            FormsAssessmentTable.COLUMN_ISTATUS + " TEXT," +
+            FormsAssessmentTable.COLUMN_ISTATUS88x + " TEXT," +
+            FormsAssessmentTable.COLUMN_ENDINGDATETIME + " TEXT," +
+            FormsAssessmentTable.COLUMN_GPSLAT + " TEXT," +
+            FormsAssessmentTable.COLUMN_GPSLNG + " TEXT," +
+            FormsAssessmentTable.COLUMN_GPSDATE + " TEXT," +
+            FormsAssessmentTable.COLUMN_GPSACC + " TEXT," +
+            FormsAssessmentTable.COLUMN_DEVICEID + " TEXT," +
+            FormsAssessmentTable.COLUMN_DEVICETAGID + " TEXT," +
+            FormsAssessmentTable.COLUMN_SYNCED + " TEXT," +
+            FormsAssessmentTable.COLUMN_SYNCED_DATE + " TEXT"
+            + " );";
+
+
     private static final String SQL_SELECT_MOTHER_BY_CHILD =
             "SELECT c.agem cm, c.agey cy, c.aged cd, c.gender, c.serial serial, m.serial serialm, c.name child_name, c.dss_id_member child_id, m.name mother_name, c.dss_id_member mother_id, c.dob date_of_birth FROM census C join census m on c.dss_id_m = m.dss_id_member where c.member_type =? and c.uuid = m.uuid and c.current_status IN ('1', '2') and c.uuid = ? group by mother_id order by substr(c.dob, 7) desc, substr(c.dob, 4,2) desc, substr(c.dob, 1,2) desc;";
     private static final String SQL_DELETE_USERS =
@@ -203,6 +235,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_LHW_TABLE);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_TEST_TABLE);
+        db.execSQL(SQL_CREATE_ASSESSMENT_FORMS);
     }
 
     @Override
@@ -1246,6 +1279,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
+    public Long addForm(FormsAssessmentContract fc) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+// Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+        values.put(FormsAssessmentTable.COLUMN_PROJECT_NAME, fc.getProjectName());
+        values.put(FormsAssessmentTable.COLUMN_UID, fc.get_UID());
+        values.put(FormsAssessmentTable.COLUMN_FORMDATE, fc.getFormDate());
+        values.put(FormsAssessmentTable.COLUMN_DSSID, fc.getDSSID());
+        values.put(FormsAssessmentTable.COLUMN_USER, fc.getUser());
+        values.put(FormsAssessmentTable.COLUMN_ISTATUS, fc.getIstatus());
+        values.put(FormsAssessmentTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
+        values.put(FormsAssessmentTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
+        values.put(FormsAssessmentTable.COLUMN_SA, fc.getsA());
+        values.put(FormsAssessmentTable.COLUMN_GPSLAT, fc.getGpsLat());
+        values.put(FormsAssessmentTable.COLUMN_GPSLNG, fc.getGpsLng());
+        values.put(FormsAssessmentTable.COLUMN_GPSDATE, fc.getGpsDT());
+        values.put(FormsAssessmentTable.COLUMN_GPSACC, fc.getGpsAcc());
+        values.put(FormsAssessmentTable.COLUMN_DEVICETAGID, fc.getDevicetagID());
+        values.put(FormsAssessmentTable.COLUMN_DEVICEID, fc.getDeviceID());
+        values.put(FormsAssessmentTable.COLUMN_APPVERSION, fc.getAppversion());
+        values.put(FormsAssessmentTable.COLUMN_STATUS, fc.getStatus());
+        values.put(FormsAssessmentTable.COLUMN_FORMTYPE, fc.getFormType());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                FormsAssessmentTable.TABLE_NAME,
+                FormsAssessmentTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
 
     public Long addTest(TestContract fc) {
 
@@ -1454,6 +1522,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
+    public void updateAssessmentForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsAssessmentTable.COLUMN_SYNCED, true);
+        values.put(FormsAssessmentTable.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = FormsAssessmentTable.COLUMN_ID + " = ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                FormsAssessmentTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
     public void updateMWRAs(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1482,10 +1569,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
 
 // Which row to update, based on the ID
-        String selection = FormsContract.FormsTable._ID + " = ?";
+        String selection = FormsAssessmentTable._ID + " = ?";
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 
         int count = db.update(FormsContract.FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateAssessmentFormID() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsAssessmentTable.COLUMN_UID, MainApp.fac.get_UID());
+
+// Which row to update, based on the ID
+        String selection = FormsAssessmentTable._ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fac.get_ID())};
+
+        int count = db.update(FormsAssessmentTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1497,13 +1602,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // New value for one column
         ContentValues values = new ContentValues();
-        values.put(FormsContract.FormsTable.COLUMN_SB, MainApp.fc.getsB());
+        values.put(FormsAssessmentTable.COLUMN_SB, MainApp.fac.getsB());
 
 // Which row to update, based on the ID
-        String selection = FormsContract.FormsTable.COLUMN_UID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.fc.get_UID())};
+        String selection = FormsAssessmentTable.COLUMN_UID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fac.get_UID())};
 
-        int count = db.update(FormsContract.FormsTable.TABLE_NAME,
+        int count = db.update(FormsAssessmentTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1970,6 +2075,68 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             );
             while (c.moveToNext()) {
                 FormsContract fc = new FormsContract();
+                allFC.add(fc.Hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
+    public Collection<FormsAssessmentContract> getUnsyncedAssessmentForms() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsAssessmentTable._ID,
+                FormsAssessmentTable.COLUMN_UID,
+                FormsAssessmentTable.COLUMN_FORMDATE,
+                FormsAssessmentTable.COLUMN_USER,
+                FormsAssessmentTable.COLUMN_ISTATUS,
+                FormsAssessmentTable.COLUMN_ISTATUS88x,
+                FormsAssessmentTable.COLUMN_DSSID,
+                FormsAssessmentTable.COLUMN_ENDINGDATETIME,
+                FormsAssessmentTable.COLUMN_SA,
+                FormsAssessmentTable.COLUMN_SB,
+                FormsAssessmentTable.COLUMN_GPSLAT,
+                FormsAssessmentTable.COLUMN_GPSLNG,
+                FormsAssessmentTable.COLUMN_GPSDATE,
+                FormsAssessmentTable.COLUMN_GPSACC,
+                FormsAssessmentTable.COLUMN_DEVICETAGID,
+                FormsAssessmentTable.COLUMN_DEVICEID,
+                FormsAssessmentTable.COLUMN_APPVERSION,
+                FormsAssessmentTable.COLUMN_STATUS,
+                FormsAssessmentTable.COLUMN_FORMTYPE
+        };
+
+
+        String whereClause = FormsAssessmentTable.COLUMN_SYNCED + " is null";
+
+        String[] whereArgs = null;
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                FormsAssessmentTable.COLUMN_ID + " ASC";
+
+        Collection<FormsAssessmentContract> allFC = new ArrayList<FormsAssessmentContract>();
+        try {
+            c = db.query(
+                    FormsAssessmentTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                FormsAssessmentContract fc = new FormsAssessmentContract();
                 allFC.add(fc.Hydrate(c));
             }
         } finally {

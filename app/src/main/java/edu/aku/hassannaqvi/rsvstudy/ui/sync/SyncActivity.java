@@ -28,6 +28,7 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.adapter.UploadListAdapter;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
@@ -189,6 +190,22 @@ public class SyncActivity extends AppCompatActivity {
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     TestContract.TestTable.TABLE_NAME,
                     db.getUnsyncedTestForms(), 1, uploadListAdapter, uploadlist
+            ).execute();
+
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Assessment Forms",
+                    "updateAssessmentForms",
+                    TestContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    FormsAssessmentContract.FormsAssessmentTable.TABLE_NAME,
+                    db.getUnsyncedAssessmentForms(), 2, uploadListAdapter, uploadlist
             ).execute();
             /*Toast.makeText(getApplicationContext(), "Syncing Form Two", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {

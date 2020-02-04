@@ -17,6 +17,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
@@ -147,14 +148,14 @@ public class Form2BPreTest extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.fc = new FormsContract();
-        MainApp.fc.setDeviceID(MainApp.deviceId);
-        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
-        MainApp.fc.setDSSID(item.getDssid());
-        MainApp.fc.setFormType("pre_test");
+        MainApp.fac = new FormsAssessmentContract();
+        MainApp.fac.setDeviceID(MainApp.deviceId);
+        MainApp.fac.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        MainApp.fac.setUser(MainApp.userName);
+        MainApp.fac.setFormDate(dtToday);
+        MainApp.fac.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+        MainApp.fac.setDSSID(item.getDssid());
+        MainApp.fac.setFormType("pre_test");
 
         JSONObject json = new JSONObject();
 
@@ -186,20 +187,20 @@ public class Form2BPreTest extends AppCompatActivity {
         //RST302
         json.put("RST302", bi.RST302.getText().toString());
 
-        MainApp.fc.setsA(String.valueOf(json));
+        MainApp.fac.setsA(String.valueOf(json));
 
     }
 
 
     private boolean UpdateDB() {
         DatabaseHelper db = new DatabaseHelper(this);
-        long updcount = db.addForm(MainApp.fc);
+        long updcount = db.addForm(MainApp.fac);
 
-        MainApp.fc.set_ID(String.valueOf(updcount));
+        MainApp.fac.set_ID(String.valueOf(updcount));
         if (updcount != 0) {
-            MainApp.fc.set_UID(
-                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
-            db.updateFormID();
+            MainApp.fac.set_UID(
+                    (MainApp.fac.getDeviceID() + MainApp.fac.get_ID()));
+            db.updateAssessmentFormID();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();

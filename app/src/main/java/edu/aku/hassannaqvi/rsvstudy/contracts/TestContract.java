@@ -249,7 +249,7 @@ public class TestContract {
 
     public static abstract class TestTable implements BaseColumns {
 
-        public static final String TABLE_NAME = "test";
+        public static final String TABLE_NAME = "tests";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "projectname";
         public static final String COLUMN_ID = "_id";
