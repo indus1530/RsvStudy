@@ -252,7 +252,7 @@ public class Forms2BafterTest extends AppCompatActivity {
         json.put("RST6AS", bi.RST6AS.getText().toString());
 
 
-        MainApp.fc.setsB(String.valueOf(json));
+        MainApp.fac.setsB(String.valueOf(json));
 
     }
 

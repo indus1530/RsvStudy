@@ -18,24 +18,23 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import edu.aku.hassannaqvi.rsvstudy.contracts.ChildrenContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract.FormsAssessmentTable;
-import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract.TestTable;
-import edu.aku.hassannaqvi.rsvstudy.contracts.UCsContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.UsersContract;
-import edu.aku.hassannaqvi.rsvstudy.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.AreasContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.AreasContract.singleAreas;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsAssessmentContract.FormsAssessmentTable;
+import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.LHWContract.lhwEntry;
 import edu.aku.hassannaqvi.rsvstudy.contracts.MWRAContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.MWRAContract.MWRATable;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TalukasContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TalukasContract.singleTalukas;
+import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract.TestTable;
+import edu.aku.hassannaqvi.rsvstudy.contracts.UCsContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.UsersContract;
+import edu.aku.hassannaqvi.rsvstudy.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.VillagesContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.VillagesContract.singleVillage;
 import edu.aku.hassannaqvi.rsvstudy.otherClasses.MotherLst;
@@ -127,7 +126,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
     private static final String SQL_SELECT_MWRA =
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
-    private static final String SQL_DELETE_CHILDREN = "DROP TABLE IF EXISTS " + ChildrenContract.singleChild.TABLE_NAME;
     private static final String SQL_DELETE_CHILDLIST = "DROP TABLE IF EXISTS " + ChildList.singleChildList.TABLE_NAME;
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + singleTalukas.TABLE_NAME;
@@ -173,14 +171,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleAreas.COLUMN_AREACODE + " TEXT,"
             + singleAreas.COLUMN_UC_CODE + " TEXT,"
             + singleAreas.COLUMN_AREA + " TEXT );";
-    final String SQL_CREATE_CHILDREN = "CREATE TABLE " + ChildrenContract.singleChild.TABLE_NAME + "("
-            + ChildrenContract.singleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + ChildrenContract.singleChild.COLUMN_LHW_CODE + " TEXT,"
-            + ChildrenContract.singleChild.COLUMN_CASEID + " TEXT,"
-            + ChildrenContract.singleChild.COLUMN_CHILD_NAME + " TEXT, "
-            + ChildrenContract.singleChild.COLUMN_F_NAME + " TEXT,"
-            + ChildrenContract.singleChild.COLUMN_REF_DATE + " TEXT, "
-            + ChildrenContract.singleChild.COLUMN_LUID + " TEXT );";
     final String SQL_CREATE_CHILDLIST = "CREATE TABLE " + ChildList.singleChildList.TABLE_NAME + "("
             + ChildList.singleChildList._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + ChildList.singleChildList.COLUMN_DSSID + " TEXT,"
@@ -228,7 +218,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_FORMS);
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
-        db.execSQL(SQL_CREATE_CHILDREN);
         db.execSQL(SQL_CREATE_CHILDLIST);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
@@ -243,7 +232,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_USERS);
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL("DROP TABLE IF EXISTS " + lhwEntry.TABLE_NAME);
-        db.execSQL(SQL_DELETE_CHILDREN);
         db.execSQL(SQL_DELETE_CHILDLIST);
         db.execSQL(SQL_DELETE_VILLAGES);
         db.execSQL(SQL_DELETE_TALUKAS);
@@ -252,37 +240,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void syncChildren(JSONArray pcList) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(ChildrenContract.singleChild.TABLE_NAME, null, null);
-
-        try {
-            JSONArray jsonArray = pcList;
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
-
-                ChildrenContract cc = new ChildrenContract();
-                cc.sync(jsonObjectCC);
-                Log.i(TAG, "syncChildren: " + jsonObjectCC.toString());
-
-                ContentValues values = new ContentValues();
-
-                values.put(ChildrenContract.singleChild.COLUMN_LHW_CODE, cc.getLhw_code());
-                values.put(ChildrenContract.singleChild.COLUMN_CASEID, cc.getCaseid());
-                values.put(ChildrenContract.singleChild.COLUMN_CHILD_NAME, cc.getChild_name());
-                values.put(ChildrenContract.singleChild.COLUMN_F_NAME, cc.getF_name());
-                values.put(ChildrenContract.singleChild.COLUMN_REF_DATE, cc.getRef_date());
-                values.put(ChildrenContract.singleChild.COLUMN_LUID, cc.getLuid());
-
-                db.insert(ChildrenContract.singleChild.TABLE_NAME, null, values);
-            }
-            db.close();
-
-        } catch (Exception e) {
-
-        }
-    }
 
     public void syncChildlist(JSONArray cList) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -699,53 +656,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allDC;
     }
 
-    public Collection<ChildrenContract> getChildBy(String lhw_code, String caseid) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                ChildrenContract.singleChild._ID,
-                ChildrenContract.singleChild.COLUMN_LHW_CODE,
-                ChildrenContract.singleChild.COLUMN_CASEID,
-                ChildrenContract.singleChild.COLUMN_CHILD_NAME,
-                ChildrenContract.singleChild.COLUMN_F_NAME,
-                ChildrenContract.singleChild.COLUMN_REF_DATE,
-                ChildrenContract.singleChild.COLUMN_LUID
-        };
-
-        String whereClause = ChildrenContract.singleChild.COLUMN_LHW_CODE + " = ? AND " + ChildrenContract.singleChild.COLUMN_CASEID + " = ?";
-        String[] whereArgs = {lhw_code, caseid};
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                ChildrenContract.singleChild.COLUMN_LHW_CODE + " ASC";
-
-        Collection<ChildrenContract> allCC = new ArrayList<>();
-        try {
-            c = db.query(
-                    ChildrenContract.singleChild.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                ChildrenContract cc = new ChildrenContract();
-                allCC.add(cc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allCC;
-    }
-
     public ChildList getChildlistBy(String study_id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -794,101 +704,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allCL;
     }
 
-
-    public ChildrenContract getChildById(String lhw_code, String caseid) {
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                ChildrenContract.singleChild._ID,
-                ChildrenContract.singleChild.COLUMN_LHW_CODE,
-                ChildrenContract.singleChild.COLUMN_CASEID,
-                ChildrenContract.singleChild.COLUMN_CHILD_NAME,
-                ChildrenContract.singleChild.COLUMN_F_NAME,
-                ChildrenContract.singleChild.COLUMN_REF_DATE,
-                ChildrenContract.singleChild.COLUMN_LUID,
-        };
-
-        String whereClause = ChildrenContract.singleChild.COLUMN_LHW_CODE + " =? AND " + ChildrenContract.singleChild.COLUMN_CASEID + " =?";
-        String[] whereArgs = {lhw_code, caseid};
-        String groupBy = null;
-        String having = null;
-
-        String orderBy = ChildrenContract.singleChild.COLUMN_LHW_CODE + " ASC";
-
-        ChildrenContract allEB = null;
-
-        try {
-            c = db.query(
-                    ChildrenContract.singleChild.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                allEB = new ChildrenContract().hydrate(c);
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allEB;
-    }
-
-
-    public ChildrenContract getChildById(String sType, String codeLhw, String refId) {
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                FormsContract.FormsTable.COLUMN_FORMTYPE,
-                FormsContract.FormsTable.COLUMN_ISTATUS,
-                FormsContract.FormsTable.COLUMN_DSSID,
-                FormsContract.FormsTable.COLUMN_NEXT_VISIT,
-                FormsContract.FormsTable.COLUMN_FORMDATE,
-                FormsContract.FormsTable.COLUMN_SA,
-                /*FormsContract.TestTable.COLUMN_SB,*/
-        };
-
-        String whereClause = FormsContract.FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsContract.FormsTable.COLUMN_DSSID + " =? AND " + FormsContract.FormsTable.COLUMN_NEXT_VISIT + "=? AND " + FormsContract.FormsTable.COLUMN_ISTATUS + "=?";
-        String[] whereArgs = {sType, codeLhw, refId, "1"};
-        String groupBy = null;
-        String having = null;
-
-        String orderBy = FormsContract.FormsTable.COLUMN_FORMTYPE + " ASC";
-
-        ChildrenContract allEB = null;
-
-        try {
-            c = db.query(
-                    FormsContract.FormsTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                allEB = new ChildrenContract().hydrateForm(c);
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allEB;
-    }
 
 
     public Collection<UCsContract> getAllUCs(String talukaCode) {
