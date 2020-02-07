@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
+import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 import edu.aku.hassannaqvi.rsvstudy.R;
@@ -49,6 +50,10 @@ public class Section05Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
+
+        bi.RS68.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
+
+
         bi.RS72.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -462,14 +467,22 @@ public class Section05Activity extends AppCompatActivity {
                 : bi.RS8398.isChecked() ? "98"
                 : "0");
 
-        SF.put("RS84", bi.RS84a.isChecked() ? "1"
+    /*    SF.put("RS84", bi.RS84a.isChecked() ? "1"
                 : bi.RS84b.isChecked() ? "2"
                 : bi.RS84c.isChecked() ? "3"
                 : bi.RS84d.isChecked() ? "4"
                 : bi.RS84e.isChecked() ? "5"
                 : bi.RS84f.isChecked() ? "6"
                 : bi.RS84g.isChecked() ? "7 "
-                : "0");
+                : "0");*/
+
+        SF.put("RS84a", bi.RS84a.isChecked() ? "1" : "0");
+        SF.put("RS84b", bi.RS84b.isChecked() ? "2" : "0");
+        SF.put("RS84c", bi.RS84c.isChecked() ? "3" : "0");
+        SF.put("RS84d", bi.RS84d.isChecked() ? "4" : "0");
+        SF.put("RS84e", bi.RS84e.isChecked() ? "5" : "0");
+        SF.put("RS84f", bi.RS84f.isChecked() ? "6" : "0");
+        SF.put("RS84g", bi.RS84g.isChecked() ? "7" : "0");
 
         SF.put("RS85", bi.RS85a.isChecked() ? "1"
                 : bi.RS85b.isChecked() ? "2"

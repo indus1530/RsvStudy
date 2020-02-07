@@ -167,6 +167,7 @@ public class SyncActivity extends AppCompatActivity {
                 uploadmodel.setstatusID(0);
                 uploadlist.add(uploadmodel);
             }
+
             new SyncAllData(
                     this,
                     "Forms",

@@ -80,7 +80,6 @@ public class MainApp extends Application {
 
     public static Boolean admin = false;
     public static FormsContract fc;
-    public static FormsAssessmentContract fac;
     public static TestContract tc;
     public static String userName = "0000";
     public static String DOB = "";

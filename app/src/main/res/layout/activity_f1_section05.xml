@@ -800,7 +800,8 @@
                             android:id="@+id/RS68"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/date" />
+                            android:hint="@string/date"
+                            app:maxDate="CR_DATE" />
 
                     </LinearLayout>
 
@@ -1998,54 +1999,54 @@
                             android:text="@string/RS84"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-                        <RadioGroup
-                            android:id="@+id/RS84"
-                            style="@style/radiogroup"
-                            android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:tag="0">
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84a"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84a" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84b"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84b" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84c"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84c" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84d"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84d" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84e"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84e" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84f"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84f" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/RS84g"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84g" />
-
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
 
