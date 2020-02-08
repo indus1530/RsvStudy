@@ -160,7 +160,20 @@ public class Section05Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
+        if (ValidatorClass.EmptyTextBox(this, bi.RS15, getString(R.string.RS15))) {
+            try {
+                SaveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                MainApp.endActivity(this, this);
+
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 
     private boolean formValidation() {

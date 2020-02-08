@@ -389,26 +389,26 @@
 
     <!-- FORM 2 - B-->
     <string name="SectionT2"> 2. General Information </string>
-    <string name="RST201"> 2.01:\t Outside Temperature (°C) </string>
-    <string name="RST202"> 2.02:\t Height of the child (cm) </string>
-    <string name="RST203"> 2.03:\t Weight of the child (kg) </string>
+    <string name="RST201">  Outside Temperature (°C) </string>
+    <string name="RST202"> Height of the child (cm) </string>
+    <string name="RST203"> Weight of the child (kg) </string>
 
-    <string name="SectionT3"> 3.0 Pre-Exercise Spirometry </string>
-    <string name="RST301"> 3.01:\t Pre-exercise spirometry performed </string>
-    <string name="RST3AS"> 3AS:\t Test Assessor </string>
-    <string name="RST302"> 3.02:\t Reasons for not performing spirometry </string>
-    <string name="RST303A"> 3.03A:\t Test Start Time </string>
-    <string name="RST303B"> 3.03B:\t Test End Time </string>
-    <string name="RST304A"> 3.04A:\t Total number of test conducted </string>
-    <string name="RST304B"> 3.04B:\t Total number of acceptable test </string>
-    <string name="RST305"> 3.05: Has the child successfully completed three spirometry tests ? </string>
-    <string name="RST306"> 3.06: Reason for not completing three spirometry tests </string>
+    <string name="SectionT3"> Pre-Exercise Spirometry </string>
+    <string name="RST301"> Pre-exercise spirometry performed </string>
+    <string name="RST3AS">  Test Assessor </string>
+    <string name="RST302">  Reasons for not performing spirometry </string>
+    <string name="RST303A">  Test Start Time </string>
+    <string name="RST303B">  Test End Time </string>
+    <string name="RST304A">  Total number of test conducted </string>
+    <string name="RST304B">  Total number of acceptable test </string>
+    <string name="RST305">  Has the child successfully completed three spirometry tests ? </string>
+    <string name="RST306">  Reason for not completing three spirometry tests </string>
     <string name="RST306a"> Dizziness </string>
     <string name="RST306b"> Cough </string>
     <string name="RST306c"> Child is not cooperating </string>
     <string name="RST306d"> Machine not working </string>
 
-    <string name="RST307"> 3.07: T E S T S </string>
+    <string name="RST307">  T E S T S </string>
     <string name="RST307A"> A: Test Number </string>
     <string name="RST307B"> B: Quality of the test </string>
     <string name="RST307Ba"> Good quality and test is acceptable </string>
@@ -426,48 +426,48 @@
     <string name="RST307E"> E: FEV1 (L) </string>
     <string name="RST307F"> F: FEV1/FVC (%) </string>
 
-    <string name="RST316"> 3.16:\t Does the child need to come for a next clinical session to complete the spirometry test </string>
+    <string name="RST316">  Does the child need to come for a next clinical session to complete the spirometry test </string>
     <string name="RST316Hint"> A child needs to visit the clinic again if he/she does not complete the three acceptable spirometry test and parents do not withdrawn the consent for the test </string>
-    <string name="RST317"> 3.17:\t Date of Next Clinical Session </string>
+    <string name="RST317">  Date of Next Clinical Session </string>
 
-    <string name="SectionT4"> 4.0  Post-Exercise Spirometry </string>
-    <string name="RST401"> 4.01:\t Has the child performed exercise challenge test </string>
-    <string name="RST402A"> 4.02A:\t Exercise Start Time </string>
-    <string name="RST402B"> 4.02B:\t Exercise Stop Time </string>
-    <string name="RST402C"> 4.02C:\t Distance covered (meters) </string>
-    <string name="RST402D"> 4.02D:\t Heart Rate Before Exercise </string>
-    <string name="RST402E"> 4.02E:\t Heart Rate After Exercise </string>
+    <string name="SectionT4">   Post-Exercise Spirometry </string>
+    <string name="RST401">  Has the child performed exercise challenge test </string>
+    <string name="RST402A">  Exercise Start Time </string>
+    <string name="RST402B">  Exercise Stop Time </string>
+    <string name="RST402C">  Distance covered (meters) </string>
+    <string name="RST402D">  Heart Rate Before Exercise </string>
+    <string name="RST402E">  Heart Rate After Exercise </string>
 
-    <string name="RST403"> 4.03:\t Post Exercise Spirometry Performed </string>
-    <string name="RST404"> 4.04:\t Reasons for not performing spirometry </string>
-    <string name="RST405A"> 4.05A:\t Test Start Time </string>
-    <string name="RST405B"> 4.05B:\t Test End Time </string>
-    <string name="RST406A"> 4.06A:\t Total number of test conducted </string>
-    <string name="RST406B"> 4.06B:\t Total number of acceptable test </string>
-    <string name="RST407"> 4.07:\t Has the child successfully completed three post exercise spirometry tests </string>
-    <string name="RST408"> 4.08:\t Reason for not completing three spirometry tests </string>
+    <string name="RST403">  Post Exercise Spirometry Performed </string>
+    <string name="RST404">  Reasons for not performing spirometry </string>
+    <string name="RST405A">  Test Start Time </string>
+    <string name="RST405B">  Test End Time </string>
+    <string name="RST406A"> Total number of test conducted </string>
+    <string name="RST406B">  Total number of acceptable test </string>
+    <string name="RST407">  Has the child successfully completed three post exercise spirometry tests </string>
+    <string name="RST408">  Reason for not completing three spirometry tests </string>
     <string name="RST408a"> Dizziness </string>
     <string name="RST408b"> Cough </string>
     <string name="RST408c"> Child is not cooperating </string>
     <string name="RST408d"> Machine Not Working </string>
 
-    <string name="RST417"> 4.17:\t Does the child need to attend a clinical session to complete the exercise challenge test  </string>
+    <string name="RST417"> Does the child need to attend a clinical session to complete the exercise challenge test  </string>
     <string name="RST417Hint"> A child needs to visit the clinic again if he/she does not complete the three acceptable spirometry test after completion the exercise and parents do not withdrawn the consent for the test </string>
-    <string name="RST418"> 4.18:\t Date of next clinical session </string>
+    <string name="RST418">  Date of next clinical session </string>
 
-    <string name="SectionT5"> 5.0  Eosinophil Count Test </string>
-    <string name="RST501"> 5.01:\t  Blood drawn for eosinophil count </string>
-    <string name="RST502"> 5.02:\t  Reason for not collecting blood </string>
+    <string name="SectionT5">   Eosinophil Count Test </string>
+    <string name="RST501">   Blood drawn for eosinophil count </string>
+    <string name="RST502">  Reason for not collecting blood </string>
     <string name="RST502a"> Caregiver did not consent for blood collection </string>
     <string name="RST502b"> Collection failure </string>
     <string name="RST502c"> Child was not cooperative </string>
-    <string name="RST503"> 5.03:\t  Does the child need to visit the clinic for performing the eosinophil test </string>
+    <string name="RST503">   Does the child need to visit the clinic for performing the eosinophil test </string>
     <string name="RST503Hint"> A child needs to visit the clinic again if he/she does not provide the blood samples and parents do not withdrawn the consent for the test </string>
-    <string name="RST504"> 5.04:\t  Date of next clinical visit </string>
+    <string name="RST504">  Date of next clinical visit </string>
 
-    <string name="RST600"> 6.0:\t  Does the child need to attend a clinical visit to perform any uncompleted test </string>
-    <string name="RST601"> 6.01:\t  Date of next clinic visit </string>
-    <string name="RST6AS">  6AS:\t  Test Assessor </string>
+    <string name="RST600">   Does the child need to attend a clinical visit to perform any uncompleted test </string>
+    <string name="RST601">   Date of next clinic visit </string>
+    <string name="RST6AS">    Test Assessor </string>
 
     <!--End RSV Study Strings-->
 

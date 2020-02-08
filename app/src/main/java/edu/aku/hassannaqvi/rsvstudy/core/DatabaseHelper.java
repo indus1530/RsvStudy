@@ -63,7 +63,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + FormsContract.FormsTable.COLUMN_UID + " TEXT," +
             FormsContract.FormsTable.COLUMN_FORMDATE + " TEXT," +
             FormsContract.FormsTable.COLUMN_APPVERSION + " TEXT," +
-            FormsContract.FormsTable.COLUMN_STATUS + " TEXT," +
             FormsContract.FormsTable.COLUMN_FORMTYPE + " TEXT," +
             FormsContract.FormsTable.COLUMN_DSSID + " TEXT," +
             FormsContract.FormsTable.COLUMN_USER + " TEXT," +
@@ -1051,7 +1050,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_DEVICETAGID, fc.getDevicetagID());
         values.put(FormsContract.FormsTable.COLUMN_DEVICEID, fc.getDeviceID());
         values.put(FormsContract.FormsTable.COLUMN_APPVERSION, fc.getAppversion());
-        values.put(FormsContract.FormsTable.COLUMN_STATUS, fc.getStatus());
         values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, fc.getFormType());
 
         // Insert the new row, returning the primary key value of the new row
@@ -1126,7 +1124,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsContract.FormsTable.COLUMN_DSSID,
                 FormsContract.FormsTable.COLUMN_ISTATUS,
-                FormsContract.FormsTable.COLUMN_STATUS,
 
         };
 
@@ -1148,7 +1145,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             while (c.moveToNext()) {
                 allFC.setDSSID(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_DSSID)));
                 allFC.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
-                allFC.setStatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_STATUS)));
             }
         } finally {
             if (c != null) {
@@ -1163,44 +1159,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-    public String getChildStatus(String studyID) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                FormsContract.FormsTable.COLUMN_DSSID,
-                FormsContract.FormsTable.COLUMN_ISTATUS
-        };
-
-        String selection = FormsContract.FormsTable.COLUMN_DSSID + " = ? ";
-        String[] selectionArgs = {studyID};
-
-        String orderBy = null;
-
-        String status = "";
-        try {
-            c = db.query(
-                    FormsContract.FormsTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    selection,               // The columns for the WHERE clause
-                    selectionArgs,                 // The values for the WHERE clause
-                    null,                   // don't group the rows
-                    null,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                status = c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_STATUS));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return status;
-    }
 
     public Long addMWRA(MWRAContract mc) {
 
@@ -1388,7 +1346,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_DEVICETAGID,
                 FormsContract.FormsTable.COLUMN_DEVICEID,
                 FormsContract.FormsTable.COLUMN_APPVERSION,
-                FormsContract.FormsTable.COLUMN_STATUS,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
 
         };
@@ -1448,7 +1405,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_DEVICETAGID,
                 FormsContract.FormsTable.COLUMN_DEVICEID,
                 FormsContract.FormsTable.COLUMN_APPVERSION,
-                FormsContract.FormsTable.COLUMN_STATUS,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
 
         };
@@ -1760,7 +1716,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_DEVICETAGID,
                 FormsContract.FormsTable.COLUMN_DEVICEID,
                 FormsContract.FormsTable.COLUMN_APPVERSION,
-                FormsContract.FormsTable.COLUMN_STATUS,
                 FormsContract.FormsTable.COLUMN_FORMTYPE
         };
 
@@ -2059,7 +2014,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
-        values.put(FormsContract.FormsTable.COLUMN_STATUS, MainApp.fc.getStatus());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
 
 

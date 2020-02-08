@@ -39,7 +39,6 @@ public class FormsContract {
     public void setsB(String sB) {
         this.sB = sB;
     }
-    private String NextVisit = "";
     private String endingdatetime = "";
 
 
@@ -151,7 +150,6 @@ public class FormsContract {
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
-        this.status = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STATUS));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
 
         return this;
@@ -196,7 +194,6 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
-        json.put(FormsTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
         json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
 
         return json;
@@ -270,13 +267,6 @@ public class FormsContract {
         this.DSSID = Study_Id;
     }
 
-    public String getNextVisit() {
-        return NextVisit;
-    }
-
-    public void setNextVisit(String NextVisit) {
-        this.NextVisit = NextVisit;
-    }
 
     public String getsA() {
         return sA;
@@ -389,7 +379,7 @@ public class FormsContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
-        public static final String COLUMN_STATUS = "status";
+        /*public static final String COLUMN_STATUS = "status";*/
 
         public static String _URL = "sync.php";
 

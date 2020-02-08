@@ -21,6 +21,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 import java.lang.reflect.Field;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
+import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
 
 /**
@@ -31,6 +32,22 @@ import edu.aku.hassannaqvi.rsvstudy.R;
 public abstract class ValidatorClass {
 
     public static boolean EmptyTextBox(Context context, EditText txt, String msg) {
+        if (TextUtils.isEmpty(txt.getText().toString())) {
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+            txt.setError("This data is Required! ");    // Set Error on last radio button
+            txt.setFocusableInTouchMode(true);
+            txt.requestFocus();
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": This data is Required!");
+            return false;
+        } else {
+            txt.setError(null);
+            txt.clearFocus();
+            return true;
+        }
+
+    }
+
+    public static boolean EmptyTextBox(Context context, DatePickerInputEditText txt, String msg) {
         if (TextUtils.isEmpty(txt.getText().toString())) {
             FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             txt.setError("This data is Required! ");    // Set Error on last radio button

@@ -95,7 +95,7 @@ public class EndingActivity extends AppCompatActivity {
 //        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         MainApp.fc.setIstatus(bi.istatus1.isChecked() ? "1"
-                : bi.istatus5.isChecked() ? "5"
+                : bi.istatus5.isChecked() ? "2"
                 : "0");
 
 //        MainApp.status == 5 && bi.istatus1.isChecked()? "5" ||
