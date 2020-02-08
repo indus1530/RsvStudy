@@ -21,12 +21,15 @@ public class FormsContract {
     //private final String surveyType = "SN";
     private String _ID = "";
     private String _UID = "";
+
+
     private String formType = "";
     private String formDate = ""; // Date
     private String user = ""; // Interviewer
     private String istatus = ""; // Interview Status
 
     private String sB = "";
+    private String hasFollowUp = "";
 
     public String getsB() {
         return sB;
@@ -39,6 +42,7 @@ public class FormsContract {
     public void setsB(String sB) {
         this.sB = sB;
     }
+
     private String endingdatetime = "";
 
 
@@ -51,17 +55,6 @@ public class FormsContract {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
-
-    private String status = "";
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
 
     public static final String DATE_FORMAT = "yyyy-mm-dd";
 
@@ -88,6 +81,14 @@ public class FormsContract {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public String getHasFollowUp() {
+        return hasFollowUp;
+    }
+
+    public void setHasFollowUp(String hasFollowUp) {
+        this.hasFollowUp = hasFollowUp;
     }
 
     public String getAppversion() {
@@ -379,6 +380,7 @@ public class FormsContract {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
+        public static final String COLUMN_HASFOLLOWUP = "hasFollowup";
         /*public static final String COLUMN_STATUS = "status";*/
 
         public static String _URL = "sync.php";

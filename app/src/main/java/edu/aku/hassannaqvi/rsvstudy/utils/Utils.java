@@ -9,11 +9,12 @@ import android.view.WindowManager;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Forms2BafterTest;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 
 public class Utils {
 
 
-    public static void openDialog(final Activity activity) {
+    public static void openDialog(final Activity activity, final FormType formType) {
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.item_dialog);
@@ -30,7 +31,7 @@ public class Utils {
             public void onClick(View v) {
                 activity.finish();
                 activity.startActivity(new Intent(activity, Forms2BafterTest.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        .putExtra(Constants.FORMTYPE, formType));
             }
         });
         dialog.findViewById(R.id.btnNo).setOnClickListener(new View.OnClickListener() {

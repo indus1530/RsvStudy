@@ -81,10 +81,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsContract.FormsTable.COLUMN_GPSACC + " TEXT," +
             FormsContract.FormsTable.COLUMN_DEVICEID + " TEXT," +
             FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT," +
+            FormsContract.FormsTable.COLUMN_HASFOLLOWUP + " TEXT," +
             FormsContract.FormsTable.COLUMN_SYNCED + " TEXT," +
             FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
-
 
 
     private static final String SQL_SELECT_MOTHER_BY_CHILD =
@@ -974,6 +974,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+    public boolean hasFollowup(String dssID) throws SQLException {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsContract.FormsTable.TABLE_NAME + " WHERE "
+                + FormsContract.FormsTable.COLUMN_DSSID + "=? AND "
+                + FormsContract.FormsTable.COLUMN_HASFOLLOWUP
+                + " = 1", new String[]{dssID});
+        if (mCursor != null) {
+            return mCursor.getCount() > 0;
+        }
+        return false;
+    }
+
 
     public List<FormsContract> getFormsByDSS(String dssID) {
         List<FormsContract> formList = new ArrayList<FormsContract>();
@@ -1038,8 +1051,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
         values.put(FormsContract.FormsTable.COLUMN_SA, fc.getsA());
-       /* values.put(FormsContract.TestTable.COLUMN_SB, fc.getsB());
-        values.put(FormsContract.TestTable.COLUMN_SC, fc.getsC());
+        values.put(FormsContract.FormsTable.COLUMN_SB, fc.getsB());
+        /* values.put(FormsContract.TestTable.COLUMN_SC, fc.getsC());
         values.put(FormsContract.TestTable.COLUMN_SD, fc.getsD());
         values.put(FormsContract.TestTable.COLUMN_SE, fc.getsE());
         values.put(FormsContract.TestTable.COLUMN_SF, fc.getsF());*/
@@ -1051,6 +1064,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_DEVICEID, fc.getDeviceID());
         values.put(FormsContract.FormsTable.COLUMN_APPVERSION, fc.getAppversion());
         values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, fc.getFormType());
+        values.put(FormsContract.FormsTable.COLUMN_HASFOLLOWUP, fc.getHasFollowUp());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
