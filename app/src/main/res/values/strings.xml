@@ -1,6 +1,6 @@
 <resources>
     <!--new Strings-->
-    <string name="app_name">ANISA RSV Study App (2nd Followup)</string>
+    <string name="app_name">ANISA RSV Study App (2nd Follow up + Clinical Assessment Form)</string>
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
     <string name="btnUpload">Upload</string>
@@ -523,6 +523,7 @@
     <string name="centimeter"> cm </string>
     <string name="Kilogram"> kg </string>
     <string name="gender">جنس</string>
+    <string name="date_of_visit">Date of visit</string>
 
 
 </resources>

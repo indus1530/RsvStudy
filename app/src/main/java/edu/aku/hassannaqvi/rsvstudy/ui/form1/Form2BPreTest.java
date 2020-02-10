@@ -167,6 +167,7 @@ public class Form2BPreTest extends AppCompatActivity {
 
         json.put("RST303A", dtToday);
         //RST201
+        json.put("RST200", bi.RST200.getText().toString());
         json.put("RST201", bi.RST201.getText().toString());
 
         //RST202

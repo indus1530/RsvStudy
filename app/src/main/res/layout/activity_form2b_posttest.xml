@@ -89,7 +89,7 @@
                             style="@style/i_textview"
                             android:text="@string/RST402A" />
 
-                        <EditText
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/RST402A"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />
@@ -112,7 +112,7 @@
                             style="@style/i_textview"
                             android:text="@string/RST402B" />
 
-                        <EditText
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/RST402B"
                             style="@style/EditTextNum"
                             android:hint="@string/Especify" />

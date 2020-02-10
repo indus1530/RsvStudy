@@ -36,6 +36,35 @@
                     android:layout_height="wrap_content"
                     android:text="@string/SectionT2" />
 
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RS15cv"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/date_of_visit" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/RST200"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:focusable="false"
+                            android:hint="DD-MM-YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
                 <!--RST201 - EditText-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/RST201cv"
