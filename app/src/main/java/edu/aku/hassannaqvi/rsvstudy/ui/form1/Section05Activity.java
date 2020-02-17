@@ -1,11 +1,12 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,18 +14,18 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
-import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 
 public class Section05Activity extends AppCompatActivity {
 

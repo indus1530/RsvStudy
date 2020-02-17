@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/SectionT2" />
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RS15cv"
                     style="@style/cardView">
 
@@ -63,10 +63,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RST201 - EditText-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RST201cv"
                     style="@style/cardView">
 
@@ -90,10 +90,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RST202 - EditText-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RST202cv"
                     style="@style/cardView">
 
@@ -117,10 +117,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RST203 - EditText-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RST203cv"
                     style="@style/cardView">
 
@@ -144,7 +144,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <TextView
@@ -154,7 +154,7 @@
                     android:text="@string/SectionT3" />
 
                 <!--RST301 - Radio-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RST301cv"
                     style="@style/cardView">
 
@@ -190,10 +190,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RST3AS - EditText -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RST3AScv"
                     style="@style/cardView">
 
@@ -214,10 +214,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RST302 - EditText -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RST302cv"
                     style="@style/cardView">
 
@@ -237,7 +237,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!-- ELSE PART AFTER TEST -->
                 <!--

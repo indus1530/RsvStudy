@@ -53,7 +53,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/preTest"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="150dp"
@@ -69,7 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="10dp" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/postTest"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="150dp"
@@ -85,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="10dp" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCancel"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="150dp"

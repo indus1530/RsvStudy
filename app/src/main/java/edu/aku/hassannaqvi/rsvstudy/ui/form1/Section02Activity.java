@@ -1,23 +1,25 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import com.validatorcrawler.aliazaz.Clear;
+import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section02Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
-import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 import static edu.aku.hassannaqvi.rsvstudy.utils.DateUtils.convertDateFormat;
 
@@ -45,23 +47,26 @@ public class Section02Activity extends AppCompatActivity {
 
                 if (checkedId == bi.RS17b.getId()) {
                     bi.RS18cv.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.RS19cv, null);
+                    /*ClearClass.ClearAllFields(bi.RS19cv, null);
                     ClearClass.ClearAllFields(bi.RS20cv, null);
                     ClearClass.ClearAllFields(bi.RS21cv, null);
-                    ClearClass.ClearAllFields(bi.RS22cv, null);
-                    bi.RS19cv.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.RS22cv, null);*/
+                    Clear.clearAllFields(bi.fldGrpSec0219);
+                    bi.fldGrpSec0219.setVisibility(View.GONE);
+                    /*bi.RS19cv.setVisibility(View.GONE);
                     bi.RS20cv.setVisibility(View.GONE);
                     bi.RS21cv.setVisibility(View.GONE);
                     bi.RS22cv.setVisibility(View.GONE);
-                    bi.btnEnd.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.GONE);*/
                     MainApp.status = 4;
                 } else {
                     ClearClass.ClearAllFields(bi.RS18cv, null);
                     bi.RS18cv.setVisibility(View.GONE);
-                    bi.RS19cv.setVisibility(View.VISIBLE);
+                    /*bi.RS19cv.setVisibility(View.VISIBLE);
                     bi.RS20cv.setVisibility(View.VISIBLE);
                     bi.RS21cv.setVisibility(View.VISIBLE);
-                    bi.RS22cv.setVisibility(View.VISIBLE);
+                    bi.RS22cv.setVisibility(View.VISIBLE);*/
+                    bi.fldGrpSec0219.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -75,6 +80,7 @@ public class Section02Activity extends AppCompatActivity {
                     bi.RS20cv.setVisibility(View.VISIBLE);
                 } else {
                     ClearClass.ClearAllFields(bi.RS20cv, null);
+
                     bi.RS20cv.setVisibility(View.GONE);
                 }
             }
@@ -189,8 +195,8 @@ public class Section02Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll02);
-
+//        return ValidatorClass.EmptyCheckingContainer(this, bi.ll02);
+        return Validator.emptyCheckingContainer(this, bi.ll02);
     }
 
 
