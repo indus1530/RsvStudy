@@ -45,7 +45,6 @@ public class Section05Activity extends AppCompatActivity {
         formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
         setupSkips();
 
-
     }
 
 

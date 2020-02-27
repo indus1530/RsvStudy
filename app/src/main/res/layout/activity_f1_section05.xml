@@ -20,13 +20,11 @@
         android:layoutDirection="rtl">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-
                 style="@style/HeadingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,7 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
 
                 <!--RS15-->
                 <android.support.v7.widget.CardView
@@ -80,7 +77,6 @@
                         android:orientation="vertical">
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -134,7 +130,6 @@
                             android:orientation="vertical">
 
                             <TextView
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -182,7 +177,6 @@
                             android:orientation="vertical">
 
                             <TextView
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -313,7 +307,6 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <TextView
                     style="@style/HeadingTitle"
@@ -543,8 +536,8 @@
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
-                </LinearLayout>
 
+                </LinearLayout>
 
                 <!--RS63 - Radio-->
                 <android.support.v7.widget.CardView
@@ -776,6 +769,7 @@
                             android:layout_height="wrap_content"
                             android:tag="-1"
                             android:text="@string/dkn" />
+
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -850,6 +844,7 @@
                                 android:text="@string/dkn" />
 
                         </RadioGroup>
+
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -883,13 +878,11 @@
 
                 </android.support.v7.widget.CardView>
 
-
                 <TextView
                     style="@style/HeadingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/section7" />
-
 
                 <!--RS72 - Radio-->
                 <android.support.v7.widget.CardView
@@ -1088,9 +1081,7 @@
                                     android:layout_weight="1"
                                     android:text="@string/RS74l" />
 
-
                             </LinearLayout>
-
 
                         </LinearLayout>
 
@@ -1143,6 +1134,7 @@
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
+
                 </LinearLayout>
 
                 <!--RS77 - Radio-->
@@ -1190,7 +1182,6 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <TextView
                     style="@style/HeadingTitle"
@@ -1408,7 +1399,6 @@
 
                 </android.support.v7.widget.CardView>
 
-
                 <TextView
 
                     style="@style/HeadingTitle"
@@ -1434,7 +1424,6 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1469,7 +1458,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1504,7 +1492,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1539,7 +1526,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1574,7 +1560,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1609,7 +1594,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1644,7 +1628,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1679,7 +1662,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1714,7 +1696,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1749,7 +1730,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1784,7 +1764,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1819,7 +1798,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1868,7 +1846,6 @@
                         android:orientation="vertical">
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1916,7 +1893,6 @@
                         android:orientation="vertical">
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1980,7 +1956,6 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <!--RS84 - Radio-->
                 <android.support.v7.widget.CardView
@@ -2047,6 +2022,7 @@
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84g" />
+
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2092,6 +2068,7 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
 
