@@ -210,10 +210,9 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="###.##"
-                                app:maxValue="100.00"
-                                app:minValue="000.00"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:inputType="numberDecimal"
+                                app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -242,10 +241,9 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="###.##"
-                                app:maxValue="100.00"
-                                app:minValue="000.00"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:inputType="numberDecimal"
+                                app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -274,12 +272,10 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="###.##"
-                                app:maxValue="100.00"
-                                app:minValue="000.00"
-                                app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                                android:inputType="numberDecimal"
+                                app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
-
 
                         </LinearLayout>
 
