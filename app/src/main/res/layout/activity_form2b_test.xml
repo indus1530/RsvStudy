@@ -13,7 +13,6 @@
             type="edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BTest" />
     </data>
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -210,9 +209,9 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="##"
-                                app:maxValue="90"
-                                app:minValue="10"
+                                android:inputType="numberDecimal"
+                                app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -241,9 +240,9 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="##"
-                                app:maxValue="90"
-                                app:minValue="10"
+                                android:inputType="numberDecimal"
+                                app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -272,11 +271,10 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/Especify"
-                                app:mask="##"
-                                app:maxValue="90"
-                                app:minValue="10"
+                                android:inputType="numberDecimal"
+                                app:maxValue="100"
+                                app:minValue="0"
                                 app:type="range" />
-
 
                         </LinearLayout>
 
@@ -287,7 +285,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical" />
-
 
                 </LinearLayout>
 

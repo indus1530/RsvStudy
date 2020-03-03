@@ -20,13 +20,11 @@
         android:layoutDirection="rtl">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-
                 style="@style/HeadingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,9 +36,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
                 <!--RS15-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS15cv"
                     style="@style/cardView">
 
@@ -67,10 +64,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS50 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS50cv"
                     style="@style/cardView">
 
@@ -80,7 +77,6 @@
                         android:orientation="vertical">
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -114,7 +110,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/RS5155Layout"
@@ -124,7 +120,7 @@
                     android:visibility='@{RS50b.checked? View.GONE : View.VISIBLE}'>
 
                     <!--RS51 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS51cv"
                         style="@style/cardView">
 
@@ -134,7 +130,6 @@
                             android:orientation="vertical">
 
                             <TextView
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -168,11 +163,11 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
 
                     <!--RS53 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS53cv"
                         style="@style/cardView">
 
@@ -182,7 +177,6 @@
                             android:orientation="vertical">
 
                             <TextView
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -216,10 +210,10 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                     <!--RS54 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS54cv"
                         style="@style/cardView">
 
@@ -263,56 +257,56 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
-                    <!--RS55 - Radio-->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/RS55cv"
-                        style="@style/cardView">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/RS55"
-                                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                            <RadioGroup
-                                android:id="@+id/RS55"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
-
-                                <RadioButton
-                                    android:id="@+id/RS55a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
-
-                                <RadioButton
-                                    android:id="@+id/RS55b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
-
-                                <RadioButton
-                                    android:id="@+id/RS5598"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/dkn" />
-
-                            </RadioGroup>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
+                <!--RS55 - Radio-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RS55cv"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS55"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RS55"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RS55a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RS55b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                            <RadioButton
+                                android:id="@+id/RS5598"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/dkn" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
 
                 <TextView
                     style="@style/HeadingTitle"
@@ -328,7 +322,7 @@
                     android:visibility="visible" />
 
                 <!--RS58 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS58cv"
                     style="@style/cardView">
 
@@ -371,7 +365,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/RS5962Layout"
@@ -381,7 +375,7 @@
                     android:visibility='@{RS58b.checked? View.GONE : View.VISIBLE}'>
 
                     <!--RS59 - EditText-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS59cv"
                         style="@style/cardView">
 
@@ -411,10 +405,10 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                     <!--RS60 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS60cv"
                         style="@style/cardView">
 
@@ -453,10 +447,10 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                     <!--RS61 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS61cv"
                         style="@style/cardView">
 
@@ -495,10 +489,10 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                     <!--RS62 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS62cv"
                         style="@style/cardView">
 
@@ -541,12 +535,12 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
+
                 </LinearLayout>
 
-
                 <!--RS63 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS63cv"
                     style="@style/cardView">
 
@@ -589,10 +583,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS64 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS64cv"
                     style="@style/cardView"
                     android:visibility='@{RS63b.checked? View.GONE : View.VISIBLE}'>
@@ -648,10 +642,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS65 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS65cv"
                     style="@style/cardView">
 
@@ -694,10 +688,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS66 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS66cv"
                     style="@style/cardView">
 
@@ -740,10 +734,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS67 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS67cv"
                     style="@style/cardView">
 
@@ -775,12 +769,13 @@
                             android:layout_height="wrap_content"
                             android:tag="-1"
                             android:text="@string/dkn" />
+
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS68 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS68cv"
                     style="@style/cardView">
 
@@ -805,10 +800,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS69 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS69cv"
                     style="@style/cardView">
 
@@ -849,12 +844,13 @@
                                 android:text="@string/dkn" />
 
                         </RadioGroup>
+
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS70 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS70cv"
                     style="@style/cardView"
                     android:visibility='@{RS69b.checked? View.GONE : View.VISIBLE}'>
@@ -880,8 +876,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-
+                </android.support.v7.widget.CardView>
 
                 <TextView
                     style="@style/HeadingTitle"
@@ -889,9 +884,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/section7" />
 
-
                 <!--RS72 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS72cv"
                     style="@style/cardView">
 
@@ -935,7 +929,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/RS7375Layout"
@@ -945,7 +939,7 @@
                     android:visibility='@{RS7297.checked? View.GONE : View.VISIBLE}'>
 
                     <!--RS73 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS73cv"
                         style="@style/cardView">
 
@@ -988,10 +982,10 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                     <!--RS74 - CheckBox-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS74cv"
                         style="@style/cardView">
 
@@ -1087,17 +1081,15 @@
                                     android:layout_weight="1"
                                     android:text="@string/RS74l" />
 
-
                             </LinearLayout>
-
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
 
                     <!--RS75 - Radio-->
-                    <androidx.cardview.widget.CardView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/RS75cv"
                         style="@style/cardView">
 
@@ -1141,11 +1133,12 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
+
                 </LinearLayout>
 
                 <!--RS77 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS77cv"
                     style="@style/cardView">
 
@@ -1188,8 +1181,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-
+                </android.support.v7.widget.CardView>
 
                 <TextView
                     style="@style/HeadingTitle"
@@ -1198,7 +1190,7 @@
                     android:text="@string/section8" />
 
                 <!--RS78 - Radio - Multiple-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS78cv"
                     style="@style/cardView">
 
@@ -1300,10 +1292,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS79 - Radio - Multiple-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS79cv"
                     style="@style/cardView">
 
@@ -1405,8 +1397,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-
+                </android.support.v7.widget.CardView>
 
                 <TextView
 
@@ -1416,7 +1407,7 @@
                     android:text="@string/Section9" />
 
                 <!--RS80 - Radio - Multiple-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS76cv"
                     style="@style/cardView">
 
@@ -1433,7 +1424,6 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1468,7 +1458,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1503,7 +1492,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1538,7 +1526,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1573,7 +1560,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1608,7 +1594,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1643,7 +1628,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1678,7 +1662,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1713,7 +1696,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1748,7 +1730,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1783,7 +1764,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1818,7 +1798,6 @@
                         </RadioGroup>
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1854,10 +1833,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS81 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS81cv"
                     style="@style/cardView">
 
@@ -1867,7 +1846,6 @@
                         android:orientation="vertical">
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1901,10 +1879,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS82 - EditText -->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS82cv"
                     style="@style/cardView"
                     android:visibility='@{RS81a.checked? View.VISIBLE : View.GONE}'>
@@ -1915,7 +1893,6 @@
                         android:orientation="vertical">
 
                         <TextView
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -1932,10 +1909,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS83 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS83cv"
                     style="@style/cardView">
 
@@ -1978,11 +1955,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-
+                </android.support.v7.widget.CardView>
 
                 <!--RS84 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS84cv"
                     style="@style/cardView"
                     android:visibility='@{RS83a.checked? View.VISIBLE : View.GONE}'>
@@ -2046,14 +2022,15 @@
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS84g" />
+
                         </LinearLayout>
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS85 - Radio-->
-                <androidx.cardview.widget.CardView
+                <android.support.v7.widget.CardView
                     android:id="@+id/RS85cv"
                     style="@style/cardView">
 
@@ -2090,7 +2067,8 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
 

@@ -37,7 +37,7 @@
                 android:orientation="vertical">
 
                 <!--RS033 Radio Button - Multiple-->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -232,10 +232,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS034 Radio Button-->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -270,7 +270,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/llrsv01"
@@ -280,7 +280,8 @@
                     android:visibility='@{RS34b.checked ? View.GONE : View.VISIBLE }'>
 
                     <!--RS035 Radio Button-->
-                    <androidx.cardview.widget.CardView style="@style/cardView">
+                    <android.support.v7.widget.CardView
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -332,10 +333,10 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                     <!--RS036 Radio Button-->
-                    <androidx.cardview.widget.CardView style="@style/cardView">
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -377,12 +378,12 @@
 
                         </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
                 </LinearLayout>
 
                 <!--RS037 Radio Button-->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -455,10 +456,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS038 Radio Button-->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -521,10 +522,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS039 Radio Button-->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -582,10 +583,10 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
                 <!--RS040 Radio Button-->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -622,7 +623,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </android.support.v7.widget.CardView>
 
 
                 <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
