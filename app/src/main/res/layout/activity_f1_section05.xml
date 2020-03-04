@@ -13,7 +13,6 @@
             type="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity" />
     </data>
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -165,7 +164,6 @@
 
                     </android.support.v7.widget.CardView>
 
-
                     <!--RS53 - Radio-->
                     <android.support.v7.widget.CardView
                         android:id="@+id/RS53cv"
@@ -259,54 +257,124 @@
 
                     </android.support.v7.widget.CardView>
 
+                    <!--RS55 - Radio-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/RS55cv"
+                        style="@style/cardView">
 
-                </LinearLayout>
-
-                <!--RS55 - Radio-->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/RS55cv"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="@string/RS55"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:orientation="vertical">
 
-                        <RadioGroup
-                            android:id="@+id/RS55"
-                            style="@style/radiogroup"
-                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/RS55"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
 
-                            <RadioButton
-                                android:id="@+id/RS55a"
-                                style="@style/radiobutton"
-                                android:layout_weight="1"
-                                android:text="@string/yes" />
+                            <RadioGroup
+                                android:id="@+id/RS55"
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/RS55b"
-                                style="@style/radiobutton"
-                                android:layout_weight="1"
-                                android:text="@string/no" />
+                                <RadioButton
+                                    android:id="@+id/RS55a"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes" />
 
-                            <RadioButton
-                                android:id="@+id/RS5598"
-                                style="@style/radiobutton"
-                                android:layout_weight="1"
-                                android:text="@string/dkn" />
+                                <RadioButton
+                                    android:id="@+id/RS55b"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:text="@string/no" />
 
-                        </RadioGroup>
+                                <RadioButton
+                                    android:id="@+id/RS5598"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn" />
 
-                    </LinearLayout>
+                            </RadioGroup>
 
-                </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--RS84 - Radio-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/RS84cv"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/RS84"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
+
+                                <CheckBox
+                                    android:id="@+id/RS84a"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84a" />
+
+                                <CheckBox
+                                    android:id="@+id/RS84b"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84b" />
+
+                                <CheckBox
+                                    android:id="@+id/RS84c"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84c" />
+
+                                <CheckBox
+                                    android:id="@+id/RS84d"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84d" />
+
+                                <CheckBox
+                                    android:id="@+id/RS84e"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84e" />
+
+                                <CheckBox
+                                    android:id="@+id/RS84f"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84f" />
+
+                                <CheckBox
+                                    android:id="@+id/RS84g"
+                                    style="@style/checkbox"
+                                    android:layout_weight="1"
+                                    android:text="@string/RS84g" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
 
                 <TextView
                     style="@style/HeadingTitle"
@@ -1086,7 +1154,6 @@
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
-
 
                     <!--RS75 - Radio-->
                     <android.support.v7.widget.CardView
@@ -1885,7 +1952,7 @@
                 <android.support.v7.widget.CardView
                     android:id="@+id/RS82cv"
                     style="@style/cardView"
-                    android:visibility='@{RS81a.checked? View.VISIBLE : View.GONE}'>
+                    android:visibility='@{RS81b.checked? View.GONE : View.VISIBLE}'>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1911,7 +1978,7 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS83 - Radio-->
+                <!--&lt;!&ndash;RS83 - Radio&ndash;&gt;
                 <android.support.v7.widget.CardView
                     android:id="@+id/RS83cv"
                     style="@style/cardView">
@@ -1955,79 +2022,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
-
-                <!--RS84 - Radio-->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/RS84cv"
-                    style="@style/cardView"
-                    android:visibility='@{RS83a.checked? View.VISIBLE : View.GONE}'>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="@string/RS84"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
-
-                            <CheckBox
-                                android:id="@+id/RS84a"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84a" />
-
-                            <CheckBox
-                                android:id="@+id/RS84b"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84b" />
-
-                            <CheckBox
-                                android:id="@+id/RS84c"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84c" />
-
-                            <CheckBox
-                                android:id="@+id/RS84d"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84d" />
-
-                            <CheckBox
-                                android:id="@+id/RS84e"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84e" />
-
-                            <CheckBox
-                                android:id="@+id/RS84f"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84f" />
-
-                            <CheckBox
-                                android:id="@+id/RS84g"
-                                style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:text="@string/RS84g" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>-->
 
                 <!--RS85 - Radio-->
                 <android.support.v7.widget.CardView
@@ -2064,6 +2059,130 @@
                                 android:text="@string/no" />
 
                         </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RS86 - EditText-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RS86cv"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/RS86" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS86h1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <EditText
+                            android:id="@+id/RS86a"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86a"
+                            android:inputType="textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/RS86b"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86b"
+                            android:inputType="textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/RS86c"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86c"
+                            android:inputType="textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/RS86d"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86d"
+                            android:inputType="textMultiLine" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/RS86ad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="@string/date"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS86h2"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <EditText
+                            android:id="@+id/RS86e"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86e"
+                            android:inputType="textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/RS86f"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86f"
+                            android:inputType="textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/RS86g"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86g"
+                            android:inputType="textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/RS86h"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/RS86h"
+                            android:inputType="textMultiLine" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/RS86bd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="@string/date"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
 
                     </LinearLayout>
 

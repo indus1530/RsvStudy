@@ -13,18 +13,18 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
 import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
-import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 
 public class Section05Activity extends AppCompatActivity {
 
@@ -62,7 +62,7 @@ public class Section05Activity extends AppCompatActivity {
             }
         });
 
-        bi.RS83.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.RS83.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
@@ -70,13 +70,13 @@ public class Section05Activity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.RS84cv, null);
                 }
             }
-        });
+        });*/
 
         bi.RS81.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId != bi.RS81a.getId()) {
+                if (checkedId == bi.RS81b.getId()) {
                     ClearClass.ClearAllFields(bi.RS82cv, null);
                 }
             }
@@ -475,10 +475,10 @@ public class Section05Activity extends AppCompatActivity {
         //RS78
         SF.put("RS82", bi.RS82.getText().toString());
 
-        SF.put("RS83", bi.RS83a.isChecked() ? "1"
+        /*SF.put("RS83", bi.RS83a.isChecked() ? "1"
                 : bi.RS83b.isChecked() ? "2"
                 : bi.RS8398.isChecked() ? "98"
-                : "0");
+                : "0");*/
 
     /*    SF.put("RS84", bi.RS84a.isChecked() ? "1"
                 : bi.RS84b.isChecked() ? "2"
@@ -497,9 +497,23 @@ public class Section05Activity extends AppCompatActivity {
         SF.put("RS84f", bi.RS84f.isChecked() ? "6" : "0");
         SF.put("RS84g", bi.RS84g.isChecked() ? "7" : "0");
 
+        //RS85
         SF.put("RS85", bi.RS85a.isChecked() ? "1"
                 : bi.RS85b.isChecked() ? "2"
                 : "0");
+
+        //RS86
+        SF.put("RS86a", bi.RS86a.getText().toString());
+        SF.put("RS86b", bi.RS86b.getText().toString());
+        SF.put("RS86c", bi.RS86c.getText().toString());
+        SF.put("RS86d", bi.RS86d.getText().toString());
+        SF.put("RS86ad", bi.RS86ad.getText().toString());
+
+        SF.put("RS86e", bi.RS86e.getText().toString());
+        SF.put("RS86f", bi.RS86f.getText().toString());
+        SF.put("RS86g", bi.RS86g.getText().toString());
+        SF.put("RS86h", bi.RS86h.getText().toString());
+        SF.put("RS86bd", bi.RS86bd.getText().toString());
 
 
         MainApp.fc.setsA(String.valueOf(SF));
