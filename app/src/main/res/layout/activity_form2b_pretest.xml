@@ -110,7 +110,7 @@
                             android:id="@+id/RST202"
                             style="@style/EditTextNum"
                             android:hint="@string/centimeter"
-                            app:mask="###.#"
+                            android:inputType="numberDecimal"
                             app:maxValue="200"
                             app:minValue="100"
                             app:type="range" />
@@ -137,7 +137,7 @@
                             android:id="@+id/RST203"
                             style="@style/EditTextNum"
                             android:hint="@string/Kilogram"
-                            app:mask="##.##"
+                            android:inputType="numberDecimal"
                             app:maxValue="40"
                             app:minValue="10"
                             app:type="range" />
