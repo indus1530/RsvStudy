@@ -62,16 +62,6 @@ public class Section05Activity extends AppCompatActivity {
             }
         });
 
-        /*bi.RS83.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId != bi.RS83a.getId()) {
-                    ClearClass.ClearAllFields(bi.RS84cv, null);
-                }
-            }
-        });*/
-
         bi.RS81.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -131,6 +121,46 @@ public class Section05Activity extends AppCompatActivity {
 
                 if (checkedId == bi.RS69b.getId()) {
                     ClearClass.ClearAllFields(bi.RS70cv, null);
+                }
+            }
+        });
+
+        bi.RS861.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.RS861a.getId()) {
+                    ClearClass.ClearAllFields(bi.RS86bcv, null);
+                }
+            }
+        });
+
+        bi.RS862.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.RS861a.getId()) {
+                    ClearClass.ClearAllFields(bi.RS86bcv, null);
+                }
+            }
+        });
+
+        bi.RS863.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.RS861a.getId()) {
+                    ClearClass.ClearAllFields(bi.RS86bcv, null);
+                }
+            }
+        });
+
+        bi.RS864.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.RS861a.getId()) {
+                    ClearClass.ClearAllFields(bi.RS86bcv, null);
                 }
             }
         });
@@ -197,6 +227,18 @@ public class Section05Activity extends AppCompatActivity {
         SF.put("f_type", MainApp.followUp);
 
         SF.put("RS15", bi.RS15.getText().toString());
+
+        SF.put("RS87", bi.RS87a.isChecked() ? "1"
+                : bi.RS87b.isChecked() ? "2"
+                : bi.RS87c.isChecked() ? "3"
+                : bi.RS87d.isChecked() ? "4"
+                : bi.RS87e.isChecked() ? "5"
+                : bi.RS87f.isChecked() ? "6"
+                : bi.RS87g.isChecked() ? "7"
+                : bi.RS87h.isChecked() ? "8"
+                : bi.RS8796.isChecked() ? "96"
+                : "0");
+        SF.put("RS8796x", bi.RS8796x.getText().toString());
 
         //RS50
         SF.put("RS50", bi.RS50a.isChecked() ? "1"
@@ -502,17 +544,33 @@ public class Section05Activity extends AppCompatActivity {
                 : bi.RS85b.isChecked() ? "2"
                 : "0");
 
-        //RS86
-        SF.put("RS86a", bi.RS86a.getText().toString());
-        SF.put("RS86b", bi.RS86b.getText().toString());
-        SF.put("RS86c", bi.RS86c.getText().toString());
-        SF.put("RS86d", bi.RS86d.getText().toString());
-        SF.put("RS86ad", bi.RS86ad.getText().toString());
+        //RS86a
+        SF.put("RS861", bi.RS861a.isChecked() ? "1"
+                : bi.RS861b.isChecked() ? "2"
+                : "0");
+        SF.put("RS861x", bi.RS861x.getText().toString());
 
-        SF.put("RS86e", bi.RS86e.getText().toString());
-        SF.put("RS86f", bi.RS86f.getText().toString());
-        SF.put("RS86g", bi.RS86g.getText().toString());
-        SF.put("RS86h", bi.RS86h.getText().toString());
+        SF.put("RS862", bi.RS862a.isChecked() ? "1"
+                : bi.RS862b.isChecked() ? "2"
+                : "0");
+        SF.put("RS862x", bi.RS862x.getText().toString());
+
+        SF.put("RS863", bi.RS863a.isChecked() ? "1"
+                : bi.RS863b.isChecked() ? "2"
+                : "0");
+        SF.put("RS863x", bi.RS863x.getText().toString());
+
+        SF.put("RS864", bi.RS864a.isChecked() ? "1"
+                : bi.RS864b.isChecked() ? "2"
+                : "0");
+        SF.put("RS864x", bi.RS864x.getText().toString());
+
+        //RS86b
+        SF.put("RS86b", bi.RS865.isChecked() ? "1"
+                : bi.RS866.isChecked() ? "2"
+                : bi.RS867.isChecked() ? "3"
+                : bi.RS868.isChecked() ? "4"
+                : "0");
         SF.put("RS86bd", bi.RS86bd.getText().toString());
 
 

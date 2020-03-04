@@ -65,6 +65,91 @@
 
                 </android.support.v7.widget.CardView>
 
+                <!--RS87 - Radio-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RS87cv"
+                    style="@style/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/RS87"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RS87"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/RS87a"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19a" />
+
+                            <RadioButton
+                                android:id="@+id/RS87b"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19b" />
+
+                            <RadioButton
+                                android:id="@+id/RS87c"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19c" />
+
+                            <RadioButton
+                                android:id="@+id/RS87d"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19d" />
+
+                            <RadioButton
+                                android:id="@+id/RS87e"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19e" />
+
+                            <RadioButton
+                                android:id="@+id/RS87f"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19f" />
+
+                            <RadioButton
+                                android:id="@+id/RS87g"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19g" />
+
+                            <RadioButton
+                                android:id="@+id/RS87h"
+                                style="@style/radiobutton"
+                                android:text="@string/RS19h" />
+
+                            <RadioButton
+                                android:id="@+id/RS8796"
+                                style="@style/radiobutton"
+                                android:text="@string/RS1996" />
+
+                            <EditText
+                                android:id="@+id/RS8796x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/ed_sentence"
+                                android:hint="@string/specify"
+                                android:inputType="textShortMessage"
+                                android:tag="RS8796"
+                                android:text='@{RS8796.checked? RS8796x.getText().toString() : "" }'
+                                android:visibility='@{RS8796.checked? View.VISIBLE : View.GONE}' />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
                 <!--RS50 - Radio-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/RS50cv"
@@ -2064,12 +2149,13 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--RS86 - EditText-->
+                <!--RS86h1 - EditText-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/RS86cv"
+                    android:id="@+id/RS86acv"
                     style="@style/cardView">
 
                     <LinearLayout
+                        android:id="@+id/RS86"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -2079,55 +2165,48 @@
                             android:text="@string/RS86" />
 
                         <TextView
+                            style="@style/i_textview"
+                            android:text="@string/RS86h1" />
+
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
-                            android:text="@string/RS86h1"
+                            android:text="@string/RS86a"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-                        <EditText
-                            android:id="@+id/RS86a"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86a"
-                            android:inputType="textMultiLine" />
+                        <RadioGroup
+                            android:id="@+id/RS861"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/RS86b"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86b"
-                            android:inputType="textMultiLine" />
+                            <RadioButton
+                                android:id="@+id/RS861a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                        <EditText
-                            android:id="@+id/RS86c"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86c"
-                            android:inputType="textMultiLine" />
+                            <RadioButton
+                                android:id="@+id/RS861b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
-                        <EditText
-                            android:id="@+id/RS86d"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86d"
-                            android:inputType="textMultiLine" />
+                        </RadioGroup>
 
-                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                            android:id="@+id/RS86ad"
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/RS861x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_weight="70"
                             android:focusable="false"
                             android:hint="@string/date"
-                            android:textColor="@android:color/black"
+                            android:tag="RS861a"
+                            android:text='@{RS861a.checked? RS861x.getText().toString() : "" }'
+                            android:visibility='@{RS861a.checked? View.VISIBLE : View.GONE}'
                             app:dateFormat="dd-MM-yyyy"
                             app:maxDate="CR_DATE" />
 
@@ -2137,40 +2216,174 @@
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
-                            android:text="@string/RS86h2"
+                            android:text="@string/RS86b"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-                        <EditText
-                            android:id="@+id/RS86e"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86e"
-                            android:inputType="textMultiLine" />
+                        <RadioGroup
+                            android:id="@+id/RS862"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/RS86f"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86f"
-                            android:inputType="textMultiLine" />
+                            <RadioButton
+                                android:id="@+id/RS862a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                        <EditText
-                            android:id="@+id/RS86g"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/RS86g"
-                            android:inputType="textMultiLine" />
+                            <RadioButton
+                                android:id="@+id/RS862b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
-                        <EditText
-                            android:id="@+id/RS86h"
-                            style="@style/textInput"
+                        </RadioGroup>
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/RS862x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/RS86h"
-                            android:inputType="textMultiLine" />
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="@string/date"
+                            android:tag="RS862a"
+                            android:text='@{RS862a.checked? RS862x.getText().toString() : "" }'
+                            android:visibility='@{RS862a.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS86c"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RS863"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RS863a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RS863b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/RS863x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="@string/date"
+                            android:tag="RS863a"
+                            android:text='@{RS863a.checked? RS863x.getText().toString() : "" }'
+                            android:visibility='@{RS863a.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:text="@string/RS86d"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <RadioGroup
+                            android:id="@+id/RS864"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RS864a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/RS864b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/RS864x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="@string/date"
+                            android:tag="RS864a"
+                            android:text='@{RS864a.checked? RS864x.getText().toString() : "" }'
+                            android:visibility='@{RS864a.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--RS86h2 - EditText-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/RS86bcv"
+                    style="@style/cardView"
+                    android:visibility='@{RS861a.checked || RS862a.checked || RS863a.checked || RS864a.checked ? View.VISIBLE : View.GONE}'>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/RS86h2" />
+
+                        <RadioGroup
+                            android:id="@+id/RS86b"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/RS865"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/RS86e" />
+
+                            <RadioButton
+                                android:id="@+id/RS866"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/RS86f" />
+
+                            <RadioButton
+                                android:id="@+id/RS867"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/RS86g" />
+
+                            <RadioButton
+                                android:id="@+id/RS868"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/RS86h" />
+
+                        </RadioGroup>
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/RS86bd"
@@ -2181,6 +2394,7 @@
                             android:focusable="false"
                             android:hint="@string/date"
                             android:textColor="@android:color/black"
+                            android:visibility='@{RS865.checked || RS866.checked || RS867.checked || RS868.checked ? View.VISIBLE : View.GONE}'
                             app:dateFormat="dd-MM-yyyy"
                             app:maxDate="CR_DATE" />
 
