@@ -114,12 +114,22 @@ public class ChildListActivity extends AppCompatActivity {
             public void onItemClick(final ChildList item, int position) {
                 if (formType == FormType.POSTTEST) {
                     if (!db.isChildExists(item.getDssid())) {
-                        Toast.makeText(ChildListActivity.this, "This child is not eligible for Post Test", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ChildListActivity.this, "Pre-Test Not Found! Child is not eligible for Post Test", Toast.LENGTH_SHORT).show();
                         return;
                     }
                 } else if (formType == FormType.PRETEST) {
+                    if (!db.hasFollowup(item.getDssid())) {
+                        Toast.makeText(ChildListActivity.this, "2nd Follow up Not Found! Child is not Eligible for Assessment", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     if (db.isChildExists(item.getDssid())) {
-                        Toast.makeText(ChildListActivity.this, "This child is eligible for Post Test", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ChildListActivity.this, "Pre-Test Found! This child is eligible for Post Test", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                } else if (formType == FormType.FOLLOWUP) {
+                    if (db.hasFollowup(item.getDssid())) {
+                        Toast.makeText(ChildListActivity.this, "Follow Up Done", Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }

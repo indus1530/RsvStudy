@@ -45,7 +45,6 @@ public class Section05Activity extends AppCompatActivity {
         formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
         setupSkips();
 
-
     }
 
 
@@ -190,6 +189,7 @@ public class Section05Activity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         MainApp.fc.setDSSID(item.getDssid());
         MainApp.fc.setFormType("followup");
+        MainApp.fc.setHasFollowUp("1");
 
         JSONObject SF = new JSONObject();
 

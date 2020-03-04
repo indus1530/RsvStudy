@@ -81,10 +81,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsContract.FormsTable.COLUMN_GPSACC + " TEXT," +
             FormsContract.FormsTable.COLUMN_DEVICEID + " TEXT," +
             FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT," +
+            FormsContract.FormsTable.COLUMN_HASFOLLOWUP + " TEXT," +
             FormsContract.FormsTable.COLUMN_SYNCED + " TEXT," +
             FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
-
 
 
     private static final String SQL_SELECT_MOTHER_BY_CHILD =
@@ -974,6 +974,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+    public boolean hasFollowup(String dssID) throws SQLException {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsContract.FormsTable.TABLE_NAME + " WHERE "
+                + FormsContract.FormsTable.COLUMN_DSSID + "=? AND "
+                + FormsContract.FormsTable.COLUMN_HASFOLLOWUP
+                + " = 1", new String[]{dssID});
+        if (mCursor != null) {
+            return mCursor.getCount() > 0;
+        }
+        return false;
+    }
+
 
     public List<FormsContract> getFormsByDSS(String dssID) {
         List<FormsContract> formList = new ArrayList<FormsContract>();
@@ -1038,8 +1051,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
         values.put(FormsContract.FormsTable.COLUMN_SA, fc.getsA());
-       /* values.put(FormsContract.TestTable.COLUMN_SB, fc.getsB());
-        values.put(FormsContract.TestTable.COLUMN_SC, fc.getsC());
+        values.put(FormsContract.FormsTable.COLUMN_SB, fc.getsB());
+        /* values.put(FormsContract.TestTable.COLUMN_SC, fc.getsC());
         values.put(FormsContract.TestTable.COLUMN_SD, fc.getsD());
         values.put(FormsContract.TestTable.COLUMN_SE, fc.getsE());
         values.put(FormsContract.TestTable.COLUMN_SF, fc.getsF());*/
@@ -1051,6 +1064,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_DEVICEID, fc.getDeviceID());
         values.put(FormsContract.FormsTable.COLUMN_APPVERSION, fc.getAppversion());
         values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, fc.getFormType());
+        values.put(FormsContract.FormsTable.COLUMN_HASFOLLOWUP, fc.getHasFollowUp());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -1690,6 +1704,70 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //    }
 
 
+    public Collection<FormsContract> getUnsyncedForms(String formType) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsContract.FormsTable._ID,
+                FormsContract.FormsTable.COLUMN_UID,
+                FormsContract.FormsTable.COLUMN_FORMDATE,
+                FormsContract.FormsTable.COLUMN_USER,
+                FormsContract.FormsTable.COLUMN_ISTATUS,
+                FormsContract.FormsTable.COLUMN_ISTATUS88x,
+                FormsContract.FormsTable.COLUMN_DSSID,
+                FormsContract.FormsTable.COLUMN_ENDINGDATETIME,
+                FormsContract.FormsTable.COLUMN_SA,
+                FormsContract.FormsTable.COLUMN_SB,
+                /*FormsContract.TestTable.COLUMN_SB,
+                FormsContract.TestTable.COLUMN_SC,
+                FormsContract.TestTable.COLUMN_SD,
+                FormsContract.TestTable.COLUMN_SE,
+                FormsContract.TestTable.COLUMN_SF,*/
+                FormsContract.FormsTable.COLUMN_GPSLAT,
+                FormsContract.FormsTable.COLUMN_GPSLNG,
+                FormsContract.FormsTable.COLUMN_GPSDATE,
+                FormsContract.FormsTable.COLUMN_GPSACC,
+                FormsContract.FormsTable.COLUMN_DEVICETAGID,
+                FormsContract.FormsTable.COLUMN_DEVICEID,
+                FormsContract.FormsTable.COLUMN_APPVERSION,
+                FormsContract.FormsTable.COLUMN_FORMTYPE
+        };
+
+
+        String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null AND " + FormsContract.FormsTable.COLUMN_FORMTYPE + " = ?";
+        String[] whereArgs = {formType};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                FormsContract.FormsTable.COLUMN_ID + " ASC";
+
+        Collection<FormsContract> allFC = new ArrayList<FormsContract>();
+        try {
+            c = db.query(
+                    FormsContract.FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                FormsContract fc = new FormsContract();
+                allFC.add(fc.Hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
     public Collection<FormsContract> getUnsyncedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -1720,10 +1798,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
 
-        String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null";
-
+        String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null ";
         String[] whereArgs = null;
-
         String groupBy = null;
         String having = null;
 

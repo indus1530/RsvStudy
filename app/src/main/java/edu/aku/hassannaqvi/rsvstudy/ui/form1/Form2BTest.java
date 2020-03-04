@@ -88,7 +88,7 @@ public class Form2BTest extends AppCompatActivity {
                             .putExtra(Constants.FORMTYPE, formType));
                     MainApp.testCount++;
                 } else {
-                    Utils.openDialog(this);
+                    Utils.openDialog(this, formType);
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

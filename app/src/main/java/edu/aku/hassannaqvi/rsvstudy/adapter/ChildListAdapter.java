@@ -59,12 +59,13 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
         holder.bi.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                itemClicked.onItemClick(mList.get(i), i);
 
-                FormsContract ChildData;
+              /*  FormsContract ChildData;
                 ChildData = db.isDataExists(mList.get(i).getDssid());
                 if (ChildData != null) {
                     if (!ChildData.getStatus().contains("1") && !ChildData.getStatus().contains("2")) {
-                        itemClicked.onItemClick(mList.get(i), i);
+
                     } else {
                         Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
                     }
@@ -80,72 +81,11 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.View
 //                } else {
 //
 //                    Toast.makeText(mContext, "Completed form for this child already exist!", Toast.LENGTH_LONG).show();
-//                }
+//                }*/
 
 
             }
         });
-
-
-        ChildData = db.isDataExists(mList.get(i).getDssid());
-        if (ChildData != null) {
-            holder.bi.childStatus.setVisibility(View.VISIBLE);
-//            FormsContract fc = ChildData.get(0);
-                   /* if ( fc.getStatus().equals("3")
-                        || fc.getStatus().equals("4")
-                        || fc.getStatus().equals("5")) {
-                    itemClicked.onItemClick(mList.get(i), i);
-                } else {
-                    Toast.makeText(mContext, "Data already exist!", Toast.LENGTH_SHORT).show();
-                }*/
-            switch (ChildData.getStatus()) {
-                case "1":
-                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.enrolled));
-                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.enrolled));
-                    holder.bi.childStatus.setText("Enrolled");
-
-                    break;
-                case "2":
-                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.died));
-                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.died));
-                    holder.bi.childStatus.setText("Died");
-
-                    break;
-                case "3":
-                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.locked));
-                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.locked));
-                    holder.bi.childStatus.setText("Locked");
-
-                    break;
-                case "4":
-                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.refused));
-                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.refused));
-                    holder.bi.childStatus.setText("Refused");
-
-                    break;
-                case "5":
-                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.shifted));
-                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.shifted));
-                    holder.bi.childStatus.setText("Shifted");
-                    break;
-                case "6":
-                    holder.bi.parentLayout.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.dssIncorrect));
-                    holder.bi.childStatus.setBackgroundColor(mContext.getResources().getColor(R.color.dssIncorrect));
-                    holder.bi.childStatus.setText("Incorrect DSS ID");
-                    break;
-                default:
-                    holder.bi.childStatus.setVisibility(View.GONE);
-                    holder.bi.parentLayout.setBackgroundTintList(null);
-
-            }
-
-        } else {
-
-            holder.bi.childStatus.setVisibility(View.GONE);
-            holder.bi.parentLayout.setBackgroundTintList(null);
-
-        }
-
 
     }
 

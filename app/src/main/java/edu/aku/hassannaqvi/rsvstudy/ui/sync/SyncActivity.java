@@ -170,13 +170,45 @@ public class SyncActivity extends AppCompatActivity {
 
             new SyncAllData(
                     this,
-                    "Forms",
+                    "Follow up Forms",
                     "updateSyncedForms",
                     FormsContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     FormsContract.FormsTable.TABLE_NAME,
-                    db.getUnsyncedForms(), 0, uploadListAdapter, uploadlist
+                    db.getUnsyncedForms("followup"), 0, uploadListAdapter, uploadlist
             ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "PreTest Forms",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    FormsContract.FormsTable.TABLE_NAME,
+                    db.getUnsyncedForms("pre_test"), 1, uploadListAdapter, uploadlist
+            ).execute();
+
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Post Test Forms",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + MainApp._SERVER_URL,
+                    FormsContract.FormsTable.TABLE_NAME,
+                    db.getUnsyncedForms("post_test"), 2, uploadListAdapter, uploadlist
+            ).execute();
+
+
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -189,7 +221,7 @@ public class SyncActivity extends AppCompatActivity {
                     TestContract.class,
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     TestContract.TestTable.TABLE_NAME,
-                    db.getUnsyncedTestForms(), 1, uploadListAdapter, uploadlist
+                    db.getUnsyncedTestForms(), 3, uploadListAdapter, uploadlist
             ).execute();
 
             /*Toast.makeText(getApplicationContext(), "Syncing Form Two", Toast.LENGTH_SHORT).show();

@@ -59,8 +59,10 @@ public class Forms2BafterTest extends AppCompatActivity {
 
         if (MainApp.acceptableTest >= 3) {
             bi.RST407a.setChecked(true);
+            bi.RST408cv.setVisibility(View.GONE);
         } else {
             bi.RST407b.setChecked(true);
+            bi.RST408cv.setVisibility(View.VISIBLE);
         }
     }
 
