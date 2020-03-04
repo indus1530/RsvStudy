@@ -507,7 +507,7 @@ public class Section05Activity extends AppCompatActivity {
                 : bi.RS8012b.isChecked() ? "2"
                 : bi.RS801298.isChecked() ? "98"
                 : "0");
-//
+
 //        //RS77
         SF.put("RS81", bi.RS81a.isChecked() ? "1"
                 : bi.RS81b.isChecked() ? "2"
