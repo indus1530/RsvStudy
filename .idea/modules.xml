@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Projects-RsvStudy.iml" filepath="$PROJECT_DIR$/Projects-RsvStudy.iml" group="RsvStudy" />
       <module fileurl="file://$PROJECT_DIR$/RsvStudy.iml" filepath="$PROJECT_DIR$/RsvStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/RsvStudy-app.iml" filepath="$PROJECT_DIR$/app/RsvStudy-app.iml" group="RsvStudy/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
