@@ -2,20 +2,21 @@ package edu.aku.hassannaqvi.rsvstudy.ui.sync;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,16 +28,16 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.adapter.UploadListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.contracts.TestContract;
-import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
-import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
-import edu.aku.hassannaqvi.rsvstudy.R;
-import edu.aku.hassannaqvi.rsvstudy.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
+import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.rsvstudy.get.GetAllData;
+import edu.aku.hassannaqvi.rsvstudy.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.rsvstudy.sync.SyncAllData;
 
 public class SyncActivity extends AppCompatActivity {

@@ -1,10 +1,11 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.other;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

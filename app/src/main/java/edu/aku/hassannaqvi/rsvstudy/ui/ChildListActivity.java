@@ -2,11 +2,7 @@ package edu.aku.hassannaqvi.rsvstudy.ui;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -16,19 +12,21 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.aku.hassannaqvi.rsvstudy.adapter.ChildListAdapter;
-import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.R;
+import edu.aku.hassannaqvi.rsvstudy.adapter.ChildListAdapter;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
-import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
+import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityChildListBinding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.LayoutDialogeBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPostTest;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Form2BPreTest;
-import edu.aku.hassannaqvi.rsvstudy.ui.form1.Forms2BafterTest;
 import edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;

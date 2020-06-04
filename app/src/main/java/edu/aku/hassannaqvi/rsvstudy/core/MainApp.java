@@ -14,10 +14,11 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

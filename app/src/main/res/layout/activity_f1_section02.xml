@@ -30,7 +30,7 @@
                 android:text="@string/Section2" />
 
             <!--RS17 - Radio-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/RS17cv"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -69,10 +69,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--RS18 - Radio-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
 
                 android:id="@+id/RS18cv"
@@ -129,10 +129,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--RS19 - Radio-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/RS19cv"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -214,10 +214,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--RS20 - Radio-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/RS20cv"
                 style="@style/cardView"
 
@@ -285,10 +285,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--RS21 - Radio-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
 
                 android:id="@+id/RS21cv"
@@ -328,10 +328,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--RS22 - Date Picker-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
 
                 android:id="@+id/RS22cv"
@@ -364,7 +364,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
