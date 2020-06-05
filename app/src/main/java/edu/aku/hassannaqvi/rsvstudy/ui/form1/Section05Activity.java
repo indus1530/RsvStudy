@@ -1,7 +1,10 @@
 package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -12,7 +15,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import edu.aku.hassannaqvi.rsvstudy.R;
 import edu.aku.hassannaqvi.rsvstudy.contracts.ChildList;
@@ -20,6 +25,7 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
+import edu.aku.hassannaqvi.rsvstudy.databinding.Rs86acvBinding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
@@ -29,11 +35,12 @@ import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section05Activity extends AppCompatActivity {
 
-    ActivityF1Section05Binding bi;
-    DatabaseHelper db;
-    ChildList item;
+    private ActivityF1Section05Binding bi;
+    private DatabaseHelper db;
+    private ChildList item;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-    FormType formType;
+    private FormType formType;
+    private List<View> rs86acvList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +50,11 @@ public class Section05Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
 
         item = getIntent().getParcelableExtra("data");
-        formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
+//        formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
         setupSkips();
+        rs86acvList = new ArrayList<>();
 
     }
-
 
     private void setupSkips() {
 
@@ -167,7 +174,6 @@ public class Section05Activity extends AppCompatActivity {
         });
 
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -549,33 +555,54 @@ public class Section05Activity extends AppCompatActivity {
         SF.put("RS861", bi.RS861a.isChecked() ? "1"
                 : bi.RS861b.isChecked() ? "2"
                 : "0");
-        SF.put("RS861x", bi.RS861x.getText().toString());
 
         SF.put("RS862", bi.RS862a.isChecked() ? "1"
                 : bi.RS862b.isChecked() ? "2"
                 : "0");
-        SF.put("RS862x", bi.RS862x.getText().toString());
 
         SF.put("RS863", bi.RS863a.isChecked() ? "1"
                 : bi.RS863b.isChecked() ? "2"
                 : "0");
-        SF.put("RS863x", bi.RS863x.getText().toString());
 
         SF.put("RS864", bi.RS864a.isChecked() ? "1"
                 : bi.RS864b.isChecked() ? "2"
                 : "0");
-        SF.put("RS864x", bi.RS864x.getText().toString());
+        SF.put("RS86d1", bi.RS86d1.getText().toString());
 
         //RS86b
         SF.put("RS865", bi.RS865.isChecked() ? "1" : "0");
         SF.put("RS866", bi.RS866.isChecked() ? "2" : "0");
         SF.put("RS867", bi.RS867.isChecked() ? "3" : "0");
         SF.put("RS868", bi.RS868.isChecked() ? "4" : "0");
-        SF.put("RS86bd", bi.RS86bd.getText().toString());
+        SF.put("RS86d2", bi.RS86d2.getText().toString());
 
 
         MainApp.fc.setsA(String.valueOf(SF));
         MainApp.setGPS(this);
+
+    }
+
+    public void addDaysInRS86() {
+
+        if (rs86acvList.size() == 3) {
+            Toast.makeText(this, "Couldn't able to add more than 4 days data", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        addViewInRS86();
+    }
+
+    private void addViewInRS86() {
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View rowView = inflater.inflate(R.layout.rs86acv, null);
+        bi.rs86Items.addView(rowView);
+        rs86acvList.add(rowView);
+        Rs86acvBinding rs86acvBi = DataBindingUtil.bind(rowView);
+        rs86acvBi.rs86DaysCounter.setText(new StringBuilder("NO:").append(rs86acvList.size() + 1));
+        rs86acvBi.btnClearView.setOnClickListener(view -> {
+            bi.rs86Items.removeView(rowView);
+            rs86acvList.remove(rowView);
+        });
 
     }
 
