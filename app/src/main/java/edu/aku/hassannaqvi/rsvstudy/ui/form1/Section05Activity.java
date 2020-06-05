@@ -567,11 +567,10 @@ public class Section05Activity extends AppCompatActivity {
         SF.put("RS864x", bi.RS864x.getText().toString());
 
         //RS86b
-        SF.put("RS86b", bi.RS865.isChecked() ? "1"
-                : bi.RS866.isChecked() ? "2"
-                : bi.RS867.isChecked() ? "3"
-                : bi.RS868.isChecked() ? "4"
-                : "0");
+        SF.put("RS865", bi.RS865.isChecked() ? "1" : "0");
+        SF.put("RS866", bi.RS866.isChecked() ? "2" : "0");
+        SF.put("RS867", bi.RS867.isChecked() ? "3" : "0");
+        SF.put("RS868", bi.RS868.isChecked() ? "4" : "0");
         SF.put("RS86bd", bi.RS86bd.getText().toString());
 
 
