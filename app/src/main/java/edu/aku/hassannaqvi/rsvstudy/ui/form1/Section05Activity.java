@@ -26,6 +26,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
 import edu.aku.hassannaqvi.rsvstudy.databinding.Rs86acvBinding;
+import edu.aku.hassannaqvi.rsvstudy.models.RSV;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
@@ -36,7 +37,6 @@ import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 public class Section05Activity extends AppCompatActivity {
 
     private ActivityF1Section05Binding bi;
-    private DatabaseHelper db;
     private ChildList item;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     private FormType formType;
@@ -47,12 +47,13 @@ public class Section05Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section05);
         bi.setCallback(this);
-        db = new DatabaseHelper(this);
+        DatabaseHelper db = new DatabaseHelper(this);
 
         item = getIntent().getParcelableExtra("data");
 //        formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
         setupSkips();
         rs86acvList = new ArrayList<>();
+        RSV.txtDaysCounter.set("NO:" + (rs86acvList.size() + 1) + "/4");
 
     }
 

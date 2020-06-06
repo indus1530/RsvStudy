@@ -11,6 +11,10 @@
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.rsvstudy.ui.form1.Section05Activity" />
+
+        <variable
+            name="days"
+            type="edu.aku.hassannaqvi.rsvstudy.models.RSV" />
     </data>
 
     <ScrollView
@@ -2178,7 +2182,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="3"
-                                    android:text="NO:01" />
+                                    android:text="@{days.txtDaysCounter}" />
 
                             </LinearLayout>
 
