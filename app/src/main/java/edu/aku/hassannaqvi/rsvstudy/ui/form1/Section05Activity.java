@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.MutableLiveData;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +41,8 @@ public class Section05Activity extends AppCompatActivity {
     private ChildList item;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     private FormType formType;
-    private List<View> rs86acvList;
+    private MutableLiveData<List<View>> rs86acvList;
+    private List<View> rs86acvMainList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +54,12 @@ public class Section05Activity extends AppCompatActivity {
         item = getIntent().getParcelableExtra("data");
 //        formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
         setupSkips();
-        rs86acvList = new ArrayList<>();
-        RSV.txtDaysCounter.set("NO:" + (rs86acvList.size() + 1) + "/4");
+        rs86acvMainList = new ArrayList<>();
+        if (rs86acvList == null)
+            rs86acvList = new MutableLiveData<>();
+        rs86acvList.observe(this, item -> {
+            RSV.txtDaysCounter.set("NO:" + (item.size() + 1) + "/4");
+        });
 
     }
 
@@ -585,7 +591,7 @@ public class Section05Activity extends AppCompatActivity {
 
     public void addDaysInRS86() {
 
-        if (rs86acvList.size() == 3) {
+        if (rs86acvMainList.size() == 3) {
             Toast.makeText(this, "Couldn't able to add more than 4 days data", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -597,12 +603,13 @@ public class Section05Activity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View rowView = inflater.inflate(R.layout.rs86acv, null);
         bi.rs86Items.addView(rowView);
-        rs86acvList.add(rowView);
+        rs86acvMainList.add(rowView);
+        rs86acvList.setValue(rs86acvMainList);
         Rs86acvBinding rs86acvBi = DataBindingUtil.bind(rowView);
-        rs86acvBi.rs86DaysCounter.setText(new StringBuilder("NO:").append(rs86acvList.size() + 1));
         rs86acvBi.btnClearView.setOnClickListener(view -> {
             bi.rs86Items.removeView(rowView);
-            rs86acvList.remove(rowView);
+            rs86acvMainList.remove(rowView);
+            rs86acvList.setValue(rs86acvMainList);
         });
 
     }
