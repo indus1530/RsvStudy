@@ -52,7 +52,7 @@ public class Section05Activity extends AppCompatActivity {
         DatabaseHelper db = new DatabaseHelper(this);
 
         item = getIntent().getParcelableExtra("data");
-//        formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
+        formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
         setupSkips();
         rs86acvMainList = new ArrayList<>();
         if (rs86acvList == null) {
@@ -561,22 +561,46 @@ public class Section05Activity extends AppCompatActivity {
                 : "0");
 
         //RS86a
-        SF.put("RS861", bi.RS861a.isChecked() ? "1"
+        SF.put("RS8611", bi.RS861a.isChecked() ? "1"
                 : bi.RS861b.isChecked() ? "2"
                 : "0");
 
-        SF.put("RS862", bi.RS862a.isChecked() ? "1"
+        SF.put("RS8612", bi.RS862a.isChecked() ? "1"
                 : bi.RS862b.isChecked() ? "2"
                 : "0");
 
-        SF.put("RS863", bi.RS863a.isChecked() ? "1"
+        SF.put("RS8613", bi.RS863a.isChecked() ? "1"
                 : bi.RS863b.isChecked() ? "2"
                 : "0");
 
-        SF.put("RS864", bi.RS864a.isChecked() ? "1"
+        SF.put("RS8614", bi.RS864a.isChecked() ? "1"
                 : bi.RS864b.isChecked() ? "2"
                 : "0");
-        SF.put("RS86d1", bi.RS86d1.getText().toString());
+        SF.put("RS861d1", bi.RS86d1.getText().toString());
+
+
+        int counter15 = 2;
+        for (View view : rs86acvMainList) {
+            Rs86acvBinding pofpa15Binding = DataBindingUtil.bind(view);
+            SF.put("RS86" + counter15 + "1", pofpa15Binding.RS861a.isChecked() ? "1"
+                    : pofpa15Binding.RS861b.isChecked() ? "2"
+                    : "0");
+
+            SF.put("RS86" + counter15 + "2", pofpa15Binding.RS862a.isChecked() ? "1"
+                    : pofpa15Binding.RS862b.isChecked() ? "2"
+                    : "0");
+
+            SF.put("RS86" + counter15 + "3", pofpa15Binding.RS863a.isChecked() ? "1"
+                    : pofpa15Binding.RS863b.isChecked() ? "2"
+                    : "0");
+
+            SF.put("RS86" + counter15 + "4", pofpa15Binding.RS864a.isChecked() ? "1"
+                    : pofpa15Binding.RS864b.isChecked() ? "2"
+                    : "0");
+            SF.put("RS86" + counter15 + "d1", pofpa15Binding.RS86d1.getText().toString());
+
+            counter15++;
+        }
 
         //RS86b
         SF.put("RS865", bi.RS865.isChecked() ? "1" : "0");
