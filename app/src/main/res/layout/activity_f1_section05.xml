@@ -2308,7 +2308,7 @@
 
                                 <TextView
                                     android:layout_width="0dp"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_weight="3"
                                     android:background="@color/colorPrimaryDark"
@@ -2320,18 +2320,21 @@
                                     android:id="@+id/RS864"
                                     style="@style/radiogroup"
                                     android:layout_width="0dp"
+                                    android:layout_height="match_parent"
                                     android:layout_weight="7"
                                     android:orientation="horizontal">
 
                                     <RadioButton
                                         android:id="@+id/RS864a"
                                         style="@style/radiobutton"
+                                        android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:text="@string/yes" />
 
                                     <RadioButton
                                         android:id="@+id/RS864b"
                                         style="@style/radiobutton"
+                                        android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:text="@string/no" />
 

@@ -55,8 +55,10 @@ public class Section05Activity extends AppCompatActivity {
 //        formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
         setupSkips();
         rs86acvMainList = new ArrayList<>();
-        if (rs86acvList == null)
+        if (rs86acvList == null) {
             rs86acvList = new MutableLiveData<>();
+            RSV.txtDaysCounter.set("NO:" + (rs86acvMainList.size() + 1) + "/4");
+        }
         rs86acvList.observe(this, item -> {
             RSV.txtDaysCounter.set("NO:" + (item.size() + 1) + "/4");
         });
@@ -606,6 +608,7 @@ public class Section05Activity extends AppCompatActivity {
         rs86acvMainList.add(rowView);
         rs86acvList.setValue(rs86acvMainList);
         Rs86acvBinding rs86acvBi = DataBindingUtil.bind(rowView);
+        rs86acvBi.setLifecycleOwner(this);
         rs86acvBi.btnClearView.setOnClickListener(view -> {
             bi.rs86Items.removeView(rowView);
             rs86acvMainList.remove(rowView);

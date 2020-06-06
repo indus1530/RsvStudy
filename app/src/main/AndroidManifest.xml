@@ -34,11 +34,6 @@
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -81,7 +76,14 @@
         <activity
             android:name=".ui.form1.Section05Activity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustResize|stateHidden">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.form1.Form2BPreTest"
