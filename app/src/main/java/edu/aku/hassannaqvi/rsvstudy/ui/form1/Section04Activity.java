@@ -271,7 +271,7 @@ public class Section04Activity extends AppCompatActivity {
                 : "0");
 
 
-        /*MainApp.fc.setsE(String.valueOf(SE));*/
+//        MainApp.fc.setsE(String.valueOf(SE));
 
 
     }

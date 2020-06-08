@@ -10,8 +10,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Validator;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -27,6 +25,7 @@ import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section01Binding;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
+import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section01Activity extends AppCompatActivity {
 
@@ -197,9 +196,7 @@ public class Section01Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-//        return ValidatorClass.EmptyCheckingContainer(this, bi.ll01);
-
-        return Validator.emptyCheckingContainer(this, bi.ll01);
+        return ValidatorClass.EmptyCheckingContainer(this, bi.ll01);
     }
 
 }

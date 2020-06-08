@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:cardCornerRadius="10dp">
@@ -277,10 +277,10 @@
                     </LinearLayout>
 
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RS9-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RS9cv"
                     style="@style/cardView">
 
@@ -303,7 +303,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--                &lt;!&ndash;studyId&ndash;&gt;-->
                 <!--                <android.support.v7.widget.CardView style="@style/cardView">-->
@@ -337,7 +337,7 @@
 
                 <!--                </android.support.v7.widget.CardView>-->
                 <!--RS15-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RS15cv"
                     style="@style/cardView">
 
@@ -364,10 +364,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--RS15-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -392,9 +392,9 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/RS16cv"
                     style="@style/cardView">
 
@@ -456,7 +456,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!--                <Button-->
                 <!--                    android:id="@+id/checkBtn"-->
                 <!--                    android:layout_width="match_parent"-->
