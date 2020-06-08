@@ -914,11 +914,11 @@
                             android:id="@+id/RS67"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:enabled="@{RS6798.checked? false : true}"
+                            android:enabled="@{RS6798.checked || RS6777.checked ? false : true}"
                             android:hint="@string/RS67a"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{RS6798.checked? ""  : RS67.getText().toString()}' />
+                            android:text='@{RS6798.checked || RS6777.checked ? ""  : RS67.getText().toString()}' />
 
                         <CheckBox
                             android:id="@+id/RS6798"
@@ -927,6 +927,13 @@
                             android:tag="-1"
                             android:text="@string/dkn" />
 
+                        <CheckBox
+                            android:id="@+id/RS6777"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:tag="-1"
+                            android:text="@string/RS6777" />
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -934,7 +941,8 @@
                 <!--RS68 - Radio-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/RS68cv"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{RS6777.checked ? View.GONE  : View.VISIBLE }">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -953,6 +961,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/date"
+                            android:text='@{RS6777.checked ? ""  : RS68.getText().toString()}'
                             app:maxDate="CR_DATE" />
 
                     </LinearLayout>
@@ -2401,11 +2410,41 @@
                                 android:layout_weight="1"
                                 android:text="@string/RS86e" />
 
+                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                android:id="@+id/RS865d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="70"
+                                android:focusable="false"
+                                android:hint="@string/date"
+                                android:tag="RS865"
+                                android:text='@{RS865.checked ? RS865d.getText().toString() : "" }'
+                                android:textColor="@android:color/black"
+                                android:visibility='@{RS865.checked ? View.VISIBLE : View.GONE}'
+                                app:dateFormat="dd-MM-yyyy"
+                                app:maxDate="CR_DATE" />
+
                             <CheckBox
                                 android:id="@+id/RS866"
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS86f" />
+
+                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                android:id="@+id/RS866d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="70"
+                                android:focusable="false"
+                                android:hint="@string/date"
+                                android:tag="RS866"
+                                android:text='@{RS866.checked ? RS866d.getText().toString() : "" }'
+                                android:textColor="@android:color/black"
+                                android:visibility='@{ RS866.checked ? View.VISIBLE : View.GONE}'
+                                app:dateFormat="dd-MM-yyyy"
+                                app:maxDate="CR_DATE" />
 
                             <CheckBox
                                 android:id="@+id/RS867"
@@ -2413,27 +2452,43 @@
                                 android:layout_weight="1"
                                 android:text="@string/RS86g" />
 
+                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                android:id="@+id/RS867d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="70"
+                                android:focusable="false"
+                                android:hint="@string/date"
+                                android:tag="RS867"
+                                android:text='@{RS867.checked ? RS867d.getText().toString() : "" }'
+                                android:textColor="@android:color/black"
+                                android:visibility='@{RS867.checked ? View.VISIBLE : View.GONE}'
+                                app:dateFormat="dd-MM-yyyy"
+                                app:maxDate="CR_DATE" />
+
                             <CheckBox
                                 android:id="@+id/RS868"
                                 style="@style/checkbox"
                                 android:layout_weight="1"
                                 android:text="@string/RS86h" />
 
-                        </LinearLayout>
+                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                android:id="@+id/RS868d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="70"
+                                android:focusable="false"
+                                android:hint="@string/date"
+                                android:tag="RS868"
+                                android:text='@{RS868.checked ? RS868d.getText().toString() : "" }'
+                                android:textColor="@android:color/black"
+                                android:visibility='@{RS868.checked ? View.VISIBLE : View.GONE}'
+                                app:dateFormat="dd-MM-yyyy"
+                                app:maxDate="CR_DATE" />
 
-                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                            android:id="@+id/RS86d2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_weight="70"
-                            android:focusable="false"
-                            android:hint="@string/date"
-                            android:text='@{RS865.checked || RS866.checked || RS867.checked || RS868.checked ? RS86d2.getText().toString() : "" }'
-                            android:textColor="@android:color/black"
-                            android:visibility='@{RS865.checked || RS866.checked || RS867.checked || RS868.checked ? View.VISIBLE : View.GONE}'
-                            app:dateFormat="dd-MM-yyyy"
-                            app:maxDate="CR_DATE" />
+                        </LinearLayout>
 
                     </LinearLayout>
 

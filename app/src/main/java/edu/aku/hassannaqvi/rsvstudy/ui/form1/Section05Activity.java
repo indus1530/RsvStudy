@@ -74,12 +74,12 @@ public class Section05Activity extends AppCompatActivity {
             radioItem.setOnCheckedChangeListener((group, checkedId) -> {
                 if (bi.RS861a.isChecked() || bi.RS862a.isChecked() || bi.RS863a.isChecked() || bi.RS864a.isChecked()) {
                     bi.RS86bcv.setVisibility(View.VISIBLE);
-                    bi.RS86d2.setVisibility(View.VISIBLE);
+                    bi.RS86d1.setVisibility(View.VISIBLE);
                 } else {
                     Clear.clearAllFields(bi.RS86bcv);
                     bi.RS86bcv.setVisibility(View.GONE);
-                    bi.RS86d2.setVisibility(View.GONE);
-                    bi.RS86d2.setText(null);
+                    bi.RS86d1.setVisibility(View.GONE);
+                    bi.RS86d1.setText(null);
                 }
             });
         }
@@ -387,7 +387,7 @@ public class Section05Activity extends AppCompatActivity {
                 : "0");
 
 //        //RS67
-        SF.put("RS67", bi.RS6798.isChecked() ? "98" : bi.RS67.getText().toString());
+        SF.put("RS67", bi.RS6798.isChecked() ? "98" : bi.RS6777.isChecked() ? "77" : bi.RS67.getText().toString());
 //
 //        //RS68
         SF.put("RS68", bi.RS68.getText().toString());
@@ -626,10 +626,13 @@ public class Section05Activity extends AppCompatActivity {
 
         //RS86b
         SF.put("RS865", bi.RS865.isChecked() ? "1" : "0");
+        SF.put("RS865d", bi.RS865d.getText().toString());
         SF.put("RS866", bi.RS866.isChecked() ? "2" : "0");
+        SF.put("RS866d", bi.RS866d.getText().toString());
         SF.put("RS867", bi.RS867.isChecked() ? "3" : "0");
+        SF.put("RS867d", bi.RS867d.getText().toString());
         SF.put("RS868", bi.RS868.isChecked() ? "4" : "0");
-        SF.put("RS86d2", bi.RS86d2.getText().toString());
+        SF.put("RS868d", bi.RS868d.getText().toString());
 
 
         MainApp.fc.setsA(String.valueOf(SF));
