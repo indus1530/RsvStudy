@@ -1075,6 +1075,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
+    public int updateSA() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsContract.FormsTable.COLUMN_SA, MainApp.fc.getsA());
+
+        String selection = FormsContract.FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        return db.update(FormsContract.FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
 
     public Long addTest(TestContract fc) {
 
@@ -1983,22 +1997,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
-    public int updateSA() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(FormsContract.FormsTable.COLUMN_SA, MainApp.fc.getsA());
-
-        String selection = FormsContract.FormsTable.COLUMN_ID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
-
-        int count = db.update(FormsContract.FormsTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
 /*
 
     public int updateSB() {
