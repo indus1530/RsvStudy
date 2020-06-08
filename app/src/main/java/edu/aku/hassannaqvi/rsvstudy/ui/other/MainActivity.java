@@ -228,16 +228,13 @@ public class MainActivity extends AppCompatActivity {
                         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
                         dialog.show();
                         dialog.getWindow().setAttributes(params);
-                        dialog.findViewById(R.id.preTest).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
-                                        .putExtra(Constants.FORMTYPE, FormType.PRETEST).putExtra("code", position + 1);
-                                startActivity(oF);
-                                dialog.dismiss();
-                                bottomSheetFragment.dismiss();
+                        dialog.findViewById(R.id.preTest).setOnClickListener(v -> {
+                            Intent oF = new Intent(MainActivity.this, ChildListActivity.class)
+                                    .putExtra(Constants.FORMTYPE, FormType.PRETEST).putExtra("code", position + 1);
+                            startActivity(oF);
+                            dialog.dismiss();
+                            bottomSheetFragment.dismiss();
 
-                            }
                         });
                         dialog.findViewById(R.id.postTest).setOnClickListener(new View.OnClickListener() {
                             @Override

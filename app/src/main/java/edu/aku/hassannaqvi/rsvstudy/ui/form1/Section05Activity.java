@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 
+import com.validatorcrawler.aliazaz.Clear;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -43,14 +45,15 @@ public class Section05Activity extends AppCompatActivity {
     private FormType formType;
     private MutableLiveData<List<View>> rs86acvList;
     private List<View> rs86acvMainList;
+    private boolean daysFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section05);
         bi.setCallback(this);
-        DatabaseHelper db = new DatabaseHelper(this);
 
+        setupList();
         item = getIntent().getParcelableExtra("data");
         formType = (FormType) getIntent().getSerializableExtra(Constants.FORMTYPE);
         setupSkips();
@@ -62,6 +65,25 @@ public class Section05Activity extends AppCompatActivity {
         rs86acvList.observe(this, item -> {
             RSV.txtDaysCounter.set("NO:" + (item.size() + 1) + "/4");
         });
+
+    }
+
+    private void setupList() {
+        RadioGroup[] daysSelectionList = new RadioGroup[]{bi.RS861, bi.RS862, bi.RS863, bi.RS864};
+        for (RadioGroup radioItem : daysSelectionList) {
+            radioItem.setOnCheckedChangeListener((group, checkedId) -> {
+                if (bi.RS861a.isChecked() || bi.RS862a.isChecked() || bi.RS863a.isChecked() || bi.RS864a.isChecked()) {
+                    bi.RS86bcv.setVisibility(View.VISIBLE);
+                    bi.RS86d2.setVisibility(View.VISIBLE);
+                } else {
+                    Clear.clearAllFields(bi.RS86bcv);
+                    bi.RS86bcv.setVisibility(View.GONE);
+                    bi.RS86d2.setVisibility(View.GONE);
+                    bi.RS86d2.setText(null);
+                }
+            });
+        }
+
 
     }
 
@@ -616,12 +638,10 @@ public class Section05Activity extends AppCompatActivity {
     }
 
     public void addDaysInRS86() {
-
         if (rs86acvMainList.size() == 3) {
             Toast.makeText(this, "Couldn't able to add more than 4 days data", Toast.LENGTH_SHORT).show();
             return;
         }
-
         addViewInRS86();
     }
 
@@ -637,7 +657,24 @@ public class Section05Activity extends AppCompatActivity {
             bi.rs86Items.removeView(rowView);
             rs86acvMainList.remove(rowView);
             rs86acvList.setValue(rs86acvMainList);
+            if (bi.rs86Btn.getVisibility() == View.GONE)
+                bi.rs86Btn.setVisibility(View.VISIBLE);
         });
+
+        RadioGroup[] daysSelectionList = new RadioGroup[]{rs86acvBi.RS861, rs86acvBi.RS862, rs86acvBi.RS863, rs86acvBi.RS864};
+        for (RadioGroup radioItem : daysSelectionList) {
+            radioItem.setOnCheckedChangeListener((group, checkedId) -> {
+                if (rs86acvBi.RS861a.isChecked() || rs86acvBi.RS862a.isChecked() || rs86acvBi.RS863a.isChecked() || rs86acvBi.RS864a.isChecked() || bi.RS861a.isChecked() || bi.RS862a.isChecked() || bi.RS863a.isChecked() || bi.RS864a.isChecked()) {
+                    bi.RS86bcv.setVisibility(View.VISIBLE);
+                } else {
+                    Clear.clearAllFields(bi.RS86bcv);
+                    bi.RS86bcv.setVisibility(View.GONE);
+                }
+            });
+        }
+
+        if (rs86acvMainList.size() == 3)
+            bi.rs86Btn.setVisibility(View.GONE);
 
     }
 
