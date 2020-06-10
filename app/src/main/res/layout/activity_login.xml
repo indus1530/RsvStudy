@@ -195,7 +195,6 @@
     <ScrollView
         android:id="@+id/login_form"
         android:background="@drawable/rsv_splash"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -328,7 +327,6 @@
 
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -365,7 +363,6 @@
 
             </LinearLayout>
 
-
             <TextView
                 android:id="@+id/syncData1"
                 style="?android:textAppearanceSmall"
@@ -378,7 +375,6 @@
                 android:textColor="@color/gray"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/txtinstalldate"
                 android:layout_width="match_parent"
@@ -389,5 +385,7 @@
                 android:textSize="12sp" />
 
         </LinearLayout>
+
     </ScrollView>
+
 </LinearLayout>

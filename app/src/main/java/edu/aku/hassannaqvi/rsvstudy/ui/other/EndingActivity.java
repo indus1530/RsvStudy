@@ -29,7 +29,7 @@ public class EndingActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
-        Boolean check = getIntent().getExtras().getBoolean("complete");
+        boolean check = getIntent().getBooleanExtra("complete", false);
 
         if (check) {
             bi.istatus1.setEnabled(true);
