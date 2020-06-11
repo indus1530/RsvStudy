@@ -399,8 +399,17 @@
     <string name="RS86f">نیومونیہ</string>
     <string name="RS86g">پھیپھڑوں کا ورم</string>
     <string name="RS86h">دمہ</string>
+    <string name="RS86i">تشخیص سے متعلق کارڈ پر کوئی معلومات نہیں</string>
 
     <string name="RS87">جواب دینے والے  شخص  کا بچے سے کیا رشتہ ہے؟</string>
+
+    <string name="RS88">کیا گھر اور بچے کی شناخت ہوگئی ہے؟</string>
+    <string name="RS88a">ہاں گھر اور بچے کی شناخت ہوگی ہے</string>
+    <string name="RS88b">نہیں گھر پر کوئی موجود نہیں ہے</string>
+    <string name="RS88c">گھر پر تالا لگا ہوا ہے</string>
+    <string name="RS88d">گھر  تبدیل کر لیا گیا ہے</string>
+    <string name="RS88e">ڈی ایس ایس آئیڈی درست نہیں ہے</string>
+    <string name="RS8896">وضاحت کریں</string>
 
 
     <!-- FORM 2 - B-->

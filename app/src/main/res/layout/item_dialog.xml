@@ -23,7 +23,6 @@
             android:tint="@android:color/white"
             app:srcCompat="@drawable/ic_stop" />
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -43,6 +42,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/dullBlack"
             android:textSize="20sp" />
+
     </LinearLayout>
 
     <LinearLayout

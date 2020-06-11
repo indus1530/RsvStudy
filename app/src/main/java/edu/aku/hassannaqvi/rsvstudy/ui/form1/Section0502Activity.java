@@ -171,6 +171,7 @@ public class Section0502Activity extends AppCompatActivity {
         SF.put("RS867d", bi.RS867d.getText().toString());
         SF.put("RS868", bi.RS868.isChecked() ? "4" : "0");
         SF.put("RS868d", bi.RS868d.getText().toString());
+        SF.put("RS869", bi.RS869.isChecked() ? "5" : "0");
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsA()), SF);

@@ -8,6 +8,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,6 +22,7 @@ import edu.aku.hassannaqvi.rsvstudy.contracts.FormsContract;
 import edu.aku.hassannaqvi.rsvstudy.core.DatabaseHelper;
 import edu.aku.hassannaqvi.rsvstudy.core.MainApp;
 import edu.aku.hassannaqvi.rsvstudy.databinding.ActivityF1Section05Binding;
+import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
@@ -49,6 +52,18 @@ public class Section05Activity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.RS68.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
+
+        bi.RS88.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.RS88a.getId()) {
+                    Clear.clearAllFields(bi.RS5156Layout);
+                }
+            }
+
+
+        });
 
 
         bi.RS72.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -134,8 +149,9 @@ public class Section05Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Section0502Activity.class)
+                startActivity(new Intent(this, bi.RS88a.isChecked() ? Section0502Activity.class : EndingActivity.class)
                         .putExtra(Constants.FORMTYPE, formType)
+                        .putExtra("complete", true)
                 );
 
             } else {
@@ -182,6 +198,15 @@ public class Section05Activity extends AppCompatActivity {
 
 //        //RS49
         SF.put("f_type", MainApp.followUp);
+
+        SF.put("RS88", bi.RS88a.isChecked() ? "1"
+                : bi.RS88b.isChecked() ? "2"
+                : bi.RS88c.isChecked() ? "3"
+                : bi.RS88d.isChecked() ? "4"
+                : bi.RS88e.isChecked() ? "5"
+                : bi.RS8896.isChecked() ? "96"
+                : "0");
+        SF.put("RS8896x", bi.RS8896x.getText().toString());
 
         SF.put("RS15", bi.RS15.getText().toString());
 
