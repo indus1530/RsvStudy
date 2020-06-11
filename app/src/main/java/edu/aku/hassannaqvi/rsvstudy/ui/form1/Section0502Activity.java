@@ -81,6 +81,24 @@ public class Section0502Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
+        bi.RS869.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                bi.RS865.setChecked(false);
+                bi.RS865.setEnabled(false);
+                bi.RS866.setChecked(false);
+                bi.RS866.setEnabled(false);
+                bi.RS867.setChecked(false);
+                bi.RS867.setEnabled(false);
+                bi.RS868.setChecked(false);
+                bi.RS868.setEnabled(false);
+            } else {
+                bi.RS865.setEnabled(true);
+                bi.RS866.setEnabled(true);
+                bi.RS867.setEnabled(true);
+                bi.RS868.setEnabled(true);
+            }
+        });
+
     }
 
     public void BtnContinue() {

@@ -325,8 +325,6 @@
                                 android:id="@+id/RS865"
                                 style="@style/checkbox"
                                 android:layout_weight="1"
-                                android:checked="@{RS869.checked ? false : false}"
-                                android:enabled="@{RS869.checked ? false : true}"
                                 android:text="@string/RS86e" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
@@ -348,8 +346,6 @@
                                 android:id="@+id/RS866"
                                 style="@style/checkbox"
                                 android:layout_weight="1"
-                                android:checked="@{RS869.checked ? false : false}"
-                                android:enabled="@{RS869.checked ? false : true}"
                                 android:text="@string/RS86f" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
@@ -370,9 +366,6 @@
                             <CheckBox
                                 android:id="@+id/RS867"
                                 style="@style/checkbox"
-                                android:layout_weight="1"
-                                android:checked="@{RS869.checked ? false : false}"
-                                android:enabled="@{RS869.checked ? false : true}"
                                 android:text="@string/RS86g" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
@@ -394,8 +387,6 @@
                                 android:id="@+id/RS868"
                                 style="@style/checkbox"
                                 android:layout_weight="1"
-                                android:checked="@{RS869.checked ? false : false}"
-                                android:enabled="@{RS869.checked ? false : true}"
                                 android:text="@string/RS86h" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
