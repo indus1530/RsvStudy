@@ -1305,7 +1305,7 @@
                                         android:id="@+id/RS74i"
                                         style="@style/checkbox"
                                         android:layout_weight="1"
-                                        android:text="@string/RS74j" />
+                                        android:text="@string/RS74i" />
 
                                     <CheckBox
                                         android:id="@+id/RS74j"
