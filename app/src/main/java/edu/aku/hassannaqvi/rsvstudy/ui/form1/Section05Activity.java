@@ -196,9 +196,12 @@ public class Section05Activity extends AppCompatActivity {
 
         JSONObject SF = new JSONObject();
 
-//        //RS49
-        SF.put("f_type", MainApp.followUp);
+        SF.put("RS09", item.getChild_name());
+        SF.put("RS10", item.getMother_name());
+        SF.put("RS11", item.getFather_name());
+        SF.put("RS12", item.getHhhead());
 
+        SF.put("f_type", MainApp.followUp);
         SF.put("RS88", bi.RS88a.isChecked() ? "1"
                 : bi.RS88b.isChecked() ? "2"
                 : bi.RS88c.isChecked() ? "3"
