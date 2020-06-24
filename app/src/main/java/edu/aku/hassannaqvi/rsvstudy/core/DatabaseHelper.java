@@ -977,13 +977,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean hasFollowup(String dssID) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsContract.FormsTable.TABLE_NAME + " WHERE "
-                + FormsContract.FormsTable.COLUMN_DSSID + "=? AND "
-                + FormsContract.FormsTable.COLUMN_HASFOLLOWUP
-                + " = 1", new String[]{dssID});
-        if (mCursor != null) {
-            return mCursor.getCount() > 0;
+        try {
+
+            Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsContract.FormsTable.TABLE_NAME + " WHERE "
+                    + FormsContract.FormsTable.COLUMN_DSSID + "=? AND "
+                    + FormsContract.FormsTable.COLUMN_HASFOLLOWUP
+                    + " = 1 ORDER BY " + FormsContract.FormsTable.COLUMN_ID + " ASC", new String[]{dssID});
+            if (mCursor != null) {
+                if (mCursor.getCount() == 0)
+                    return false;
+                while (mCursor.moveToNext()) {
+                    JSONObject json = new JSONObject(mCursor.getString(mCursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SA)));
+                    String rs88 = json.getString("RS88");
+                    if (rs88.equals("1"))
+                        return true;
+                }
+            }
+
+        } catch (Exception ignored) {
+            return false;
         }
+
         return false;
     }
 
