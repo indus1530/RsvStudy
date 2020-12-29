@@ -136,12 +136,12 @@ public class GetAllData extends AsyncTask<String, String, String> {
     protected String doInBackground(String... args) {
 
         StringBuilder result = new StringBuilder();
-
+        Log.d(TAG, "doInBackground: Class: " + syncClass);
         URL url = null;
         try {
             switch (syncClass) {
                 case "VersionApp":
-                    url = new URL(MainApp._APP_UPDATE_URL + VersionAppContract.VersionAppTable._URI);
+                    url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable._URI);
                     position = 0;
                     break;
                 case "Users":
@@ -174,7 +174,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     break;
 
             }
-
+            Log.d(TAG, "doInBackground: URL: " + url);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
@@ -218,11 +218,13 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 }
             }
         } catch (java.net.SocketTimeoutException e) {
+            Log.d(TAG, "doInBackground: " + e.getMessage());
             return null;
         } catch (java.io.IOException e) {
+            Log.d(TAG, "doInBackground: " + e.getMessage());
             return null;
         } finally {
-            urlConnection.disconnect();
+//            urlConnection.disconnect();
         }
 
 

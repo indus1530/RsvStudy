@@ -46,10 +46,8 @@ public class Forms2BafterTest extends AppCompatActivity {
         item = getIntent().getParcelableExtra("data");
         formType = (FormType) getIntent().getExtras().getSerializable(Constants.FORMTYPE);
 
-
         setUIComponent();
         setupSkips();
-
 
     }
 

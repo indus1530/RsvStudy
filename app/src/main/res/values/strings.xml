@@ -1,6 +1,6 @@
 <resources>
     <!--new Strings-->
-    <string name="app_name">ANISA RSV Study App (2nd Follow up + Clinical Assessment Form)</string>
+    <string name="app_name">ANISA RSV Study App (3rd Follow up + Clinical Assessment Form)</string>
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
     <string name="btnUpload">Upload</string>
@@ -13,7 +13,6 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
-
 
     <string name="dialogCheck">کیا آپ منتخب کئیے گئے بچے کے بارے میں اسکرین پر ظاہر کی گئی معلومات کے درست ہونے کی تصدیق کرتے ہیں؟</string>
 

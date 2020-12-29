@@ -145,7 +145,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_centerHorizontal="true"
                                             android:layout_centerVertical="true"
-                                            android:enabled="false"
+                                            android:enabled="true"
                                             android:onClick='@{()->callback.openForm(type.ASSESSMENT)}'
                                             android:text="Clinical Assessment"
                                             android:textAppearance="@style/TextAppearance.AppCompat.Large"

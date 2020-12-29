@@ -42,13 +42,12 @@ public class MainApp extends Application {
     /*public static final Integer _PORT = 80; // Port - with colon (:)
     public static final String _HOST_URL = "https://" + MainApp._IP + "/pulseox/api/";// .VOC server*/
 
-    public static final String _IP = "https://vcoe1.aku.edu"; // .Net server
-    public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _TEST_IP = "http://f38158" + ":" + MainApp._PORT;// .TEST server
-
-    public static final String _HOST_URL = MainApp._IP + "/rsv/api/";
+    public static final String _IP = "http://f38158";// .TEST server
+    public static final String _HOST_URL = MainApp._IP + "/rsv/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
-    public static final String _APP_UPDATE_URL = "https://" + MainApp._IP + "/rsv/app/";
+    public static final String _SERVER_GET_URL = "getData.php";
+    public static final String _PHOTO_UPLOAD_URL = MainApp._IP + _HOST_URL + "uploads.php";
+    public static final String _UPDATE_URL = MainApp._IP + "/rsv/app/";
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
     //public static final long MILLISECONDS_IN_5YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
