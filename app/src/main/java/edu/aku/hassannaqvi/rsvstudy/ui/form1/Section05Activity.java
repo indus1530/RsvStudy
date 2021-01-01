@@ -30,7 +30,6 @@ import edu.aku.hassannaqvi.rsvstudy.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.rsvstudy.ui.other.FormType;
 import edu.aku.hassannaqvi.rsvstudy.utils.Constants;
 import edu.aku.hassannaqvi.rsvstudy.utils.DateUtils;
-import edu.aku.hassannaqvi.rsvstudy.validator.ClearClass;
 import edu.aku.hassannaqvi.rsvstudy.validator.ValidatorClass;
 
 public class Section05Activity extends AppCompatActivity {
@@ -80,22 +79,21 @@ public class Section05Activity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, bi.RS88a.isChecked() ? Section0502Activity.class : EndingActivity.class)
-                        .putExtra(Constants.FORMTYPE, formType)
-                        .putExtra("complete", true)
-                );
+        if (!formValidation()) return;
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, bi.RS88a.isChecked() ? Section0502Activity.class : EndingActivity.class)
+                    .putExtra(Constants.FORMTYPE, formType)
+                    .putExtra("complete", true)
+            );
 
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
 
     }
