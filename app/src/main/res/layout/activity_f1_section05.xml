@@ -57,7 +57,7 @@
                             android:id="@+id/RS15"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
+                            android:gravity="center"
                             android:layout_weight="70"
                             android:focusable="false"
                             android:hint="DD-MM-YYYY"
@@ -242,33 +242,64 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <TextView
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_rs50"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_rs50"
+                                    android:background="@color/white"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19sp"
+                                    android:padding="16dp"
+                                    android:text="@string/RS50" />
+
+                                <TextView
+                                    android:id="@+id/q_rs50"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_rs50"
+                                    android:layout_alignBottom="@id/qtxt_rs50"
+                                    android:text="2.01" />
+
+                            </RelativeLayout>
+
+                            <!--<TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:text="@string/RS50"
-                                android:textAppearance="?android:attr/textAppearanceLarge" />
+                                android:textAppearance="?android:attr/textAppearanceLarge" />-->
 
                             <RadioGroup
                                 android:id="@+id/RS50"
-                                style="@style/radiogroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
                                 <RadioButton
                                     android:id="@+id/RS50a"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
                                     android:id="@+id/RS50b"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/no" />
 
                                 <RadioButton
                                     android:id="@+id/RS5098"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/dkn" />
 
@@ -531,6 +562,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <LinearLayout
                         android:id="@+id/RS5962Layout"
                         android:layout_width="match_parent"
@@ -701,6 +733,7 @@
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
 
                     <!--RS63 - Radio-->
                     <androidx.cardview.widget.CardView

@@ -54,6 +54,7 @@
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:layout_marginStart="20dp"
                             android:focusable="false"
                             android:hint="DD-MM-YYYY"
@@ -82,7 +83,9 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RST201"
                             style="@style/EditTextNum"
-                            android:hint="@string/centigrade"
+                            android:inputType="numberDecimal"
+                            android:gravity="center"
+                            android:hint="##.#"
                             app:mask="##.#"
                             app:maxValue="55"
                             app:minValue="1"
@@ -109,8 +112,10 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RST202"
                             style="@style/EditTextNum"
-                            android:hint="@string/centimeter"
+                            android:gravity="center"
+                            android:hint="###.#"
                             android:inputType="numberDecimal"
+                            app:mask="###.#"
                             app:maxValue="200"
                             app:minValue="100"
                             app:type="range" />
@@ -136,9 +141,11 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/RST203"
                             style="@style/EditTextNum"
-                            android:hint="@string/Kilogram"
+                            android:hint="##.##"
+                            android:gravity="center"
                             android:inputType="numberDecimal"
-                            app:maxValue="40"
+                            app:mask="##.##"
+                            app:maxValue="90"
                             app:minValue="10"
                             app:type="range" />
 
