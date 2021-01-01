@@ -76,7 +76,6 @@ public class Section0502Activity extends AppCompatActivity {
             });
         }
 
-
     }
 
     private void setupSkips() {
@@ -138,6 +137,8 @@ public class Section0502Activity extends AppCompatActivity {
                 : bi.RS85b.isChecked() ? "2"
                 : "0");
 
+
+        /*Hamza Requested this to be ommitted*/
         //RS86a
         SF.put("RS8611", bi.RS861a.isChecked() ? "1"
                 : bi.RS861b.isChecked() ? "2"
@@ -179,6 +180,7 @@ public class Section0502Activity extends AppCompatActivity {
 
             counter15++;
         }
+
 
         //RS86b
         SF.put("RS865", bi.RS865.isChecked() ? "1" : "0");

@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -10,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Clear;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -53,91 +57,26 @@ public class Section05Activity extends AppCompatActivity {
 
         bi.RS68.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
 
-        bi.RS88.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+        bi.RS88.setOnCheckedChangeListener((group, i) -> Clear.clearAllFields(bi.RS5156Layout));
 
-                if (checkedId != bi.RS88a.getId()) {
-                    Clear.clearAllFields(bi.RS5156Layout);
-                }
-            }
-
-
-        });
-
-
-        bi.RS72.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS7297.getId())
-                    ClearClass.ClearAllFields(bi.RS7375Layout, null);
-            }
-        });
-
-        bi.RS81.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS81b.getId()) {
-                    ClearClass.ClearAllFields(bi.RS82cv, null);
-                }
-            }
+        rgListener(bi.RS50, bi.RS50b, bi.RS5155Layout);
+        rgListener(bi.RS58, bi.RS58b, bi.RS5962Layout);
+        rgListener(bi.RS63, bi.RS63b, bi.RS64cv);
+        rgListener(bi.RS69, bi.RS69b, bi.RS70cv);
+        rgListener(bi.RS72, bi.RS7297, bi.RS7375Layout);
+        rgListener(bi.RS81, bi.RS81b, bi.RS82cv);
+        rgListener(bi.RS83, bi.RS83b, bi.RS84cv);
+    }
 
 
-        });
-
-        bi.RS69.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS69b.getId()) {
-                    ClearClass.ClearAllFields(bi.RS70cv, null);
-
-                }
+    public void rgListener(@NotNull RadioGroup rg, RadioButton rb, ViewGroup vg) {
+        rg.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(vg);
+            vg.setVisibility(View.VISIBLE);
+            if (i == rb.getId()) {
+                vg.setVisibility(View.GONE);
             }
         });
-
-        bi.RS50.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS50b.getId()) {
-                    ClearClass.ClearAllFields(bi.RS5155Layout, null);
-                }
-            }
-        });
-
-        bi.RS58.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS58b.getId()) {
-                    ClearClass.ClearAllFields(bi.RS5962Layout, null);
-                }
-            }
-        });
-
-        bi.RS63.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS63b.getId()) {
-                    ClearClass.ClearAllFields(bi.RS64cv, null);
-                }
-            }
-        });
-
-        bi.RS69.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.RS69b.getId()) {
-                    ClearClass.ClearAllFields(bi.RS70cv, null);
-                }
-            }
-        });
-
     }
 
     public void BtnContinue() {
@@ -502,10 +441,10 @@ public class Section05Activity extends AppCompatActivity {
         //RS78
         SF.put("RS82", bi.RS82.getText().toString());
 
-        /*SF.put("RS83", bi.RS83a.isChecked() ? "1"
+        SF.put("RS83", bi.RS83a.isChecked() ? "1"
                 : bi.RS83b.isChecked() ? "2"
                 : bi.RS8398.isChecked() ? "98"
-                : "0");*/
+                : "0");
 
     /*    SF.put("RS84", bi.RS84a.isChecked() ? "1"
                 : bi.RS84b.isChecked() ? "2"

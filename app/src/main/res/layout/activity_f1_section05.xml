@@ -282,8 +282,7 @@
                         android:id="@+id/RS5155Layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{RS50b.checked? View.GONE : View.VISIBLE}'>
+                        android:orientation="vertical">
 
                         <!--RS51 - Radio-->
                         <androidx.cardview.widget.CardView
@@ -536,8 +535,7 @@
                         android:id="@+id/RS5962Layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{RS58b.checked? View.GONE : View.VISIBLE}'>
+                        android:orientation="vertical">
 
                         <!--RS59 - EditText-->
                         <androidx.cardview.widget.CardView
@@ -753,8 +751,7 @@
                     <!--RS64 - Radio-->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RS64cv"
-                        style="@style/cardView"
-                        android:visibility='@{RS63b.checked? View.GONE : View.VISIBLE}'>
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -901,7 +898,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!--RS67 - Radio-->
+                    <!--RS67 - CheckBox - EditTexts -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RS67cv"
                         style="@style/cardView">
@@ -1026,8 +1023,7 @@
                     <!--RS70 - Radio-->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RS70cv"
-                        style="@style/cardView"
-                        android:visibility='@{RS69b.checked? View.GONE : View.VISIBLE}'>
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1109,8 +1105,7 @@
                         android:id="@+id/RS7375Layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{RS7297.checked? View.GONE : View.VISIBLE}'>
+                        android:orientation="vertical">
 
                         <!--RS73 - Radio-->
                         <androidx.cardview.widget.CardView
@@ -2057,8 +2052,7 @@
                     <!--RS82 - EditText -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RS82cv"
-                        style="@style/cardView"
-                        android:visibility='@{RS81b.checked? View.GONE : View.VISIBLE}'>
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -2084,8 +2078,8 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!--&lt;!&ndash;RS83 - Radio&ndash;&gt;
-                    <android.support.v7.widget.CardView
+                    <!--RS83 - Radio-->
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/RS83cv"
                         style="@style/cardView">
 
@@ -2128,7 +2122,7 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>-->
+                    </androidx.cardview.widget.CardView>
 
                     <!--RS84 - Radio-->
                     <androidx.cardview.widget.CardView
