@@ -90,6 +90,18 @@ public class Form2BPreTest extends AppCompatActivity {
         });
 
 
+        bi.RST301.setOnCheckedChangeListener((group, i) -> {
+            ClearClass.ClearAllFields(bi.RST3AScv, null);
+            bi.RST3AScv.setVisibility(View.GONE);
+            bi.RST302cv.setVisibility(View.GONE);
+            if (i == bi.RST301a.getId()) {
+                bi.RST3AScv.setVisibility(View.VISIBLE);
+            } else  if (i == bi.RST301b.getId()) {
+                bi.RST302cv.setVisibility(View.VISIBLE);
+            }
+        });
+
+
         /*bi.RST305.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -130,7 +142,7 @@ public class Form2BPreTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Form2BTest.class).putExtra("data", item)
+                startActivity(new Intent(this, bi.RST301b.isChecked() ? Forms2BafterTest.class : Form2BTest.class).putExtra("data", item)
                         .putExtra(Constants.FORMTYPE, formType));
 
             } else {
