@@ -76,154 +76,162 @@
 
                    </android.support.v7.widget.CardView>-->
 
-                <!--RST406A - EditText -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/RST406Acv"
-                    style="@style/cardView">
+                <LinearLayout
+                    android:id="@+id/ll406A408"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!--RST406A - EditText -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/RST406Acv"
+                        style="@style/cardView">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RST406A" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/RST406A"
-                            style="@style/EditTextNum"
-                            android:clickable="false"
-                            android:enabled="false"
-                            android:focusable="false"
-                            android:hint="@string/RST406A" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <!--RST406B - EditText -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/RST406Bcv"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RST406B" />
-
-                        <EditText
-                            android:id="@+id/RST406B"
-                            style="@style/EditTextNum"
-                            android:clickable="false"
-                            android:enabled="false"
-                            android:focusable="false"
-                            android:hint="@string/RST406B" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <!--RST407 - Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/RST407cv"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RST407" />
-
-                        <RadioGroup
-                            android:id="@+id/RST407"
-                            style="@style/radiogroup"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/RST407a"
-                                style="@style/radiobutton"
-                                android:layout_weight="1"
-                                android:enabled="false"
-                                android:padding="10dp"
-                                android:text="@string/Eyes" />
-
-                            <RadioButton
-                                android:id="@+id/RST407b"
-                                style="@style/radiobutton"
-                                android:layout_weight="1"
-                                android:enabled="false"
-                                android:padding="10dp"
-                                android:text="@string/Eno" />
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <!--RST408 - Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/RST408cv"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RST408" />
-
-                        <RadioGroup
-                            android:id="@+id/RST408"
-                            style="@style/radiogroup">
-
-                            <RadioButton
-                                android:id="@+id/RST408a"
-                                style="@style/radiobutton"
-                                android:text="@string/RST408a" />
-
-                            <RadioButton
-                                android:id="@+id/RST408b"
-                                style="@style/radiobutton"
-                                android:text="@string/RST408b" />
-
-                            <RadioButton
-                                android:id="@+id/RST408c"
-                                style="@style/radiobutton"
-                                android:text="@string/RST408c" />
-
-                            <RadioButton
-                                android:id="@+id/RST408d"
-                                style="@style/radiobutton"
-                                android:text="@string/RST408d" />
-
-                            <RadioButton
-                                android:id="@+id/RST40896"
-                                style="@style/radiobutton"
-                                android:text="@string/Eother" />
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/RST406A" />
 
                             <EditText
-                                android:id="@+id/RST40896x"
-                                style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/Especify"
-                                android:text='@{RST40896.checked ? RST40896x.getText().toString() : "" }'
-                                android:visibility='@{RST40896.checked ? View.VISIBLE : View.GONE }' />
+                                android:id="@+id/RST406A"
+                                style="@style/EditTextNum"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:hint="@string/RST406A" />
 
-                        </RadioGroup>
+                        </LinearLayout>
 
-                    </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                </androidx.cardview.widget.CardView>
+                    <!--RST406B - EditText -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/RST406Bcv"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/RST406B" />
+
+                            <EditText
+                                android:id="@+id/RST406B"
+                                style="@style/EditTextNum"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:hint="@string/RST406B" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--RST407 - Radio-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/RST407cv"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/RST407" />
+
+                            <RadioGroup
+                                android:id="@+id/RST407"
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/RST407a"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:padding="10dp"
+                                    android:text="@string/Eyes" />
+
+                                <RadioButton
+                                    android:id="@+id/RST407b"
+                                    style="@style/radiobutton"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    android:padding="10dp"
+                                    android:text="@string/Eno" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--RST408 - Radio-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/RST408cv"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/RST408" />
+
+                            <RadioGroup
+                                android:id="@+id/RST408"
+                                style="@style/radiogroup">
+
+                                <RadioButton
+                                    android:id="@+id/RST408a"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RST408a" />
+
+                                <RadioButton
+                                    android:id="@+id/RST408b"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RST408b" />
+
+                                <RadioButton
+                                    android:id="@+id/RST408c"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RST408c" />
+
+                                <RadioButton
+                                    android:id="@+id/RST408d"
+                                    style="@style/radiobutton"
+                                    android:text="@string/RST408d" />
+
+                                <RadioButton
+                                    android:id="@+id/RST40896"
+                                    style="@style/radiobutton"
+                                    android:text="@string/Eother" />
+
+                                <EditText
+                                    android:id="@+id/RST40896x"
+                                    style="@style/EditTextAlphaNumeric"
+                                    android:hint="@string/Especify"
+                                    android:text='@{RST40896.checked ? RST40896x.getText().toString() : "" }'
+                                    android:visibility='@{RST40896.checked ? View.VISIBLE : View.GONE }' />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
 
                 <!--RST417 - Radio-->
