@@ -54,7 +54,7 @@ public class Form2BPreTest extends AppCompatActivity {
     private void setupSkips() {
 
 
-        bi.RST301.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.RST301.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
@@ -87,7 +87,7 @@ public class Form2BPreTest extends AppCompatActivity {
                     bi.RST302cv.setVisibility(View.VISIBLE);
                 }
             }
-        });
+        });*/
 
 
         bi.RST301.setOnCheckedChangeListener((group, i) -> {
@@ -96,8 +96,10 @@ public class Form2BPreTest extends AppCompatActivity {
             bi.RST302cv.setVisibility(View.GONE);
             if (i == bi.RST301a.getId()) {
                 bi.RST3AScv.setVisibility(View.VISIBLE);
+                MainApp.testNotConduct=false;
             } else  if (i == bi.RST301b.getId()) {
                 bi.RST302cv.setVisibility(View.VISIBLE);
+                MainApp.testNotConduct=true;
             }
         });
 

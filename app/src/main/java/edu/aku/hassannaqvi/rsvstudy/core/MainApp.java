@@ -79,6 +79,7 @@ public class MainApp extends Application {
     public static String userName = "0000";
     public static String DOB = "";
     public static int testCount = 1;
+    public static boolean testNotConduct = false;
     public static int acceptableTest = 0;
     //    Total No of members got from Section A
 

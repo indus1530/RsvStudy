@@ -85,9 +85,11 @@ public class Form2BPostTest extends AppCompatActivity {
 
                 if (checkedId == bi.RST403b.getId()) {
                     bi.RST404cv.setVisibility(View.VISIBLE);
+                    MainApp.testNotConduct = true;
                 } else {
                     ClearClass.ClearAllFields(bi.RST404cv, null);
                     bi.RST404cv.setVisibility(View.GONE);
+                    MainApp.testNotConduct = false;
                 }
             }
         });
@@ -105,7 +107,7 @@ public class Form2BPostTest extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Form2BTest.class)
+                startActivity(new Intent(this, bi.RST403b.isChecked() ? Forms2BafterTest.class : Form2BTest.class)
                         .putExtra("data", item).putExtra(Constants.FORMTYPE, formType));
 
             } else {
