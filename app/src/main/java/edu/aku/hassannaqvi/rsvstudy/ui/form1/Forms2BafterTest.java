@@ -54,10 +54,12 @@ public class Forms2BafterTest extends AppCompatActivity {
     private void setUIComponent() {
         bi.ll406A408.setVisibility(MainApp.testNotConduct ? View.GONE : View.VISIBLE);
         bi.forPostTest.setVisibility(formType == FormType.PRETEST ? View.GONE : View.GONE);
-        bi.RST406A.setText(String.valueOf(MainApp.testCount));
-        bi.RST406B.setText(String.valueOf(MainApp.acceptableTest));
 
         if (!MainApp.testNotConduct) {
+
+            bi.RST406A.setText(String.valueOf(MainApp.testCount));
+            bi.RST406B.setText(String.valueOf(MainApp.acceptableTest));
+
             if (MainApp.acceptableTest >= 3) {
                 bi.RST407a.setChecked(true);
                 bi.RST408cv.setVisibility(View.GONE);
