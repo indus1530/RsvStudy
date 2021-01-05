@@ -467,6 +467,7 @@ public class Section05Activity extends AppCompatActivity {
 
     }
 
+
     private boolean UpdateDB() {
 
         DatabaseHelper db = new DatabaseHelper(this);

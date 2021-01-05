@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.rsvstudy.ui.form1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Toast;
 
@@ -75,7 +76,7 @@ public class Form2BTest extends AppCompatActivity {
     }
 
     public void addTest() {
-        if (formValidation()) {
+        if (!formValidation()) return;
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -87,13 +88,13 @@ public class Form2BTest extends AppCompatActivity {
                     startActivity(new Intent(this, Form2BTest.class).putExtra("data", item)
                             .putExtra(Constants.FORMTYPE, formType));
                     MainApp.testCount++;
+                    bi.AddTest.setEnabled(false);
                 } else {
                     Utils.openDialog(this, formType);
                 }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
-        }
 
     }
 
