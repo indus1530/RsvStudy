@@ -140,7 +140,7 @@ public class Section0502Activity extends AppCompatActivity {
 
         /*Hamza Requested this to be ommitted*/
         //RS86a
-        SF.put("RS8611", bi.RS861a.isChecked() ? "1"
+        /*SF.put("RS8611", bi.RS861a.isChecked() ? "1"
                 : bi.RS861b.isChecked() ? "2"
                 : "0");
 
@@ -191,7 +191,7 @@ public class Section0502Activity extends AppCompatActivity {
         SF.put("RS867d", bi.RS867d.getText().toString());
         SF.put("RS868", bi.RS868.isChecked() ? "4" : "0");
         SF.put("RS868d", bi.RS868d.getText().toString());
-        SF.put("RS869", bi.RS869.isChecked() ? "5" : "0");
+        SF.put("RS869", bi.RS869.isChecked() ? "5" : "0");*/
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getsA()), SF);
