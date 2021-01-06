@@ -526,7 +526,9 @@
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
             </LinearLayout>
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
         </LinearLayout>
 
