@@ -50,12 +50,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="@string/RS85"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RS85" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp"
+                                android:padding="16dp"
+                                android:text="@string/RS85" />
+
+                        </LinearLayout>
 
                         <RadioGroup
                             android:id="@+id/RS85"
@@ -89,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:visibility="gone"
-                    tools:visibility="gone">
+                    tools:visibility="visible">
 
 
                 <!--RS86h1 - EditText-->
@@ -106,7 +123,32 @@
                             android:orientation="vertical">
 
                             <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="RS86" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/white"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="22sp"
+                                    android:padding="16dp"
+                                    android:text="@string/RS86" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
                                 style="@style/linearlayout_view_wt_bound"
+                                android:layout_marginTop="3dp"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -114,7 +156,7 @@
                                     android:layout_width="0dp"
                                     android:layout_weight="10"
                                     android:paddingStart="50dp"
-                                    android:text="@string/RS86" />
+                                    android:text="@string/RS86h1" />
 
                                 <TextView
                                     style="@style/i_textview"
@@ -124,10 +166,6 @@
                                     android:text="@{days.txtDaysCounter}" />
 
                             </LinearLayout>
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/RS86h1" />
 
                             <!--RS861-->
                             <LinearLayout
@@ -238,6 +276,7 @@
                                         android:text="@string/no" />
 
                                 </RadioGroup>
+
                             </LinearLayout>
 
                             <!--RS864-->
@@ -278,6 +317,7 @@
                                         android:text="@string/no" />
 
                                 </RadioGroup>
+
                             </LinearLayout>
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
@@ -323,9 +363,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RS86h2" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RS86h2" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp"
+                                android:padding="16dp"
+                                android:text="@string/RS86h2" />
+
+                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/RS86b"
