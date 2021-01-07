@@ -106,17 +106,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:visibility="gone"
-                    tools:visibility="visible">
+                    tools:visibility="gone">
 
 
-                <!--RS86h1 - EditText-->
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <!--RS86h1 - EditText-->
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/RS86acv"
-                        style="@style/cardView">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/RS86acv"
+                            style="@style/cardView">
 
-                        <LinearLayout
+                            <LinearLayout
                             android:id="@+id/RS86"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
