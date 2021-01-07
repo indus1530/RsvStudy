@@ -43,12 +43,10 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="10dp">
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
 
                         <ImageView
                             android:id="@+id/genderImage"
@@ -279,6 +277,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!--RS9-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/RS9cv"
@@ -289,9 +288,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RS9" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RS9" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:padding="16dp"
+                                android:text="@string/RS9"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
 
                         <EditText
                             android:id="@+id/RS9"
@@ -305,37 +324,40 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!--                &lt;!&ndash;studyId&ndash;&gt;-->
-                <!--                <android.support.v7.widget.CardView style="@style/cardView">-->
 
-                <!--                    <LinearLayout-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:layoutDirection="ltr"-->
+                <!-- &lt;!&ndash;studyId&ndash;&gt; -->
+                <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <!--                        android:orientation="vertical">-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
 
-                <!--                        <TextView-->
-                <!--                            android:layout_width="match_parent"-->
-                <!--                            android:layout_height="wrap_content"-->
-                <!--                            android:text="@string/RSID"-->
-                <!--                            android:textAppearance="?android:attr/textAppearanceLarge" />-->
+                        android:orientation="vertical">
 
-                <!--                        <com.edittextpicker.aliazaz.EditTextPicker-->
-                <!--                            android:id="@+id/RSID"-->
-                <!--                            android:layout_width="match_parent"-->
-                <!--                            android:layout_height="wrap_content"-->
-                <!--                            android:hint="Study ID"-->
-                <!--                            android:inputType="number"-->
-                <!--                            android:textColor="@color/colorPrimary"-->
-                <!--                            app:mask="#####"-->
-                <!--                            app:maxValue="99999"-->
-                <!--                            app:minValue="999"-->
-                <!--                            app:type="range" />-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/RSID"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-                <!--                    </LinearLayout>-->
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/RSID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Study ID"
+                            android:inputType="number"
+                            android:textColor="@color/colorPrimary"
+                            app:mask="#####"
+                            app:maxValue="99999"
+                            app:minValue="999"
+                            app:type="range" />
 
-                <!--                </android.support.v7.widget.CardView>-->
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>-->
+
+
                 <!--RS15-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/RS15cv"
@@ -346,14 +368,35 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RS15" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RS15" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:padding="16dp"
+                                android:text="@string/RS15"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/RS15"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:layout_marginStart="20dp"
                             android:layout_weight="70"
                             android:focusable="false"
@@ -366,6 +409,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!--RS15-->
                 <androidx.cardview.widget.CardView style="@style/cardView">
 
@@ -374,15 +418,36 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RS14" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RS14" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:padding="16dp"
+                                android:text="@string/RS14"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
 
                         <EditText
                             android:id="@+id/dobInMonths"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:layout_marginStart="20dp"
                             android:layout_weight="70"
                             android:enabled="false"
@@ -394,6 +459,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/RS16cv"
                     style="@style/cardView">
@@ -403,9 +469,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/RS16" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RS16" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:padding="16dp"
+                                android:text="@string/RS16"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
 
                         <RadioGroup
                             android:id="@+id/RS16"
@@ -457,6 +543,8 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
+
                 <!--                <Button-->
                 <!--                    android:id="@+id/checkBtn"-->
                 <!--                    android:layout_width="match_parent"-->

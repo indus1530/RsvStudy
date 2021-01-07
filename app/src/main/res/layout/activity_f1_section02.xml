@@ -29,29 +29,46 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Section2" />
 
+
             <!--RS17 - Radio-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/RS17cv"
-                style="@style/cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/RS17" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS17" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS17"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS17"
-                        android:orientation="horizontal"
-                        style="@style/radiogroup">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/RS17a"
@@ -71,29 +88,45 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!--RS18 - Radio-->
             <androidx.cardview.widget.CardView
                 style="@style/cardView"
-
-                android:id="@+id/RS18cv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/RS18cv">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/RS18" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS18" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS18"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS18"
-                        style="@style/radiogroup">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/RS18a"
@@ -131,28 +164,45 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!--RS19 - Radio-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/RS19cv"
-                style="@style/cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/RS19" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS19" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS19"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS19"
-                        style="@style/radiogroup">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/RS19a"
@@ -216,29 +266,45 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!--RS20 - Radio-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/RS20cv"
-                style="@style/cardView"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/RS20" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS20" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS20"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS20"
-                        style="@style/radiogroup">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/RS20a"
@@ -287,29 +353,45 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!--RS21 - Radio-->
             <androidx.cardview.widget.CardView
                 style="@style/cardView"
-
-                android:id="@+id/RS21cv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/RS21cv">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/RS21" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS21" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS21"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS21"
-                        style="@style/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <RadioButton
@@ -330,30 +412,46 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!--RS22 - Date Picker-->
             <androidx.cardview.widget.CardView
                 style="@style/cardView"
-
-                android:id="@+id/RS22cv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/RS22cv">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/RS22" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS22" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS22"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         android:id="@+id/RS22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_marginStart="20dp"
                         android:layout_weight="70"
                         android:focusable="false"
