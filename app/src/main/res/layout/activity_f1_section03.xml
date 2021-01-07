@@ -101,12 +101,12 @@
                             android:id="@+id/RS24ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/year"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:tag="RS24a"
                             android:text='@{RS24a.checked ? RS24ax.getText().toString() : ""}'
                             android:visibility='@{RS24a.checked ? View.VISIBLE : View.GONE}'
-                            app:mask="##"
                             app:maxValue="99"
                             app:minValue="1"
                             app:type="range" />
@@ -115,12 +115,12 @@
                             android:id="@+id/RS24bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/month"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:tag="RS24b"
                             android:text='@{RS24b.checked ? RS24bx.getText().toString() : ""}'
                             android:visibility='@{RS24b.checked ? View.VISIBLE : View.GONE}'
-                            app:mask="##"
                             app:maxValue="11"
                             app:minValue="1"
                             app:type="range" />
@@ -992,845 +992,996 @@
 
                         </LinearLayout>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS321"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS321-->
                         <RadioGroup
                             android:id="@+id/RS321"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS321"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS321a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS321b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS322"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS322-->
                         <RadioGroup
                             android:id="@+id/RS322"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS322"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS322a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS322b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS323"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS323-->
                         <RadioGroup
                             android:id="@+id/RS323"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS323"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS323a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS323b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS324"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS324-->
                         <RadioGroup
                             android:id="@+id/RS324"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS324"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS324a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS324b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS325"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS325-->
                         <RadioGroup
                             android:id="@+id/RS325"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS325"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS325a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS325b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS326"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS326-->
                         <RadioGroup
                             android:id="@+id/RS326"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS326"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS326a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS326b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS327"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS327-->
                         <RadioGroup
                             android:id="@+id/RS327"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS327"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS327a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS327b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS328"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS328-->
                         <RadioGroup
                             android:id="@+id/RS328"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS328"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS328a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS328b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS329"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS329-->
                         <RadioGroup
                             android:id="@+id/RS329"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS329"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS329a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS329b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3210"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3210-->
                         <RadioGroup
                             android:id="@+id/RS3210"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3210"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3210a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3210b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3211"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3211-->
                         <RadioGroup
                             android:id="@+id/RS3211"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3211"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3211a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3211b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3212"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3212-->
                         <RadioGroup
                             android:id="@+id/RS3212"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3212"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3212a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3212b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3213"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3213-->
                         <RadioGroup
                             android:id="@+id/RS3213"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3213"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3213a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3213b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3214"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3214-->
                         <RadioGroup
                             android:id="@+id/RS3214"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3214"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3214a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3214b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3215"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3215-->
                         <RadioGroup
                             android:id="@+id/RS3215"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3215"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3215a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3215b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3216"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3216-->
                         <RadioGroup
                             android:id="@+id/RS3216"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3216"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3216a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3216b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3217"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3217-->
                         <RadioGroup
                             android:id="@+id/RS3217"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3217"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3217a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3217b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3218"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3218-->
                         <RadioGroup
                             android:id="@+id/RS3218"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3218"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3218a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3218b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3219"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3219-->
                         <RadioGroup
                             android:id="@+id/RS3219"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3219"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3219a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3219b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3220"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3220-->
                         <RadioGroup
                             android:id="@+id/RS3220"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3220"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3220a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3220b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3221"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3221-->
                         <RadioGroup
                             android:id="@+id/RS3221"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3221"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3221a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3221b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3222"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3222-->
                         <RadioGroup
                             android:id="@+id/RS3222"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3222"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3222a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3222b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3223"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3223-->
                         <RadioGroup
                             android:id="@+id/RS3223"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3223"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3223a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3223b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3224"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3224-->
                         <RadioGroup
                             android:id="@+id/RS3224"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3224"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3224a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3224b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3225"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3225-->
                         <RadioGroup
                             android:id="@+id/RS3225"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3225"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3225a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3225b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3226"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3226-->
                         <RadioGroup
                             android:id="@+id/RS3226"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3226"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3226a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3226b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3227"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3227-->
                         <RadioGroup
                             android:id="@+id/RS3227"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3227"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3227a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3227b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3228"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3228-->
                         <RadioGroup
                             android:id="@+id/RS3228"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3228"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3228a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3228b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3229"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3229-->
                         <RadioGroup
                             android:id="@+id/RS3229"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3229"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3229a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3229b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/RS3230"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+                        <!--RS3230-->
                         <RadioGroup
                             android:id="@+id/RS3230"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/RS3230"
+                                android:textColor="@color/colorPrimary" />
 
                             <RadioButton
                                 android:id="@+id/RS3230a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS3230b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
                         </RadioGroup>
+
 
                     </LinearLayout>
 
