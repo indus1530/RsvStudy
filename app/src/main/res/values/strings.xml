@@ -447,9 +447,9 @@
     <string name="RST307Bi"> PEF Variable </string>
     <string name="RST307Bj"> Not Attempt  </string>
     <string name="RST307C"> C: Test Accepted </string>
-    <string name="RST307D"> D: FVC (L) </string>
-    <string name="RST307E"> E: FEV1 (L) </string>
-    <string name="RST307F"> F: FEV1/FVC (%) </string>
+    <string name="RST307D"> D: \tFVC (L) </string>
+    <string name="RST307E"> E: \tFEV1 (L) </string>
+    <string name="RST307F"> F: \tFEV1 / FVC (%) </string>
 
     <string name="RST316">  Does the child need to come for a next clinical session to complete the spirometry test </string>
     <string name="RST316Hint"> A child needs to visit the clinic again if he/she does not complete the three acceptable spirometry test and parents do not withdrawn the consent for the test </string>

@@ -42,6 +42,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+
                     <!-- RST307A EditText -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RST307Acv"
@@ -50,23 +51,48 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
                             android:orientation="horizontal">
 
                             <TextView
-                                style="@style/i_textview"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:text="@string/RST307A" />
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RST307A" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:padding="16dp"
+                                android:text="@string/RST307A"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/RST307A"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/RST307A"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <!--<com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/RST307A"
                                 style="@style/EditTextNum"
+                                android:gravity="center"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:clickable="false"
                                 android:enabled="false"
                                 android:focusable="false"
-                                android:hint="@string/RST307A" />
+                                android:hint="@string/RST307A" />-->
 
                         </LinearLayout>
 
@@ -82,13 +108,34 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/RST307B" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="RST307B" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/white"
+                                    android:padding="16dp"
+                                    android:text="@string/RST307B"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="22sp" />
+
+                            </LinearLayout>
 
                             <RadioGroup
                                 android:id="@+id/RST307B"
-                                style="@style/radiogroup">
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/RST307Ba"
@@ -146,6 +193,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- RST307C Radio -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RST307Ccv"
@@ -156,13 +204,34 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/RST307C" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="RST307C" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/white"
+                                    android:padding="16dp"
+                                    android:text="@string/RST307C"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="22sp" />
+
+                            </LinearLayout>
 
                             <RadioGroup
                                 android:id="@+id/RST307C"
-                                style="@style/radiogroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
                                 <RadioButton
@@ -186,6 +255,7 @@
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
+
 
                     <!-- RST307D EditText -->
                     <androidx.cardview.widget.CardView
@@ -220,6 +290,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- RST307E EditText -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RST307Ecv"
@@ -253,6 +324,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- RST307F EditText -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/RST307Fcv"
@@ -285,6 +357,7 @@
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
+
 
                     <LinearLayout
                         android:id="@+id/RST307Items"
