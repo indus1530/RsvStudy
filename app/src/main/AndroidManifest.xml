@@ -22,7 +22,7 @@
         android:icon="@drawable/rsv_logo"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppThemeEnglish1"
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustResize|stateHidden">
 
@@ -45,91 +45,99 @@
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <activity
             android:name=".ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section01Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section02Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section03Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section031Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section04Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section05Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Section0502Activity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Form2BPreTest"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Form2BPostTest"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Form2BTest"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.form1.Forms2BafterTest"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.other.EndingActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppThemeUrdu1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeEnglish1" />
         <activity android:name=".FormsList" />
 
         <service android:name=".DownloadFileService" />

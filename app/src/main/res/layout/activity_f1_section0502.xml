@@ -66,28 +66,27 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp"
-                                android:padding="16dp"
                                 android:text="@string/RS85" />
 
                         </LinearLayout>
 
                         <RadioGroup
                             android:id="@+id/RS85"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/RS85a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/RS85b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 

@@ -16,9 +16,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rsv_bg"
-        android:layoutDirection="rtl"
-        android:padding="16dp">
+        android:background="@drawable/rsv_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,10 +45,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/dcstatus" />
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="dcstatus" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/dcstatus" />
+
+                        </LinearLayout>
 
                         <RadioGroup
                             android:id="@+id/istatus"
@@ -58,22 +71,16 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
-                                style="@style/radiobutton"
                                 android:id="@+id/istatus1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus1"
-                                android:textSize="25sp" />
+                                android:text="@string/istatus1" />
 
                             <RadioButton
-                                style="@style/radiobutton"
                                 android:id="@+id/istatus5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/istatus5"
-                                android:textSize="25sp" />
+                                android:text="@string/istatus5" />
 
                         </RadioGroup>
 

@@ -15,37 +15,22 @@
     </data>
 
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/dullWhile"
-        android:layoutDirection="rtl">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
-        <LinearLayout
+        <TextView
+            style="@style/HeadingTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="@string/Section3" />
 
 
-            <!--HeadTitle-->
-            <androidx.cardview.widget.CardView style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryDark"
-                        android:gravity="center"
-                        android:text="@string/Section3" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
             <LinearLayout
@@ -79,11 +64,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RS33"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RS33" />
 
                         </LinearLayout>
 
@@ -102,8 +83,7 @@
                                 android:layout_weight="2"
                                 android:background="@color/white"
                                 android:gravity="center"
-                                android:text="@string/RS331"
-                                android:textColor="@color/colorPrimary" />
+                                android:text="@string/RS331" />
 
                             <RadioButton
                                 android:id="@+id/RS331a"
@@ -136,8 +116,7 @@
                                 android:layout_weight="2"
                                 android:background="@color/white"
                                 android:gravity="center"
-                                android:text="@string/RS332"
-                                android:textColor="@color/colorPrimary" />
+                                android:text="@string/RS332" />
 
                             <RadioButton
                                 android:id="@+id/RS332a"
@@ -170,8 +149,7 @@
                                 android:layout_weight="2"
                                 android:background="@color/white"
                                 android:gravity="center"
-                                android:text="@string/RS333"
-                                android:textColor="@color/colorPrimary" />
+                                android:text="@string/RS333" />
 
                             <RadioButton
                                 android:id="@+id/RS333a"
@@ -204,8 +182,7 @@
                                 android:layout_weight="2"
                                 android:background="@color/white"
                                 android:gravity="center"
-                                android:text="@string/RS334"
-                                android:textColor="@color/colorPrimary" />
+                                android:text="@string/RS334" />
 
                             <RadioButton
                                 android:id="@+id/RS334a"
@@ -238,8 +215,7 @@
                                 android:layout_weight="2"
                                 android:background="@color/white"
                                 android:gravity="center"
-                                android:text="@string/RS335"
-                                android:textColor="@color/colorPrimary" />
+                                android:text="@string/RS335" />
 
                             <RadioButton
                                 android:id="@+id/RS335a"
@@ -272,8 +248,7 @@
                                 android:layout_weight="2"
                                 android:background="@color/white"
                                 android:gravity="center"
-                                android:text="@string/uother"
-                                android:textColor="@color/colorPrimary" />
+                                android:text="@string/uother" />
 
                             <RadioButton
                                 android:id="@+id/RS3396a"
@@ -331,11 +306,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RS34"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RS34" />
 
                         </LinearLayout>
 
@@ -374,8 +345,7 @@
                     android:visibility='@{RS34b.checked ? View.GONE : View.VISIBLE }'>
 
                     <!--RS035 Radio Button-->
-                    <androidx.cardview.widget.CardView
-                        style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -398,11 +368,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/white"
-                                    android:padding="16dp"
-                                    android:text="@string/RS35"
-                                    android:textColor="@color/colorPrimary"
-                                    android:textSize="22sp" />
+                                    android:text="@string/RS35" />
 
                             </LinearLayout>
 
@@ -478,11 +444,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/white"
-                                    android:padding="16dp"
-                                    android:text="@string/RS36"
-                                    android:textColor="@color/colorPrimary"
-                                    android:textSize="22sp" />
+                                    android:text="@string/RS36" />
 
                             </LinearLayout>
 
@@ -548,11 +510,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RS37"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RS37" />
 
                         </LinearLayout>
 
@@ -650,11 +608,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RS38"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RS38" />
 
                         </LinearLayout>
 
@@ -740,11 +694,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RS39"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RS39" />
 
                         </LinearLayout>
 
@@ -790,7 +740,8 @@
 
                             <RadioButton
                                 android:id="@+id/RS39d"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/RS394" />
 
                         </RadioGroup>
@@ -823,11 +774,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RS40"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RS40" />
 
                         </LinearLayout>
 
@@ -895,12 +842,15 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
+                <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+
 
             </LinearLayout>
 
-        </LinearLayout>
+
+        </ScrollView>
 
 
-    </ScrollView>
+    </LinearLayout>
 
 </layout>

@@ -63,11 +63,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST401"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST401" />
 
                         </LinearLayout>
 
@@ -79,16 +75,16 @@
 
                             <RadioButton
                                 android:id="@+id/RST401a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:padding="10dp"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
                                 android:id="@+id/RST401b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:padding="10dp"
                                 android:text="@string/Eno" />
 
                         </RadioGroup>
@@ -124,17 +120,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST402A"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST402A" />
 
                         </LinearLayout>
 
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/RST402A"
-                            style="@style/EditTextNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/Especify" />
 
                     </LinearLayout>
@@ -168,17 +161,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST402B"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST402B" />
 
                         </LinearLayout>
 
                         <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
                             android:id="@+id/RST402B"
-                            style="@style/EditTextNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/Especify" />
 
                     </LinearLayout>
@@ -212,17 +202,16 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST402C"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST402C" />
 
                         </LinearLayout>
 
                         <EditText
                             android:id="@+id/RST402C"
-                            style="@style/EditTextNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:inputType="number"
                             android:hint="@string/Especify" />
 
                     </LinearLayout>
@@ -256,17 +245,16 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST402D"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST402D" />
 
                         </LinearLayout>
 
                         <EditText
                             android:id="@+id/RST402D"
-                            style="@style/EditTextNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:inputType="number"
                             android:hint="@string/Especify" />
 
                     </LinearLayout>
@@ -300,17 +288,16 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST402E"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST402E" />
 
                         </LinearLayout>
 
                         <EditText
                             android:id="@+id/RST402E"
-                            style="@style/EditTextNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:inputType="number"
                             android:hint="@string/Especify" />
 
                     </LinearLayout>
@@ -344,11 +331,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST403"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST403" />
 
                         </LinearLayout>
 
@@ -360,16 +343,16 @@
 
                             <RadioButton
                                 android:id="@+id/RST403a"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:padding="10dp"
                                 android:text="@string/Eyes" />
 
                             <RadioButton
                                 android:id="@+id/RST403b"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:padding="10dp"
                                 android:text="@string/Eno" />
 
                         </RadioGroup>
@@ -405,17 +388,15 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
-                                android:padding="16dp"
-                                android:text="@string/RST404"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="22sp" />
+                                android:text="@string/RST404" />
 
                         </LinearLayout>
 
                         <EditText
                             android:id="@+id/RST404"
-                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
                             android:hint="@string/Especify" />
 
                     </LinearLayout>

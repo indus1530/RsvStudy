@@ -75,7 +75,6 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/white"
                                 android:gravity="center"
                                 android:padding="16dp"
                                 android:text="@string/RST307A"
@@ -125,11 +124,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/white"
-                                    android:padding="16dp"
-                                    android:text="@string/RST307B"
-                                    android:textColor="@color/colorPrimary"
-                                    android:textSize="22sp" />
+                                    android:text="@string/RST307B" />
 
                             </LinearLayout>
 
@@ -140,52 +135,62 @@
 
                                 <RadioButton
                                     android:id="@+id/RST307Ba"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Ba" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bb"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bb" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bc"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bc" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bd"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bd" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Be"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Be" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bf"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bf" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bg"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bg" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bh"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bh" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bi"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bi" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Bj"
-                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/RST307Bj" />
 
                             </RadioGroup>
@@ -221,11 +226,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/white"
-                                    android:padding="16dp"
-                                    android:text="@string/RST307C"
-                                    android:textColor="@color/colorPrimary"
-                                    android:textSize="22sp" />
+                                    android:text="@string/RST307C" />
 
                             </LinearLayout>
 
@@ -237,18 +238,16 @@
 
                                 <RadioButton
                                     android:id="@+id/RST307Ca"
-                                    style="@style/radiobutton"
+                                    android:layout_height="wrap_content"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
-                                    android:padding="10dp"
                                     android:text="@string/Eyes" />
 
                                 <RadioButton
                                     android:id="@+id/RST307Cb"
-                                    style="@style/radiobutton"
+                                    android:layout_height="wrap_content"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
-                                    android:padding="10dp"
                                     android:text="@string/Eno" />
 
                             </RadioGroup>
