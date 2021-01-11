@@ -652,12 +652,29 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="@string/RS45"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS45" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS45"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS45"
@@ -698,19 +715,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="@string/RS46"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS46" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS46"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         android:id="@+id/RS46"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_weight="70"
+                        android:gravity="center"
                         android:hint="DD/MM/YYYY"
                         android:textColor="@android:color/black"
                         app:dateFormat="dd-MM-yyyy" />
@@ -729,12 +762,29 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="@string/RS47"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS47" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS47"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/RS47"
@@ -762,12 +812,29 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="@string/RS48"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="RS48" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:padding="16dp"
+                            android:text="@string/RS48"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/RS48"
