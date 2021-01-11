@@ -414,7 +414,10 @@
 
     <!-- FORM 2 - B-->
     <string name="SectionT2"> 2. General Information </string>
-    <string name="RST201">  Outside Temperature (°C) </string>
+
+    <!--Dr Mashal Emailed Hasan 11-jan-2021-->
+    <!--<string name="RST201">  Outside Temperature (°C) </string>-->
+    <string name="RST201">  Room Temperature (°C) </string>
     <string name="RST202"> Height of the child (cm) </string>
     <string name="RST203"> Weight of the child (kg) </string>
 

@@ -324,6 +324,74 @@
                 </LinearLayout>
 
 
+                <!--RST316 - Radio-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/RST316cv"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RST316" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:padding="16dp"
+                                android:text="@string/RST316"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/RST316Hint"
+                            android:textSize="20dp"
+                            android:textStyle="italic" />
+
+                        <RadioGroup
+                            android:id="@+id/RST316"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/RST316a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:text="@string/Eyes" />
+
+                            <RadioButton
+                                android:id="@+id/RST316b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:text="@string/Eno" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
                 <!--RST417 - Radio-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/RST417cv"

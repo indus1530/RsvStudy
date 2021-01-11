@@ -52,7 +52,15 @@ public class Forms2BafterTest extends AppCompatActivity {
     }
 
     private void setUIComponent() {
+        if (formType == FormType.PRETEST) {
+            bi.RST316cv.setVisibility(View.VISIBLE);
+            bi.RST417cv.setVisibility(View.GONE);
+        } else {
+            bi.RST316cv.setVisibility(View.GONE);
+            bi.RST417cv.setVisibility(View.VISIBLE);
+        }
         bi.ll406A408.setVisibility(MainApp.testNotConduct ? View.GONE : View.VISIBLE);
+
         bi.forPostTest.setVisibility(formType == FormType.PRETEST ? View.GONE : View.GONE);
 
         if (!MainApp.testNotConduct) {
@@ -215,10 +223,16 @@ public class Forms2BafterTest extends AppCompatActivity {
         json.put("RST40896x", bi.RST40896x.getText().toString());
 
 
+        //RST316
+        json.put("RST316", bi.RST316a.isChecked() ? "1"
+                : bi.RST316b.isChecked() ? "2"
+                : "-1");
+
+
         //RST417
         json.put("RST417", bi.RST417a.isChecked() ? "1"
                 : bi.RST417b.isChecked() ? "2"
-                : "0");
+                : "-1");
 
         //RST418
         json.put("RST418", bi.RST418.getText().toString());
