@@ -42,7 +42,8 @@ public class MainApp extends Application {
     /*public static final Integer _PORT = 80; // Port - with colon (:)
     public static final String _HOST_URL = "https://" + MainApp._IP + "/pulseox/api/";// .VOC server*/
 
-    public static final String _IP = "http://f38158";// .TEST server
+    public static final String _IP = "http://vcoe1.aku.edu";// .LIVE server
+    //    public static final String _IP = "http://f38158";// .TEST server
     public static final String _HOST_URL = MainApp._IP + "/rsv/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
     public static final String _SERVER_GET_URL = "getData.php";
