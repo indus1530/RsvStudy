@@ -37,9 +37,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
     List<SyncModel> list;
     int position;
     private String TAG = "";
-    private Context mContext;
+    private final Context mContext;
     private ProgressDialog pd;
-    private String syncClass;
+    private final String syncClass;
 
 
     public GetAllData(Context context, String syncClass) {
@@ -241,16 +241,19 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 DatabaseHelper db = new DatabaseHelper(mContext);
                 String message;
                 try {
-                    JSONArray jsonArray = new JSONArray(json);
+                    JSONArray jsonArray = new JSONArray();
+                    int insertCount = 0;
 
                     switch (syncClass) {
 
                         case "VersionApp":
-                            db.syncVersionApp(jsonArray);
+                            insertCount = db.syncVersionApp(new JSONObject(result));
+                            if (insertCount == 1) jsonArray.put("1");
                             position = 0;
                             break;
                         case "Users":
-                            db.syncUser(jsonArray);
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncUser(jsonArray);
                             position = 1;
                             break;/*
                         case "UCs":
@@ -274,15 +277,16 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             position = 6;
                             break;*/
                         case "Childlist":
-                            db.syncChildlist(jsonArray);
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncChildlist(jsonArray);
                             position = 2;
                             break;
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());
-                    list.get(position).setmessage("Received: " + jsonArray.length());
-                    list.get(position).setstatus("Successfull");
-                    list.get(position).setstatusID(3);
+                    list.get(position).setmessage("Received: " + jsonArray.length() + ", Saved: " + insertCount);
+                    list.get(position).setstatus(insertCount == 0 ? "Unsuccessful" : "Successful");
+                    list.get(position).setstatusID(insertCount == 0 ? 2 : 3);
                     adapter.updatesyncList(list);
 //                    pd.show();
                 } catch (JSONException e) {

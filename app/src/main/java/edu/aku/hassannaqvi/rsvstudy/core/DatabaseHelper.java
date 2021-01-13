@@ -211,10 +211,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void syncChildlist(JSONArray cList) {
+    public Integer syncChildlist(JSONArray cList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(ChildList.singleChildList.TABLE_NAME, null, null);
 
+        int insertCount = 0;
         try {
             JSONArray jsonArray = cList;
 
@@ -237,13 +238,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(ChildList.singleChildList.COLUMN_GENDER, cl.getGender());
                 values.put(ChildList.singleChildList.COLUMN_AREACODE, cl.getAreacode());
 
-                db.insert(ChildList.singleChildList.TABLE_NAME, null, values);
+                long rowID = db.insert(ChildList.singleChildList.TABLE_NAME, null, values);
+                if (rowID != -1) insertCount++;
             }
             db.close();
 
         } catch (Exception e) {
 
         }
+        return insertCount;
     }
 
     public void syncVillages(JSONArray pcList) {
@@ -858,13 +861,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allAC;
     }
 
-    public void syncVersionApp(JSONArray Versionlist) {
+    public Integer syncVersionApp(JSONObject VersionList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(VersionAppContract.VersionAppTable.TABLE_NAME, null, null);
+        long count = 0;
         try {
-            JSONArray jsonArray = Versionlist;
-            JSONObject jsonObjectCC = jsonArray.getJSONObject(0);
-
+            JSONObject jsonObjectCC = ((JSONArray) VersionList.get(VersionAppContract.VersionAppTable.COLUMN_VERSION_PATH)).getJSONObject(0);
             VersionAppContract Vc = new VersionAppContract();
             Vc.Sync(jsonObjectCC);
 
@@ -874,11 +876,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(VersionAppContract.VersionAppTable.COLUMN_VERSION_CODE, Vc.getVersioncode());
             values.put(VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME, Vc.getVersionname());
 
-            db.insert(VersionAppContract.VersionAppTable.TABLE_NAME, null, values);
-        } catch (Exception e) {
+            count = db.insert(VersionAppContract.VersionAppTable.TABLE_NAME, null, values);
+            if (count > 0) count = 1;
+
+        } catch (Exception ignored) {
         } finally {
             db.close();
         }
+
+        return (int) count;
     }
 
     public VersionAppContract getVersionApp() {
@@ -924,9 +930,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allVC;
     }
 
-    public void syncUser(JSONArray userlist) {
+    public Integer syncUser(JSONArray userlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(UsersContract.singleUser.TABLE_NAME, null, null);
+        int insertCount = 0;
         try {
             JSONArray jsonArray = userlist;
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -941,7 +948,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
                 values.put(UsersContract.singleUser.FULL_NAME, user.getFULL_NAME());
 //                values.put(singleUser.REGION_DSS, user.getREGION_DSS());
-                db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
+                long rowID = db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
+                if (rowID != -1) insertCount++;
             }
 
 
@@ -950,6 +958,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } finally {
             db.close();
         }
+        return insertCount;
     }
 
 
