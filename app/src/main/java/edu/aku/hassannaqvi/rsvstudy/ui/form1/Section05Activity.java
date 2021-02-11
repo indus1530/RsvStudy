@@ -36,7 +36,7 @@ public class Section05Activity extends AppCompatActivity {
 
     private ActivityF1Section05Binding bi;
     private ChildList item;
-    private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private final String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     private FormType formType;
 
 
@@ -463,7 +463,9 @@ public class Section05Activity extends AppCompatActivity {
 
 
         MainApp.fc.setsA(String.valueOf(SF));
-        MainApp.setGPS(this);
+
+        //HassanBhai@Requested11Feb2021
+        //MainApp.setGPS(this);
 
     }
 

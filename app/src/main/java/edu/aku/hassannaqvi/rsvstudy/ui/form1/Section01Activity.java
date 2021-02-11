@@ -34,7 +34,7 @@ public class Section01Activity extends AppCompatActivity {
     private List<String> dssID, motherName, fatherName, hHhead, studyId;
     private DatabaseHelper db;
     private ChildList cContract;
-    private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private final String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     ChildList childData;
 
@@ -189,7 +189,9 @@ public class Section01Activity extends AppCompatActivity {
         SA.put("RS1696x", bi.RS1696x.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(SA));
-        MainApp.setGPS(this);
+
+        //HassanBhai@Requested11Feb2021
+        //MainApp.setGPS(this);
 
         /*DOB = getDOB();*/
 
