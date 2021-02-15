@@ -108,6 +108,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     protected static LocationManager locationManager;
 
     // UI references.
+    @BindView(R.id.testing)
+    TextView testing;
     @BindView(R.id.login_progress)
     ProgressBar mProgressView;
     @BindView(R.id.login_form)
@@ -208,6 +210,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
+
+//        Testing visibility
+        if (Integer.parseInt(MainApp.versionName.split("\\.")[0]) > 0) {
+            testing.setVisibility(View.GONE);
+        } else {
+            testing.setVisibility(View.VISIBLE);
+        }
+
         db = new DatabaseHelper(this);
 //        DB backup
 
@@ -274,13 +284,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
         if (permissionReadPhoneState != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.READ_PHONE_STATE);
-        }
+        }/*
         if (accessFineLocation != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.ACCESS_FINE_LOCATION);
         }
         if (accessCoarseLocation != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-        }
+        }*/
         if (writeExternalStorage != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
@@ -705,7 +715,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     doPermissionGrantedStuffs();
                     //loadIMEI();
                 }
-            } else if (permissions[i].equals(Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            }/* else if (permissions[i].equals(Manifest.permission.ACCESS_COARSE_LOCATION)) {
                 if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
 
 
@@ -732,7 +742,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
                     );
                 }
-            } else if (permissions[i].equals(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            }*/ else if (permissions[i].equals(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
 
                 }
@@ -762,7 +772,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     protected void showCurrentLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+       /* if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -781,7 +791,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             );
             //Toast.makeText(getApplicationContext(), message,
             //Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
     }
 
